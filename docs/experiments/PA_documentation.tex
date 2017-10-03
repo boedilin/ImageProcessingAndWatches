@@ -1,0 +1,63 @@
+\documentclass[11pt]{report}
+\usepackage{tabularx}
+	\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\title{}
+\author{Linda Boedi and Valentin Bossi\\
+ZHAW School of Enigneering}
+\maketitle
+\chapter {Competitor Analysis}
+\section{Optical versus acoustical measurement}
+To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback.
+
+\begin{table}
+ \centering
+\begin{tabularx}{\linewidth}{ |c||L|L|  }
+ \hline
+ \multicolumn{3}{|c|}{\textbf{Comparison acoustical and optical measurement}} \\
+ \hline
+ & \textbf{acoustical}  & \textbf{optical} \\\hline
+  since   &  around 19th century (2)  & end of 20th century (2)\\ \hline
+ accuracy &   0.1 s/d & 0.1 s/d\\  \hline
+ advantages & most experience (exists for about 200 years)& measurement can be done anywhere\\  \hline
+ disadvantages & background noises need to be filtered out& \\
+ \hline
+\end{tabularx}
+    \end{table}
+
+\subsection{Acoustical measurement}
+The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated. (1) But as this method isn't the most accurate other techniques are used nowadays.  
+Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel (1). The noises of the balance wheel are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
+
+\subsection{Optical measurement}
+About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated (3). In this paper we want to try to quantify the frequency optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
+
+\subsection{Companies}
+\subsubsection{Witschi - WisioScope S}
+WisioScope S tests mechanical watches acoustically and optically. The measurement is done parallel and in this way is more accurate as both signals are used for the calculation of the frequency.
+The optical metering is done using a laser and lighting, a camera helps to adjust the watch properly. The costs of their product are: CHF 10450.-
+
+\subsubsection{Lepsi - WatchScope/WatchAnalyzer}
+The WatchScope and WatchAnalyzer by Lepsi are mostly for enthusiasts and not really for the manufacturing. Both devices only work with acoustical input. All data can be accessed with the smartphone. The prices of their product are CHF 369.-, resp. CHF 929.-
+
+\subsubsection{Greiner Vibrograf - Compact 900}
+The Compact 900 measures only the beat noises of the balance wheel. The price is CHF 4070.-
+
+\chapter {Possible Technologies}
+\section{Frame analysis versus given GPU motion vectors}
+
+\subsection{Analyse pixel per pixel from every frame returned of the camera (gstreamer or OpenCV)}
+
+\subsection{Analyse frame per frame returned of the camera (gstreamer or OpenCV)}
+\subsection{Use motion vectors from low level API of the camera (mmal)}
+\subsection{Use motion vectors from high level library of the camera (picamera)}
+
+\begin{thebibliography}{9}
+\bibitem[Uhrenwiki]{Uhrenwiki} 
+(1) https://www.uhren-wiki.net/index.php?title=Zeitwaage
+\bibitem[ncsli]{ncsli} https://www.ncsli.org/c/f/p11/286.314.pdf
+\bibitem[chronoscop]{chronoscop} http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
+\end{thebibliography}
+
+
+\end{document}
