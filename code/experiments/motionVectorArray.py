@@ -12,4 +12,4 @@ with picamera.PiCamera() as camera:
         print('Captured %d frames' % output.array.shape[0])
         print('Frames are %dx%d blocks big' % (
             output.array.shape[2], output.array.shape[1]))
-        np.savetxt("testTXT.npy", output.array)
+        np.save("test.npy", output.array)
