@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-data = np.load('test.npy')
+data = np.load('tttest.npy')
 counter = 0
 
 def f():

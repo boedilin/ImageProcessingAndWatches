@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-data = np.load('testx.npy')
+data = np.load('testy.npy')
 counter = 0
 
 print('Captured %d frames' % data.shape[0])
