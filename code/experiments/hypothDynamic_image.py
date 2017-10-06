@@ -13,14 +13,16 @@ fig = plt.figure()
 data = np.load('test.npy')
 counter = 0
 
-
 def f():
     global counter
     counter += 1
     if (data.shape[0]-1) != counter:
-        return data[counter]["sad"]
+        return getHypothenuses(data[counter])
     else:
         ani.event_source.stop()
+
+def getHypothenuses(a):
+     return np.sqrt(np.square(a['x'].astype(np.float)) + np.square(a['y'].astype(np.float))).clip(0, 255).astype(np.uint8)
 
 
 # imshow(array)
