@@ -4,6 +4,7 @@ import picamera.array
 
 class DetectMotion(picamera.array.PiMotionAnalysis):
     def analyze(self, a):
+        print(camera.frame)
         # a['x'].astype(np.float) man kann direkt auf alle x Werte zugreifen und den integer in einen float umwandeln
         # mit clip kann man die Werte eines n-dim-array einschränken
         # testClip = np.array([1,2,3])

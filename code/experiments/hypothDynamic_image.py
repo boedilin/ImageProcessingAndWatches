@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-data = np.load('tttest.npy')
+data = np.load('my_video.npy')
 counter = 0
 
 def f():
@@ -33,5 +33,5 @@ def updatefig(*args):
     im.set_array(f())
     return im,
 
-ani = animation.FuncAnimation(fig, updatefig, interval=20, blit=True)
+ani = animation.FuncAnimation(fig, updatefig, interval=800, blit=True)
 plt.show()

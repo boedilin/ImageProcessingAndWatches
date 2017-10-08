@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-data = np.load('test.npy')
+data = np.load('my_video.npy')
 counter = 0
 
 
@@ -18,7 +18,7 @@ def f():
     global counter
     counter += 1
     if (data.shape[0]-1) != counter:
-        return data[counter]["sad"]
+        return data[counter]["x"]
     else:
         ani.event_source.stop()
 
