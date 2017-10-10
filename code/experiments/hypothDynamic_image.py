@@ -10,14 +10,21 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
+<<<<<<< Updated upstream
 data = np.load('my_video.npy')
+=======
+data = np.load('testVertikal.npy')
+>>>>>>> Stashed changes
 counter = 0
 
 def f():
     global counter
     counter += 1
     if (data.shape[0]-1) != counter:
-        return getHypothenuses(data[counter])
+        d = getHypothenuses(data[counter])
+        #print all y in the middle of image
+        print(data[counter][7,10]["y"])
+        return d
     else:
         ani.event_source.stop()
 
