@@ -10,11 +10,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-<<<<<<< Updated upstream
-data = np.load('testy.npy')
-=======
 data = np.load('testVertikal.npy')
->>>>>>> Stashed changes
+
 counter = 0
 
 print('Captured %d frames' % data.shape[0])
