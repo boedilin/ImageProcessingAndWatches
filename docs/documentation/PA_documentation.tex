@@ -1,6 +1,18 @@
 \documentclass[11pt]{report}
+\usepackage[toc]{glossaries}
+\makeglossaries
+\newglossaryentry{computer}
+{
+  name=computer,
+  description={is a programmable machine that receives input,
+               stores and manipulates data, and provides
+               output in a useful format}
+}
+
 \usepackage{tabularx}
 	\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+
 \begin{document}
 \title{}
 \author{Linda Boedi and Valentin Bossi\\
@@ -52,12 +64,15 @@ The Compact 900 measures only the beat noises of the balance wheel. The price is
 \subsection{Use motion vectors from low level API of the camera (mmal)}
 \subsection{Use motion vectors from high level library of the camera (picamera)}
 
+\chapter {Experiments with the picamera library}
+
+\printglossaries
+
 \begin{thebibliography}{9}
 \bibitem[Uhrenwiki]{Uhrenwiki} 
 (1) https://www.uhren-wiki.net/index.php?title=Zeitwaage
 \bibitem[ncsli]{ncsli} https://www.ncsli.org/c/f/p11/286.314.pdf
 \bibitem[chronoscop]{chronoscop} http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
 \end{thebibliography}
-
 
 \end{document}
