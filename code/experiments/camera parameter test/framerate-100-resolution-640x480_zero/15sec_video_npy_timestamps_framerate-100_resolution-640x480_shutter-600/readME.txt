@@ -1,0 +1,1 @@
+die effektive framerate ist hier sicher nicht 100 sondern die Anzahl frames in der timestamps Datei dividiert durch die Anzahl Sekunden
