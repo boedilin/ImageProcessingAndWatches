@@ -18,7 +18,7 @@ def f():
     global counter
     counter += 1
     if (data.shape[0]-1) != counter:
-        return data[counter]["x"]
+        return data[counter]["sad"]
     else:
         ani.event_source.stop()
 
