@@ -1,5 +1,9 @@
-\documentclass[11pt]{report}
+\documentclass[12pt, a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage{pdfpages}
 \usepackage[toc]{glossaries}
+
 \makeglossaries
 \newglossaryentry{computer}
 {
@@ -16,8 +20,16 @@
 \begin{document}
 \title{}
 \author{Linda Boedi and Valentin Bossi\\
-ZHAW School of Enigneering}
+ZHAW School of Engineering}
+\date{}
+
 \maketitle
+\tableofcontents
+
+\chapter{Summary}
+
+\chapter{Introduction}
+
 \chapter {Competitor Analysis}
 \section{Optical versus acoustical measurement}
 To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback.
@@ -62,17 +74,68 @@ The Compact 900 measures only the beat noises of the balance wheel. The price is
 
 \subsection{Analyse frame per frame returned of the camera (gstreamer or OpenCV)}
 \subsection{Use motion vectors from low level API of the camera (mmal)}
-\subsection{Use motion vectors from high level library of the camera (picamera)}
+\subsection{Use motion vectors from high level library of the camera (picamera library)}
+The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame.
+(referenz zu picamera.readthedocs.io)
 
-\chapter {Experiments with the picamera library}
+\chapter {Experimental approaches}
+\section{Animation of motion vectors}
+After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
+With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
+The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
 
-\printglossaries
+In a first step all SAD values were animated with colors to get a better understanding of how good the information they keep is and how as well as if they can be used to calculate the frequency of the movement of the balance wheel.
+
+\bigskip
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.6]{Images/animation_sad.png}
+
+{\bf Abbildung 1:}  Animation of the SAD values, the lighter the color the higher the value of the SAD
+\end{center}
+
+\bigskip
+ 
+Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and give incomplete information, the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
+ 
+ \bigskip
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
+
+{\bf Abbildung 2:}  Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse\end{center}
+
+\bigskip
+
+Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached. 
+
+\section{Crude calculation of frequency}
+\pagebreak
+
+\chapter{Appendices}
+
 
 \begin{thebibliography}{9}
+\bigskip
 \bibitem[Uhrenwiki]{Uhrenwiki} 
 (1) https://www.uhren-wiki.net/index.php?title=Zeitwaage
 \bibitem[ncsli]{ncsli} https://www.ncsli.org/c/f/p11/286.314.pdf
 \bibitem[chronoscop]{chronoscop} http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
 \end{thebibliography}
+
+\pagebreak
+
+\section {Illustration directory}
+\bigskip
+
+\begin{itemize}
+\item Abbildung 1: Animation SAD values. Linda Boedi and Valentin Bossi
+\item Abbildung 2: Animation hypotenueses. Linda Boedi and Valentin Bossi
+\end{itemize}
+
+\chapter{Independence delcaration}
+
 
 \end{document}
