@@ -69,12 +69,12 @@ The Compact 900 measures only the beat noises of the balance wheel. The price is
 
 \chapter {Possible Technologies}
 \section{Frame analysis versus given GPU motion vectors}
-
-\subsection{Analyse pixel per pixel from every frame returned of the camera (gstreamer or OpenCV)}
+One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
+Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
 
 \subsection{Analyse frame per frame returned of the camera (gstreamer or OpenCV)}
-\subsection{Use motion vectors from low level API of the camera (mmal)}
-\subsection{Use motion vectors from high level library of the camera (picamera library)}
+With the library OpenCV, it is possible to determine the optical flow of an image sequence. OpenCV uses the Lucas-Kanade method.
+\subsection{Use motion vectors from high level library for the camera (picamera library)}
 The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame.
 (referenz zu picamera.readthedocs.io)
 
@@ -92,7 +92,7 @@ In a first step all SAD values were animated with colors to get a better underst
 \begin{center}
 \includegraphics[scale=0.6]{Images/animation_sad.png}
 
-{\bf Abbildung 1:}  Animation of the SAD values, the lighter the color the higher the value of the SAD
+{\bf Illustration 1:}  Animation of the SAD values, the lighter the color the higher the value of the SAD
 \end{center}
 
 \bigskip
@@ -105,13 +105,47 @@ Further the x and y vector were analyzed and also animated. But as those vectors
 \begin{center}
 \includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
 
-{\bf Abbildung 2:}  Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse\end{center}
+{\bf Illustration 2:}  Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse
+\end{center}
 
 \bigskip
 
-Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached. 
+Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
+\pagebreak
 
+\section{Motion vectors visualized in a frame}
+We used Codecvisa[4] to see how the motion vectors of a frame looks in our case.
+The result is visible in Illustration 3.
+\bigskip
+\noindent
+\begin{center}
+\includegraphics[scale=0.4]{Images/motion_vectors.png}
+
+{\bf Illustration 3:}  Motion vectors drawn in one frame
+\end{center}
+\bigskip
+
+We also used Excel to determine if a motion vector from one frame is the predecessor of the motion vector in the next frame.
+The hope was that we could follow the moving object and thus always know the location of the object.
+The result was sobering, because a frame and motion vector can not be connected to another frame and motion vector.
+With this experiment, we took a look at the idea of the optical flow with the motion vectors of the mmal.
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.55]{Images/optical_flow_basic1.jpg}
+
+{\bf Illustration 4:}  It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
+\end{center}
+
+\bigskip
 \section{Crude calculation of frequency}
+A crude calculation of the frequency can be made with the aid of the motion vectors and the associated time stamps per frame.
+All x, y, or sad values contained in the image are summed up. If the sum of all the values is small, it is very likely that the balance wheel is not moving so it has a standstill.
+For small values, the time stamp is registered and the difference to the next standstill is calculated.
+Because the balance wheel makes half oscillations, it has passed from one stop to the next half a period.
+
+Our test clock has a frequency of three Hertz. The frequency is the reciprocal of the period, which means that our period is a third.
+Half of the period is equal to a standstill of the balance wheel. In this case, we should be able to measure a standstill of the balance wheel at every sixth of a second.
 \pagebreak
 
 \chapter{Appendices}
