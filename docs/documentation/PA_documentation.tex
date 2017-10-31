@@ -5,9 +5,9 @@
 \usepackage[toc]{glossaries}
 
 \makeglossaries
-\newglossaryentry{computer}
+\newglossaryentry{mmal}
 {
-  name=computer,
+  name=mmal,
   description={is a programmable machine that receives input,
                stores and manipulates data, and provides
                output in a useful format}
@@ -72,11 +72,27 @@ The Compact 900 measures only the beat noises of the balance wheel. The price is
 One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
 Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
 
-\subsection{Analyse frame per frame returned of the camera (gstreamer or OpenCV)}
-With the library OpenCV, it is possible to determine the optical flow of an image sequence. OpenCV uses the Lucas-Kanade method.
+\subsection{Analyse frame per frame returned of the camera (OpenCV)}
+With the library OpenCV it is possible to determine the optical flow of an image sequence. 
+
+The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
+
+One possibility would be to follow the course of a velocity vector and thereby calculate a period of the frequency of the balance wheel. The calculation of the flow at selected points is also called feature point tracking. Another approach would be to calculate the frequency based on the velocity obtained from the optical flow, since it is more or less a circular movement. 
+
+One difficulty with this procedure is that one has to commit to certain pixels that one examines. This can cause problems if the clock is placed differently, because wrong points (worst-case scenario: points in which movement never takes place) can cause problems for the calculation.  
+
+The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients). 
+
+One characteristic of this method is that it does not provide a dense flow, i. e. the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
+
 \subsection{Use motion vectors from high level library for the camera (picamera library)}
-The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame.
-(referenz zu picamera.readthedocs.io)
+The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. (2) 
+
+The sum of absolute differences is a positive number resulting from the formation of the difference between two digital images. It serves as a measure of the difference between two images.
+
+The SAD is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount. (3)
+
+The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
 
 \chapter {Experimental approaches}
 \section{Animation of motion vectors}
@@ -114,8 +130,8 @@ Another experimental approach was displaying the motion vectors as arrows direct
 \pagebreak
 
 \section{Motion vectors visualized in a frame}
-We used Codecvisa[4] to see how the motion vectors of a frame looks in our case.
-The result is visible in Illustration 3.
+Codecvisa was used to display the motion vectors of a frame.
+The result is shown in Figure 3.
 \bigskip
 \noindent
 \begin{center}
@@ -125,10 +141,10 @@ The result is visible in Illustration 3.
 \end{center}
 \bigskip
 
-We also used Excel to determine if a motion vector from one frame is the predecessor of the motion vector in the next frame.
-The hope was that we could follow the moving object and thus always know the location of the object.
-The result was sobering, because a frame and motion vector can not be connected to another frame and motion vector.
-With this experiment, we took a look at the idea of the optical flow with the motion vectors of the mmal.
+Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
+The hope was that a moving pixel could be followed and therefore the location of the pixel would always have been known.
+The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
+This experiment looked at the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer).
 
 \noindent
 \begin{center}
@@ -139,13 +155,44 @@ With this experiment, we took a look at the idea of the optical flow with the mo
 
 \bigskip
 \section{Crude calculation of frequency}
-A crude calculation of the frequency can be made with the aid of the motion vectors and the associated time stamps per frame.
-All x, y, or sad values contained in the image are summed up. If the sum of all the values is small, it is very likely that the balance wheel is not moving so it has a standstill.
+With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made.
+All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance will not move so that it is at a standstill.
 For small values, the time stamp is registered and the difference to the next standstill is calculated.
-Because the balance wheel makes half oscillations, it has passed from one stop to the next half a period.
+Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point.
 
-Our test clock has a frequency of three Hertz. The frequency is the reciprocal of the period, which means that our period is a third.
-Half of the period is equal to a standstill of the balance wheel. In this case, we should be able to measure a standstill of the balance wheel at every sixth of a second.
+\subsection{Reference measurement and test watch}
+At first some general information to the test watch, which was used.
+
+The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. (5)
+
+In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, an acoustic measurement was carried out with a professional measuring device, the Greiner Vibrograf - Compact 900, and the rate deviation was determined. 
+
+In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
+
+Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows: 
+
+\begin{displaymath}
+n* = 2f*3600
+ \end{displaymath}
+ and therefore:
+ \begin{displaymath}
+  f = \frac{n*}{7200}
+ \end{displaymath}
+ 
+ 
+\section{Implementation of the algorithm}
+
+In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program. 
+
+The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
+
+Furthermore, the calculation of the frequency in the Python program has been further simplified by not calculating each period individually, but by selecting the first and the last minimum over the whole period of time, in which it was recorded. This time span is then calculated by half of the number of minima minus 1. Half, because every half of the period the balance wheel stops and minus 1, because otherwise a half-period would be taken into account too much. This approach reduces the number of rounding errors, resulting in higher accuracy. After this calculation, the period duration T is now available, from which the frequency f can be calculated quite simply: 
+
+ \begin{displaymath}
+  f = \frac{1}{T}
+ \end{displaymath}
+
+
 \pagebreak
 
 \chapter{Appendices}
@@ -157,6 +204,14 @@ Half of the period is equal to a standstill of the balance wheel. In this case, 
 (1) https://www.uhren-wiki.net/index.php?title=Zeitwaage
 \bibitem[ncsli]{ncsli} https://www.ncsli.org/c/f/p11/286.314.pdf
 \bibitem[chronoscop]{chronoscop} http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
+\bibitem[Picamera]
+(2) picamera readthedocs
+\bibitem[SAD]
+(3) Wikipedia: Sum of absolute differences
+\bibitem[Schlagzahl]
+(4) Wikipedia: Schlagzahl
+\bibitem[Caliber Test watch]
+(5) http://watchbase.com/eta/caliber/c01-211
 \end{thebibliography}
 
 \pagebreak

@@ -21,7 +21,8 @@ for value in range(xySad.shape[0]):
         print("False")  
 for i in range(diff.size-2):
     freq[i] = diff[i+1]-diff[i]
-    print(freq[i])
+    if freq[i] != 0:
+        print(1/freq[i])
 def funcSinus(x, a, b, c):
     return np.sin(x) + a + b + c
 
