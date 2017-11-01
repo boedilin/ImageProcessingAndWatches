@@ -3,6 +3,7 @@
 \usepackage{inputenc}
 \usepackage{pdfpages}
 \usepackage[toc]{glossaries}
+\usepackage{booktabs}
 
 \makeglossaries
 \newglossaryentry{mmal}
@@ -24,14 +25,22 @@ ZHAW School of Engineering}
 \date{}
 
 \maketitle
+
+\chapter{Acknowledgement}
+
+\chapter{Affidavit}
+
+\setcounter{secnumdepth}{5} 
+\setcounter{tocdepth}{5} 
 \tableofcontents
 
-\chapter{Summary}
+\chapter{Conceptual formulation}
 
-\chapter{Introduction}
+\chapter{Motivation}
 
-\chapter {Competitor Analysis}
-\section{Optical versus acoustical measurement}
+\chapter{Fundamentals}
+\section {Competitor Analysis}
+\subsection{Optical versus acoustical measurement}
 To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback.
 
 \begin{table}
@@ -49,17 +58,25 @@ To measure the frequency of the balance wheel of a mechanic clock there exist ma
 \end{tabularx}
     \end{table}
 
-\subsection{Acoustical measurement}
+\subsubsection{Acoustical measurement}
 The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated. (1) But as this method isn't the most accurate other techniques are used nowadays.  
 Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel (1). The noises of the balance wheel are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
 
-\subsection{Optical measurement}
-About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated (3). In this paper we want to try to quantify the frequency optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
+\subsubsection{Optical measurement}
+About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated (3). In this paper the frequency should be quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
 
 \subsection{Companies}
 \subsubsection{Witschi - WisioScope S}
 WisioScope S tests mechanical watches acoustically and optically. The measurement is done parallel and in this way is more accurate as both signals are used for the calculation of the frequency.
 The optical metering is done using a laser and lighting, a camera helps to adjust the watch properly. The costs of their product are: CHF 10450.-
+
+\bigskip
+
+\begin{tabularx}{\textwidth}{>{\bfseries}lX}
+Measurement gear deviation & \\\toprule
+scope & +/- 999.9 s/d \\\midrule
+resolution & 0.1 s/d\\\bottomrule
+\end{tabularx}
 
 \subsubsection{Lepsi - WatchScope/WatchAnalyzer}
 The WatchScope and WatchAnalyzer by Lepsi are mostly for enthusiasts and not really for the manufacturing. Both devices only work with acoustical input. All data can be accessed with the smartphone. The prices of their product are CHF 369.-, resp. CHF 929.-
@@ -67,12 +84,32 @@ The WatchScope and WatchAnalyzer by Lepsi are mostly for enthusiasts and not rea
 \subsubsection{Greiner Vibrograf - Compact 900}
 The Compact 900 measures only the beat noises of the balance wheel. The price is CHF 4070.-
 
-\chapter {Possible Technologies}
-\section{Frame analysis versus given GPU motion vectors}
+\section{Reference measurement and test watch}
+At first some general information to the test watch, which was used.
+
+The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. (5)
+
+In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, an acoustic measurement was carried out with a professional measuring device, the Greiner Vibrograf - Compact 900, and the rate deviation was determined. 
+
+In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
+
+Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows: 
+
+\begin{displaymath}
+n* = 2f*3600
+ \end{displaymath}
+ and therefore:
+ \begin{displaymath}
+  f = \frac{n*}{7200}
+ \end{displaymath}
+
+
+\section {Possible Technologies}
+\subsection{Frame analysis versus given GPU motion vectors}
 One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
 Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
 
-\subsection{Analyse frame per frame returned of the camera (OpenCV)}
+\subsubsection{Frame analysis via OpenCV}
 With the library OpenCV it is possible to determine the optical flow of an image sequence. 
 
 The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
@@ -85,7 +122,7 @@ The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. T
 
 One characteristic of this method is that it does not provide a dense flow, i. e. the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
 
-\subsection{Use motion vectors from high level library for the camera (picamera library)}
+\subsubsection{Motion vectors from high level library picamera}
 The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. (2) 
 
 The sum of absolute differences is a positive number resulting from the formation of the difference between two digital images. It serves as a measure of the difference between two images.
@@ -93,6 +130,8 @@ The sum of absolute differences is a positive number resulting from the formatio
 The SAD is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount. (3)
 
 The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
+
+\subsubsection{Motion vector data}
 
 \chapter {Experimental approaches}
 \section{Animation of motion vectors}
@@ -129,7 +168,7 @@ Further the x and y vector were analyzed and also animated. But as those vectors
 Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
 \pagebreak
 
-\section{Motion vectors visualized in a frame}
+\subsection{Motion vectors visualized in a frame}
 Codecvisa was used to display the motion vectors of a frame.
 The result is shown in Figure 3.
 \bigskip
@@ -154,32 +193,17 @@ This experiment looked at the idea of the optical flux with the movement vectors
 \end{center}
 
 \bigskip
+
+\section{Pi camera settings}
+
 \section{Crude calculation of frequency}
 With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made.
 All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance will not move so that it is at a standstill.
 For small values, the time stamp is registered and the difference to the next standstill is calculated.
-Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point.
-
-\subsection{Reference measurement and test watch}
-At first some general information to the test watch, which was used.
-
-The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. (5)
-
-In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, an acoustic measurement was carried out with a professional measuring device, the Greiner Vibrograf - Compact 900, and the rate deviation was determined. 
-
-In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
-
-Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows: 
-
-\begin{displaymath}
-n* = 2f*3600
- \end{displaymath}
- and therefore:
- \begin{displaymath}
-  f = \frac{n*}{7200}
- \end{displaymath}
+Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
  
- 
+\chapter{Calculation of the frequency}
+
 \section{Implementation of the algorithm}
 
 In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program. 
@@ -192,10 +216,15 @@ Furthermore, the calculation of the frequency in the Python program has been fur
   f = \frac{1}{T}
  \end{displaymath}
 
+\chapter{Results}
+
 
 \pagebreak
 
 \chapter{Appendices}
+\section{Measurements}
+
+\section{Evaluation}
 
 
 \begin{thebibliography}{9}
@@ -223,8 +252,5 @@ Furthermore, the calculation of the frequency in the Python program has been fur
 \item Abbildung 1: Animation SAD values. Linda Boedi and Valentin Bossi
 \item Abbildung 2: Animation hypotenueses. Linda Boedi and Valentin Bossi
 \end{itemize}
-
-\chapter{Independence delcaration}
-
 
 \end{document}

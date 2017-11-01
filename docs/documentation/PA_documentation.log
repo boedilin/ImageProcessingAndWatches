@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.3)  31 OCT 2017 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.3)  1 NOV 2017 13:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -353,70 +353,81 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 ty
 Package: glossary-tree 2015/02/03 v4.13 (NLCT)
 \glstreeindent=\skip61
-))
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen130
+\lightrulewidth=\dimen131
+\cmidrulewidth=\dimen132
+\belowrulesep=\dimen133
+\belowbottomsep=\dimen134
+\aboverulesep=\dimen135
+\abovetopsep=\dimen136
+\cmidrulesep=\dimen137
+\cmidrulekern=\dimen138
+\defaultaddspace=\dimen139
+\@cmidla=\count133
+\@cmidlb=\count134
+\@aboverulesep=\dimen140
+\@belowrulesep=\dimen141
+\@thisruleclass=\count135
+\@lastruleclass=\count136
+\@thisrulewidth=\dimen142
+)
 \glswrite=\write3
 \glo@main@file=\write4
 \openout4 = `PA_documentation.glo'.
 
 Package glossaries Info: Writing glossary file PA_documentation.glo on input li
-ne 7.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+ne 8.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen130
-\extrarowheight=\dimen131
+\col@sep=\dimen143
+\extrarowheight=\dimen144
 \NC@list=\toks34
 \extratabsurround=\skip62
 \backup@length=\skip63
 )
-\TX@col@width=\dimen132
-\TX@old@table=\dimen133
-\TX@old@col=\dimen134
-\TX@target=\dimen135
-\TX@delta=\dimen136
-\TX@cols=\count133
+\TX@col@width=\dimen145
+\TX@old@table=\dimen146
+\TX@old@col=\dimen147
+\TX@target=\dimen148
+\TX@delta=\dimen149
+\TX@cols=\count137
 \TX@ftn=\toks35
 )
-(./PA_documentation.aux
-
-LaTeX Warning: Label `(' multiply defined.
-
-
-LaTeX Warning: Label `(' multiply defined.
-
-
-LaTeX Warning: Label `(' multiply defined.
-
-)
+(./PA_documentation.aux)
 \openout1 = `PA_documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 \AtBeginShipoutBox=\box35
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
-\scratchdimen=\dimen137
+\scratchcounter=\count138
+\scratchdimen=\dimen150
 \scratchbox=\box36
-\nofMPsegments=\count135
-\nofMParguments=\count136
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count137
-\MPscratchDim=\dimen138
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen151
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -467,109 +478,116 @@ e
 \openout3 = `PA_documentation.ist'.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./PA_documentation.toc
-Overfull \hbox (6.78383pt too wide) in paragraph at lines 13--13
- [][] []\T1/cmr/m/n/12 Analyse frame per frame re-turned of the cam-era (OpenCV
-) [][]  
- []
-
-)
-\tf@toc=\write5
-\openout5 = `PA_documentation.toc'.
-
- [1
-
-]
 Chapter 1.
-[2
+[1
 
 ]
 Chapter 2.
-[3
+[2
+
+] (./PA_documentation.toc)
+\tf@toc=\write5
+\openout5 = `PA_documentation.toc'.
+
+ [3
 
 ]
 Chapter 3.
 [4
 
-] [5]
+]
 Chapter 4.
+[5
+
+]
+Chapter 5.
 [6
 
-] [7]
-Chapter 5.
-<Images/animation_sad.png, id=34, 589.20125pt x 421.575pt>
+]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 79--80
+[][] 
+ []
+
+[7] [8] [9]
+Chapter 6.
+<Images/animation_sad.png, id=43, 589.20125pt x 421.575pt>
 File: Images/animation_sad.png Graphic file (type png)
 
 <use Images/animation_sad.png>
-Package pdftex.def Info: Images/animation_sad.png used on input line 109.
+Package pdftex.def Info: Images/animation_sad.png used on input line 148.
 (pdftex.def)             Requested size: 353.52347pt x 252.94695pt.
- [8
+ [10
 
 ]
-<Images/animation_hypotenuse.png, id=39, 584.1825pt x 433.62pt>
+<Images/animation_hypotenuse.png, id=48, 584.1825pt x 433.62pt>
 File: Images/animation_hypotenuse.png Graphic file (type png)
 
 <use Images/animation_hypotenuse.png>
-Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 122
+Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 161
 .
 (pdftex.def)             Requested size: 350.51219pt x 260.17401pt.
- [9 <./Images/animation_sad.png>] [10 <./Images/animation_hypotenuse.png>]
-<Images/motion_vectors.png, id=48, 618.31pt x 617.30624pt>
+ [11 <./Images/animation_sad.png>]
+[12 <./Images/animation_hypotenuse.png>]
+<Images/motion_vectors.png, id=58, 618.31pt x 617.30624pt>
 File: Images/motion_vectors.png Graphic file (type png)
 
 <use Images/motion_vectors.png>
-Package pdftex.def Info: Images/motion_vectors.png used on input line 138.
+Package pdftex.def Info: Images/motion_vectors.png used on input line 177.
 (pdftex.def)             Requested size: 247.31961pt x 246.91812pt.
 
-<Images/optical_flow_basic1.jpg, id=49, 438.63875pt x 194.7275pt>
+<Images/optical_flow_basic1.jpg, id=59, 438.63875pt x 194.7275pt>
 File: Images/optical_flow_basic1.jpg Graphic file (type jpg)
 
 <use Images/optical_flow_basic1.jpg>
-Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 151.
+Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 190.
 
 (pdftex.def)             Requested size: 241.25204pt x 107.10043pt.
- [11 <./Images/motion_vectors.png> <./Images/optical_flow_basic1.jpg>] [12] [13
-]
-Chapter 6.
-[14
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
-[]\T1/cmr/m/n/12 http://www.chronoskop.com/index.php/chronoskop-
- []
-
+ [13 <./Images/motion_vectors.png> <./Images/optical_flow_basic1.jpg>] [14]
+Chapter 7.
 [15
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 223.
+Chapter 8.
+[16
+
+]
+Chapter 9.
+[17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
+[]\T1/cmr/m/n/12 http://www.chronoskop.com/index.php/chronoskop-
+ []
+
+[18
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 252.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
- [16]
-Chapter 7.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 252.
+
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[17
+[19] (./PA_documentation.aux)
 
-] (./PA_documentation.aux)
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7390 strings out of 493089
- 106098 string characters out of 6134842
- 227335 words of memory out of 5000000
- 10702 multiletter control sequences out of 15000+600000
+ 7444 strings out of 493089
+ 106847 string characters out of 6134842
+ 226998 words of memory out of 5000000
+ 10752 multiletter control sequences out of 15000+600000
  15360 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,10n,39p,1804b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,10n,39p,1825b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
@@ -580,10 +598,10 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on PA_documentation.pdf (18 pages, 698041 bytes).
+Output written on PA_documentation.pdf (20 pages, 698888 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

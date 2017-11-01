@@ -1,23 +1,31 @@
-\contentsline {chapter}{\numberline {1}Summary}{2}
-\contentsline {chapter}{\numberline {2}Introduction}{3}
-\contentsline {chapter}{\numberline {3}Competitor Analysis}{4}
-\contentsline {section}{\numberline {3.1}Optical versus acoustical measurement}{4}
-\contentsline {subsection}{\numberline {3.1.1}Acoustical measurement}{4}
-\contentsline {subsection}{\numberline {3.1.2}Optical measurement}{5}
-\contentsline {subsection}{\numberline {3.1.3}Companies}{5}
-\contentsline {subsubsection}{Witschi - WisioScope S}{5}
-\contentsline {subsubsection}{Lepsi - WatchScope/WatchAnalyzer}{5}
-\contentsline {subsubsection}{Greiner Vibrograf - Compact 900}{5}
-\contentsline {chapter}{\numberline {4}Possible Technologies}{6}
-\contentsline {section}{\numberline {4.1}Frame analysis versus given GPU motion vectors}{6}
-\contentsline {subsection}{\numberline {4.1.1}Analyse frame per frame returned of the camera (OpenCV)}{6}
-\contentsline {subsection}{\numberline {4.1.2}Use motion vectors from high level library for the camera (picamera library)}{7}
-\contentsline {chapter}{\numberline {5}Experimental approaches}{8}
-\contentsline {section}{\numberline {5.1}Animation of motion vectors}{8}
-\contentsline {section}{\numberline {5.2}Motion vectors visualized in a frame}{11}
-\contentsline {section}{\numberline {5.3}Crude calculation of frequency}{12}
-\contentsline {subsection}{\numberline {5.3.1}Reference measurement and test watch}{12}
-\contentsline {section}{\numberline {5.4}Implementation of the algorithm}{13}
-\contentsline {chapter}{\numberline {6}Appendices}{14}
-\contentsline {section}{\numberline {6.1}Illustration directory}{16}
-\contentsline {chapter}{\numberline {7}Independence delcaration}{17}
+\contentsline {chapter}{\numberline {1}Acknowledgement}{1}
+\contentsline {chapter}{\numberline {2}Affidavit}{2}
+\contentsline {chapter}{\numberline {3}Conceptual formulation}{4}
+\contentsline {chapter}{\numberline {4}Motivation}{5}
+\contentsline {chapter}{\numberline {5}Fundamentals}{6}
+\contentsline {section}{\numberline {5.1}Competitor Analysis}{6}
+\contentsline {subsection}{\numberline {5.1.1}Optical versus acoustical measurement}{6}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Acoustical measurement}{6}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Optical measurement}{7}
+\contentsline {subsection}{\numberline {5.1.2}Companies}{7}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Witschi - WisioScope S}{7}
+\contentsline {subsubsection}{\numberline {5.1.2.2}Lepsi - WatchScope/WatchAnalyzer}{7}
+\contentsline {subsubsection}{\numberline {5.1.2.3}Greiner Vibrograf - Compact 900}{7}
+\contentsline {section}{\numberline {5.2}Reference measurement and test watch}{8}
+\contentsline {section}{\numberline {5.3}Possible Technologies}{8}
+\contentsline {subsection}{\numberline {5.3.1}Frame analysis versus given GPU motion vectors}{8}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Frame analysis via OpenCV}{8}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Motion vectors from high level library picamera}{9}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Motion vector data}{9}
+\contentsline {chapter}{\numberline {6}Experimental approaches}{10}
+\contentsline {section}{\numberline {6.1}Animation of motion vectors}{10}
+\contentsline {subsection}{\numberline {6.1.1}Motion vectors visualized in a frame}{13}
+\contentsline {section}{\numberline {6.2}Pi camera settings}{14}
+\contentsline {section}{\numberline {6.3}Crude calculation of frequency}{14}
+\contentsline {chapter}{\numberline {7}Calculation of the frequency}{15}
+\contentsline {section}{\numberline {7.1}Implementation of the algorithm}{15}
+\contentsline {chapter}{\numberline {8}Results}{16}
+\contentsline {chapter}{\numberline {9}Appendices}{17}
+\contentsline {section}{\numberline {9.1}Measurements}{17}
+\contentsline {section}{\numberline {9.2}Evaluation}{17}
+\contentsline {section}{\numberline {9.3}Illustration directory}{19}
