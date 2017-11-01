@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import argrelmin
 
-timestamps = np.loadtxt("testSadtimestamps.txt")
-xySad = np.load("myTest.npy")
+timestamps = np.loadtxt("differents_time_records/10min/timestamps.txt")
+xySad = np.load("differents_time_records/10min/myTest1.npy")
 x = np.empty(xySad.shape[0])
 y = np.empty(xySad.shape[0])
 sad = np.empty(xySad.shape[0])
@@ -13,12 +13,20 @@ counter = 0
 counterxy = 0
 index = 0
 
+#==============================================================================
+# for value in range(xySad.shape[0]):
+#     x[index] = np.sum(abs(xySad[value]["x"]))
+#     y[index] = np.sum(abs(xySad[value]["y"]))
+#     sad[index] = np.sum(xySad[value]["sad"])
+#     index = index + 1;
+#   
+#==============================================================================
 for value in range(xySad.shape[0]):
-    x[index] = np.sum(abs(xySad[value]["x"]))
-    y[index] = np.sum(abs(xySad[value]["y"]))
-    sad[index] = np.sum(xySad[value]["sad"])
-    index = index + 1;
-  
+     x[index] = abs(xySad[value][0])
+     y[index] = abs(xySad[value][1])
+     sad[index] = xySad[value][2]
+     index = index + 1;
+
 xmin = argrelmin(x)[0]
 ymin = argrelmin(y)[0]
 sadmin = argrelmin(sad)[0]

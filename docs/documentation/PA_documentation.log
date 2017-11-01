@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.3)  1 NOV 2017 13:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.3)  1 NOV 2017 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -399,7 +399,17 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@cols=\count137
 \TX@ftn=\toks35
 )
-(./PA_documentation.aux)
+(./PA_documentation.aux
+
+LaTeX Warning: Label `(' multiply defined.
+
+
+LaTeX Warning: Label `(' multiply defined.
+
+
+LaTeX Warning: Label `(' multiply defined.
+
+)
 \openout1 = `PA_documentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -415,8 +425,7 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 \AtBeginShipoutBox=\box35
-
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count138
 \scratchdimen=\dimen150
@@ -485,107 +494,107 @@ Chapter 1.
 Chapter 2.
 [2
 
-] (./PA_documentation.toc)
+] (./PA_documentation.toc [3
+
+])
 \tf@toc=\write5
 \openout5 = `PA_documentation.toc'.
 
- [3
-
-]
+ [4]
 Chapter 3.
-[4
-
-]
-Chapter 4.
 [5
 
 ]
-Chapter 5.
+Chapter 4.
 [6
 
 ]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 79--80
+Chapter 5.
+[7
+
+]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 111--112
 [][] 
  []
 
-[7] [8] [9]
+[8] [9] [10]
 Chapter 6.
-<Images/animation_sad.png, id=43, 589.20125pt x 421.575pt>
+<Images/animation_sad.png, id=50, 589.20125pt x 421.575pt>
 File: Images/animation_sad.png Graphic file (type png)
 
 <use Images/animation_sad.png>
-Package pdftex.def Info: Images/animation_sad.png used on input line 148.
+Package pdftex.def Info: Images/animation_sad.png used on input line 180.
 (pdftex.def)             Requested size: 353.52347pt x 252.94695pt.
- [10
+ [11
 
 ]
-<Images/animation_hypotenuse.png, id=48, 584.1825pt x 433.62pt>
+<Images/animation_hypotenuse.png, id=55, 584.1825pt x 433.62pt>
 File: Images/animation_hypotenuse.png Graphic file (type png)
 
 <use Images/animation_hypotenuse.png>
-Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 161
+Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 193
 .
 (pdftex.def)             Requested size: 350.51219pt x 260.17401pt.
- [11 <./Images/animation_sad.png>]
-[12 <./Images/animation_hypotenuse.png>]
-<Images/motion_vectors.png, id=58, 618.31pt x 617.30624pt>
+ [12 <./Images/animation_sad.png>]
+[13 <./Images/animation_hypotenuse.png>]
+<Images/motion_vectors.png, id=65, 618.31pt x 617.30624pt>
 File: Images/motion_vectors.png Graphic file (type png)
 
 <use Images/motion_vectors.png>
-Package pdftex.def Info: Images/motion_vectors.png used on input line 177.
+Package pdftex.def Info: Images/motion_vectors.png used on input line 209.
 (pdftex.def)             Requested size: 247.31961pt x 246.91812pt.
 
-<Images/optical_flow_basic1.jpg, id=59, 438.63875pt x 194.7275pt>
+<Images/optical_flow_basic1.jpg, id=66, 438.63875pt x 194.7275pt>
 File: Images/optical_flow_basic1.jpg Graphic file (type jpg)
 
 <use Images/optical_flow_basic1.jpg>
-Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 190.
+Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 222.
 
 (pdftex.def)             Requested size: 241.25204pt x 107.10043pt.
- [13 <./Images/motion_vectors.png> <./Images/optical_flow_basic1.jpg>] [14]
+ [14 <./Images/motion_vectors.png> <./Images/optical_flow_basic1.jpg>] [15]
 Chapter 7.
-[15
-
-]
-Chapter 8.
 [16
 
 ]
-Chapter 9.
+Chapter 8.
 [17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
-[]\T1/cmr/m/n/12 http://www.chronoskop.com/index.php/chronoskop-
- []
-
+Chapter 9.
 [18
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 252.
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+[]\T1/cmr/m/n/12 http://www.chronoskop.com/index.php/chronoskop-
+ []
+
+[19
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 284.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 252.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
 
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[19] (./PA_documentation.aux)
+[20] (./PA_documentation.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7444 strings out of 493089
- 106847 string characters out of 6134842
- 226998 words of memory out of 5000000
+ 7448 strings out of 493089
+ 106867 string characters out of 6134842
+ 228087 words of memory out of 5000000
  10752 multiletter control sequences out of 15000+600000
- 15360 words of font info for 40 fonts, out of 8000000 for 9000
+ 16613 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,10n,39p,1825b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -596,12 +605,16 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on PA_documentation.pdf (20 pages, 698888 bytes).
+texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
+Output written on PA_documentation.pdf (21 pages, 746194 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
