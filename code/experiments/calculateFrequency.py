@@ -4,58 +4,57 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import argrelmin
 
-timestamps = np.loadtxt("differents_time_records/10min/timestamps.txt")
-xySad = np.load("differents_time_records/10min/myTest1.npy")
+timestampsNotCleared = np.loadtxt("differents_time_records/10min/timestamps_black_white.txt")
+xySad = np.load("differents_time_records/10min/motion_vectors_black_white.npy")
 x = np.empty(xySad.shape[0])
 y = np.empty(xySad.shape[0])
-sad = np.empty(xySad.shape[0])
+timestamps = np.empty(xySad.shape[0])
 counter = 0
-counterxy = 0
 index = 0
 
-#==============================================================================
-# for value in range(xySad.shape[0]):
-#     x[index] = np.sum(abs(xySad[value]["x"]))
-#     y[index] = np.sum(abs(xySad[value]["y"]))
-#     sad[index] = np.sum(xySad[value]["sad"])
-#     index = index + 1;
-#   
-#==============================================================================
 for value in range(xySad.shape[0]):
-     x[index] = abs(xySad[value][0])
-     y[index] = abs(xySad[value][1])
-     sad[index] = xySad[value][2]
-     index = index + 1;
+    if xySad[value][0] != 0 and xySad[value][1]!= 0 and xySad[value][2] != 0:
+         x[index] = abs(xySad[value][0])
+         y[index] = abs(xySad[value][1])
+         timestamps[index] = timestampsNotCleared[value]
+         index = index + 1;
 
+x = np.trim_zeros(x)
+y = np.trim_zeros(y)
+timestamps = np.trim_zeros(timestamps)
 xmin = argrelmin(x)[0]
 ymin = argrelmin(y)[0]
-sadmin = argrelmin(sad)[0]
+
 firsttimestamp = 0
 lasttimestamp = 0
 
-for index in sadmin:
-    if x[index] != 0 and y[index]!= 0 and sad[index] != 0:
-        if sad[index] < 190000:
-            counter += 1
-            
-for index in xmin:
-    if x[index] != 0 and y[index]!= 0 and sad[index] != 0:
-        if x[index] < 650 and y[index] < 650:
-            counterxy += 1
-            if firsttimestamp == 0:
-                firsttimestamp = timestamps[ index ]
-            lasttimestamp = timestamps[ index ]    
+          
+for min_index in xmin:
+    y_check = 0
+    check_min_in_ymin = False
+    if np.argwhere(ymin == min_index).size != 0:
+        check_min_in_ymin = True
+        y_check = y[min_index]
+    elif np.argwhere(ymin == (min_index + 1)).size != 0:
+        check_min_in_ymin = True
+        y_check = y[min_index+1]
+    elif np.argwhere(ymin == (min_index -1)).size != 0:
+        check_min_in_ymin = True
+        y_check = y[min_index-1]
+    if x[min_index] < 1500 and check_min_in_ymin and y_check < 1500:
+        counter += 1
+        if firsttimestamp == 0:
+            firsttimestamp = timestamps[ min_index ]
+        lasttimestamp = timestamps[ min_index ] 
    
 print(counter)
-print(counterxy)
 
 duration = ( lasttimestamp - firsttimestamp - 1 ) / 1000 / 1000
 print(duration)
 
-frequencySAD = 1 / (duration / counter * 2)
-frequencyXY = 1 / (duration / counterxy * 2)
-print(frequencySAD)
+frequencyXY = 1 / (duration / counter * 2)
 print(frequencyXY)
+
 
 plt.plot(timestamps, x, 'b-', label='sum of x-factor of motion per frame')
 plt.plot(timestamps, y, 'r-', label='sum of y-factor of motion per frame')
