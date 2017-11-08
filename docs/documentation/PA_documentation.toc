@@ -25,7 +25,7 @@
 \contentsline {chapter}{\numberline {7}Calculation of the frequency}{16}
 \contentsline {section}{\numberline {7.1}Implementation of the algorithm}{16}
 \contentsline {chapter}{\numberline {8}Results}{17}
+\contentsline {section}{\numberline {8.1}Measurements}{17}
+\contentsline {section}{\numberline {8.2}Evaluation}{17}
 \contentsline {chapter}{\numberline {9}Appendices}{18}
-\contentsline {section}{\numberline {9.1}Measurements}{18}
-\contentsline {section}{\numberline {9.2}Evaluation}{18}
-\contentsline {section}{\numberline {9.3}Illustration directory}{20}
+\contentsline {section}{\numberline {9.1}Illustration directory}{20}
