@@ -48,6 +48,9 @@ for min_index in xmin:
         lasttimestamp = timestamps[ min_index ] 
    
 print(counter)
+print(timestamps.size)
+x.tofile("differents_time_records/10sec/2_record/x.txt", sep="\n")
+xmin.tofile("differents_time_records/10sec/2_record/xmin.txt", sep="\n")
 
 duration = ( lasttimestamp - firsttimestamp - 1 ) / 1000 / 1000
 print(duration)
@@ -58,7 +61,7 @@ print(frequencyXY)
 
 plt.plot(timestamps, x, 'b-', label='sum of x-factor of motion per frame')
 plt.plot(timestamps, y, 'r-', label='sum of y-factor of motion per frame')
-
+ 
 plt.grid(b=True, which='both', color='0.65',linestyle='-')
 plt.xlabel('x')
 plt.ylabel('y')
