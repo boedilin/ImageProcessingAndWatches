@@ -4,6 +4,8 @@
 \usepackage{pdfpages}
 \usepackage[toc]{glossaries}
 \usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
 
 \makeglossaries
 \newglossaryentry{mmal}
@@ -135,13 +137,14 @@ n* = 2f*3600
   f = \frac{n*}{7200}
  \end{displaymath}
 
+\chapter {Experimental approaches}
 
-\section {Possible Technologies}
+\section {Evaluation of possible technologies}
 \subsection{Frame analysis versus given GPU motion vectors}
 One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
 Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
 
-\subsubsection{Frame analysis via OpenCV}
+\subsection{Frame analysis via OpenCV}
 With the library OpenCV it is possible to determine the optical flow of an image sequence. 
 
 The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
@@ -154,7 +157,7 @@ The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. T
 
 One characteristic of this method is that it does not provide a dense flow, i. e. the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
 
-\subsubsection{Motion vectors from high level library picamera}
+\subsection{Motion vectors from high level library picamera}
 The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. (2) 
 
 The sum of absolute differences is a positive number resulting from the formation of the difference between two digital images. It serves as a measure of the difference between two images.
@@ -163,9 +166,6 @@ The SAD is obtained by subtracting the color values of the images pixel by pixel
 
 The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
 
-\subsubsection{Motion vector data}
-
-\chapter {Experimental approaches}
 \section{Animation of motion vectors}
 After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
 With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
@@ -226,7 +226,7 @@ This experiment looked at the idea of the optical flux with the movement vectors
 
 \bigskip
 
-\section{Pi camera settings}
+\section{Picamera library}
 
 \section{Crude calculation of frequency}
 With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made.
@@ -251,6 +251,16 @@ Furthermore, the calculation of the frequency in the Python program has been fur
 \chapter{Results}
 
 \section{Measurements}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Positions & Greiner Compact 900 & 10 min & 20 min & 40 min & 80 min \\ \hline
+    up        & -13                 & X      & X      & X      & X      \\ \hline
+    right     & -30                 & X      & X      & X      & X      \\ \hline
+    down      & -20                 & X      & X      & X      & X      \\ \hline
+    left      & -14                 & X      & X      & X      & X      \\ \hline
+    \end{tabular}
+\end{table}
 
 \section{Evaluation}
 
