@@ -25,6 +25,6 @@
 \contentsline {section}{\numberline {7.1}Implementation of the algorithm}{16}{section.7.1}
 \contentsline {chapter}{\numberline {8}Results}{17}{chapter.8}
 \contentsline {section}{\numberline {8.1}Measurements}{17}{section.8.1}
-\contentsline {section}{\numberline {8.2}Evaluation}{17}{section.8.2}
-\contentsline {chapter}{\numberline {9}Appendices}{18}{chapter.9}
-\contentsline {section}{\numberline {9.1}Illustration directory}{20}{section.9.1}
+\contentsline {section}{\numberline {8.2}Evaluation}{18}{section.8.2}
+\contentsline {chapter}{\numberline {9}Appendices}{19}{chapter.9}
+\contentsline {section}{\numberline {9.1}Illustration directory}{21}{section.9.1}

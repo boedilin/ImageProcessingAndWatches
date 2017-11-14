@@ -150,6 +150,10 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
 OUTPUT PA_documentation.glo
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
@@ -222,6 +226,12 @@ INPUT ./Images/motion_vectors.png
 INPUT Images/optical_flow_basic1.jpg
 INPUT ./Images/optical_flow_basic1.jpg
 INPUT ./Images/optical_flow_basic1.jpg
+INPUT Images/variations_per_day.png
+INPUT ./Images/variations_per_day.png
+INPUT ./Images/variations_per_day.png
+INPUT Images/smallest_variation.png
+INPUT ./Images/smallest_variation.png
+INPUT ./Images/smallest_variation.png
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 INPUT PA_documentation.aux

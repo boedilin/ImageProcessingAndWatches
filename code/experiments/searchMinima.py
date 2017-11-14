@@ -14,9 +14,9 @@ step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 xysadValues = np.load("motion_vectors_10min_black_white.npy")
 xValues = xysadValues[:, 0]
 """
-directory = "different_position_records/down/10min"
-xValues = np.loadtxt("xValues.txt")
-timestamps = np.loadtxt("timestamps.txt")
+directory = "different_position_records/down/20min/"
+xValues = np.loadtxt(directory+"xValues.txt")
+timestamps = np.loadtxt(directory+"timestamps.txt")
 
 def is_minima_search_window_5(array, index):
     left_right_increase = 2
@@ -64,3 +64,4 @@ print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)
 print("number of found minimas", len(minimas))
 print("length of half period over all: ", duration_of_half_period_in_microsec)
+print("variation per day: ", ((duration_of_half_period_in_microsec/1000000*21600)-3600)*24)
