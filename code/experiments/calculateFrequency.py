@@ -4,21 +4,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import argrelmin
 
-timestampsNotCleared = np.loadtxt("differents_time_records/20min/timestamps_black_white.txt")
-xySad = np.load("differents_time_records/20min/motion_vectors_black_white.npy")
-x = np.empty(xySad.shape[0])
-y = np.empty(xySad.shape[0])
-timestamps = np.empty(xySad.shape[0])
+#timestampsNotCleared = np.loadtxt("different_position_records/down/10min/timestamps_10min_black_white.txt")
+#xySad = np.load("different_position_records/down/10min/motion_vectors_10min_black_white.npy")
+timestamps = np.loadtxt("different_position_records/down/80min/timestamps.txt")
+x = np.loadtxt("different_position_records/down/80min/xValues.txt")
+y = np.loadtxt("different_position_records/down/80min/yValues.txt")
+#x = np.empty(xySad.shape[0])
+#y = np.empty(xySad.shape[0])
+#timestamps = np.empty(xySad.shape[0])
 counter = 0
 index = 0
-
+"""
 for value in range(xySad.shape[0]):
     if xySad[value][0] != 0 and xySad[value][1]!= 0 and xySad[value][2] != 0:
          x[index] = abs(xySad[value][0])
          y[index] = abs(xySad[value][1])
          timestamps[index] = timestampsNotCleared[value]
-         index = index + 1;
-
+         index = index + 1
+"""
 x = np.trim_zeros(x)
 y = np.trim_zeros(y)
 timestamps = np.trim_zeros(timestamps)

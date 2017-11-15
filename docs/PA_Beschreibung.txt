@@ -1,0 +1,6 @@
+Die heutige Uhrentechnik verlangt von Messgeräten die unterschiedlichsten Messungen und Analysen an praktisch allen Uhrentypen sehr präzise und zuverlässig vorzunehmen.
+Mechanische Uhren müssen in der Produktion und im Service auf ihre Gangabweichung überprüft werden.
+Es gibt verschiedene Techniken um diese Gangabweichung zu messen; Einerseits akustisch und optisch oder nur akustisch.
+Das Ziel dieser Arbeit ist mit günstigen und einfachen Mitteln ein handliches Gerät zu entwickeln, das optisch die Gangabweichung messen kann.
+Um dies umzusetzen, wird auf eine bestehende Kamera, welche aus dem Single-Board Computer Raspberry Pi und der dazugehörigen Kamera von Raspberry Pi besteht, zurückgegriffen.
+Mittels Bildverarbeitung soll in dieser PA eine Messung und Analyse der Gangabweichung mechanischer Uhren gemacht werden.
