@@ -83,7 +83,7 @@ Linda Helen \textsc{Boedi}  Valentin \textsc{Bossi} % Your name
 \chapter{Fundamentals}
 \section {Competitor Analysis}
 \subsection{Optical versus acoustical measurement}
-To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback.
+To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
 
 \begin{table}
  \centering
@@ -117,14 +117,35 @@ The optical metering is done using a laser and lighting, a camera helps to adjus
 \begin{tabularx}{\textwidth}{>{\bfseries}lX}
 Measurement gear deviation & \\\toprule
 scope & +/- 999.9 s/d \\\midrule
-resolution & 0.1 s/d\\\bottomrule
+resolution & 0.1 s/d\\\midrule
+price & CHF 10450.-\\\bottomrule
 \end{tabularx}
 
 \subsubsection{Lepsi - WatchScope/WatchAnalyzer}
-The WatchScope and WatchAnalyzer by Lepsi are mostly for enthusiasts and not really for the manufacturing. Both devices only work with acoustical input. All data can be accessed with the smartphone. The prices of their product are CHF 369.-, resp. CHF 929.-
+The WatchScope and WatchAnalyzer from Lepsi are especially for lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input, with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can easily measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.00, resp. CHF 929.-
+
+\bigskip
+
+\begin{tabularx}{\textwidth}{>{\bfseries}lX}
+Measurement gear deviation & \\\toprule
+scope & +/- 1000 s/d \\\midrule
+resolution & 0.1 s/d\\\midrule
+price & CHF 369.-, resp. CHF 929.-\\\bottomrule
+\end{tabularx}
+
 
 \subsubsection{Greiner Vibrograf - Compact 900}
 The Compact 900 measures only the beat noises of the balance wheel. The price is CHF 4070.-
+
+\bigskip
+
+\begin{tabularx}{\textwidth}{>{\bfseries}lX}
+Measurement gear deviation & \\\toprule
+scope & +/- 1000 s/d \\\midrule
+resolution & 0.1 s/d\\\midrule
+price & CHF 4070.-\\\bottomrule
+\end{tabularx}
+
 
 \section{Reference measurement and test watch}
 At first some general information to the test watch, which was used.
@@ -135,6 +156,7 @@ In order to obtain an exact reference value of the frequency of the balance whee
 
 In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
 
+\subsection{Number of impacts}
 Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows: 
 
 \begin{displaymath}
@@ -144,6 +166,25 @@ n* = 2f*3600
  \begin{displaymath}
   f = \frac{n*}{7200}
  \end{displaymath}
+ 
+\bigskip
+
+ \begin{table}
+ \centering
+\begin{tabularx}{\linewidth}{ |L|L|L|L|L|  }
+ \hline
+ \textbf{Number of impacts} [1/h] &  \textbf{Impact duration} [s]& \textbf{Oscillation number}  [1/h]& \textbf{Period duration} [s]& \textbf{Frequency} [Hz]\\\hline
+  18'000   &  0.200  & 9'000 & 0.400 & 2.50\\ \hline
+ 19'800 &  0.182 & 9'900 & 0.364 & 2.74\\  \hline
+ 21'600 &  0.166 & 10'800 & 0.333 & 3.00\\  \hline
+28'800 &  0.125 & 14'400 & 0.250 & 4.00\\  \hline
+36'000 &  0.100 & 18'000 & 0.200 & 5.00\\  \hline
+\end{tabularx}
+   {\bf Illustration 1:}  Number of strokes, period duration and frequency of the balance of automatic wristwatches
+    \end{table}
+ 
+ 
+\section {Picamera settings}
 
 \chapter {Experimental approaches}
 
@@ -185,7 +226,7 @@ In a first step all SAD values were animated with colors to get a better underst
 
 \noindent
 \begin{center}
-\includegraphics[scale=0.6]{Images/animation_sad.png}
+\includegraphics[scale=0.4]{Images/animation_sad.png}
 
 {\bf Illustration 1:}  Animation of the SAD values, the lighter the color the higher the value of the SAD
 \end{center}
@@ -198,7 +239,7 @@ Further the x and y vector were analyzed and also animated. But as those vectors
 
 \noindent
 \begin{center}
-\includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
+\includegraphics[scale=0.4]{Images/animation_hypotenuse.png}
 
 {\bf Illustration 2:}  Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse
 \end{center}
@@ -214,7 +255,7 @@ The result is shown in Figure 3.
 \bigskip
 \noindent
 \begin{center}
-\includegraphics[scale=0.4]{Images/motion_vectors.png}
+\includegraphics[scale=0.3]{Images/motion_vectors.png}
 
 {\bf Illustration 3:}  Motion vectors drawn in one frame
 \end{center}
@@ -227,7 +268,7 @@ This experiment looked at the idea of the optical flux with the movement vectors
 
 \noindent
 \begin{center}
-\includegraphics[scale=0.55]{Images/optical_flow_basic1.jpg}
+\includegraphics[scale=0.3]{Images/optical_flow_basic1.jpg}
 
 {\bf Illustration 4:}  It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
 \end{center}
@@ -237,10 +278,24 @@ This experiment looked at the idea of the optical flux with the movement vectors
 \section{Picamera library}
 
 \section{Crude calculation of frequency}
-With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made.
-All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance will not move so that it is at a standstill.
-For small values, the time stamp is registered and the difference to the next standstill is calculated.
-Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
+With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
+In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the gear deviation. 
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.4]{Images/excel_sheet_numbers.png}
+
+{\bf Illustration 4:}  Excel sheet with summed x-, y-values, timestamps and calculated frequency\end{center}
+
+\bigskip
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.3]{Images/excel_sheet_graph.png}
+
+{\bf Illustration 4:} Illustration of summed x-, y-values over time\end{center}
+
+\bigskip
  
 \chapter{Calculation of the frequency}
 
@@ -312,6 +367,8 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 \begin{center}    
 {\bf Table 4: variations per day in seconds based on smallest variation} 
 \end{center}
+
+\section{Calculation of gang deviation from frequency}
 
 \section{Evaluation}
 
