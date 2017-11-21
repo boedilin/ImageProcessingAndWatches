@@ -3,6 +3,37 @@
 \usepackage{inputenc}
 \usepackage{pdfpages}
 \usepackage[toc]{glossaries}
+\makeglossaries
+\newglossaryentry{Rolling shutter}
+{
+  name=Rolling shutter,
+  description={When the camera needs to capture an image, it reads out pixels from the sensor a row at a time rather than capturing all pixel values at once}
+}
+
+\newglossaryentry{Balance wheel}
+{
+  name=Balance wheel,
+  description={is a wheel that regulates or stabilizes the motion of a mechanical watch and is responsible for the clock to run precisely}
+}
+
+\newglossaryentry{SAD}
+{
+  name=SAD,
+  description={(sum of absolute differences) is a positive number, which results from the formation of the difference between two digital images. It serves as a measure of the difference between two images and is used in image processing and pattern recognition. It is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount}
+}
+
+\newglossaryentry{MMAL}
+{
+  name=MMAL,
+  description={(Multimedia Abstraction Layer) is a framework designed by Broadcom  to provide a host-side, simple and relatively low-level interface to multimedia components running on the Videocore IV GPU on the Raspberry Pi}
+}
+
+\newglossaryentry{Optical flow}
+{
+  name=Optical flow,
+  description={The optical flow of an image sequence is the vector field of the velocity projected into the image from visible points of the object in the reference system of the imaging optics}
+}
+
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{hyperref}
@@ -13,15 +44,6 @@
     filecolor=black,
     linkcolor=black,
     urlcolor=black
-}
-
-\makeglossaries
-\newglossaryentry{mmal}
-{
-  name=mmal,
-  description={is a programmable machine that receives input,
-               stores and manipulates data, and provides
-               output in a useful format}
 }
 
 \usepackage{tabularx}
@@ -146,6 +168,78 @@ resolution & 0.1 s/d\\\midrule
 price & CHF 4070.-\\\bottomrule
 \end{tabularx}
 
+\section{Pi camera module}
+
+The camera module of the Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
+
+However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry PIPi.
+
+This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but processing takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
+
+\bigskip
+
+\noindent
+\begin{center}
+\includegraphics[scale=0.6]{Images/camera_architecture.png}
+
+{\bf Illustration 10:}  Camera architecture
+\end{center}
+
+\bigskip
+
+The illustration above illustrates the processing flow of a frame, with the associated steps explained in the following section.
+
+\begin{enumerate}
+\item The camera's sensor is configured and continuously streams frame lines to the GPU.
+\item The GPU builds complete frame buffers from these lines and performs the post-processing of these buffers.
+\item Meanwhile, myscript. py makes a capture call with the picamera on the CPU.
+\item The Picamera library uses the MMAL API to meet this requirement.
+\item The MMAL API sends a message via VCHI requesting a frame capture.
+\item The GPU then initiates a DMA transmission of the next full frame from its RAM portion to the CPU portion.
+\item Finally, the GPU sends a message via VCHI that the capture is complete.
+\item This causes an MMAL thread to trigger a callback in the Picamera library, which in turn retrieves the frame.
+\item Finally, write picamera calls to the output object provided by myscript. py.
+\end{enumerate}
+
+\subsection{Exposure time}
+
+The camera sensor detects how many photons hit the sensor elements, because the more impact, the more they increase their counter values. The sensor can perform exactly two operations; reset a set of elements or read a set of elements.
+
+\subsubsection{Minimal exposure time}
+
+Reading out a series of elements takes a certain amount of time, thus there is a limit to the minimum exposure time. Assuming one has 500 lines on a sensor and reading each line takes at least 20ns, then it will take at least $500*20 \text{ns} = 10 \text{ms}$ to read a full screen. 
+
+\subsubsection{Maximum framerate}
+
+The frame rate is the number of frames the camera can capture per second. The exposure time determines the maximum number of images that can be taken in a given time. Assuming it takes 10ms to read a complete image, then no more than $\frac{1 \text{s} }{10 \text{ms}} = \frac{1\text{s}}{0.01\text{s}} = 100 $ images in one second. 
+
+\bigskip
+
+So it is valid: 
+\begin{displaymath}
+\frac{1\text{s}}{\text{min exposure time in s}} = \text{max framerate in
+fps.} 
+\end{displaymath}
+The lower the minimum exposure time, the higher the maximum frame rate and vice versa.
+
+\subsubsection{Maximum exposure time}
+Um die Belichtungszeit zu maximieren, muss die Framerate reduziert werden. 
+
+Es gilt :
+\begin{displaymath}
+\frac{1\text{s}}{\text{min framerate in fps}} = \text{max exposure time
+in s}
+\end{displaymath} 
+
+\subsection{Hardware limits}
+
+\begin{itemize}
+\item The maximum resolution for MJPEG recording is partially dependent on the GPU memory.
+\item The maximum horizontal resolution for the standard H264 recording is 1920 (this is a limitation of the H264 block in the GPU).
+\item The maximum frame rate of the camera depends on several factors. With overclocking 120fps can be achieved, but 90fps is the maximum supported frame rate.
+
+\end{itemize}
+
 
 \section{Reference measurement and test watch}
 At first some general information to the test watch, which was used.
@@ -185,6 +279,8 @@ n* = 2f*3600
  
  
 \section {Picamera settings}
+
+'sports'-mode reduces motion blur by preferentially increasing gain rather than exposure time (i.e. line read-out time).
 
 \chapter {Experimental approaches}
 
@@ -326,7 +422,7 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 
 \(\triangle t / s = f*2\)
 
-\((f*2*s2)-3600=deviation per hour\)
+\((f*2*s2)-3600=\text{deviation per hour}\)
 
 \begin{center}
     \includegraphics[scale=0.3]{Images/variations_per_day.png}
@@ -373,9 +469,8 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 \section{Evaluation}
 
 
-\pagebreak
-
-\chapter{Appendices}
+\glsaddall
+\printglossaries
 
 \begin{thebibliography}{9}
 \bigskip
@@ -395,12 +490,14 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 
 \pagebreak
 
-\section {Illustration directory}
+\listoffigures
 \bigskip
 
 \begin{itemize}
-\item Abbildung 1: Animation SAD values. Linda Boedi and Valentin Bossi
-\item Abbildung 2: Animation hypotenueses. Linda Boedi and Valentin Bossi
+\item Figure 1: Animation SAD values. Linda Boedi and Valentin Bossi
+\item Figure 2: Animation hypotenueses. Linda Boedi and Valentin Bossi
+\item Figure 10: Camera architecture. Readthedocs Picamera
 \end{itemize}
+
 
 \end{document}
