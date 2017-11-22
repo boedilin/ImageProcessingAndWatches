@@ -21,3 +21,4 @@ for index in range(len(array)):
 xValues.close()
 yValues.close()
 sadValues.close()
+timestamps.close()
