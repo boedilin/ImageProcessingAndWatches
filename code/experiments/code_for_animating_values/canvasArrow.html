@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <canvas id="myCanvas" width="640" height="640" style="border:1px solid #000000;">
+    </canvas>
+    <script>
+        var width = document.getElementById("myCanvas").width;
+        var height = document.getElementById("myCanvas").height;
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.lineWidth = 0.5;
+        ctx.moveTo(0, 0);
+        ctx.lineTo(100, 100);
+        ctx.stroke();
+    </script>
+    <script>
+        var drawPixelGrid = function () {
+            widthCounter = 1;
+            heighCounter = 1;
+            //draw verticals
+            while(width >= widthCounter){
+                ctx.moveTo(widthCounter, 0);
+                ctx.lineTo(widthCounter, height);
+                ctx.stroke();
+                widthCounter = widthCounter + 5;
+            }
+            //draw horizontals
+            while(height >= heighCounter){
+                ctx.moveTo(0,heighCounter);
+                ctx.lineTo(width, heighCounter);
+                ctx.stroke();
+                heighCounter = heighCounter + 5;
+            }
+        }
+    </script>
+    <script>
+        var drawBlockGrid = function () {
+
+        }
+    </script>
+    <script>
+            var drawArrow = function (x,y) {
+                ctx.fillRect(10,10,1,1); // fill in the pixel at (10,10) // make a point at this point
+                ctx.moveTo(0, 0);
+                ctx.lineTo(50, 100);
+                ctx.stroke();
+    
+            }
+
+            var getMiddleOfBlock = function(x,y){
+
+            }
+    </script>
+
+</body>
+
+</html>
