@@ -177,13 +177,15 @@ However, the sensor is configured via the registers with the number of lines to 
 This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but processing takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
 
 \bigskip
-
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.6]{Images/camera_architecture.png}
 
-{\bf Illustration 10:}  Camera architecture
-\end{center}
+\caption{Camera architecture. Readthedocs Picamera}
+\end{figure}
+
+
 
 \bigskip
 
@@ -319,26 +321,26 @@ The motion data object consists of multiple values; a signed 1-byte x vector, a 
 In a first step all SAD values were animated with colors to get a better understanding of how good the information they keep is and how as well as if they can be used to calculate the frequency of the movement of the balance wheel.
 
 \bigskip
-
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.4]{Images/animation_sad.png}
 
-{\bf Illustration 1:}  Animation of the SAD values, the lighter the color the higher the value of the SAD
-\end{center}
+\caption{Animation of the SAD values, the lighter the color the higher the value of the SAD}
+\end{figure}
 
 \bigskip
  
 Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and give incomplete information (WHY?), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
- 
- \bigskip
 
+\bigskip
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.4]{Images/animation_hypotenuse.png}
 
-{\bf Illustration 2:}  Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse
-\end{center}
+\caption{Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}
+\end{figure}
 
 \bigskip
 
@@ -348,13 +350,15 @@ Another experimental approach was displaying the motion vectors as arrows direct
 \subsection{Motion vectors visualized in a frame}
 Codecvisa was used to display the motion vectors of a frame.
 The result is shown in Figure 3.
+
 \bigskip
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.3]{Images/motion_vectors.png}
 
-{\bf Illustration 3:}  Motion vectors drawn in one frame
-\end{center}
+\caption{Motion vectors drawn in one frame}
+\end{figure}
 \bigskip
 
 Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
@@ -362,12 +366,15 @@ The hope was that a moving pixel could be followed and therefore the location of
 The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
 This experiment looked at the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer).
 
+\bigskip
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.3]{Images/optical_flow_basic1.jpg}
 
-{\bf Illustration 4:}  It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
-\end{center}
+\caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
+\end{figure}
+
 
 \bigskip
 
@@ -377,20 +384,25 @@ This experiment looked at the idea of the optical flux with the movement vectors
 With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
 In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the gear deviation. 
 
+\bigskip
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.4]{Images/excel_sheet_numbers.png}
 
-{\bf Illustration 4:}  Excel sheet with summed x-, y-values, timestamps and calculated frequency\end{center}
+\caption{Excel sheet with summed x-, y-values, timestamps and calculated frequency}
+\end{figure}
 
 \bigskip
 
+\bigskip
 \noindent
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.3]{Images/excel_sheet_graph.png}
 
-{\bf Illustration 4:} Illustration of summed x-, y-values over time\end{center}
-
+\caption{Illustration of summed x-, y-values over time}
+\end{figure}
 \bigskip
  
 \chapter{Calculation of the frequency}
@@ -424,11 +436,15 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 
 \((f*2*s2)-3600=\text{deviation per hour}\)
 
-\begin{center}
+\bigskip
+\noindent
+\begin{figure}
+\centering
     \includegraphics[scale=0.3]{Images/variations_per_day.png}
-    
-    {\bf Illustration 5:} Variation of different time and position recordings
-    \end{center}
+
+\caption{ Variation of different time and position recordings}
+\end{figure}    
+
 \begin{table}[H]
     \begin{tabular}{|l|l|l|l|l|l|}
     \hline
@@ -444,20 +460,22 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 \end{center}
 
 \bigskip
-
-\begin{center}
+\noindent
+\begin{figure}
+\centering
 \includegraphics[scale=0.3]{Images/smallest_variation.png}
 
-{\bf Illustration 6: Variation of different time and position recordings}
-\end{center}
+\caption{ Variation of different time and position recordings}
+\end{figure} 
+
 \begin{table}[H]
     \begin{tabular}{|l|l|l|l|l|l|}
     \hline
-    Positions & Greiner Compact 900 & 10 min & 20 min & 40 min & 80 min \\ \hline
-    up        & -13                 & -2.9     & -0.8     & -1.3      & -0.8      \\ \hline
-    right     & -30                 & -19      & -65.6    & -0.8      & -24.7      \\ \hline
-    down      & -20                 & -13.8    & -3.4     & -125.2    & -81.7      \\ \hline
-    left      & -14                 & -39.2	   & -39.2	  & -72.9	  & -2.9      \\ \hline
+    Positions & Wisio Scope & 10 min & 20 min & 40 min & 80 min \\ \hline
+    up        & -32                & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
+    right     & -60                 & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
+    down      & -43                 & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
+    left      & -29                & -87.0	   & -87.1	  & -87.1	  & -83.1      \\ \hline
     \end{tabular}
 \end{table}
 \begin{center}    
@@ -493,11 +511,6 @@ number of stillstands (s1), number of strokes per hour (s2) (21600):
 \listoffigures
 \bigskip
 
-\begin{itemize}
-\item Figure 1: Animation SAD values. Linda Boedi and Valentin Bossi
-\item Figure 2: Animation hypotenueses. Linda Boedi and Valentin Bossi
-\item Figure 10: Camera architecture. Readthedocs Picamera
-\end{itemize}
 
 
 \end{document}
