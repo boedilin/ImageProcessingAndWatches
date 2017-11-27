@@ -3,6 +3,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Camera architecture. Readthedocs Picamera}}{10}{figure.5.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Animation of the SAD values, the lighter the color the higher the value of the SAD}}{16}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{17}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Motion vectors drawn in one frame}}{18}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}}{18}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Excel sheet with summed x-, y-values, timestamps and calculated frequency}}{20}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Illustration of summed x-, y-values over time}}{20}{figure.6.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Variation of different time and position recordings}}{23}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Variation of different time and position recordings}}{24}{figure.8.2}
