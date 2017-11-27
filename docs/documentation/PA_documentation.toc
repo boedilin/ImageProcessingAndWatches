@@ -19,7 +19,6 @@
 \contentsline {subsection}{\numberline {5.2.2}Hardware limits}{12}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Reference measurement and test watch}{12}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Number of impacts}{12}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Picamera settings}{13}{section.5.4}
 \contentsline {chapter}{\numberline {6}Experimental approaches}{14}{chapter.6}
 \contentsline {section}{\numberline {6.1}Evaluation of possible technologies}{14}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Frame analysis versus given GPU motion vectors}{14}{subsection.6.1.1}
@@ -28,11 +27,13 @@
 \contentsline {section}{\numberline {6.2}Animation of motion vectors}{15}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Motion vectors visualized in a frame}{17}{subsection.6.2.1}
 \contentsline {section}{\numberline {6.3}Picamera library}{18}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Picamera settings}{18}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Crude calculation of frequency}{18}{section.6.4}
-\contentsline {chapter}{\numberline {7}Calculation of the frequency}{20}{chapter.7}
-\contentsline {section}{\numberline {7.1}Implementation of the algorithm}{20}{section.7.1}
-\contentsline {chapter}{\numberline {8}Results}{21}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurements}{21}{section.8.1}
-\contentsline {section}{\numberline {8.2}Calculation of gang deviation from frequency}{22}{section.8.2}
-\contentsline {section}{\numberline {8.3}Evaluation}{22}{section.8.3}
-\contentsline {chapter}{Glossary}{23}{section*.2}
+\contentsline {section}{\numberline {6.5}Verification of accuracy}{19}{section.6.5}
+\contentsline {chapter}{\numberline {7}Calculation of the frequency}{21}{chapter.7}
+\contentsline {section}{\numberline {7.1}Implementation of the algorithm}{21}{section.7.1}
+\contentsline {chapter}{\numberline {8}Results}{22}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measurements}{22}{section.8.1}
+\contentsline {section}{\numberline {8.2}Calculation of gang deviation from frequency}{23}{section.8.2}
+\contentsline {section}{\numberline {8.3}Evaluation}{23}{section.8.3}
+\contentsline {chapter}{Glossary}{24}{section*.2}
