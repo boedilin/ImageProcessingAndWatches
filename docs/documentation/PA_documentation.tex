@@ -16,6 +16,12 @@
       description={is a wheel that regulates or stabilizes the motion of a mechanical watch and is responsible for the clock to run precisely}
     }
     
+  \newglossaryentry{Time scale}
+    {
+      name=Time scale,
+      description={is used to measure the rate deviation of a mechanical watch in different positions}
+    }
+    
     \newglossaryentry{SAD}
     {
       name=SAD,
@@ -90,13 +96,24 @@
     
     \end{titlepage}
     
-    \chapter{Acknowledgement}
+    \pagenumbering{roman}
+    \chapter*{Acknowledgement}
+    \addcontentsline{toc}{chapter}{Acknowledgement}
     
-    \chapter{Affidavit}
-    
+    \chapter*{Affidavit}
+     \addcontentsline{toc}{chapter}{Affidavit}
+     
+         
+    \chapter*{Abstract}
+     \addcontentsline{toc}{chapter}{Abstract}
+
+\pagebreak
     \setcounter{secnumdepth}{5} 
     \setcounter{tocdepth}{5} 
+    \pagenumbering{gobble}
     \tableofcontents
+    \pagebreak
+    \pagenumbering{arabic}
     
     \chapter{Conceptual formulation}
     
@@ -180,7 +197,7 @@
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.6]{Images/camera_architecture.png}
+    \includegraphics[scale=0.7]{Images/camera_architecture.png}
     
     \caption{Camera architecture. Readthedocs Picamera}
     \end{figure}
@@ -243,14 +260,29 @@
     \end{itemize}
     
     
-    \section{Reference measurement and test watch}
-    At first some general information to the test watch, which was used.
+    \section{Mechanical watches}  
+    \subsection{Operation of a mechanical watch}  
+    If a mechanical watch is wound up over the crown, the locking wheel (3) is moved by the winding shaft (1) and winding wheels (2). It turns the spring core (4) and pulls the tension spring in the mainspring barrel (5). The spring transmits the stored energy via the external toothed mainspring barrel (5) to the minute wheel (6), third wheel (7) and fourth wheel (8).
+    \newline
+    \noindent
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{Images/Funktionsweise-Uhrwerk.jpg}
     
-    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. (5)
+    \caption{Operation of a mechanical watch}
+    \end{figure}
+The so-called escapement ensures that the gear train runs at the correct speed. The fourth wheel (8) drives the escapement wheel (9); it gives an impulse to the armature (10) which it passes on to the balance (11), after which the armature, which moves back and forth like a seesaw, blocks the escapement wheel. The balance wheel rotates, but is then retracted by the hairspring (12). It moves the armature back, which now releases the armature wheel again a little bit, which gives the armature with its rotation the next impulse. Due to the sudden braking and acceleration of the escapement wheel, the second hand of a mechanical watch also moves stepwise. [6]
+    \newline
+    \noindent
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{Images/Hemmung-Teil1.jpg}
     
-    In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, an acoustic measurement was carried out with a professional measuring device, the Greiner Vibrograf - Compact 900, and the rate deviation was determined. 
-    
-    In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
+    \caption{Escapement and balance wheel}
+    \end{figure}
+\bigskip
+The balance wheel is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
+The occurring error, if the balance wheel does not run accurate, is called gang deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
     
     \subsection{Number of impacts}
     Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows: 
@@ -263,7 +295,6 @@
       f = \frac{n*}{7200}
      \end{displaymath}
      
-    \bigskip
     
      \begin{table}
      \centering
@@ -276,8 +307,18 @@
     28'800 &  0.125 & 14'400 & 0.250 & 4.00\\  \hline
     36'000 &  0.100 & 18'000 & 0.200 & 5.00\\  \hline
     \end{tabularx}
-       {\bf Illustration 1:}  Number of strokes, period duration and frequency of the balance of automatic wristwatches
+       \caption{  Number of strokes, period duration and frequency of the balance of automatic wristwatches}
         \end{table}
+        
+        \subsection{Test watch}
+    At first some general information to the test watch, which was used.
+    
+    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. (5)
+    
+    In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, an acoustic measurement was carried out with a professional measuring device, the Greiner Vibrograf - Compact 900, and the rate deviation was determined. 
+    
+    In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
+
      
     
     \chapter {Experimental approaches}
@@ -316,29 +357,23 @@
     
     In a first step all SAD values were animated with colors to get a better understanding of how good the information they keep is and how as well as if they can be used to calculate the frequency of the movement of the balance wheel.
     
-    \bigskip
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{Images/animation_sad.png}
+    \includegraphics[scale=0.6]{Images/animation_sad.png}
     
     \caption{Animation of the SAD values, the lighter the color the higher the value of the SAD}
     \end{figure}
-    
-    \bigskip
      
-    Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and give incomplete information (WHY?), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
+    Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
     
-    \bigskip
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{Images/animation_hypotenuse.png}
+    \includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
     
     \caption{Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}
     \end{figure}
-    
-    \bigskip
     
     Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
     \pagebreak
@@ -346,33 +381,27 @@
     \subsection{Motion vectors visualized in a frame}
     Codecvisa was used to display the motion vectors of a frame.
     The result is shown in Figure 3.
-    
-    \bigskip
+ 
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.3]{Images/motion_vectors.png}
+    \includegraphics[scale=0.5]{Images/motion_vectors.png}
     
     \caption{Motion vectors drawn in one frame}
     \end{figure}
-    \bigskip
     
     Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
     The hope was that a moving pixel could be followed and therefore the location of the pixel would always have been known.
     The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
     This experiment looked at the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer).
     
-    \bigskip
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.3]{Images/optical_flow_basic1.jpg}
+    \includegraphics[scale=0.7]{Images/optical_flow_basic1.jpg}
     
     \caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
     \end{figure}
-    
-    
-    \bigskip
     
     \newpage
     
@@ -389,35 +418,33 @@
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
     In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the gear deviation. 
     
-    \bigskip
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{Images/excel_sheet_numbers.png}
+    \includegraphics[scale=0.7]{Images/excel_sheet_numbers.png}
     
     \caption{Excel sheet with summed x-, y-values, timestamps and calculated frequency}
     \end{figure}
-    
-    \bigskip
-    
-    \bigskip
+
     \noindent
     \begin{figure}
     \centering
-    \includegraphics[scale=0.3]{Images/excel_sheet_graph.png}
+    \includegraphics[scale=0.4]{Images/excel_sheet_graph.png}
     
-    \caption{Illustration of summed x-, y-values over time}
+    \caption{Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}
     \end{figure}
-    \bigskip
+    
+    \pagebreak
 
     \section{Verification of accuracy}
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
-    
-    \begin{table}[H]
-        \begin{tabular}{|l|l|l|l|l|l|}
+   
+   \begin{table}
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
-        Duration & run 1 & run 2 & run 3 & run 4 & run 5 \\ \hline
+        \textbf{Duration} &  \textbf{run 1} &  \textbf{run 2} &  \textbf{run 3} &  \textbf{run 4} &  \textbf{run 5} \\ \hline
         10 sec        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
         20 sec     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
         40 sec      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
@@ -430,12 +457,14 @@
         1800 sec      & 166652.8                 & 166668.2	   & 166669.2	  & 166668.2	  & 166669.2      \\ \hline
         2100 sec      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
         2400 sec      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
-    \end{tabular}
+    \end{tabularx}
+     \caption{}
     \end{table}
      
     \chapter{Calculation of the frequency}
     
-    \section{Implementation of the algorithm}
+    \section{Implementation of the algorithms}
+    \subsection{Calculation of the frequency by counting minima with upper limit}
     
     In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program. 
     
@@ -446,16 +475,25 @@
      \begin{displaymath}
       f = \frac{1}{T}
      \end{displaymath}
+     
+  \subsection{Calculation of the frequency by counting minima with stepsize}
     
     \chapter{Results}
     
     \section{Measurements}
-    This measurements were taken in different positions of the watch with different length
-    of recordings. Each position were recorded in 10, 20, 40 and 80 minutes.
-    
-    Figure 5 and Table 3 shows the deviation per day based on the following calculation:
-    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted
-    number of stillstands (s1), number of strokes per hour (s2) (21600):
+    Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Wisio Scope meter. Calculations using the Greiner Compact diverge greatly from those taken with the Wisio Scope. In the next section, this divergence and its causes will be discussed in more detail. 
+\bigskip
+\newline
+As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Wisio Scope time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
+The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
+\bigskip
+\newline
+    All measurements were taken in different positions of the watch with different length
+    of recordings whereas each position was recorded in 10, 20, 40 and 80 minutes.
+\bigskip
+\newline
+    Figure 5 and Table 3 show the deviation per day based on the following calculation:
+    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2) (21600):
     \bigskip
     
     \(t2-t1 = \triangle t\)
@@ -464,51 +502,32 @@
     
     \((f*2*s2)-3600=\text{deviation per hour}\)
     
-    \bigskip
     \noindent
     \begin{figure}
-    \centering
-        \includegraphics[scale=0.3]{Images/variations_per_day.png}
+        \includegraphics[scale=0.5]{Images/variations_per_day.png}
     
     \caption{ Variation of different time and position recordings}
     \end{figure}    
     
-    \begin{table}[H]
-        \begin{tabular}{|l|l|l|l|l|l|}
+    \begin{table}
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|L|L|  }
         \hline
-        Positions & Greiner Compact 900 & 10 min & 20 min & 40 min & 80 min \\ \hline
-        up        & -13                 & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
-        right     & -30                 & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
-        down      & -20                 & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
-        left      & -14                 & -87.0	   & -87.1	  & -87.1	  & -83.1      \\ \hline
-        \end{tabular}
+        {\fontsize{10}{12}\selectfont \textbf{Positions}} &{\fontsize{9}{10}\selectfont \textbf{Greiner Compact 900}} & {\fontsize{10}{12}\selectfont \textbf{Wisio Scope}} & {\fontsize{10}{12}\selectfont \textbf{10 min}} &  {\fontsize{10}{12}\selectfont \textbf{20 min}} &  {\fontsize{10}{12}\selectfont \textbf{40 min}} & {\fontsize{10}{12}\selectfont  \textbf{80 min}} \\ \hline
+        up        & -13                 &      -31  & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
+        right     & -30                 &      -64  & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
+        down      & -20               &  -46  & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
+        left      & -14                & -34 & -87.0	   & -87.1	  & -87.1	  & -83.1      \\ \hline
+        \end{tabularx}
+          \caption{ variations per day in seconds} 
     \end{table}
-    \begin{center}    
-    {\bf Table 3: variations per day in seconds} 
-    \end{center}
     
-    \bigskip
     \noindent
     \begin{figure}
-    \centering
-    \includegraphics[scale=0.3]{Images/smallest_variation.png}
+    \includegraphics[scale=0.5]{Images/smallest_variation.png}
     
     \caption{ Variation of different time and position recordings}
     \end{figure} 
-    
-    \begin{table}[H]
-        \begin{tabular}{|l|l|l|l|l|l|}
-        \hline
-        Positions & Wisio Scope & 10 min & 20 min & 40 min & 80 min \\ \hline
-        up        & -32                & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
-        right     & -60                 & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
-        down      & -43                 & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
-        left      & -29                & -87.0	   & -87.1	  & -87.1	  & -83.1      \\ \hline
-        \end{tabular}
-    \end{table}
-    \begin{center}    
-    {\bf Table 4: variations per day in seconds based on smallest variation} 
-    \end{center}
     
     \section{Calculation of gang deviation from frequency}
     
@@ -532,6 +551,8 @@
     (4) Wikipedia: Schlagzahl
     \bibitem[Caliber Test watch]
     (5) http://watchbase.com/eta/caliber/c01-211
+    \bibitem[Das mechanische Uhrwerk]
+    (6) https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
     \end{thebibliography}
     
     \pagebreak

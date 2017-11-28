@@ -1,39 +1,44 @@
-\BOOKMARK [0][-]{chapter.1}{Acknowledgement}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Affidavit}{}% 2
-\BOOKMARK [0][-]{chapter.3}{Conceptual formulation}{}% 3
-\BOOKMARK [0][-]{chapter.4}{Motivation}{}% 4
-\BOOKMARK [0][-]{chapter.5}{Fundamentals}{}% 5
-\BOOKMARK [1][-]{section.5.1}{Competitor Analysis}{chapter.5}% 6
-\BOOKMARK [2][-]{subsection.5.1.1}{Optical versus acoustical measurement}{section.5.1}% 7
-\BOOKMARK [3][-]{subsubsection.5.1.1.1}{Acoustical measurement}{subsection.5.1.1}% 8
-\BOOKMARK [3][-]{subsubsection.5.1.1.2}{Optical measurement}{subsection.5.1.1}% 9
-\BOOKMARK [2][-]{subsection.5.1.2}{Companies}{section.5.1}% 10
-\BOOKMARK [3][-]{subsubsection.5.1.2.1}{Witschi - WisioScope S}{subsection.5.1.2}% 11
-\BOOKMARK [3][-]{subsubsection.5.1.2.2}{Lepsi - WatchScope/WatchAnalyzer}{subsection.5.1.2}% 12
-\BOOKMARK [3][-]{subsubsection.5.1.2.3}{Greiner Vibrograf - Compact 900}{subsection.5.1.2}% 13
-\BOOKMARK [1][-]{section.5.2}{Pi camera module}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.2.1}{Exposure time}{section.5.2}% 15
-\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Minimal exposure time}{subsection.5.2.1}% 16
-\BOOKMARK [3][-]{subsubsection.5.2.1.2}{Maximum framerate}{subsection.5.2.1}% 17
-\BOOKMARK [3][-]{subsubsection.5.2.1.3}{Maximum exposure time}{subsection.5.2.1}% 18
-\BOOKMARK [2][-]{subsection.5.2.2}{Hardware limits}{section.5.2}% 19
-\BOOKMARK [1][-]{section.5.3}{Reference measurement and test watch}{chapter.5}% 20
-\BOOKMARK [2][-]{subsection.5.3.1}{Number of impacts}{section.5.3}% 21
-\BOOKMARK [0][-]{chapter.6}{Experimental approaches}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Evaluation of possible technologies}{chapter.6}% 23
-\BOOKMARK [2][-]{subsection.6.1.1}{Frame analysis versus given GPU motion vectors}{section.6.1}% 24
-\BOOKMARK [2][-]{subsection.6.1.2}{Frame analysis via OpenCV}{section.6.1}% 25
-\BOOKMARK [2][-]{subsection.6.1.3}{Motion vectors from high level library picamera}{section.6.1}% 26
-\BOOKMARK [1][-]{section.6.2}{Animation of motion vectors}{chapter.6}% 27
-\BOOKMARK [2][-]{subsection.6.2.1}{Motion vectors visualized in a frame}{section.6.2}% 28
-\BOOKMARK [1][-]{section.6.3}{Picamera library}{chapter.6}% 29
-\BOOKMARK [2][-]{subsection.6.3.1}{Picamera settings}{section.6.3}% 30
-\BOOKMARK [1][-]{section.6.4}{Crude calculation of frequency}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.5}{Verification of accuracy}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Calculation of the frequency}{}% 33
-\BOOKMARK [1][-]{section.7.1}{Implementation of the algorithm}{chapter.7}% 34
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 35
-\BOOKMARK [1][-]{section.8.1}{Measurements}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.2}{Calculation of gang deviation from frequency}{chapter.8}% 37
-\BOOKMARK [1][-]{section.8.3}{Evaluation}{chapter.8}% 38
-\BOOKMARK [0][-]{section*.2}{Glossary}{}% 39
+\BOOKMARK [0][-]{chapter*.1}{Acknowledgement}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Affidavit}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Conceptual formulation}{}% 4
+\BOOKMARK [0][-]{chapter.2}{Motivation}{}% 5
+\BOOKMARK [0][-]{chapter.3}{Fundamentals}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Competitor Analysis}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.3.1.1}{Optical versus acoustical measurement}{section.3.1}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{Acoustical measurement}{subsection.3.1.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.1.2}{Optical measurement}{subsection.3.1.1}% 10
+\BOOKMARK [2][-]{subsection.3.1.2}{Companies}{section.3.1}% 11
+\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Witschi - WisioScope S}{subsection.3.1.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.1.2.2}{Lepsi - WatchScope/WatchAnalyzer}{subsection.3.1.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.1.2.3}{Greiner Vibrograf - Compact 900}{subsection.3.1.2}% 14
+\BOOKMARK [1][-]{section.3.2}{Pi camera module}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{Exposure time}{section.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Minimal exposure time}{subsection.3.2.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Maximum framerate}{subsection.3.2.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{Maximum exposure time}{subsection.3.2.1}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Hardware limits}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{Mechanical watches}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Operation of a mechanical watch}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Number of impacts}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.3}{Test watch}{section.3.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Experimental approaches}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Evaluation of possible technologies}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.1.1}{Frame analysis versus given GPU motion vectors}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.2}{Frame analysis via OpenCV}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.3}{Motion vectors from high level library picamera}{section.4.1}% 29
+\BOOKMARK [1][-]{section.4.2}{Animation of motion vectors}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.2.1}{Motion vectors visualized in a frame}{section.4.2}% 31
+\BOOKMARK [1][-]{section.4.3}{Picamera library}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.3.1}{Picamera settings}{section.4.3}% 33
+\BOOKMARK [1][-]{section.4.4}{Crude calculation of frequency}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.5}{Verification of accuracy}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Calculation of the frequency}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Implementation of the algorithms}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.1.1}{Calculation of the frequency by counting minima with upper limit}{section.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.2}{Calculation of the frequency by counting minima with stepsize}{section.5.1}% 39
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Measurements}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Calculation of gang deviation from frequency}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{Evaluation}{chapter.6}% 43
+\BOOKMARK [0][-]{section*.5}{Glossary}{}% 44
