@@ -194,7 +194,7 @@
     \caption{Measurement rate deviation with different professional devices}
  \end{table}
     
-    \section{Pi camera module}
+    \section{Camera module}
     The documentation Readthedocs for the picamera library \cite{ReadTheDocsPicamera} provides a good introduction to the operation of the Raspberry Pi with camera. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
     
     The camera module of the Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
@@ -327,11 +327,20 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     
     In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Watch Expert II from Witschi, and the rate deviation was determined. 
     
-    In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out. 
+    In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
 
-    \chapter {Experimental approaches}
+    \chapter{Technologies}
+    \begin{itemize}
+        \item stillstand erkennen
+        \item merkmal verfolgen
+        \item geschwindigkeit berechnen
+        \item timestamps als wichtige komponente, da für uns die bewegung über die zeit interessiert
+      \end{itemize}
+    \section{Evaluation of technologies}
+    \subsection{OpenCV}
+    \subsection{Gstreamer}
+    \subsection{Picamera}
     
-    \section {Evaluation of possible technologies}
     \subsection{Frame analysis versus given GPU motion vectors}
     One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
     Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
@@ -358,6 +367,9 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     
     The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
     
+
+    \chapter {Experimental approaches}
+
     \section{Animation of motion vectors}
     After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
     With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
@@ -468,7 +480,7 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     \end{tabularx}
      \caption{}
     \end{table}
-     
+    
     \chapter{Calculation of the frequency}
     
     \section{Implementation of the algorithms}
@@ -521,7 +533,7 @@ The optical measurements of the picamera were carried out on an average at about
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|L|L|  }
         \hline
-        {\fontsize{10}{12}\selectfont \textbf{Positions}} &{\fontsize{9}{10}\selectfont \textbf{Greiner Compact 900}} & {\fontsize{10}{12}\selectfont \textbf{Wisio Scope}} & {\fontsize{10}{12}\selectfont \textbf{10 min}} &  {\fontsize{10}{12}\selectfont \textbf{20 min}} &  {\fontsize{10}{12}\selectfont \textbf{40 min}} & {\fontsize{10}{12}\selectfont  \textbf{80 min}} \\ \hline
+        {\fontsize{10}{12}\selectfont \textbf{Positions}} &{\fontsize{9}{10}\selectfont \textbf{Greiner Compact 900}} & {\fontsize{10}{12}\selectfont \textbf{Watch Exper II}} & {\fontsize{10}{12}\selectfont \textbf{10 min}} &  {\fontsize{10}{12}\selectfont \textbf{20 min}} &  {\fontsize{10}{12}\selectfont \textbf{40 min}} & {\fontsize{10}{12}\selectfont  \textbf{80 min}} \\ \hline
         up        & -13                 &      -31  & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
         right     & -30                 &      -64  & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
         down      & -20               &  -46  & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
@@ -529,13 +541,6 @@ The optical measurements of the picamera were carried out on an average at about
         \end{tabularx}
           \caption{ variations per day in seconds} 
     \end{table}
-    
-    \noindent
-    \begin{figure}[H]
-    \includegraphics[scale=0.5]{Images/smallest_variation.png}
-    
-    \caption{ Variation of different time and position recordings}
-    \end{figure} 
     
     \section{Calculation of rate deviation from frequency}
     
