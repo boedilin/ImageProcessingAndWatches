@@ -82,7 +82,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Measurements}{24}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Calculation of gang deviation from frequency}{26}{section.6.2}
+\contentsline {section}{\numberline {6.2}Calculation of rate deviation from frequency}{26}{section.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.3}Evaluation}{26}{section.6.3}
 \defcounter {refsection}{0}\relax 

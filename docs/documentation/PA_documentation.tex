@@ -129,15 +129,22 @@
     \chapter{Conceptual formulation}
     
     \chapter{Motivation}
+    Today's watch technology requires measuring instruments to perform a wide variety of measurements and analyses on almost all types of watches with great precision and reliability.
+    Mechanical watches must be checked in production and service for their rate deviation.
+    There are different techniques to measure this deviation; on the one hand acoustically and optically or only acoustically.
+    The aim of this work is to develop a handy device that can visually measure the rate deviation using inexpensive and simple means.
+    To achieve this, an existing camera consisting of the best-known single-board computer Raspberry Pi and the corresponding camera from Raspberry Pi is used.
+    The aim of this work is to use image processing to measure and analyse the rate deviation of mechanical clocks.
+    The vision of this project is to be able to perform real-time measurements as established providers do.
     
     \chapter{Fundamentals}
     \section {Competitor Analysis}
     \subsection{Optical versus acoustical measurement}
-    To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
+    To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
     
     \subsubsection{Acoustical measurement}
     The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
-    Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The noises of the balance wheel are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
+    Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The beat noises of the lever escapement are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
     
     \subsubsection{Optical measurement}
     About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency should be quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
@@ -168,7 +175,7 @@
     
     
     \subsubsection{Greiner Vibrograf - Compact 900}
-    The Compact 900 measures only the beat noises of the balance wheel. The price is CHF 4070.-
+    The Compact 900 measures only the beat noises of the ever escapement. The price is CHF 4070.-
     
     \bigskip
    The following table summarizes all important information for the three mentioned professional devices.
@@ -177,14 +184,14 @@
      \centering
     \begin{tabularx}{\linewidth}{ |c||L|L|L|  }
      \hline
-     \multicolumn{4}{|c|}{\textbf{Measurement gear deviation}} \\
+     \multicolumn{4}{|c|}{\textbf{Measurement rate deviation}} \\
      \hline
      &{\fontsize{9}{10}\selectfont \textbf{Witschi - WisioScope S}}  & {\fontsize{8}{9}\selectfont \textbf{Lepsi - WatchScope/WatchAnalyzer} }& {\fontsize{9}{10}\selectfont \textbf{Greiner Vibrograf - Compact 900} }\\\hline
       scope   &  +/- 999.9 s/d  & +/- 1000 s/d &  +/- 1000 s/d \\ \hline
      resolution &   0.1 s/d & 0.1 s/d & 0.1 s/d\\  \hline
      price & CHF 10450.- & CHF 369.-, resp. CHF 929.- &  CHF 4070.-\\  \hline
     \end{tabularx}
-    \caption{Measurement gear deviation with different professional devices}
+    \caption{Measurement rate deviation with different professional devices}
  \end{table}
     
     \section{Pi camera module}
@@ -192,7 +199,7 @@
     
     The camera module of the Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
     
-    However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry PIPi.
+    However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry Pi.
     
     This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but processing takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
     
@@ -214,7 +221,7 @@
     \begin{enumerate}
     \item The camera's sensor is configured and continuously streams frame lines to the GPU.
     \item The GPU builds complete frame buffers from these lines and performs the post-processing of these buffers.
-    \item Meanwhile, myscript. py makes a capture call with the picamera on the CPU.
+    \item Meanwhile, myscript.py makes a capture call with the picamera on the CPU.
     \item The Picamera library uses the MMAL API to meet this requirement.
     \item The MMAL API sends a message via VCHI requesting a frame capture.
     \item The GPU then initiates a DMA transmission of the next full frame from its RAM portion to the CPU portion.
@@ -274,21 +281,21 @@
     
     \caption{Operation of a mechanical watch \cite{Uhrwerk}}
     \end{figure}
-The so-called escapement ensures that the gear train runs at the correct speed. The fourth wheel (8) drives the escapement wheel (9); it gives an impulse to the armature (10) which it passes on to the balance (11), after which the armature, which moves back and forth like a seesaw, blocks the escapement wheel. The balance wheel rotates, but is then retracted by the hairspring (12). It moves the armature back, which now releases the armature wheel again a little bit, which gives the armature with its rotation the next impulse. Due to the sudden braking and acceleration of the escapement wheel, the second hand of a mechanical watch also moves stepwise. \cite{Uhrwerk}
+The so-called escapement ensures that the gear train runs at the correct speed. The fourth wheel (8) drives the escape wheel (9); it gives an impulse to the pallet fork (10) which it passes on to the balance wheel (11), after which the armature, which moves back and forth like a seesaw, blocks the escape wheel. The balance wheel rotates, but is then retracted by the hairspring (12). It moves the armature back, which now releases the armature wheel again a little bit, which gives the armature with its rotation the next impulse. Due to the sudden braking and acceleration of the escapement wheel, the second hand of a mechanical watch also moves stepwise. \cite{Uhrwerk}
     \newline
     \noindent
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/Hemmung-Teil1.jpg}
     
-    \caption{Escapement and balance wheel \cite{Uhrwerk}}
+    \caption{lever escapement and balance wheel \cite{Uhrwerk}}
     \end{figure}
 \bigskip
 The balance wheel is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
-The occurring error, if the balance wheel does not run accurate, is called gang deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
+The occurring error, if the balance wheel does not run accurate, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
     
     \subsection{Number of impacts}
-    Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed armature of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows \cite{Krug1987}: 
+    Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows \cite{Krug1987}: 
     
     \begin{displaymath}
     n* = 2f*3600
@@ -303,7 +310,7 @@ The occurring error, if the balance wheel does not run accurate, is called gang 
      \centering
     \begin{tabularx}{\linewidth}{ |L|L|L|L|L|  }
      \hline
-     \textbf{Number of impacts} [1/h] &  \textbf{Impact duration} [s]& \textbf{Oscillation number}  [1/h]& \textbf{Period duration} [s]& \textbf{Frequency} [Hz]\\\hline
+     \textbf{Number of strokes} [1/h] &  \textbf{Stroke duration} [s]& \textbf{Oscillation number}  [1/h]& \textbf{Period duration} [s]& \textbf{Frequency} [Hz]\\\hline
       18'000   &  0.200  & 9'000 & 0.400 & 2.50\\ \hline
      19'800 &  0.182 & 9'900 & 0.364 & 2.74\\  \hline
      21'600 &  0.166 & 10'800 & 0.333 & 3.00\\  \hline
@@ -316,11 +323,11 @@ The occurring error, if the balance wheel does not run accurate, is called gang 
         \subsection{Test watch}
     At first some general information to the test watch, which was used.
     
-    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It has a beat rate of 21600 beats per hour and therefore a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. \cite{Caliber}
+    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It strokes 21600 times per hour and therefore has a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. \cite{Caliber}
     
-    In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Wisio Scope from Witschi, and the rate deviation was determined. 
+    In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Watch Expert II from Witschi, and the rate deviation was determined. 
     
-    In order to calculate the frequency from the gear deviation of the balance wheel, first some transformations had to be carried out. 
+    In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out. 
 
     \chapter {Experimental approaches}
     
@@ -417,7 +424,7 @@ The occurring error, if the balance wheel does not run accurate, is called gang 
     
     \section{Crude calculation of frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
-    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the gear deviation. 
+    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the rate deviation. 
     
     \noindent
     \begin{figure}[H]
@@ -530,7 +537,7 @@ The optical measurements of the picamera were carried out on an average at about
     \caption{ Variation of different time and position recordings}
     \end{figure} 
     
-    \section{Calculation of gang deviation from frequency}
+    \section{Calculation of rate deviation from frequency}
     
     \section{Evaluation}
     
@@ -538,7 +545,7 @@ The optical measurements of the picamera were carried out on an average at about
     \section{Difficulties}
     \section{Outlook}
     
-    \lstinputlisting[language=Python]{source_filename.py}
+    \lstinputlisting[language=Python]{Files/source_filename.py}
     
     
     \glsaddall

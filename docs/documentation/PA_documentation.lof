@@ -10,13 +10,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Operation of a mechanical watch \cite {Uhrwerk}}}{9}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Escapement and balance wheel \cite {Uhrwerk}}}{10}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces lever escapement and balance wheel \cite {Uhrwerk}}}{10}{figure.3.3}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Animation of the SAD values, the lighter the color the higher the value of the SAD}}{14}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}}{14}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{15}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{15}{figure.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Motion vectors drawn in one frame}}{16}{figure.4.3}
 \defcounter {refsection}{0}\relax 
@@ -33,3 +33,5 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Variation of different time and position recordings}}{25}{figure.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Variation of different time and position recordings}}{25}{figure.6.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
