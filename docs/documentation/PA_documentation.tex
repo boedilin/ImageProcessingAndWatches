@@ -3,6 +3,7 @@
     \usepackage{inputenc}
     \usepackage{pdfpages}
     \usepackage{float}
+    \usepackage{listings}   
     \usepackage[toc]{glossaries}
     \makeglossaries
     \newglossaryentry{Rolling shutter}
@@ -134,7 +135,14 @@
     \subsection{Optical versus acoustical measurement}
     To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the noises of the balance wheel. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
     
-    \begin{table}
+    \subsubsection{Acoustical measurement}
+    The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
+    Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The noises of the balance wheel are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
+    
+    \subsubsection{Optical measurement}
+    About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency should be quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
+    
+        \begin{table}[H]
      \centering
     \begin{tabularx}{\linewidth}{ |c||L|L|  }
      \hline
@@ -147,53 +155,37 @@
      disadvantages & background noises need to be filtered out& \\
      \hline
     \end{tabularx}
+    \caption{bla}
         \end{table}
-    
-    \subsubsection{Acoustical measurement}
-    The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
-    Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The noises of the balance wheel are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
-    
-    \subsubsection{Optical measurement}
-    About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency should be quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
     
     \subsection{Companies}
     \subsubsection{Witschi - WisioScope S}
     WisioScope S tests mechanical watches acoustically and optically. The measurement is done parallel and in this way is more accurate as both signals are used for the calculation of the frequency.
     The optical metering is done using a laser and lighting, a camera helps to adjust the watch properly. The costs of their product are: CHF 10450.-
     
-    \bigskip
-    
-    \begin{tabularx}{\textwidth}{>{\bfseries}lX}
-    Measurement gear deviation & \\\toprule
-    scope & +/- 999.9 s/d \\\midrule
-    resolution & 0.1 s/d\\\midrule
-    price & CHF 10450.-\\\bottomrule
-    \end{tabularx}
-    
     \subsubsection{Lepsi - WatchScope/WatchAnalyzer}
     The WatchScope and WatchAnalyzer from Lepsi are especially for lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input, with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can easily measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.00, resp. CHF 929.-
-    
-    \bigskip
-    
-    \begin{tabularx}{\textwidth}{>{\bfseries}lX}
-    Measurement gear deviation & \\\toprule
-    scope & +/- 1000 s/d \\\midrule
-    resolution & 0.1 s/d\\\midrule
-    price & CHF 369.-, resp. CHF 929.-\\\bottomrule
-    \end{tabularx}
     
     
     \subsubsection{Greiner Vibrograf - Compact 900}
     The Compact 900 measures only the beat noises of the balance wheel. The price is CHF 4070.-
     
     \bigskip
+   The following table summarizes all important information for the three mentioned professional devices.
     
-    \begin{tabularx}{\textwidth}{>{\bfseries}lX}
-    Measurement gear deviation & \\\toprule
-    scope & +/- 1000 s/d \\\midrule
-    resolution & 0.1 s/d\\\midrule
-    price & CHF 4070.-\\\bottomrule
+\begin{table}[H]
+     \centering
+    \begin{tabularx}{\linewidth}{ |c||L|L|L|  }
+     \hline
+     \multicolumn{4}{|c|}{\textbf{Measurement gear deviation}} \\
+     \hline
+     &{\fontsize{9}{10}\selectfont \textbf{Witschi - WisioScope S}}  & {\fontsize{8}{9}\selectfont \textbf{Lepsi - WatchScope/WatchAnalyzer} }& {\fontsize{9}{10}\selectfont \textbf{Greiner Vibrograf - Compact 900} }\\\hline
+      scope   &  +/- 999.9 s/d  & +/- 1000 s/d &  +/- 1000 s/d \\ \hline
+     resolution &   0.1 s/d & 0.1 s/d & 0.1 s/d\\  \hline
+     price & CHF 10450.- & CHF 369.-, resp. CHF 929.- &  CHF 4070.-\\  \hline
     \end{tabularx}
+    \caption{Measurement gear deviation with different professional devices}
+ \end{table}
     
     \section{Pi camera module}
     The documentation Readthedocs for the picamera library \cite{ReadTheDocsPicamera} provides a good introduction to the operation of the Raspberry Pi with camera. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
@@ -371,7 +363,7 @@ The occurring error, if the balance wheel does not run accurate, is called gang 
     \centering
     \includegraphics[scale=0.6]{Images/animation_sad.png}
     
-    \caption{Animation of the SAD values, the lighter the color the higher the value of the SAD}
+    \caption{Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}
     \end{figure}
      
     Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
@@ -381,7 +373,7 @@ The occurring error, if the balance wheel does not run accurate, is called gang 
     \centering
     \includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
     
-    \caption{Animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}
+    \caption{Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}
     \end{figure}
     
     Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
@@ -541,6 +533,12 @@ The optical measurements of the picamera were carried out on an average at about
     \section{Calculation of gang deviation from frequency}
     
     \section{Evaluation}
+    
+    \chapter{Discussion}
+    \section{Difficulties}
+    \section{Outlook}
+    
+    \lstinputlisting[language=Python]{source_filename.py}
     
     
     \glsaddall
