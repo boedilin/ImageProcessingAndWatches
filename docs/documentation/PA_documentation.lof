@@ -1,37 +1,20 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Camera architecture. Readthedocs Picamera}}{6}{figure.3.1}
-\defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Operation of a mechanical watch \cite {Uhrwerk}}}{9}{figure.3.2}
-\defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces lever escapement and balance wheel \cite {Uhrwerk}}}{10}{figure.3.3}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}}{15}{figure.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{16}{figure.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Motion vectors drawn in one frame}}{17}{figure.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}}{18}{figure.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Excel sheet with summed x-, y-values, timestamps and calculated frequency}}{20}{figure.5.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}}{21}{figure.5.6}
-\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Test setup for records}}{15}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}}{17}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{18}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Motion vectors drawn in one frame}}{19}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}}{20}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Excel sheet with summed x-, y-values, timestamps and calculated frequency}}{22}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}}{23}{figure.5.7}
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Variation of different time and position recordings}}{26}{figure.7.1}
-\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Variation of different time and position recordings}}{28}{figure.7.1}
 \addvspace {10\p@ }

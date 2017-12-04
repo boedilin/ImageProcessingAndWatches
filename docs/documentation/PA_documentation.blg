@@ -1,19 +1,18 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'PA_documentation.blg'
-[43] biber-darwin:303> INFO - === Mon Dec  4, 2017, 12:05:14
-[64] Biber.pm:359> INFO - Reading 'PA_documentation.bcf'
-[164] Biber.pm:835> INFO - Found 6 citekeys in bib section 0
-[182] Biber.pm:3670> INFO - Processing section 0
-[206] Biber.pm:3840> INFO - Looking for bibtex format file 'PA_cogsworth_citation.bib' for section 0
+[45] biber-darwin:303> INFO - === Mon Dec  4, 2017, 16:04:18
+[69] Biber.pm:359> INFO - Reading 'PA_documentation.bcf'
+[173] Biber.pm:835> INFO - Found 6 citekeys in bib section 0
+[186] Biber.pm:3670> INFO - Processing section 0
+[207] Biber.pm:3840> INFO - Looking for bibtex format file 'PA_cogsworth_citation.bib' for section 0
 [208] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
 [214] bibtex.pm:1292> INFO - Found BibTeX data source 'PA_cogsworth_citation.bib'
-[250] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/g1/3zy32gy15pd5c34fr1f_qg500000gn/T/h4jbjOQA1D/PA_cogsworth_citation.bib_911.utf8, line 6, warning: 177 characters of junk seen at toplevel
-[251] Utils.pm:164> WARN - I didn't find a database entry for 'Caliber' (section 0)
-[264] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[264] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[265] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[265] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[271] bbl.pm:608> INFO - Writing 'PA_documentation.bbl' with encoding 'ascii'
-[273] Utils.pm:164> WARN - The entry 'Krug1987' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[274] bbl.pm:712> INFO - Output to PA_documentation.bbl
-[274] Biber.pm:109> INFO - WARNINGS: 3
+[248] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/g1/3zy32gy15pd5c34fr1f_qg500000gn/T/gl9ST3uYif/PA_cogsworth_citation.bib_4401.utf8, line 6, warning: 177 characters of junk seen at toplevel
+[249] Utils.pm:164> WARN - I didn't find a database entry for 'Caliber' (section 0)
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[262] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[262] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[267] bbl.pm:608> INFO - Writing 'PA_documentation.bbl' with encoding 'UTF-8'
+[268] bbl.pm:712> INFO - Output to PA_documentation.bbl
+[269] Biber.pm:109> INFO - WARNINGS: 2

@@ -1,9 +1,10 @@
 \documentclass[12pt, a4paper]{report}
     \usepackage[T1]{fontenc}
-    \usepackage{inputenc}
+    \usepackage[utf8]{inputenc}
     \usepackage{pdfpages}
     \usepackage{float}
-    \usepackage{listings}   
+    \usepackage{listings}
+    \usepackage{siunitx}   
     \usepackage[toc]{glossaries}
     \makeglossaries
     \newglossaryentry{Rolling shutter}
@@ -330,6 +331,7 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
 
     \chapter{Technologies}
+    was für uns wichtig ist bei einem tool/library. wie ein bild aufgebaut ist zeigen (rgb etc)
     \begin{itemize}
         \item stillstand erkennen
         \item merkmal verfolgen
@@ -340,6 +342,8 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     \subsection{OpenCV}
     \subsection{Gstreamer}
     \subsection{Picamera}
+    The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
+    This means that the camera can be accessed using a simple programming language such as Python.
     
     \subsection{Frame analysis versus given GPU motion vectors}
     One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
@@ -369,8 +373,36 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     
 
     \chapter {Experimental approaches}
-
-    \section{Animation of motion vectors}
+    \begin{itemize}
+        \item ev begründen, wieso wir picamera lib gewählt haben?
+      \end{itemize}
+    \section{Test setup}
+    \begin{itemize}
+        \item bild ausarbeiten
+        \item kurze beschreibung dazu
+      \end{itemize}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.1]{Images/test_setup}
+        
+        \caption{Test setup for records}
+        \end{figure}
+    \section{Motion vectors}
+    \begin{itemize}
+        \item kurz erklären wie mv funktionieren-> makro blocks. mv -> wird für video kompression genutzt
+        \item erklären, dass die idee einen punkt zu verfolgen ist und dann den stillstand zu erfassen, um die periode bzw die frequenz herauszufinden.
+        \item ev erwähnen, dass so ev geschwindigkeitsunterschiede festgestellt werden könnten, dachten wir...
+      \end{itemize}
+    \subsection{Gesture detection}
+    \begin{itemize}
+        \item wir haben zuerst getestet, ob wir mit der kamera real time erkennen können, ob sich ein objekt vor der kamera nach links/rechts/runter/rauf bewegt
+        \item das konnten wir und sind weitergegangen und wollten das an der uhr testen und visualisieren (animation of motion vectors) 
+      \end{itemize}
+    \subsection{Records of balance wheel}
+    \begin{itemize}
+        \item dann haben wir aufnahmen der unruhe gemacht und versucht die ergebnisse zu interpretieren
+    \end{itemize}
+    \subsection{Animation of motion vectors}
     After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
     With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
     The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
@@ -410,6 +442,10 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     \caption{Motion vectors drawn in one frame}
     \end{figure}
     
+    \subsection{Analysis of motion vectors in excel}
+    \begin{itemize}
+        \item ev bild, wie das gemeint ist...
+      \end{itemize}
     Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
     The hope was that a moving pixel could be followed and therefore the location of the pixel would always have been known.
     The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
@@ -423,17 +459,18 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     \caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
     \end{figure}
     
-    \newpage
-    
-    \section{Picamera library}
-    The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
-    This means that the camera can be accessed using a simple programming language such as Python.
-    
-    \subsection {Picamera settings}
+    \subsection{Influences of light, ANGLE? and camera parameters}
+    \begin{itemize}
+        \item mehr licht ergab deutlichere messwerte
+        \item bewegungsunschärfe (ev bild) minimieren hat auch deutlichere messwerte ergeben, braucht aber sehr strake lichtquelle(mit smartphone)
+        \item anderer winkel hat keine auswirkungen...
+    \end{itemize}
     Testing with different settings has shown that the results can be improved. For example, the black and white shots are the better choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
     The consequence of the shorter exposure time is that the light source must be very strong and close to the subject, otherwise the image is too dark and has a negative effect on the result.
-    
-    
+        
+
+    \newpage
+
     \section{Crude calculation of frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
     In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the rate deviation. 
@@ -460,25 +497,25 @@ The occurring error, if the balance wheel does not run accurate, is called rate 
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
    
-   \begin{table}
+    \begin{table}
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
-        \textbf{Duration} &  \textbf{run 1} &  \textbf{run 2} &  \textbf{run 3} &  \textbf{run 4} &  \textbf{run 5} \\ \hline
-        10 sec        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
-        20 sec     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
-        40 sec      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
-        60 sec      & 166673.7                 & 166672.4	   & 166673.7	  & 166672.4	  & 166673.7  \\ \hline
-        300 sec      & 166665.2                 & 166671.7	   & 166640.4	  & 166665.3	  & 166640.4      \\ \hline
-        600 sec      & 166668.2                 & 166649.6	   & 166668.2	  & 166655.8	  & 166668.2      \\ \hline
-        900 sec      & 166667.2                 & 166667.3	   & 166638.4	  & 166638.4	  & 166667.2      \\ \hline
-        1200 sec      & 166660.4                 & 166668.3	   & 166669.7	  & 166668.2	  & 166668.2      \\ \hline
-        1500 sec      & 166668.8                 & 166650.3	   & 166650.3	  & 166668.8	  & 166668.8      \\ \hline
-        1800 sec      & 166652.8                 & 166668.2	   & 166669.2	  & 166668.2	  & 166669.2      \\ \hline
-        2100 sec      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
-        2400 sec      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
+        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        10        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
+        20     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
+        40      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
+        60      & 166673.7                 & 166672.4	   & 166673.7	  & 166672.4	  & 166673.7  \\ \hline
+        300      & 166665.2                 & 166671.7	   & 166640.4	  & 166665.3	  & 166640.4      \\ \hline
+        600      & 166668.2                 & 166649.6	   & 166668.2	  & 166655.8	  & 166668.2      \\ \hline
+        900      & 166667.2                 & 166667.3	   & 166638.4	  & 166638.4	  & 166667.2      \\ \hline
+        1200      & 166660.4                 & 166668.3	   & 166669.7	  & 166668.2	  & 166668.2      \\ \hline
+        1500      & 166668.8                 & 166650.3	   & 166650.3	  & 166668.8	  & 166668.8      \\ \hline
+        1800      & 166652.8                 & 166668.2	   & 166669.2	  & 166668.2	  & 166669.2      \\ \hline
+        2100      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
+        2400      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
     \end{tabularx}
-     \caption{}
+    \caption{}
     \end{table}
     
     \chapter{Calculation of the frequency}
