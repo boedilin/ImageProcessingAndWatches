@@ -19,6 +19,19 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{Caliber}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeltitlesource}{title}
+      \field{title}{{Chronoskop Zeitwaagen von Timegraphers}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
+      \endverb
+    \endentry
     \entry{ReadTheDocsPicamera}{misc}{}
       \name{author}{1}{}{%
         {{hash=26af5ce5068131de10c5293586383068}{%
@@ -41,6 +54,19 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://picamera.readthedocs.io/en/release-1.13/fov.html
+      \endverb
+    \endentry
+    \entry{Witschi_basics}{article}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Witschi Electronic AG entwickelt, produziert und verkauft Innovative Prüf-und Messtechnolgie für: • Uhrenproduktion • Uhrenservice • Prüfgeräte für die Automobil-, Medizin-und Apparateindustrie Unser Qualitätsanspruch Als weltweit führendes Unternehmen der Prüf-und Messtechnik für Uhren und andere mikrotechnische Produkte, setzen wir auf höchste Qualität, zukunftsorientierte Entwicklungsarbeit und zuverlässige Serv-iceleistungen. Um den Ansprüchen des Marktes gerecht zu werden, baut das Unternehmen auf hochqual-ifizierte, kompetente Mitarbeiter und Mitarbeiterinnen. Auch die Zertifizierung nach ISO 9001:2000 ist Garant für eine gleich bleibende, sichergestellte Qualität. So können sich unsere Kunden darauf verlas-sen, dass sie in der Firma Witschi einen optimalen Partner finden und Produkte mit bestmöglichem Ko-sten-Nutzen-Verhältnis erhalten. Dafür bürgen der Name Witschi sowie die rund 70 Mitarbeiterinnen und Mitarbeiter des Unternehmens Unser Know-how Seit über 60 Jahren entwickelt, produziert und verkauft die Firma Witschi weltweit in über 40 Ländern hochwertige Geräte auf dem Gebiet der Mess-und Prüftechnik. Am Anfang des Unternehmens stand das erklärte Ziel, der Uhrenindustrie die besten Mess-und Prüfgeräte zu liefern. Dieses Ziel ist heute längst erreicht. Alle namhaften Betriebe setzen unsere Produkte ein. Im Laufe der Zeit ist es uns gelungen, konstant neue Produkte zu entwickeln, die den höchsten An-forderungen entsprechen und den heutigen Massstab für markt-und kundengerechte Mess-und Prüftechnologie bilden. Davon zeugen tausende zufriedener Anwender in aller Welt. Das Potential unserer Ingenieure und Experten wird auch in Zukunft für wegweisende Innovationen aus dem Hause Witschi sorgen. Ausbildungsziel}
+      \field{title}{{Einführung Wir stellen uns vor}}
+      \verb{file}
+      \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Unknown - Unknown - Einf{\"{u}}hrung Wir stellen uns vor.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.witschi.com/assets/files/sheets/Witschi%20Grundkurs.pdf
       \endverb
     \endentry
     \entry{Uhrwerk}{misc}{}
@@ -67,6 +93,44 @@
       \verb https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
       \endverb
     \endentry
+    \entry{Halliday2005}{book}{}
+      \name{author}{3}{}{%
+        {{hash=9d9a6552821ea504ab1a5c767dddff92}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8967f5a0664f741b0ef2530a47e698fa}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa8304879d8f7d99c7c4570759b948e2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Jearl},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{authornamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhash}{3978689396696961b0bd612b55ccf075}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{7th ed., extended ed. Includes indexes. Includes index. Measurement -- Motion along a straight line -- Vectors -- Motion in two and three dimensions -- Force and motion I -- Force and motion II -- Kinetic energy and work -- Potential energy and conservation of energy -- Center of mass and linear momentum -- Rotation -- Rolling, torque, and angular momentum -- Equilibrium and elasticity -- Gravitation -- Fluids -- Oscillations -- Waves I -- Waves II -- Temperature, heat, and the First law of thermodynamics -- The kinetic theory of gases -- Entropy and the Second law of thermodynamics -- Electric charge -- Electric fields -- Gauss' law -- Electric potential -- Capacitance -- Current and resistance -- Circuits -- Magnetic fields -- Magnetic fields due to currents -- Induction and inductance -- Electromagnetic oscillations and alternating current -- Maxwell's equations; magnetism of matter -- Electromagnetic waves -- Images -- Interference -- Diffraction -- Relativity.}
+      \field{edition}{7th}
+      \field{isbn}{0471232319}
+      \field{title}{{Fundamentals of physics}}
+      \field{year}{2005}
+    \endentry
     \entry{Krug1987}{book}{}
       \name{author}{1}{}{%
         {{hash=266ad7791c8cfa6bdfa3e7235c2e76b8}{%
@@ -90,6 +154,31 @@
       \field{isbn}{3341003568}
       \field{title}{{Mechanische Uhren : Einzelteile, Baugruppen, Werk- u. Hilfsstoffe}}
       \field{year}{1987}
+    \endentry
+    \entry{Kuck1978}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f0f2a4b09e260568ee26290922e3ea3b}{%
+           family={Kuck},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{fullhash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{authornamehash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{authorfullhash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0471027162}
+      \field{title}{{The structure of computers and computations}}
+      \field{year}{1978}
+      \field{pages}{12}
+      \range{pages}{1}
     \endentry
     \entry{Lombardi2011}{article}{}
       \name{author}{1}{}{%
@@ -127,7 +216,6 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{Caliber}
 \endrefsection
 \endinput
 

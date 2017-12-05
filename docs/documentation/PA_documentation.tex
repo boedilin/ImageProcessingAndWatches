@@ -34,7 +34,7 @@
     \newglossaryentry{MMAL}
     {
       name=MMAL,
-      description={(Multimedia Abstraction Layer) is a framework designed by Broadcom  to provide a host-side, simple and relatively low-level interface to multimedia components running on the Videocore IV GPU on the Raspberry Pi}
+      description={(Multimedia Abstraction Layer) is a framework designed by Broadcom to provide a host-side, simple and relatively low-level interface to multimedia components running on the Videocore IV GPU on the Raspberry Pi}
     }
     
     \newglossaryentry{Optical flow}
@@ -48,6 +48,38 @@
       name=Codecvisa,
       description={}
     }
+    
+  \newglossaryentry{VCHI}
+    {
+      name=VCHI,
+      description={}
+    }
+    
+  \newglossaryentry{API}
+    {
+      name=API,
+      description={}
+    }
+    
+      \newglossaryentry{DMA}
+    {
+      name=DMA,
+      description={(Direct Memory Access) allows specific hardware systems of a computer system to access main system memory independently of the CPU \cite{Kuck1978}}
+    }
+    
+          \newglossaryentry{CPU}
+    {
+      name=CPU,
+      description={(Central Processing Unit) is the electronic circuitry in a computer, which executes the instructions of a computer program. \cite{Kuck1978}}
+    }
+    
+   \newglossaryentry{Photon}
+    {
+      name=Photon,
+      description={is an elementary particle, which includes electromagnetic radiation (e.g. light) and moves at the speed of light within a vacuum. \cite{Halliday2005}}
+    }
+    
+    
     
     \usepackage{booktabs}
     \usepackage{float}
@@ -102,7 +134,7 @@
     
     {\large \today}\\[2cm] 
     
-    %\includegraphics{logo.png}\\[1cm] 
+    \includegraphics[scale=0.05]{Images/logo.png}\\[1cm] 
     
     \vfill 
     
@@ -112,12 +144,18 @@
     \chapter*{Acknowledgement}
     \addcontentsline{toc}{chapter}{Acknowledgement}
     
-    \chapter*{Affidavit}
-     \addcontentsline{toc}{chapter}{Affidavit}
+    \chapter*{Declaration of Autonomy}
+     \addcontentsline{toc}{chapter}{Declaration of Autonomy}
      
-         
-    \chapter*{Abstract}
-     \addcontentsline{toc}{chapter}{Abstract}
+     The undersigned certify with their signature that the work has been written independently and put into written form, that the involvement of other persons has been limited to consulting and proofreading, and that all documents and guarantors used are listed.
+
+ \vskip4cm
+$\overline{\hbox{\phantom{mmmm}Place and Date\phantom{mmmm}}}$\hskip2cm
+$\overline{\hbox{\phantom{mmm}Linda Helen Bödi\phantom{mmm}}}$
+
+\vskip3cm
+$\overline{\hbox{\phantom{mmmm}Place and Date\phantom{mmmm}}}$\hskip2cm
+$\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
 
 \pagebreak
     \setcounter{secnumdepth}{5} 
@@ -127,16 +165,16 @@
     \pagebreak
     \pagenumbering{arabic}
     
-    \chapter{Conceptual formulation}
+    \chapter{Abstract}
     
     \chapter{Motivation}
     Today's watch technology requires measuring instruments to perform a wide variety of measurements and analyses on almost all types of watches with great precision and reliability.
     Mechanical watches must be checked in production and service for their rate deviation.
-    There are different techniques to measure this deviation; on the one hand acoustically and optically or only acoustically.
+    There are different techniques to measure this deviation; on one hand acoustically and optically or only acoustically.
     The aim of this work is to develop a handy device that can visually measure the rate deviation using inexpensive and simple means.
     To achieve this, an existing camera consisting of the best-known single-board computer Raspberry Pi and the corresponding camera from Raspberry Pi is used.
     The aim of this work is to use image processing to measure and analyse the rate deviation of mechanical clocks.
-    The vision of this project is to be able to perform real-time measurements as established providers do.
+    The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device.
     
     \chapter{Fundamentals}
     \section {Competitor Analysis}
@@ -223,12 +261,12 @@
     \item The camera's sensor is configured and continuously streams frame lines to the GPU.
     \item The GPU builds complete frame buffers from these lines and performs the post-processing of these buffers.
     \item Meanwhile, myscript.py makes a capture call with the picamera on the CPU.
-    \item The Picamera library uses the MMAL API to meet this requirement.
+    \item The picamera library uses the MMAL API to meet this requirement.
     \item The MMAL API sends a message via VCHI requesting a frame capture.
     \item The GPU then initiates a DMA transmission of the next full frame from its RAM portion to the CPU portion.
-    \item Finally, the GPU sends a message via VCHI that the capture is complete.
-    \item This causes an MMAL thread to trigger a callback in the Picamera library, which in turn retrieves the frame.
-    \item Finally, write picamera calls to the output object provided by myscript. py.
+    \item Finally, the GPU sends back a message via VCHI that the capture is complete.
+    \item This causes an MMAL thread to trigger a callback in the picamera library, which in turn retrieves the frame.
+    \item Last picamera calls "write" on the output object provided by myscript.py.
     \end{enumerate}
     
     \subsection{Exposure time}
@@ -294,6 +332,28 @@ The so-called escapement ensures that the gear train runs at the correct speed. 
 \bigskip
 The balance wheel is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
 The occurring error, if the balance wheel does not run accurate, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
+
+\subsection{Oscillation of the balance wheel}
+
+\subsubsection{Period}
+The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A). \cite{Witschi_basics}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Images/period.png}
+    
+    \caption{period of the balance wheel \cite{Witschi_basics}}
+    \end{figure}
+\bigskip
+
+\subsubsection{Half a period}
+Half of a period of the balance wheel is the path of a point from one turning point to the other (A - B). \cite{Witschi_basics}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Images/Halfperiod.png}
+    
+    \caption{half of a period of the balance wheel \cite{Witschi_basics}}
+    \end{figure}
+\bigskip
     
     \subsection{Number of impacts}
     Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows \cite{Krug1987}: 

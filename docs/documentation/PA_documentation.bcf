@@ -2150,11 +2150,18 @@
     <bcf:citekey order="5">Uhrwerk</bcf:citekey>
     <bcf:citekey order="6">Uhrwerk</bcf:citekey>
     <bcf:citekey order="7">Uhrwerk</bcf:citekey>
-    <bcf:citekey order="8">Krug1987</bcf:citekey>
-    <bcf:citekey order="9">Krug1987</bcf:citekey>
-    <bcf:citekey order="10">Krug1987</bcf:citekey>
-    <bcf:citekey order="11">Caliber</bcf:citekey>
-    <bcf:citekey order="12">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="8">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="9">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="10">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="11">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="12">Krug1987</bcf:citekey>
+    <bcf:citekey order="13">Krug1987</bcf:citekey>
+    <bcf:citekey order="14">Krug1987</bcf:citekey>
+    <bcf:citekey order="15">Caliber</bcf:citekey>
+    <bcf:citekey order="16">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="17">Kuck1978</bcf:citekey>
+    <bcf:citekey order="18">Kuck1978</bcf:citekey>
+    <bcf:citekey order="19">Halliday2005</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
