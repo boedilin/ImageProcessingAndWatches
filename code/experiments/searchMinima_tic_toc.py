@@ -11,7 +11,7 @@ half_period_duration_in_sec = one_second / watch_hertz_half_period
 resolution_grid_in_sec = one_second / frames_per_second
 step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 
-directory = "different_position_records/up/40min/"
+directory = "different_position_records/left/80min/"
 xValues = np.loadtxt(directory+"xValues.txt")
 timestamps = np.loadtxt(directory+"timestamps.txt")
 
@@ -79,4 +79,4 @@ print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)
 print("number of found minimas", len(minima_tic)+len(minima_toc))
 print("length of half period over all: ", duration_of_period_in_microsec/2)
-print("variation per day: ", ((duration_of_period_in_microsec/2/1000000*21600)-3600)*24)
+print("variation per day: ", (((duration_of_period_in_microsec/2)/1000000*21600)-3600)*24)

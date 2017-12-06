@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  5 DEC 2017 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  6 DEC 2017 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1582,225 +1582,225 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.170     \chapter
-                  {Motivation} [1
+l.174 
+       [1
 
-]
+] [2]
 Chapter 2.
-[2
+[3
 
 ]
 Chapter 3.
-[3
+[4
 
-] [4] <Images/camera_architecture.png, id=350, 540.0175pt x 614.295pt>
+] [5] <Images/camera_architecture.png, id=354, 540.0175pt x 614.295pt>
 File: Images/camera_architecture.png Graphic file (type png)
 
 <use Images/camera_architecture.png>
-Package pdftex.def Info: Images/camera_architecture.png used on input line 249.
+Package pdftex.def Info: Images/camera_architecture.png used on input line 254.
 
 (pdftex.def)             Requested size: 378.00966pt x 430.00356pt.
- [5] [6 <./Images/camera_architecture.png>]
-Overfull \hbox (8.46089pt too wide) in paragraph at lines 269--270
+ [6] [7 <./Images/camera_architecture.png>]
+Overfull \hbox (8.46089pt too wide) in paragraph at lines 274--275
 []\T1/cmr/m/n/12 Last pi-cam-era calls "write" on the out-put ob-ject pro-vided
  by myscript.py. 
  []
 
-[7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 305.
+[8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 310.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 310.
 
-<Images/Funktionsweise-Uhrwerk.jpg, id=383, 903.375pt x 520.94624pt>
+<Images/Funktionsweise-Uhrwerk.jpg, id=388, 903.375pt x 520.94624pt>
 File: Images/Funktionsweise-Uhrwerk.jpg Graphic file (type jpg)
 
 <use Images/Funktionsweise-Uhrwerk.jpg>
 Package pdftex.def Info: Images/Funktionsweise-Uhrwerk.jpg used on input line 3
-19.
+24.
 (pdftex.def)             Requested size: 361.3436pt x 208.3748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--322
+Underfull \hbox (badness 10000) in paragraph at lines 319--327
 
  []
 
-[8] <Images/Hemmung-Teil1.jpg, id=391, 903.375pt x 643.40375pt>
+[9] <Images/Hemmung-Teil1.jpg, id=395, 903.375pt x 643.40375pt>
 File: Images/Hemmung-Teil1.jpg Graphic file (type jpg)
 
 <use Images/Hemmung-Teil1.jpg>
-Package pdftex.def Info: Images/Hemmung-Teil1.jpg used on input line 328.
+Package pdftex.def Info: Images/Hemmung-Teil1.jpg used on input line 333.
 (pdftex.def)             Requested size: 361.3436pt x 257.35693pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--331
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
-[9 <./Images/Funktionsweise-Uhrwerk.jpg>]
-<Images/period.png, id=400, 463.7325pt x 402.50375pt>
+[10 <./Images/Funktionsweise-Uhrwerk.jpg>]
+<Images/period.png, id=404, 463.7325pt x 402.50375pt>
 File: Images/period.png Graphic file (type png)
  <use Images/period.png>
-Package pdftex.def Info: Images/period.png used on input line 342.
+Package pdftex.def Info: Images/period.png used on input line 347.
 (pdftex.def)             Requested size: 185.4897pt x 160.99864pt.
 
-[10 <./Images/Hemmung-Teil1.jpg>]
-<Images/Halfperiod.png, id=409, 461.725pt x 368.37625pt>
+[11 <./Images/Hemmung-Teil1.jpg>]
+<Images/Halfperiod.png, id=413, 461.725pt x 368.37625pt>
 File: Images/Halfperiod.png Graphic file (type png)
 
 <use Images/Halfperiod.png>
-Package pdftex.def Info: Images/Halfperiod.png used on input line 352.
+Package pdftex.def Info: Images/Halfperiod.png used on input line 357.
 (pdftex.def)             Requested size: 184.68672pt x 147.34789pt.
- [11 <./Images/period.png> <./Images/Halfperiod.png>] [12]
+ [12 <./Images/period.png> <./Images/Halfperiod.png>] [13]
 Chapter 4.
-[13
+[14
 
-] [14] [15]
+] [15] [16]
 Chapter 5.
-<Images/test_setup.jpg, id=446, 2457.18pt x 2457.18pt>
+<Images/test_setup.jpg, id=450, 2457.18pt x 2457.18pt>
 File: Images/test_setup.jpg Graphic file (type jpg)
 
 <use Images/test_setup.jpg>
-Package pdftex.def Info: Images/test_setup.jpg used on input line 446.
+Package pdftex.def Info: Images/test_setup.jpg used on input line 451.
 (pdftex.def)             Requested size: 245.73239pt x 245.73239pt.
- [16
+ [17
 
  <./Images/test_setup.jpg>]
-<Images/animation_sad.png, id=452, 589.20125pt x 421.575pt>
+<Images/animation_sad.png, id=456, 589.20125pt x 421.575pt>
 File: Images/animation_sad.png Graphic file (type png)
 
 <use Images/animation_sad.png>
-Package pdftex.def Info: Images/animation_sad.png used on input line 475.
+Package pdftex.def Info: Images/animation_sad.png used on input line 480.
 (pdftex.def)             Requested size: 353.52347pt x 252.94695pt.
- [17]
-<Images/animation_hypotenuse.png, id=457, 584.1825pt x 433.62pt>
+ [18]
+<Images/animation_hypotenuse.png, id=461, 584.1825pt x 433.62pt>
 File: Images/animation_hypotenuse.png Graphic file (type png)
 
 <use Images/animation_hypotenuse.png>
-Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 485
+Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 490
 .
 (pdftex.def)             Requested size: 350.51219pt x 260.17401pt.
- [18 <./Images/animation_sad.png>]
-[19 <./Images/animation_hypotenuse.png>]
-<Images/motion_vectors.png, id=470, 618.31pt x 617.30624pt>
+ [19 <./Images/animation_sad.png>]
+[20 <./Images/animation_hypotenuse.png>]
+<Images/motion_vectors.png, id=475, 618.31pt x 617.30624pt>
 File: Images/motion_vectors.png Graphic file (type png)
 
 <use Images/motion_vectors.png>
-Package pdftex.def Info: Images/motion_vectors.png used on input line 500.
+Package pdftex.def Info: Images/motion_vectors.png used on input line 505.
 (pdftex.def)             Requested size: 309.15424pt x 308.65236pt.
 
-<Images/optical_flow_basic1.jpg, id=471, 438.63875pt x 194.7275pt>
+<Images/optical_flow_basic1.jpg, id=476, 438.63875pt x 194.7275pt>
 File: Images/optical_flow_basic1.jpg Graphic file (type jpg)
 
 <use Images/optical_flow_basic1.jpg>
-Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 517.
+Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 522.
 
 (pdftex.def)             Requested size: 307.04501pt x 136.3083pt.
- [20 <./Images/motion_vectors.png>]
-[21 <./Images/optical_flow_basic1.jpg>]
-<Images/excel_sheet_numbers.png, id=484, 564.1075pt x 552.0625pt>
+ [21 <./Images/motion_vectors.png>]
+[22 <./Images/optical_flow_basic1.jpg>]
+<Images/excel_sheet_numbers.png, id=488, 564.1075pt x 552.0625pt>
 File: Images/excel_sheet_numbers.png Graphic file (type png)
 
 <use Images/excel_sheet_numbers.png>
-Package pdftex.def Info: Images/excel_sheet_numbers.png used on input line 541.
+Package pdftex.def Info: Images/excel_sheet_numbers.png used on input line 546.
 
 (pdftex.def)             Requested size: 394.87254pt x 386.4411pt.
 
-Overfull \hbox (4.87254pt too wide) in paragraph at lines 541--542
+Overfull \hbox (4.87254pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
-[22] <Images/excel_sheet_graph.png, id=489, 1151.30125pt x 326.21875pt>
+[23] <Images/excel_sheet_graph.png, id=493, 1151.30125pt x 326.21875pt>
 File: Images/excel_sheet_graph.png Graphic file (type png)
 
 <use Images/excel_sheet_graph.png>
-Package pdftex.def Info: Images/excel_sheet_graph.png used on input line 549.
+Package pdftex.def Info: Images/excel_sheet_graph.png used on input line 554.
 (pdftex.def)             Requested size: 460.51234pt x 130.48518pt.
 
-Overfull \hbox (70.51234pt too wide) in paragraph at lines 549--550
+Overfull \hbox (70.51234pt too wide) in paragraph at lines 554--555
  [][] 
  []
 
-[23 <./Images/excel_sheet_numbers.png>] [24 <./Images/excel_sheet_graph.png>]
+[24 <./Images/excel_sheet_numbers.png>] [25 <./Images/excel_sheet_graph.png>]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 577--577
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 582--582
 []|\T1/cmr/bx/n/12 Duration 
  []
 
-[25]
+[26]
 Chapter 6.
-[26
+[27
 
-] [27]
+] [28]
 Chapter 7.
-[28
+[29
 
-] <Images/variations_per_day.png, id=521, 771.88374pt x 299.1175pt>
+] <Images/variations_per_day.png, id=525, 771.88374pt x 299.1175pt>
 File: Images/variations_per_day.png Graphic file (type png)
 
 <use Images/variations_per_day.png>
-Package pdftex.def Info: Images/variations_per_day.png used on input line 624.
+Package pdftex.def Info: Images/variations_per_day.png used on input line 629.
 (pdftex.def)             Requested size: 385.94092pt x 149.55838pt.
 
-Overfull \hbox (2.09566pt too wide) in paragraph at lines 638--638
+Overfull \hbox (2.09566pt too wide) in paragraph at lines 643--643
 []|\T1/cmr/bx/n/10 Positions|  
  []
 
 
-Overfull \hbox (6.1062pt too wide) in paragraph at lines 642--642
+Overfull \hbox (6.1062pt too wide) in paragraph at lines 647--647
 []\T1/cmr/bx/n/17.28 Calculation of rate de-vi-a-tion from fre-quency 
  []
 
-[29 <./Images/variations_per_day.png>]
+[30 <./Images/variations_per_day.png>]
 Chapter 8.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(./Files/source_filename.py) (./PA_documentation.gls [30
+(./Files/source_filename.py) (./PA_documentation.gls [31
 
-] [31
+] [32
 
 
-]) [32]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 656.
+]) [33]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 661.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (15.7957pt too wide) in paragraph at lines 657--657
+Overfull \hbox (15.7957pt too wide) in paragraph at lines 662--662
 []\T1/cmr/m/it/12 Chronoskop Zeit-waa-gen von Timeg-ra-phers\T1/cmr/m/n/12 . \T
 1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 http : / / www . chronos
 kop .
  []
 
 
-Overfull \hbox (37.4266pt too wide) in paragraph at lines 657--657
+Overfull \hbox (37.4266pt too wide) in paragraph at lines 662--662
 \T1/cmtt/m/n/12 com / index . php / chronoskop -[] zeitwaagen -[] von -[] preli
 slisit -[] timegraphers/$[][]
  []
 
 
-Overfull \hbox (3.50462pt too wide) in paragraph at lines 657--657
+Overfull \hbox (3.50462pt too wide) in paragraph at lines 662--662
 []\T1/cmr/m/it/12 Zeitwaage Uhren-Wiki: Die besten Uhren und Uhren-marken\T1/cm
 r/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
  []
 
-[33
+[34
 
 ] (./PA_documentation.lof)
 \tf@lof=\write9
 \openout9 = `PA_documentation.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 663.
- [34
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
+ [35
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 663.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
  (./PA_documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 663.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 663.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
 Package rerunfilecheck Info: File `PA_documentation.out' has not changed.
 (rerunfilecheck)             Checksum: 2E9ED027B73483B8A8807D07C8E19728;4125.
 Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
@@ -1808,8 +1808,8 @@ Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32013 strings out of 492995
- 589308 string characters out of 6132703
+ 32014 strings out of 492995
+ 589315 string characters out of 6132703
  1049314 words of memory out of 5000000
  35025 multiletter control sequences out of 15000+600000
  25422 words of font info for 57 fonts, out of 8000000 for 9000
@@ -1839,10 +1839,10 @@ fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sftt1200.pfb>
-Output written on PA_documentation.pdf (39 pages, 3075385 bytes).
+Output written on PA_documentation.pdf (40 pages, 3077792 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 137 named destinations out of 1000 (max. 500000)
  527 words of extra memory for PDF output out of 10000 (max. 10000000)
 
