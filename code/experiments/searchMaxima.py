@@ -18,23 +18,28 @@ half_period_duration_in_sec = one_second / watch_hertz_half_period
 resolution_grid_in_sec = one_second / frames_per_second
 step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 beginning_led_on = 100
-lower_limit_start_maximum = 500
+lower_limit_start_maximum = 300
 
-directory = "records_from_led_board/sadValues/5sec/"
-sadValues = np.loadtxt(directory+"sadValues.txt")
-timestamps = np.loadtxt(directory+"timestamps.txt")
+directory = "records_from_led_board/sadValues/2400sec/"
+sadValues = np.loadtxt(directory+"cutoff_sad_values_2400_sec_run_5.txt")
+timestamps = np.loadtxt(directory+"cutoff_timestamps_2400_sec_run_5.txt")
 
 def is_maxima_search_window_5(array, index):
     left_right_increase = 2
     if index+left_right_increase < len(array):
-        search_window = np.copy(array[index-left_right_increase:index+left_right_increase])
-        array_to_find_index = np.copy(array[index-left_right_increase:index+left_right_increase])
-        maxima = 0
+        search_window = np.copy(array[index-left_right_increase-1:index+left_right_increase])
+        array_to_find_index = np.copy(array[index-left_right_increase-1:index+left_right_increase])
+        maxima = "unset"
         for i in search_window:
             if i > beginning_led_on:
                 maxima = i
                 break
-        index_in_search_window = np.where(array_to_find_index == maxima)[0][0]
+        if maxima == "unset":
+            print("never found a maxima at: ", index)
+        try:
+            index_in_search_window = np.where(array_to_find_index == maxima)[0][0]
+        except:
+            index_in_search_window = 2
         return index + (index_in_search_window - left_right_increase)
 
 def find_start_maxima(array):
@@ -46,10 +51,13 @@ def find_start_maxima(array):
 durations_of_half_periods_in_microsec = []
 search_window_increase = 2
 maxima = []
+
 start_index = find_start_maxima(sadValues)
+#print("start index: ", start_index)
+#start_index = 18
 maximum = start_index
 start_timestamp = timestamps[start_index]
-while (maximum + step_size + search_window_increase) <= len(sadValues):
+while (maximum + step_size + search_window_increase) < len(sadValues):
     next_maximum = is_maxima_search_window_5(sadValues, maximum + step_size)
     maxima.append(next_maximum)
     maximum = next_maximum

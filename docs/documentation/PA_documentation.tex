@@ -435,6 +435,9 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \chapter {Experimental approaches}
     \begin{itemize}
         \item ev begründen, wieso wir picamera lib gewählt haben?
+        \item ev nicht hier erwähnen, aber iwo einbetten, dass wir die MV's gewählt haben, weil sie auch universell sind. rgb zum beispiel ist abhängig
+        von der farbe und weil die uhren verschiedene metalle haben, wäre es dann nicht möglich mit rgb zu messen. nach mustern im bild suchen bzw nach der unruhe suchen
+        und so objekttracking machen ist auch nicht sinnvoll, weil es sehr viele verschiedene unruhen gibt. (ev bilder von verschiedenen unruhen?)
       \end{itemize}
     \section{Test setup}
     \begin{itemize}
@@ -575,7 +578,28 @@ Half of a period of the balance wheel is the path of a point from one turning po
         2100      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
         2400      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
     \end{tabularx}
-    \caption{}
+    \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
+    \end{table}
+
+    \begin{table}
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
+        \hline
+        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        10        & 166636.1                 & 166628.1     & 166628.1     & 166628.1      & 166628.1      \\ \hline
+        20     & 166700.3                 & 166602.3      & 166700.3    & 166602.3     & 166602.3  \\ \hline
+        40      & 166685.6                 & 166638.1    & 166638.1     & 166638.1    & 166638.1    \\ \hline
+        60      & 166649.5                 & 166649.5	   & 166649.5	  & 166649.5	  & 166649.5  \\ \hline
+        300      & 166667.4                 & 166667.4	   & 166673.6	  & 166667.4	  & 166667.4      \\ \hline
+        600      & 166666.5                 & 166666.5	   & 166666.5	  & 166669.6	  & 166666.5      \\ \hline
+        900      & 166668.2                 & 166666.2	   & 166668.3	  & 166668.3	  & 166651.7      \\ \hline
+        1200      & 166669.1                 & 166656.7	   & 166658.3	  & 166658.4	  & 166669.3      \\ \hline
+        1500      & 166669.7                 & 166659.8	   & 166658.5	  & 166669.6	  & 166659.7      \\ \hline
+        1800      & 166661.7                 & 166660.7	   & 166668.9	  & 166669.9	  & 166668.9      \\ \hline
+        2100      & 166668.4                 & 166661.4	   & 166668.4	  & 166669.3	  & 166662.3      \\ \hline
+        2400      & 166669.7                 & 166669.6	   & 166663.5	  & 166663.5	  & 166662.7        \\ \hline
+    \end{tabularx}
+    \caption{Measured half periods of led board using motion vectors. Desired value 166666}
     \end{table}
     
     \chapter{Calculation of the frequency}

@@ -287,6 +287,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm2488.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecti1440.tfm
+INPUT Images/logo.png
+INPUT ./Images/logo.png
+INPUT ./Images/logo.png
 OUTPUT PA_documentation.ist
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT PA_documentation.toc
@@ -312,6 +315,12 @@ INPUT ./Images/Funktionsweise-Uhrwerk.jpg
 INPUT Images/Hemmung-Teil1.jpg
 INPUT ./Images/Hemmung-Teil1.jpg
 INPUT ./Images/Hemmung-Teil1.jpg
+INPUT Images/period.png
+INPUT ./Images/period.png
+INPUT ./Images/period.png
+INPUT Images/Halfperiod.png
+INPUT ./Images/Halfperiod.png
+INPUT ./Images/Halfperiod.png
 INPUT Images/test_setup.jpg
 INPUT ./Images/test_setup.jpg
 INPUT ./Images/test_setup.jpg
