@@ -157,6 +157,14 @@ $\overline{\hbox{\phantom{mmm}Linda Helen Bödi\phantom{mmm}}}$
 $\overline{\hbox{\phantom{mmmm}Place and Date\phantom{mmmm}}}$\hskip2cm
 $\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
 
+\chapter*{Abstract}
+ \addcontentsline{toc}{chapter}{Abstract}
+Every mechanical watch must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper measuring device that can compete with the accuracy of a professional device. This camera also differs from conventional measuring devices in the type of measurement. Almost all devices on the market perform acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work a new approach is used; the measurement is carried out completely optically, but without laser beam, but completely by means of image processing. 
+\newline
+The following questions should be clarified in the work: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
+\newline
+In a first step, possible methods were then evaluated in order to carry out the optical measurement of the frequency of the balance of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library has a very well-founded documentation and offers many of the functionalities needed for this work, the decision was made in the end for this library. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel and due to a promising result the implementation of a Python program was carried out. During the course of the work, after several measurements with professional instruments, it was found that the watch reacts very sensitively to temperatures, runs very inaccurately and therefore it is difficult to get good reference measurements. Therefore, a comparison was made with a blinking LED which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing works very well and that sufficient good results can be achieved. In order to improve the results even further, it is possible, for example, to investigate which camera settings are best suited for the measurement.
+
 \pagebreak
     \setcounter{secnumdepth}{5} 
     \setcounter{tocdepth}{5} 
@@ -164,13 +172,6 @@ $\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
     \tableofcontents
     \pagebreak
     \pagenumbering{arabic}
-    
-    \chapter{Abstract}
-Every mechanical watch must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper measuring device that can compete with the accuracy of a professional device. This camera also differs from conventional measuring devices in the type of measurement. Almost all devices on the market perform acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work a new approach is used; the measurement is carried out completely optically, but without laser beam, but completely by means of image processing. 
-\newline
-The following questions should be clarified in the work: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
-\newline
-In a first step, possible methods were then evaluated in order to carry out the optical measurement of the frequency of the balance of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library has a very well-founded documentation and offers many of the functionalities needed for this work, the decision was made in the end for this library. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel and due to a promising result the implementation of a Python program was carried out. During the course of the work, after several measurements with professional instruments, it was found that the watch reacts very sensitively to temperatures, runs very inaccurately and therefore it is difficult to get good reference measurements. Therefore, a comparison was made with a blinking LED which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing works very well and that sufficient good results can be achieved. In order to improve the results even further, it is possible, for example, to investigate which camera settings are best suited for the measurement.
     
     \chapter{Motivation}
     Today's watch technology requires measuring instruments to perform a wide variety of measurements and analyses on almost all types of watches with great precision and reliability.
@@ -206,7 +207,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
      disadvantages & background noises need to be filtered out& \\
      \hline
     \end{tabularx}
-    \caption{bla}
+    \caption{Comparison of acoustical and optical measurement}
         \end{table}
     
     \subsection{Companies}
@@ -253,7 +254,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \centering
     \includegraphics[scale=0.7]{Images/camera_architecture.png}
     
-    \caption{Camera architecture. Readthedocs Picamera}
+    \caption{Camera architecture. \cite{ReadTheDocsPicamera}}
     \end{figure}
     
     
@@ -296,9 +297,11 @@ In a first step, possible methods were then evaluated in order to carry out the 
     The lower the minimum exposure time, the higher the maximum frame rate and vice versa.
     
     \subsubsection{Maximum exposure time}
-    Um die Belichtungszeit zu maximieren, muss die Framerate reduziert werden. 
-    
-    Es gilt :
+    To maximize shutter speed, the framerate needs to be reduced. 
+       \newline
+      
+        \bigskip
+    Therefore the following is valid :
     \begin{displaymath}
     \frac{1\text{s}}{\text{min framerate in fps}} = \text{max exposure time
     in s}
@@ -364,11 +367,11 @@ Half of a period of the balance wheel is the path of a point from one turning po
     Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows \cite{Krug1987}: 
     
     \begin{displaymath}
-    n* = 2f*3600
+    n\text{*} = 2f*3600
      \end{displaymath}
      and therefore:
      \begin{displaymath}
-      f = \frac{n*}{7200}
+      f = \frac{n\text{*}}{7200}
      \end{displaymath}
      
     
@@ -408,7 +411,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \subsection{Gstreamer}
     \subsection{Picamera}
     The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
-    This means that the camera can be accessed using a simple programming language such as Python.
+    This means that the camera can be accessed using a simple programming language such as Python.  \cite{ReadTheDocsPicamera}
     
     \subsection{Frame analysis versus given GPU motion vectors}
     One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
@@ -435,6 +438,8 @@ Half of a period of the balance wheel is the path of a point from one turning po
     The SAD is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount. 
     
     The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
+   
+   \subsection{Conclusions}
     
 
     \chapter {Experimental approaches}

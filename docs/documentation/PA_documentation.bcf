@@ -2147,21 +2147,23 @@
     <bcf:citekey order="2">Zeitwaage</bcf:citekey>
     <bcf:citekey order="3">Lombardi2011</bcf:citekey>
     <bcf:citekey order="4">ReadTheDocsPicamera</bcf:citekey>
-    <bcf:citekey order="5">Uhrwerk</bcf:citekey>
+    <bcf:citekey order="5">ReadTheDocsPicamera</bcf:citekey>
     <bcf:citekey order="6">Uhrwerk</bcf:citekey>
     <bcf:citekey order="7">Uhrwerk</bcf:citekey>
-    <bcf:citekey order="8">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="8">Uhrwerk</bcf:citekey>
     <bcf:citekey order="9">Witschi_basics</bcf:citekey>
     <bcf:citekey order="10">Witschi_basics</bcf:citekey>
     <bcf:citekey order="11">Witschi_basics</bcf:citekey>
-    <bcf:citekey order="12">Krug1987</bcf:citekey>
+    <bcf:citekey order="12">Witschi_basics</bcf:citekey>
     <bcf:citekey order="13">Krug1987</bcf:citekey>
     <bcf:citekey order="14">Krug1987</bcf:citekey>
-    <bcf:citekey order="15">Caliber</bcf:citekey>
-    <bcf:citekey order="16">ReadTheDocsPicamera</bcf:citekey>
-    <bcf:citekey order="17">Kuck1978</bcf:citekey>
-    <bcf:citekey order="18">Kuck1978</bcf:citekey>
-    <bcf:citekey order="19">Halliday2005</bcf:citekey>
+    <bcf:citekey order="15">Krug1987</bcf:citekey>
+    <bcf:citekey order="16">Caliber</bcf:citekey>
+    <bcf:citekey order="17">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="18">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="19">Kuck1978</bcf:citekey>
+    <bcf:citekey order="20">Kuck1978</bcf:citekey>
+    <bcf:citekey order="21">Halliday2005</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
