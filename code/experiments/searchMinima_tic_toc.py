@@ -11,7 +11,11 @@ half_period_duration_in_sec = one_second / watch_hertz_half_period
 resolution_grid_in_sec = one_second / frames_per_second
 step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 
+<<<<<<< HEAD
 directory = "different_position_records/left/80min/"
+=======
+directory = "different_position_records/up/80min/"
+>>>>>>> origin/master
 xValues = np.loadtxt(directory+"xValues.txt")
 timestamps = np.loadtxt(directory+"timestamps.txt")
 
