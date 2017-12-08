@@ -141,8 +141,6 @@
     \end{titlepage}
     
     \pagenumbering{roman}
-    \chapter*{Acknowledgement}
-    \addcontentsline{toc}{chapter}{Acknowledgement}
     
     \chapter*{Declaration of Autonomy}
      \addcontentsline{toc}{chapter}{Declaration of Autonomy}
@@ -163,7 +161,8 @@ Every mechanical watch must be checked for accuracy both during manufacture and 
 \newline
 The following questions should be clarified in the work: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
 \newline
-In a first step, possible methods were then evaluated in order to carry out the optical measurement of the frequency of the balance of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library has a very well-founded documentation and offers many of the functionalities needed for this work, the decision was made in the end for this library. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel and due to a promising result the implementation of a Python program was carried out. During the course of the work, after several measurements with professional instruments, it was found that the watch reacts very sensitively to temperatures, runs very inaccurately and therefore it is difficult to get good reference measurements. Therefore, a comparison was made with a blinking LED which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing works very well and that sufficient good results can be achieved. In order to improve the results even further, it is possible, for example, to investigate which camera settings are best suited for the measurement.
+In a first step, possible methods were then evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library has a very well-founded documentation and offers many of the functionalities needed for this work, the decision was made in the end for this library. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel and due to a promising result the implementation of a Python program was carried out. During the work, after several measurements with professional instruments, it was found that the watch reacts very sensitively to temperatures, runs very inaccurately and therefore it is difficult to get good reference measurements. Therefore, a comparison was made with a blinking LED which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing works very well and that sufficient good results can be achieved. In order to improve the results even further, it is possible, for example, to investigate which camera settings are best suited for the measurement. 
+Overall the measurements with the camera are a little bit worse than those with professional devices, but it is not impossible to get a similar accuracy when some error sources are eliminated (e.g. by testing out other and maybe better camera settings and better light conditions).
 
 \pagebreak
     \setcounter{secnumdepth}{5} 
@@ -183,7 +182,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
     The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device.
     
     \chapter{Fundamentals}
-    \section {Competitor Analysis}
+    \section{Competitor Analysis}
     \subsection{Optical versus acoustical measurement}
     To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
     
@@ -209,6 +208,10 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \end{tabularx}
     \caption{Comparison of acoustical and optical measurement}
         \end{table}
+        
+        \begin{itemize}
+       \item Add introduction what method is used in project
+       \end{itemize}
     
     \subsection{Companies}
     \subsubsection{Witschi - WisioScope S}
@@ -232,17 +235,17 @@ In a first step, possible methods were then evaluated in order to carry out the 
      \multicolumn{4}{|c|}{\textbf{Measurement rate deviation}} \\
      \hline
      &{\fontsize{9}{10}\selectfont \textbf{Witschi - WisioScope S}}  & {\fontsize{8}{9}\selectfont \textbf{Lepsi - WatchScope/WatchAnalyzer} }& {\fontsize{9}{10}\selectfont \textbf{Greiner Vibrograf - Compact 900} }\\\hline
-      scope   &  +/- 999.9 s/d  & +/- 1000 s/d &  +/- 1000 s/d \\ \hline
-     resolution &   0.1 s/d & 0.1 s/d & 0.1 s/d\\  \hline
-     price & CHF 10450.- & CHF 369.-, resp. CHF 929.- &  CHF 4070.-\\  \hline
+      Scope   &  +/- 999.9 s/d  & +/- 1000 s/d &  +/- 1000 s/d \\ \hline
+     Resolution &   0.1 s/d & 0.1 s/d & 0.1 s/d\\  \hline
+     Price & CHF 10450.- & CHF 369.-, resp. CHF 929.- &  CHF 4070.-\\  \hline
     \end{tabularx}
     \caption{Measurement rate deviation with different professional devices}
  \end{table}
     
     \section{Camera module}
-    The documentation Readthedocs for the picamera library \cite{ReadTheDocsPicamera} provides a good introduction to the operation of the Raspberry Pi with camera. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
+    The documentation for the picamera library \cite{ReadTheDocsPicamera} provides a good introduction to the operation of the Raspberry Pi with camera, which is used for all measurements in this project. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
     
-    The camera module of the Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
+    The camera module of the Raspberry Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
     
     However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry Pi.
     
@@ -324,7 +327,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \noindent
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{Images/Funktionsweise-Uhrwerk.jpg}
+    \includegraphics[scale=0.45]{Images/Funktionsweise-Uhrwerk.jpg}
     
     \caption{Operation of a mechanical watch \cite{Uhrwerk}}
     \end{figure}
@@ -333,15 +336,18 @@ The so-called escapement ensures that the gear train runs at the correct speed. 
     \noindent
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{Images/Hemmung-Teil1.jpg}
+    \includegraphics[scale=0.45]{Images/Hemmung-Teil1.jpg}
     
-    \caption{lever escapement and balance wheel \cite{Uhrwerk}}
+    \caption{Lever escapement and balance wheel \cite{Uhrwerk}}
     \end{figure}
 \bigskip
 The balance wheel is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
 The occurring error, if the balance wheel does not run accurate, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
 
 \subsection{Oscillation of the balance wheel}
+\begin{itemize}
+\item add that this is what will be recorded and measured
+\end{itemize}
 
 \subsubsection{Period}
 The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A). \cite{Witschi_basics}
@@ -349,12 +355,12 @@ The period of the balance wheel is the path of a point from one turning point to
     \centering
     \includegraphics[scale=0.4]{Images/period.png}
     
-    \caption{period of the balance wheel \cite{Witschi_basics}}
+    \caption{Period of the balance wheel \cite{Witschi_basics}}
     \end{figure}
 \bigskip
 
 \subsubsection{Half a period}
-Half of a period of the balance wheel is the path of a point from one turning point to the other (A - B). \cite{Witschi_basics}
+Half of a period, resp. one stroke, of the balance wheel is the path of a point from one turning point to the other (A - B). \cite{Witschi_basics}
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/Halfperiod.png}
@@ -363,8 +369,8 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \end{figure}
 \bigskip
     
-    \subsection{Number of impacts}
-    Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses (beats) of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the beat number (n*) and frequency (f) is as follows \cite{Krug1987}: 
+    \subsection{Number of strokes}
+    Since the gang deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the number of strokes (n*) and frequency (f) is as follows \cite{Krug1987}: 
     
     \begin{displaymath}
     n\text{*} = 2f*3600
@@ -375,7 +381,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
      \end{displaymath}
      
     
-     \begin{table}
+     \begin{table}[H]
      \centering
     \begin{tabularx}{\linewidth}{ |L|L|L|L|L|  }
      \hline
@@ -392,32 +398,20 @@ Half of a period of the balance wheel is the path of a point from one turning po
         \subsection{Test watch}
     At first some general information to the test watch, which was used.
     
-    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It strokes 21600 times per hour and therefore has a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. \cite{Caliber}
+    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It strokes 21600 times per hour with a stroke duration of 0.1666 seconds and therefore has a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. \cite{Caliber}
     
     In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Watch Expert II from Witschi, and the rate deviation was determined. 
     
     In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
 
     \chapter{Technologies}
-    was für uns wichtig ist bei einem tool/library. wie ein bild aufgebaut ist zeigen (rgb etc)
     \begin{itemize}
-        \item stillstand erkennen
-        \item merkmal verfolgen
-        \item geschwindigkeit berechnen
-        \item timestamps als wichtige komponente, da für uns die bewegung über die zeit interessiert
+        \item Picamera, Gstreamer und OpenCV im allgemeinen erklären:
+        (Picamera library: The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
+    This means that the camera can be accessed using a simple programming language such as Python.  \cite{ReadTheDocsPicamera})    
     \end{itemize}
-    \section{Evaluation of technologies}
-    \subsection{OpenCV}
-    \subsection{Gstreamer}
-    \subsection{Picamera}
-    The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
-    This means that the camera can be accessed using a simple programming language such as Python.  \cite{ReadTheDocsPicamera}
     
-    \subsection{Frame analysis versus given GPU motion vectors}
-    One approach is to compare each image with the subsequent image and to mark the displacements with motion vectors. This would mean a considerable computational effort.
-    Such motion vectors are already made by the GPU, in order to compress videos in the H.264 codec.
-    
-    \subsection{Frame analysis via OpenCV}
+    \section{Optical Flow}
     With the library OpenCV it is possible to determine the optical flow of an image sequence. 
     
     The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
@@ -429,8 +423,12 @@ Half of a period of the balance wheel is the path of a point from one turning po
     The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients). 
     
     One characteristic of this method is that it does not provide a dense flow, i. e. the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
+    (Dense optical flow vs. sparse optical flow)
+  
+   \section{Kalman Filtering} 
+      \section{Object tracking} 
     
-    \subsection{Motion vectors from high level library picamera}
+ \section{Motion vectors}
     The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. \cite{ReadTheDocsPicamera}
     
     The sum of absolute differences is a positive number resulting from the formation of the difference between two digital images. It serves as a measure of the difference between two images.
@@ -438,18 +436,29 @@ Half of a period of the balance wheel is the path of a point from one turning po
     The SAD is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount. 
     
     The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
+     \begin{itemize}
+        \item makroblock sad
+        \end{itemize}
+    
    
-   \subsection{Conclusions}
+   \section{Conclusions and Evaluations}
+       was für uns wichtig ist bei einem tool/library. wie ein bild aufgebaut ist zeigen (rgb etc)
+    \begin{itemize}
+        \item stillstand erkennen
+        \item merkmal verfolgen
+        \item geschwindigkeit berechnen
+        \item timestamps als wichtige komponente, da für uns die bewegung über die zeit interessiert
+        \item in Tabelle zeigen, welche Bibliothek, was anbietet und evaluieren
+        \item begründen, wieso wir picamera lib gewählt haben
+        \item die MV's gewählt haben, weil sie auch universell sind. rgb zum beispiel ist abhängig
+        von der farbe und weil die uhren verschiedene metalle haben, wäre es dann nicht möglich mit rgb zu messen. nach mustern im bild suchen bzw nach der unruhe suchen
+        und so objekttracking machen ist auch nicht sinnvoll, weil es sehr viele verschiedene unruhen gibt. (ev bilder von verschiedenen unruhen?)
+    \end{itemize}
     
 
     \chapter {Experimental approaches}
-    \begin{itemize}
-        \item ev begründen, wieso wir picamera lib gewählt haben?
-        \item ev nicht hier erwähnen, aber iwo einbetten, dass wir die MV's gewählt haben, weil sie auch universell sind. rgb zum beispiel ist abhängig
-        von der farbe und weil die uhren verschiedene metalle haben, wäre es dann nicht möglich mit rgb zu messen. nach mustern im bild suchen bzw nach der unruhe suchen
-        und so objekttracking machen ist auch nicht sinnvoll, weil es sehr viele verschiedene unruhen gibt. (ev bilder von verschiedenen unruhen?)
-      \end{itemize}
-    \section{Test setup}
+    wir haben zuerst verschiedene experimente durchgeführt, um uns mit der picamera library vertraut zu machen. 
+   \section{Test setup}
     \begin{itemize}
         \item bild ausarbeiten
         \item kurze beschreibung dazu
@@ -460,22 +469,17 @@ Half of a period of the balance wheel is the path of a point from one turning po
         
         \caption{Test setup for records}
         \end{figure}
-    \section{Motion vectors}
-    \begin{itemize}
-        \item kurz erklären wie mv funktionieren-> makro blocks. mv -> wird für video kompression genutzt
-        \item erklären, dass die idee einen punkt zu verfolgen ist und dann den stillstand zu erfassen, um die periode bzw die frequenz herauszufinden.
-        \item ev erwähnen, dass so ev geschwindigkeitsunterschiede festgestellt werden könnten, dachten wir...
-      \end{itemize}
-    \subsection{Gesture detection}
+    \section{Gesture detection}
     \begin{itemize}
         \item wir haben zuerst getestet, ob wir mit der kamera real time erkennen können, ob sich ein objekt vor der kamera nach links/rechts/runter/rauf bewegt
         \item das konnten wir und sind weitergegangen und wollten das an der uhr testen und visualisieren (animation of motion vectors) 
       \end{itemize}
-    \subsection{Records of balance wheel}
+    \section{Records of balance wheel}
     \begin{itemize}
         \item dann haben wir aufnahmen der unruhe gemacht und versucht die ergebnisse zu interpretieren
     \end{itemize}
-    \subsection{Animation of motion vectors}
+    
+    \section{Animation of motion vectors}
     After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
     With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
     The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
@@ -503,7 +507,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
     \pagebreak
     
-    \subsection{Motion vectors visualized in a frame}
+    \section{Motion vectors visualized in a frame}
     Codecvisa was used to display the motion vectors of a frame.
     The result is shown in Figure 3.
  
@@ -515,7 +519,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \caption{Motion vectors drawn in one frame}
     \end{figure}
     
-    \subsection{Analysis of motion vectors in excel}
+    \section{Analysis of motion vectors in excel}
     \begin{itemize}
         \item ev bild, wie das gemeint ist...
       \end{itemize}
@@ -532,7 +536,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
     \end{figure}
     
-    \subsection{Influences of light, ANGLE? and camera parameters}
+    \section{Influences of light, angle and camera parameters}
     \begin{itemize}
         \item mehr licht ergab deutlichere messwerte
         \item bewegungsunschärfe (ev bild) minimieren hat auch deutlichere messwerte ergeben, braucht aber sehr strake lichtquelle(mit smartphone)
@@ -551,7 +555,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \noindent
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{Images/excel_sheet_numbers.png}
+    \includegraphics[scale=0.45]{Images/excel_sheet_numbers.png}
     
     \caption{Excel sheet with summed x-, y-values, timestamps and calculated frequency}
     \end{figure}
@@ -559,7 +563,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \noindent
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{Images/excel_sheet_graph.png}
+    \includegraphics[scale=0.35]{Images/excel_sheet_graph.png}
     
     \caption{Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}
     \end{figure}
@@ -569,8 +573,12 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \section{Verification of accuracy}
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
+    \begin{itemize}
+    \item RGB values verwendet, wie funktioniert das
+    \item als schlusswort: Messungen mit Kamera sind genau genug
+    \end{itemize}
    
-    \begin{table}
+    \begin{table}[H]
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
@@ -591,7 +599,7 @@ Half of a period of the balance wheel is the path of a point from one turning po
     \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
@@ -614,8 +622,12 @@ Half of a period of the balance wheel is the path of a point from one turning po
     
     \chapter{Calculation of the frequency}
     
+    \begin{itemize}
+    \item Erklärung wie Algorithmen implementiert, was Idee dahinter...
+    \end{itemize}
+    
     \section{Implementation of the algorithms}
-    \subsection{Calculation of the frequency by counting minima with upper limit}
+    \subsection{Counting minima with upper limit}
     
     In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program. 
     
@@ -627,7 +639,9 @@ Half of a period of the balance wheel is the path of a point from one turning po
       f = \frac{1}{T}
      \end{displaymath}
      
-  \subsection{Calculation of the frequency by counting minima with stepsize}
+  \subsection{Counting minima with stepsize}
+  
+    \subsection{Counting minima with tic toc and stepsize}
     
     \chapter{Results}
     
@@ -647,11 +661,16 @@ The optical measurements of the picamera were carried out on an average at about
     Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2) (21600):
     \bigskip
     
+    \begin{center}
     \(t2-t1 = \triangle t\)
+        \bigskip
     
-    \(\triangle t / s = f*2\)
+	\( \triangle t / s1 = f*2\)
+	    \bigskip
     
     \((f*2*s2)-3600=\text{deviation per hour}\)
+        
+    \end{center}
     
     \noindent
     \begin{figure}[H]
@@ -660,7 +679,7 @@ The optical measurements of the picamera were carried out on an average at about
     \caption{ Variation of different time and position recordings}
     \end{figure}    
     
-    \begin{table}
+    \begin{table}[H]
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|L|L|  }
         \hline
@@ -673,25 +692,33 @@ The optical measurements of the picamera were carried out on an average at about
           \caption{ variations per day in seconds} 
     \end{table}
     
-    \section{Calculation of rate deviation from frequency}
-    
     \section{Evaluation}
     
     \chapter{Discussion}
     \section{Difficulties}
     \section{Outlook}
     
-    \lstinputlisting[language=Python]{Files/source_filename.py}
-    
     
     \glsaddall
     \printglossaries
 
+\addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
         
+    \addcontentsline{toc}{chapter}{List of Figures}    
     \listoffigures
     \bigskip
-    
-    
+      
+    \addcontentsline{toc}{chapter}{Appendix - Python programs}
+     \chapter*{Appendix - Python programs}  
+     \section*{searchMinima\_tic\_toc.py}  
+      \lstset{
+       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
+           keywordstyle=\color{blue}\ttfamily,
+           stringstyle=\color{red}\ttfamily,
+           commentstyle=\color{teal}\ttfamily,
+          breaklines=true
+          }  
+    \lstinputlisting[language=Python]{Files/searchMinima_tic_toc.py}
     
     \end{document}

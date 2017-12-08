@@ -12,7 +12,6 @@ resolution_grid_in_sec = one_second / frames_per_second
 step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 
 directory = "different_position_records/left/80min/"
-
 xValues = np.loadtxt(directory+"xValues.txt")
 timestamps = np.loadtxt(directory+"timestamps.txt")
 
