@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  8 DEC 2017 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  8 DEC 2017 15:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1551,7 +1551,7 @@ Package biblatex Info: Reference segment=0 on input line 103.
 \c__siunitx_mathsf_int=\count411
 \c__siunitx_mathtt_int=\count412
 
-<Images/logo.png, id=233, 1116.17pt x 1116.17pt>
+<Images/logo.png, id=225, 1116.17pt x 1116.17pt>
 File: Images/logo.png Graphic file (type png)
  <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png used on input line 137.
@@ -1598,7 +1598,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 213.
  [3]
-<Images/camera_architecture.png, id=349, 540.0175pt x 614.295pt>
+<Images/camera_architecture.png, id=339, 540.0175pt x 614.295pt>
 File: Images/camera_architecture.png Graphic file (type png)
 
 <use Images/camera_architecture.png>
@@ -1616,7 +1616,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 303--305
 
  []
 
-[6] <Images/Funktionsweise-Uhrwerk.jpg, id=382, 903.375pt x 520.94624pt>
+[6] <Images/Funktionsweise-Uhrwerk.jpg, id=372, 903.375pt x 520.94624pt>
 File: Images/Funktionsweise-Uhrwerk.jpg Graphic file (type jpg)
 
 <use Images/Funktionsweise-Uhrwerk.jpg>
@@ -1633,7 +1633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--333
 
  []
 
-[7] <Images/Hemmung-Teil1.jpg, id=390, 903.375pt x 643.40375pt>
+[7] <Images/Hemmung-Teil1.jpg, id=380, 903.375pt x 643.40375pt>
 File: Images/Hemmung-Teil1.jpg Graphic file (type jpg)
 
 <use Images/Hemmung-Teil1.jpg>
@@ -1650,14 +1650,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--342
  []
 
 [8 <./Images/Funktionsweise-Uhrwerk.jpg>]
-<Images/period.png, id=399, 463.7325pt x 402.50375pt>
+<Images/period.png, id=389, 463.7325pt x 402.50375pt>
 File: Images/period.png Graphic file (type png)
  <use Images/period.png>
 Package pdftex.def Info: Images/period.png used on input line 356.
 (pdftex.def)             Requested size: 185.4897pt x 160.99864pt.
 
 [9 <./Images/Hemmung-Teil1.jpg>]
-<Images/Halfperiod.png, id=408, 461.725pt x 368.37625pt>
+<Images/Halfperiod.png, id=398, 461.725pt x 368.37625pt>
 File: Images/Halfperiod.png Graphic file (type png)
 
 <use Images/Halfperiod.png>
@@ -1669,7 +1669,7 @@ Chapter 3.
 
 ] [13] [14]
 Chapter 4.
-<Images/test_setup.jpg, id=445, 2457.18pt x 2457.18pt>
+<Images/test_setup.jpg, id=435, 2457.18pt x 2457.18pt>
 File: Images/test_setup.jpg Graphic file (type jpg)
 
 <use Images/test_setup.jpg>
@@ -1678,14 +1678,14 @@ Package pdftex.def Info: Images/test_setup.jpg used on input line 468.
  [15
 
  <./Images/test_setup.jpg>]
-<Images/animation_sad.png, id=452, 589.20125pt x 421.575pt>
+<Images/animation_sad.png, id=441, 589.20125pt x 421.575pt>
 File: Images/animation_sad.png Graphic file (type png)
 
 <use Images/animation_sad.png>
 Package pdftex.def Info: Images/animation_sad.png used on input line 492.
 (pdftex.def)             Requested size: 353.52347pt x 252.94695pt.
  [16]
-<Images/animation_hypotenuse.png, id=457, 584.1825pt x 433.62pt>
+<Images/animation_hypotenuse.png, id=447, 584.1825pt x 433.62pt>
 File: Images/animation_hypotenuse.png Graphic file (type png)
 
 <use Images/animation_hypotenuse.png>
@@ -1694,14 +1694,14 @@ Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 502
 (pdftex.def)             Requested size: 350.51219pt x 260.17401pt.
  [17 <./Images/animation_sad.png>]
 [18 <./Images/animation_hypotenuse.png>]
-<Images/motion_vectors.png, id=470, 618.31pt x 617.30624pt>
+<Images/motion_vectors.png, id=460, 618.31pt x 617.30624pt>
 File: Images/motion_vectors.png Graphic file (type png)
 
 <use Images/motion_vectors.png>
 Package pdftex.def Info: Images/motion_vectors.png used on input line 517.
 (pdftex.def)             Requested size: 309.15424pt x 308.65236pt.
 
-<Images/optical_flow_basic1.jpg, id=471, 438.63875pt x 194.7275pt>
+<Images/optical_flow_basic1.jpg, id=461, 438.63875pt x 194.7275pt>
 File: Images/optical_flow_basic1.jpg Graphic file (type jpg)
 
 <use Images/optical_flow_basic1.jpg>
@@ -1710,7 +1710,7 @@ Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 534.
 (pdftex.def)             Requested size: 307.04501pt x 136.3083pt.
  [19 <./Images/motion_vectors.png>]
 [20 <./Images/optical_flow_basic1.jpg>]
-<Images/excel_sheet_numbers.png, id=484, 878.28125pt x 516.93124pt>
+<Images/excel_sheet_numbers.png, id=474, 878.28125pt x 516.93124pt>
 File: Images/excel_sheet_numbers.png Graphic file (type png)
 
 <use Images/excel_sheet_numbers.png>
@@ -1722,7 +1722,7 @@ Overfull \hbox (5.22292pt too wide) in paragraph at lines 558--559
  [][] 
  []
 
-<Images/excel_sheet_graph.png, id=485, 1151.30125pt x 326.21875pt>
+<Images/excel_sheet_graph.png, id=475, 1151.30125pt x 326.21875pt>
 File: Images/excel_sheet_graph.png Graphic file (type png)
 
 <use Images/excel_sheet_graph.png>
@@ -1752,7 +1752,7 @@ Chapter 5.
 Chapter 6.
 [27
 
-] <Images/variations_per_day.png, id=522, 771.88374pt x 299.1175pt>
+] <Images/variations_per_day.png, id=512, 771.88374pt x 299.1175pt>
 File: Images/variations_per_day.png Graphic file (type png)
 
 <use Images/variations_per_day.png>
@@ -1823,52 +1823,49 @@ Package rerunfilecheck Warning: File `PA_documentation.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `PA_documentation.out':
-(rerunfilecheck)             Before: 3FF54EB86975E67996C4AE9767D07D90;3938
+(rerunfilecheck)             Before: 22A9814D0068BA38BF57BBA48177527C;3810
 (rerunfilecheck)             After:  E2232FD0A4288C71BB4DB241F84B1900;3855.
 Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
 \openout1 = `PA_documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32147 strings out of 492995
- 591328 string characters out of 6132703
- 1122351 words of memory out of 5000000
- 35073 multiletter control sequences out of 15000+600000
+ 32144 strings out of 492995
+ 591282 string characters out of 6132703
+ 1122348 words of memory out of 5000000
+ 35071 multiletter control sequences out of 15000+600000
  25735 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,16n,75p,10399b,2469s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.6.1.1} has been referenced but does no
-t exist, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
-usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sftt1200.pfb>
-Output written on PA_documentation.pdf (42 pages, 3093308 bytes).
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sftt1200.pfb>
+Output written on PA_documentation.pdf (42 pages, 3092957 bytes).
 PDF statistics:
- 823 PDF objects out of 1000 (max. 8388607)
- 723 compressed objects within 8 object streams
- 221 named destinations out of 1000 (max. 500000)
- 527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 814 PDF objects out of 1000 (max. 8388607)
+ 714 compressed objects within 8 object streams
+ 220 named destinations out of 1000 (max. 500000)
+ 511 words of extra memory for PDF output out of 10000 (max. 10000000)
 
