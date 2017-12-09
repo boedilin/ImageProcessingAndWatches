@@ -1,0 +1,17 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'PA_documentation.blg'
+[52] biber-darwin:303> INFO - === Thu Dec  7, 2017, 14:38:51
+[77] Biber.pm:359> INFO - Reading 'PA_documentation.bcf'
+[182] Biber.pm:835> INFO - Found 9 citekeys in bib section 0
+[198] Biber.pm:3670> INFO - Processing section 0
+[214] Biber.pm:3840> INFO - Looking for bibtex format file 'PA_cogsworth_citation.bib' for section 0
+[217] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[223] bibtex.pm:1292> INFO - Found BibTeX data source 'PA_cogsworth_citation.bib'
+[275] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/g1/3zy32gy15pd5c34fr1f_qg500000gn/T/TxKogbHo4v/PA_cogsworth_citation.bib_47236.utf8, line 6, warning: 177 characters of junk seen at toplevel
+[296] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[296] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[296] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[297] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[307] bbl.pm:608> INFO - Writing 'PA_documentation.bbl' with encoding 'UTF-8'
+[309] bbl.pm:712> INFO - Output to PA_documentation.bbl
+[309] Biber.pm:109> INFO - WARNINGS: 1

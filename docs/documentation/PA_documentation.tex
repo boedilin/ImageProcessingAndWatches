@@ -411,7 +411,8 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
         \item Picamera, Gstreamer und OpenCV im allgemeinen erklären:
         (Picamera library: The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
     This means that the camera can be accessed using a simple programming language such as Python.  \cite{ReadTheDocsPicamera})    
-    \end{itemize}
+        \item opencv vereint verschiedene Algorithmen zur Bildverarbeitung und für maschinelles Sehen. Die Programmbibliothek opencv bietet Module an, die Algorithmen haben, die bekannte Probleme lösen können, wie zum Beispiel Gesichtserkennung, Gestenerkennung, Objekterkennung, Tracking(ins Glossar) und Optischer Fluss um nur einige zu nennen.
+  \end{itemize}
     
     \section{Optical Flow}
     With the library OpenCV it is possible to determine the optical flow of an image sequence. 
@@ -428,7 +429,7 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     (Dense optical flow vs. sparse optical flow)
   
    \section{Kalman Filtering} 
-      \section{Object tracking} 
+   \section{Object tracking} 
     
  \section{Motion vectors}
     The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. \cite{ReadTheDocsPicamera}
