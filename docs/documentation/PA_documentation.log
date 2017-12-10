@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.26)  10 DEC 2017 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.26)  10 DEC 2017 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1766,86 +1766,97 @@ Overfull \hbox (12.96149pt too wide) in paragraph at lines 580--581
 
 [21 <./Images/excel_sheet_numbers.png>] [22 <./Images/excel_sheet_graph.png>]
 Chapter 5.
+
+Overfull \hbox (93.3471pt too wide) in paragraph at lines 587--590
+[][][][][][]
+ []
+
 [23
 
 ] [24]
 Chapter 6.
+
+Overfull \hbox (102.9212pt too wide) in paragraph at lines 610--624
+\T1/cmr/m/n/12 the ac-cu-racy of the watch[][][][][][].
+ []
+
 [25
 
 ] <Images/variations_per_day.png, id=503, 771.88374pt x 299.1175pt>
 File: Images/variations_per_day.png Graphic file (type png)
 
 <use Images/variations_per_day.png>
-Package pdftex.def Info: Images/variations_per_day.png used on input line 639.
+Package pdftex.def Info: Images/variations_per_day.png used on input line 638.
 (pdftex.def)             Requested size: 385.94092pt x 149.55838pt.
 
-Overfull \hbox (2.09566pt too wide) in paragraph at lines 653--653
+Overfull \hbox (2.09566pt too wide) in paragraph at lines 652--652
 []|\T1/cmr/bx/n/10 Positions|  
  []
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 682--682
-[]|\T1/cmr/bx/n/12 Duration 
- []
-
 [26 <./Images/variations_per_day.png>]
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 703--703
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 688--688
 []|\T1/cmr/bx/n/12 Duration 
  []
 
-[27]
+
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 709--709
+[]|\T1/cmr/bx/n/12 Duration 
+ []
+
+[27] [28]
 Chapter 7.
-(./PA_documentation.gls [28
+(./PA_documentation.gls [29
 
-] [29
+] [30
 
 
-]) [30]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 716.
+]) [31]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 722.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (15.7957pt too wide) in paragraph at lines 717--717
+Overfull \hbox (15.7957pt too wide) in paragraph at lines 723--723
 []\T1/cmr/m/it/12 Chronoskop Zeit-waa-gen von Timeg-ra-phers\T1/cmr/m/n/12 . \T
 1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 http : / / www . chronos
 kop .
  []
 
 
-Overfull \hbox (37.4266pt too wide) in paragraph at lines 717--717
+Overfull \hbox (37.4266pt too wide) in paragraph at lines 723--723
 \T1/cmtt/m/n/12 com / index . php / chronoskop -[] zeitwaagen -[] von -[] preli
 slisit -[] timegraphers/$[][]
  []
 
 
-Overfull \hbox (3.50462pt too wide) in paragraph at lines 717--717
+Overfull \hbox (3.50462pt too wide) in paragraph at lines 723--723
 []\T1/cmr/m/it/12 Zeitwaage Uhren-Wiki: Die besten Uhren und Uhren-marken\T1/cm
 r/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
  []
 
-[31
+[32
 
 ] (./PA_documentation.lof)
 \tf@lof=\write9
 \openout9 = `PA_documentation.lof'.
 
- [32
+ [33
 
 ]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(./Files/searchMinima_tic_toc.py [33
+(./Files/searchMinima_tic_toc.py [34
 
-] [34])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 734.
- [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 734.
+] [35])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 740.
+ [36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 740.
  (./PA_documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 734.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 734.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 740.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 740.
 Package rerunfilecheck Info: File `PA_documentation.out' has not changed.
 (rerunfilecheck)             Checksum: E3D94259AACDA9055C2231A5392C1D73;3862.
 Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
@@ -1853,8 +1864,8 @@ Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32235 strings out of 492995
- 593275 string characters out of 6132704
+ 32236 strings out of 492995
+ 593282 string characters out of 6132704
  1124249 words of memory out of 5000000
  35146 multiletter control sequences out of 15000+600000
  26425 words of font info for 60 fonts, out of 8000000 for 9000
@@ -1886,10 +1897,10 @@ s/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/public/cm-super/sftt1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/zapfding/uzdr.pfb>
-Output written on PA_documentation.pdf (41 pages, 3098172 bytes).
+Output written on PA_documentation.pdf (42 pages, 3100146 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 818 PDF objects out of 1000 (max. 8388607)
+ 717 compressed objects within 8 object streams
+ 220 named destinations out of 1000 (max. 500000)
  511 words of extra memory for PDF output out of 10000 (max. 10000000)
 

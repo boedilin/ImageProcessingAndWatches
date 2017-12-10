@@ -564,7 +564,7 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
 
     \section{Crude calculation of frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
-    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and \colorbox{pink}{thus the rate deviation??}. 
+    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are \colorbox{pink}{good enough??} to determine the frequency and thus the rate deviation. 
     
     \noindent
     \begin{figure}[H]
@@ -583,17 +583,15 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     \end{figure}
     
     \chapter{Calculation of the frequency}
-    
-    \begin{itemize}
-    \item Erklärung wie Algorithmen implementiert, was Idee dahinter...
-    \end{itemize}
+    \colorbox{pink}{Irgendwie ist es schwierig hier eine
+    Einleitung zu machen ohne 5.1.1 anzupassen! Weglassen?}
+    In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program.
+    It turned out that there are different methods to calculate the frequency. 
     
     \section{Implementation of the algorithms}
-    \subsection{Counting minima with upper limit}
+    \subsection{Counting minima with upper limit} 
     
-    In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program. 
-    
-    The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
+    The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the image noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
     
     Furthermore, the calculation of the frequency in the Python program has been further simplified by not calculating each period individually, but by selecting the first and the last minimum over the whole period of time, in which it was recorded. This time span is then calculated by half of the number of minima minus 1. Half, because every half of the period the balance wheel stops and minus 1, because otherwise a half-period would be taken into account too much. This approach reduces the number of rounding errors, resulting in higher accuracy. After this calculation, the period duration T is now available, from which the frequency f can be calculated quite simply: 
     
@@ -602,16 +600,17 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
      \end{displaymath}
      
   \subsection{Counting minima with stepsize}
-  
+  To ensure that minimas are not missed during counting, step sizes were used, i. e. the specifications where the minimas are to be searched for. In the measurements with the test watch, which has a stroke number of 6 per second, a frame rate of 90 was used and therefore every 15th value should show a standstill or a minimum. To detect deviations, a search window of size 5 has been defined.
+  For this way, two further values are compared to the left and right of the nominal step size and 15th steps are added from the smallest value of these 5. This method does not require defining a threshold for the minima searching, which is often difficult to set.
     \subsection{Counting minima with tic toc and stepsize}
     
     \chapter{Results}
     
     \section{Measurements}
-    Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Wisio Scope meter. Calculations using the Greiner Compact diverge greatly from those taken with the Wisio Scope. In the next section, this divergence and its causes will be discussed in more detail. 
+    Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. In the next section, this divergence and its causes will be discussed in more detail. 
 \bigskip
 \newline
-As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Wisio Scope time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
+As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch\colorbox{pink}{Referenz zu Witschi Grundkurs letzte Seite (S.55) Messtipps Danke:)}. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
 \bigskip
 \newline
@@ -657,8 +656,15 @@ The optical measurements of the picamera were carried out on an average at about
     \section{Verification of accuracy}
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
+    
+    Because trust in the motion vectors has diminished, a color-based method was used. The new method analyzes certain pixels in each image of the video sequence and detects the LED's light when a threshold value is exceeded in the RGB color space.
+    The LED has been programmed to mimic the test watch's balance wheel and provide 21600 pulses per hour -
+    respectively a frequency of 3 Hz.
+
+    The measurement is already accurate to approx. 7 microseconds at 60 seconds, as can be seen in the table below.
+
     \begin{itemize}
-    \item RGB values verwendet, wie funktioniert das
+      \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
     \item als schlusswort: Messungen mit Kamera sind genau genug
     \end{itemize}
    
