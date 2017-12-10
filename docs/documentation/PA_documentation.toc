@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {4.4}Animation of motion vectors}{16}{section.4.4}
 \contentsline {section}{\numberline {4.5}Motion vectors visualized in a frame}{19}{section.4.5}
 \contentsline {section}{\numberline {4.6}Analysis of motion vectors in excel}{19}{section.4.6}
-\contentsline {section}{\numberline {4.7}Influences of light, angle and camera parameters}{20}{section.4.7}
+\contentsline {section}{\numberline {4.7}Influences of camera setup and parameters}{20}{section.4.7}
 \contentsline {section}{\numberline {4.8}Crude calculation of frequency}{21}{section.4.8}
 \contentsline {section}{\numberline {4.9}Verification of accuracy}{23}{section.4.9}
 \contentsline {chapter}{\numberline {5}Calculation of the frequency}{25}{chapter.5}

@@ -80,6 +80,14 @@
       name=Photon,
       description={is an elementary particle, which includes electromagnetic radiation (e.g. light) and moves at the speed of light within a vacuum. \cite{Halliday2005}}
     }
+
+    \newglossaryentry{Motion blur}
+    {
+      name=Motion blur,
+      description={Motion blur is the apparent streaking of rapidly moving objects in a still image or a sequence of images such as a movie or animation.}
+    }
+
+    
     
     
     
@@ -461,7 +469,17 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     \end{table}
 
     \chapter {Experimental approaches}
-    wir haben zuerst verschiedene experimente durchgeführt, um uns mit der picamera library vertraut zu machen. 
+    \begin{itemize}
+      \item  von Animation of motion vectors: !!!!!!!!!!!!!!!!!
+    \end{itemize}
+    After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
+    With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
+    The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
+    
+    \begin{itemize}
+      \item wir haben zuerst verschiedene experimente durchgeführt, um uns mit der picamera library vertraut zu machen.       
+    \end{itemize}
+
    \section{Test setup}
     \begin{itemize}
         \item bild ausarbeiten
@@ -483,9 +501,6 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     \end{itemize}
     
     \section{Animation of motion vectors}
-    After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
-    With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
-    The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
     
     In a first step all SAD values were animated with colors to get a better understanding of how good the information they keep is and how as well as if they can be used to calculate the frequency of the movement of the balance wheel.
     
@@ -539,10 +554,11 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     \caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
     \end{figure}
     
-    \section{Influences of light, angle and camera parameters}
+    \section{Influences of camera setup and parameters}
     Testing with different settings has shown that the results can be improved. For example, the black and white records are the better choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
     The consequence of the shorter exposure time is that the light source must be very strong and close to the subject, otherwise the image is too dark and has a negative effect on the result.
     Records with changed angles were also taken. The angle was changed by about 30 degrees. With this adjustment, no significant changes in the measured values could be detected.
+    Furthermore, it was recognized that the selected image detail influences the measured values. During the video recordings it was taken care that the balance wheel takes up the entire image section.
     \newpage
 
     \section{Crude calculation of frequency}
