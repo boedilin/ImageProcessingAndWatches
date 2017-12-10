@@ -671,17 +671,17 @@ The optical measurements of the picamera were carried out on an average at about
 \bigskip
 \newline
     Figure 5 and Table 3 show the deviation per day based on the following calculation:
-    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2) (21600):
+    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2=21600):
     \bigskip
     
     \begin{center}
     \(t2-t1 = \triangle t\)
         \bigskip
     
-	\( \triangle t / s1 = f*2\)
+	\( \triangle t / s1 = \text{stroke duration}\)
 	    \bigskip
     
-    \((f*2*s2)-3600=\text{deviation per hour}\)
+    \((\text{stroke duration}*s2)-3600 sec=\text{deviation per hour}\)
         
     \end{center}
     
