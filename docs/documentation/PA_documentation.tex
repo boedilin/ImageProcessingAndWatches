@@ -429,17 +429,12 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     (Dense optical flow vs. sparse optical flow)
   
    \section{Kalman Filtering} 
-   \section{Object tracking} 
+   \section{Object tracking (isbn 978-1-4614-6533-1 oder wikipedia als referenz?)}
+   Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops.
     
  \section{Motion vectors}
-    The picamera library is capable of storing all motion vector estimations of the h.264 encoder in an object. This object with all motion vectors for all frames can be later accessed and used. The motion data is at the level of macro-blocks where the values are 4-bytes long and consist of a signed 1-byte x vector, a signed 1-byte y vector and an unsigned 2-byte SAD (Sum of Absolute Differences) value. All motion data values can be easily accessed frame by frame. \cite{ReadTheDocsPicamera}
-    
-    The sum of absolute differences is a positive number resulting from the formation of the difference between two digital images. It serves as a measure of the difference between two images.
-    
-    The SAD is obtained by subtracting the color values of the images pixel by pixel from each other and adding them up by amount. 
-    
-    The advantage of the Picamera library is that compared to the possibilities of the OpenCV library, the information about the motion vectors is available faster, since this library already has an internal object (motiondata), which stores all necessary information as well as the SAD value. 
-     \begin{itemize}
+ Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence. The movement vectors can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
+    \begin{itemize}
         \item makroblock sad
         \end{itemize}
     
