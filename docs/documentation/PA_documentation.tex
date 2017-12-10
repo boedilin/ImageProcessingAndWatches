@@ -5,6 +5,8 @@
     \usepackage{float}
     \usepackage{listings}
     \usepackage{siunitx}   
+    \usepackage{nicefrac}
+    \usepackage{pifont}
     \usepackage[toc]{glossaries}
     \makeglossaries
     \newglossaryentry{Rolling shutter}
@@ -406,7 +408,7 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     
     In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
 
-    \chapter{Technologies}
+    \chapter{Technologies and algorithms}
     \begin{itemize}
         \item Picamera, Gstreamer und OpenCV im allgemeinen erklären:
         (Picamera library: The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
@@ -440,19 +442,23 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     
    
    \section{Conclusions and Evaluations}
-       was für uns wichtig ist bei einem tool/library. wie ein bild aufgebaut ist zeigen (rgb etc)
-    \begin{itemize}
-        \item stillstand erkennen
-        \item merkmal verfolgen
-        \item geschwindigkeit berechnen
-        \item timestamps als wichtige komponente, da für uns die bewegung über die zeit interessiert
-        \item in Tabelle zeigen, welche Bibliothek, was anbietet und evaluieren
-        \item begründen, wieso wir picamera lib gewählt haben
-        \item die MV's gewählt haben, weil sie auch universell sind. rgb zum beispiel ist abhängig
-        von der farbe und weil die uhren verschiedene metalle haben, wäre es dann nicht möglich mit rgb zu messen. nach mustern im bild suchen bzw nach der unruhe suchen
-        und so objekttracking machen ist auch nicht sinnvoll, weil es sehr viele verschiedene unruhen gibt. (ev bilder von verschiedenen unruhen?)
-    \end{itemize}
+   Because in this project a mini computer is used and a realtime measurement is to be made, many presented technologies and algorithms are already excluded because they are too computing-intensive.
+   This means that at 90 frames per second, a calculation on the image data must be done within \nicefrac{1}{90} seconds, no matter how computing-intensive it is.
+   In addition, there is the problem with object tracking, for example, that there are many different shapes of balance wheels and that the software would have to be adapted for each new shape of balance wheel in order to make the object detection work again
+   The same applies to procedures that work with colours. As soon as a balance wheel has a different colour, the procedure would have to be adapted.
+  
+   \begin{table}[H]
     
+      \centering
+        \begin{tabularx}{\linewidth}{ |>{\hsize=1.3\hsize}L|>{\hsize=0.5\hsize}L|>{\hsize=0.6\hsize}L|>{\hsize=0.6\hsize}L|>{\hsize=0.6\hsize}L|  }
+        \hline
+        \textbf{} &  \textbf{Oprical Flow} &  \textbf{Kalman Filtering}&  \textbf{Object Tracking} &  \textbf{Motion Vectors} \\ \hline
+        Generalisability            & \ding{51}        & \ding{51}    & \ding{51}   & \ding{51}          \\ \hline
+        Computational intensity     & \ding{51}        & \ding{51}    & \ding{51}    & \ding{55}      \\ \hline
+        Available in a library      & \ding{51}        & \ding{51}    & \ding{51}    & \ding{51}       \\ \hline
+      \end{tabularx}
+    \caption{Evaluation of different algorithms}
+    \end{table}
 
     \chapter {Experimental approaches}
     wir haben zuerst verschiedene experimente durchgeführt, um uns mit der picamera library vertraut zu machen. 
