@@ -48,7 +48,7 @@
     \newglossaryentry{Codecvisa}
     {
       name=Codecvisa,
-      description={}
+      description={CodecVisa is a powerful real-time analyzer for different video codecs. http://www.codecian.com/}
     }
     
   \newglossaryentry{VCHI}
@@ -474,10 +474,9 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
         \caption{Test setup for records}
         \end{figure}
     \section{Gesture detection}
-    \begin{itemize}
-        \item wir haben zuerst getestet, ob wir mit der kamera real time erkennen können, ob sich ein objekt vor der kamera nach links/rechts/runter/rauf bewegt
-        \item das konnten wir und sind weitergegangen und wollten das an der uhr testen und visualisieren (animation of motion vectors) 
-      \end{itemize}
+    A first attempt was to move the hand in front of the camera down, up, right and left and to determine the direction in real time based on the motion vectors.
+    Because this worked quite well, it has been tried to record the balance wheel of the test watch.
+
     \section{Records of balance wheel}
     \begin{itemize}
         \item dann haben wir aufnahmen der unruhe gemacht und versucht die ergebnisse zu interpretieren
@@ -541,15 +540,9 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     \end{figure}
     
     \section{Influences of light, angle and camera parameters}
-    \begin{itemize}
-        \item mehr licht ergab deutlichere messwerte
-        \item bewegungsunschärfe (ev bild) minimieren hat auch deutlichere messwerte ergeben, braucht aber sehr strake lichtquelle(mit smartphone)
-        \item anderer winkel hat keine auswirkungen...
-    \end{itemize}
-    Testing with different settings has shown that the results can be improved. For example, the black and white shots are the better choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
+    Testing with different settings has shown that the results can be improved. For example, the black and white records are the better choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
     The consequence of the shorter exposure time is that the light source must be very strong and close to the subject, otherwise the image is too dark and has a negative effect on the result.
-        
-
+    Records with changed angles were also taken. The angle was changed by about 30 degrees. With this adjustment, no significant changes in the measured values could be detected.
     \newpage
 
     \section{Crude calculation of frequency}
