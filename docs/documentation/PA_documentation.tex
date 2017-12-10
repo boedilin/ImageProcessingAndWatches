@@ -7,6 +7,7 @@
     \usepackage{siunitx}   
     \usepackage{nicefrac}
     \usepackage{pifont}
+    \usepackage{xcolor}
     \usepackage[toc]{glossaries}
     \makeglossaries
     \newglossaryentry{Rolling shutter}
@@ -563,7 +564,7 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
 
     \section{Crude calculation of frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
-    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and thus the rate deviation. 
+    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are good enough to determine the frequency and \colorbox{pink}{thus the rate deviation??}. 
     
     \noindent
     \begin{figure}[H]
@@ -580,58 +581,6 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     
     \caption{Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}
     \end{figure}
-    
-    \pagebreak
-
-    \section{Verification of accuracy}
-    The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
-    But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
-    \begin{itemize}
-    \item RGB values verwendet, wie funktioniert das
-    \item als schlusswort: Messungen mit Kamera sind genau genug
-    \end{itemize}
-   
-    \begin{table}[H]
-      \centering
-        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
-        \hline
-        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
-        10        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
-        20     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
-        40      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
-        60      & 166673.7                 & 166672.4	   & 166673.7	  & 166672.4	  & 166673.7  \\ \hline
-        300      & 166665.2                 & 166671.7	   & 166640.4	  & 166665.3	  & 166640.4      \\ \hline
-        600      & 166668.2                 & 166649.6	   & 166668.2	  & 166655.8	  & 166668.2      \\ \hline
-        900      & 166667.2                 & 166667.3	   & 166638.4	  & 166638.4	  & 166667.2      \\ \hline
-        1200      & 166660.4                 & 166668.3	   & 166669.7	  & 166668.2	  & 166668.2      \\ \hline
-        1500      & 166668.8                 & 166650.3	   & 166650.3	  & 166668.8	  & 166668.8      \\ \hline
-        1800      & 166652.8                 & 166668.2	   & 166669.2	  & 166668.2	  & 166669.2      \\ \hline
-        2100      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
-        2400      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
-    \end{tabularx}
-    \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
-    \end{table}
-
-    \begin{table}[H]
-      \centering
-        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
-        \hline
-        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
-        10        & 166636.1                 & 166628.1     & 166628.1     & 166628.1      & 166628.1      \\ \hline
-        20     & 166700.3                 & 166602.3      & 166700.3    & 166602.3     & 166602.3  \\ \hline
-        40      & 166685.6                 & 166638.1    & 166638.1     & 166638.1    & 166638.1    \\ \hline
-        60      & 166649.5                 & 166649.5	   & 166649.5	  & 166649.5	  & 166649.5  \\ \hline
-        300      & 166667.4                 & 166667.4	   & 166673.6	  & 166667.4	  & 166667.4      \\ \hline
-        600      & 166666.5                 & 166666.5	   & 166666.5	  & 166669.6	  & 166666.5      \\ \hline
-        900      & 166668.2                 & 166666.2	   & 166668.3	  & 166668.3	  & 166651.7      \\ \hline
-        1200      & 166669.1                 & 166656.7	   & 166658.3	  & 166658.4	  & 166669.3      \\ \hline
-        1500      & 166669.7                 & 166659.8	   & 166658.5	  & 166669.6	  & 166659.7      \\ \hline
-        1800      & 166661.7                 & 166660.7	   & 166668.9	  & 166669.9	  & 166668.9      \\ \hline
-        2100      & 166668.4                 & 166661.4	   & 166668.4	  & 166669.3	  & 166662.3      \\ \hline
-        2400      & 166669.7                 & 166669.6	   & 166663.5	  & 166663.5	  & 166662.7        \\ \hline
-    \end{tabularx}
-    \caption{Measured half periods of led board using motion vectors. Desired value 166666}
-    \end{table}
     
     \chapter{Calculation of the frequency}
     
@@ -705,7 +654,55 @@ The optical measurements of the picamera were carried out on an average at about
           \caption{ variations per day in seconds} 
     \end{table}
     
-    \section{Evaluation}
+    \section{Verification of accuracy}
+    The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
+    But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
+    \begin{itemize}
+    \item RGB values verwendet, wie funktioniert das
+    \item als schlusswort: Messungen mit Kamera sind genau genug
+    \end{itemize}
+   
+    \begin{table}[H]
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
+        \hline
+        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        10        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
+        20     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
+        40      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
+        60      & 166673.7                 & 166672.4	   & 166673.7	  & 166672.4	  & 166673.7  \\ \hline
+        300      & 166665.2                 & 166671.7	   & 166640.4	  & 166665.3	  & 166640.4      \\ \hline
+        600      & 166668.2                 & 166649.6	   & 166668.2	  & 166655.8	  & 166668.2      \\ \hline
+        900      & 166667.2                 & 166667.3	   & 166638.4	  & 166638.4	  & 166667.2      \\ \hline
+        1200      & 166660.4                 & 166668.3	   & 166669.7	  & 166668.2	  & 166668.2      \\ \hline
+        1500      & 166668.8                 & 166650.3	   & 166650.3	  & 166668.8	  & 166668.8      \\ \hline
+        1800      & 166652.8                 & 166668.2	   & 166669.2	  & 166668.2	  & 166669.2      \\ \hline
+        2100      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
+        2400      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
+    \end{tabularx}
+    \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
+    \end{table}
+
+    \begin{table}[H]
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
+        \hline
+        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        10        & 166636.1                 & 166628.1     & 166628.1     & 166628.1      & 166628.1      \\ \hline
+        20     & 166700.3                 & 166602.3      & 166700.3    & 166602.3     & 166602.3  \\ \hline
+        40      & 166685.6                 & 166638.1    & 166638.1     & 166638.1    & 166638.1    \\ \hline
+        60      & 166649.5                 & 166649.5	   & 166649.5	  & 166649.5	  & 166649.5  \\ \hline
+        300      & 166667.4                 & 166667.4	   & 166673.6	  & 166667.4	  & 166667.4      \\ \hline
+        600      & 166666.5                 & 166666.5	   & 166666.5	  & 166669.6	  & 166666.5      \\ \hline
+        900      & 166668.2                 & 166666.2	   & 166668.3	  & 166668.3	  & 166651.7      \\ \hline
+        1200      & 166669.1                 & 166656.7	   & 166658.3	  & 166658.4	  & 166669.3      \\ \hline
+        1500      & 166669.7                 & 166659.8	   & 166658.5	  & 166669.6	  & 166659.7      \\ \hline
+        1800      & 166661.7                 & 166660.7	   & 166668.9	  & 166669.9	  & 166668.9      \\ \hline
+        2100      & 166668.4                 & 166661.4	   & 166668.4	  & 166669.3	  & 166662.3      \\ \hline
+        2400      & 166669.7                 & 166669.6	   & 166663.5	  & 166663.5	  & 166662.7        \\ \hline
+    \end{tabularx}
+    \caption{Measured half periods of led board using motion vectors. Desired value 166666}
+    \end{table}
     
     \chapter{Discussion}
     \section{Difficulties}
