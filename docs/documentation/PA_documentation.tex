@@ -717,6 +717,12 @@ The optical measurements of the picamera were carried out on an average at about
     \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
     \end{table}
 
+    \begin{figure}[H]
+      \includegraphics[scale=0.5]{Images/error_led_rgb.png}
+  
+    \caption{ Illustration of convergation of the error to 0. (Hier noch text hinzufügen)}
+    \end{figure}  
+
     \begin{table}[H]
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
@@ -737,6 +743,18 @@ The optical measurements of the picamera were carried out on an average at about
     \end{tabularx}
     \caption{Measured half periods of led board using motion vectors. Desired value 166666}
     \end{table}
+
+    \begin{figure}[H]
+      \includegraphics[scale=0.15]{Images/greiner_verification.jpg}
+  
+    \caption{ Taken picture of measurement verfification of camera and Greiner Compact 900}
+    \end{figure}  
+
+    \begin{figure}[H]
+      \includegraphics[scale=0.5]{Images/win_snipped_searchminima}
+  
+    \caption{ Calculated ratedeviation with searchMinima.py}
+    \end{figure}  
     
     \chapter{Discussion}
     With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best. If more research is done, such as whether and how to improve the camera settings, the results could possibly be further improved. 

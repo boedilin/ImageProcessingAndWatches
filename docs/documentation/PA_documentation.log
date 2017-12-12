@@ -1,10 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  12 DEC 2017 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.26)  12 DEC 2017 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**PA_documentation.tex
-(./PA_documentation.tex
+**/Users/valentinbossi/Documents/git/pa17_cogsworth/docs/documentation/PA_docum
+entation.tex
+
+(/Users/valentinbossi/Documents/git/pa17_cogsworth/docs/documentation/PA_docume
+ntation.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
@@ -1801,71 +1804,103 @@ Overfull \hbox (0.62726pt too wide) in paragraph at lines 716--716
 []|\T1/cmr/bx/n/12 Duration 
  []
 
+<Images/error_led_rgb.png, id=539, 743.4174pt x 471.2004pt>
+File: Images/error_led_rgb.png Graphic file (type png)
 
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 737--737
+<use Images/error_led_rgb.png>
+Package pdftex.def Info: Images/error_led_rgb.png used on input line 721.
+(pdftex.def)             Requested size: 371.7078pt x 235.59961pt.
+ [29]
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 743--743
 []|\T1/cmr/bx/n/12 Duration 
  []
 
-[29] [30]
+<Images/greiner_verification.jpg, id=546, 2457.18pt x 2457.18pt>
+File: Images/greiner_verification.jpg Graphic file (type jpg)
+
+<use Images/greiner_verification.jpg>
+Package pdftex.def Info: Images/greiner_verification.jpg used on input line 748
+.
+(pdftex.def)             Requested size: 368.5611pt x 368.5611pt.
+ [30 <./Images/error_led_rgb.png>]
+<Images/win_snipped_searchminima.png, id=554, 796.9775pt x 138.5175pt>
+File: Images/win_snipped_searchminima.png Graphic file (type png)
+
+<use Images/win_snipped_searchminima.png>
+Package pdftex.def Info: Images/win_snipped_searchminima.png used on input line
+ 754.
+(pdftex.def)             Requested size: 398.48776pt x 69.25858pt.
+
+Overfull \hbox (8.48776pt too wide) in paragraph at lines 754--755
+[][] 
+ []
+
+[31 <./Images/greiner_verification.jpg> <./Images/win_snipped_searchminima.png>
+]
 Chapter 7.
-(./PA_documentation.gls [31
+(./PA_documentation.gls [32
 
-] [32
+] [33
 
 
-]) [33]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 758.
+]) [34]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 776.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (21.66927pt too wide) in paragraph at lines 759--759
+Overfull \hbox (21.66927pt too wide) in paragraph at lines 777--777
 []\T1/cmr/m/it/12 Chronoskop Zeit-waa-gen von Timeg-ra-phers\T1/cmr/m/n/12 . \T
 1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 http : / / www . chronos
 kop .
  []
 
 
-Overfull \hbox (43.30017pt too wide) in paragraph at lines 759--759
+Overfull \hbox (43.30017pt too wide) in paragraph at lines 777--777
 \T1/cmtt/m/n/12 com / index . php / chronoskop -[] zeitwaagen -[] von -[] preli
 slisit -[] timegraphers/$[][]
  []
 
 
-Overfull \hbox (18.65652pt too wide) in paragraph at lines 759--759
+Overfull \hbox (18.65652pt too wide) in paragraph at lines 777--777
 []\T1/cmr/m/it/12 GStreamer: open source mul-ti-me-dia frame-work\T1/cmr/m/n/12
  . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / gstream
 er .
  []
 
-[34
+[35
 
 ]
-Overfull \hbox (9.37819pt too wide) in paragraph at lines 759--759
+Overfull \hbox (9.37819pt too wide) in paragraph at lines 777--777
 []\T1/cmr/m/it/12 Zeitwaage Uhren-Wiki: Die besten Uhren und Uhren-marken\T1/cm
 r/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
  []
 
-[35] (./PA_documentation.lof)
+[36] (./PA_documentation.lof
+Overfull \hbox (13.00732pt too wide) in paragraph at lines 23--23
+ [][] [][][]\T1/cmr/m/n/12 Taken pic-ture of mea-sure-ment ver-fi-fi-ca-tion of
+ cam-era and Greiner 
+ []
+
+)
 \tf@lof=\write9
 \openout9 = `PA_documentation.lof'.
 
- [36
+ [37
 
-]
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+] (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(./Files/searchMinima_tic_toc.py [37
+(./Files/searchMinima_tic_toc.py [38
 
-] [38])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 776.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 776.
+] [39])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 794.
+ [40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 794.
  (./PA_documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 776.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 776.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 794.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 794.
 Package rerunfilecheck Info: File `PA_documentation.out' has not changed.
 (rerunfilecheck)             Checksum: 5FB915158A7E6B974C847F46CEED4601;3872.
 Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
@@ -1873,13 +1908,13 @@ Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32261 strings out of 492995
- 593730 string characters out of 6132703
- 1124453 words of memory out of 5000000
- 35161 multiletter control sequences out of 15000+600000
+ 32281 strings out of 492995
+ 594458 string characters out of 6132704
+ 1125453 words of memory out of 5000000
+ 35173 multiletter control sequences out of 15000+600000
  26425 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,16n,75p,10392b,2470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,16n,75p,10461b,2470s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1906,10 +1941,10 @@ s/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/public/cm-super/sftt1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/zapfding/uzdr.pfb>
-Output written on PA_documentation.pdf (45 pages, 3161863 bytes).
+Output written on PA_documentation.pdf (46 pages, 4278421 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 754 compressed objects within 8 object streams
- 230 named destinations out of 1000 (max. 500000)
- 524 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
+ 234 named destinations out of 1000 (max. 500000)
+ 539 words of extra memory for PDF output out of 10000 (max. 10000000)
 
