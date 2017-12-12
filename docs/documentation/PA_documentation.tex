@@ -252,7 +252,7 @@ Overall the measurements with the camera are a little bit worse than those with 
      Resolution &   0.1 s/d & 0.1 s/d & 0.1 s/d\\  \hline
      Price & CHF 10450.- & CHF 369.-, resp. CHF 929.- &  CHF 4070.-\\  \hline
     \end{tabularx}
-    \caption{Measurement rate deviation with different professional devices}
+    \caption{ Measurement rate deviation with different professional devices}
  \end{table}
     
     \section{Camera module}
@@ -326,6 +326,7 @@ Overall the measurements with the camera are a little bit worse than those with 
     \subsection{Hardware limits}
     
     \begin{itemize}
+    \item The picamera originally has a very limited zoom to record the watch properly a lens was added to the camera in this project.
     \item The maximum horizontal resolution for the standard H264 recording is 1920 (this is a limitation of the H264 block in the GPU).
     \item The maximum frame rate of the camera depends on several factors. With overclocking 120fps can be achieved, but 90fps is the maximum supported frame rate.
     
@@ -358,9 +359,7 @@ The balance wheel is the heart of the oscillation system. It generates a time-de
 The occurring error, if the balance wheel does not run accurate, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
 
 \subsection{Oscillation of the balance wheel}
-\begin{itemize}
-\item add that this is what will be recorded and measured
-\end{itemize}
+In the following section the movement of the balance wheel, which will be recorded and used for the calculation of the frequency, is explained.
 
 \subsubsection{Period}
 The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A). \cite{Witschi_basics}
@@ -498,24 +497,22 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
     \end{itemize}
 
    \section{Test setup}
-    \begin{itemize}
-        \item bild ausarbeiten
-        \item kurze beschreibung dazu
-      \end{itemize}
+   
+The following figure shows the test setup. On average the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used.
+
       \begin{figure}[H]
         \centering
         \includegraphics[scale=0.1]{Images/test_setup}
         
         \caption{Test setup for records}
         \end{figure}
+        
     \section{Gesture detection}
-    A first attempt was to move the hand in front of the camera down, up, right and left and to determine the direction in real time based on the motion vectors.
-    Because this worked quite well, it has been tried to record the balance wheel of the test watch.
-
-    \section{Records of balance wheel}
-    \begin{itemize}
-        \item dann haben wir aufnahmen der unruhe gemacht und versucht die ergebnisse zu interpretieren
-    \end{itemize}
+    A first attempt was to move the hand in front of the camera down, up, right and left and to determine the direction in real time based on the motion vectors. 
+    \newline
+    For this, the average of all x-values and all y-values of the motion vectors of a frame are calculated and compared with a minimum value of movement that was defined. Depending on whether the x-average value is lower or higher than zero, a movement to the left or right has been detected. Likewise, it works for the y-average with the movement up or down.
+        \newline
+ As this worked quite well, the balance wheel of the test watch was recorded and it was tried out to detect the movement with the same program. Unfortunately, this program can only detect very clear movements. With very minimal movements this program fails, therefore the frequency of the balance wheel could not be calculated with this implementation. 
     
     \section{Animation of motion vectors}
     
@@ -580,7 +577,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
 
     \section{Crude calculation of frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
-    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method are \colorbox{pink}{good enough??} to determine the frequency and thus the rate deviation. 
+    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method should be good enough to determine the frequency and thus the rate deviation. 
     
     \noindent
     \begin{figure}[H]
@@ -599,12 +596,9 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
     \end{figure}
     
     \chapter{Calculation of the frequency}
-    \colorbox{pink}{Irgendwie ist es schwierig hier eine
-    Einleitung zu machen ohne 5.1.1 anzupassen! Weglassen?}
-    In a next step, the results of the rough calculation from the Excel sheet were transferred into a Python program.
-    It turned out that there are different methods to calculate the frequency. 
+    The implementation of a Python program was based on the procedure in the rough calculation from the Excel spreadsheet. During the first implementation, it turned out that there are different methods for calculating the frequency and it resulted in three different implementations, which are explained in more detail in the following sections.
     
-    \section{Implementation of the algorithms}
+       \section{Implementation of the algorithms}
     \subsection{Counting minima with upper limit} 
     
     The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the image noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
@@ -616,16 +610,33 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
      \end{displaymath}
      
   \subsection{Counting minima with stepsize}
-  To ensure that minimas are not missed during counting, step sizes were used, i. e. the specifications where the minimas are to be searched for. In the measurements with the test watch, which has a stroke number of 6 per second, a frame rate of 90 was used and therefore every 15th value should show a standstill or a minimum. To detect deviations, a search window of size 5 has been defined.
-  For this way, two further values are compared to the left and right of the nominal step size and 15th steps are added from the smallest value of these 5. This method does not require defining a threshold for the minima searching, which is often difficult to set.
+  To ensure that minimas are not missed during counting, step sizes were used, that means the specifications where the minimas are to be searched for. In the measurements with the test watch, which has a stroke number of 6 per second, a frame rate of 90 was used and therefore every 15th value should show a standstill or a minimum. To detect deviations, a search window of size 5 has been defined.
+  For this way, two further values are compared to the left and right of the nominal step size and 15th steps are added from the smallest value of these 5. This method does not require defining a threshold for the minima searching, which is often difficult to set. On the other hand one has to know the ideal frequency of the watch to calculate the stepsize.
+  
     \subsection{Counting minima with tic toc and stepsize}
+  The implementation of the program for calculating the frequency by counting the minimums with a defined step size has been adapted so that the calculation is carried out in a similar way as with the professional devices. In the previous implementation, the length of one half-period after another was measured and then the frequency calculated. However, the semi-oscillation may differ in one direction from the semi-oscillation in the other direction, so the accuracy of the program can be improved if the length is measured from one tic to the next and exactly the same for the beat on the other side, the tac, as shown in the figure below. 
+       \noindent
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{Images/gangdeviation.png}
+    
+    \caption{Period duration of tic, resp. tac}
+    \end{figure}    
+  
+  This results in overlapping periods, which is why the following calculation must be carried out at the end:
+  
+       \begin{displaymath}
+     \text{period duration} = \frac{\text{period duration of tic} + \text{period duration of tac}}{2} 
+     \end{displaymath}
+  and therefore: 
+       \begin{displaymath}
+      \text{frequency}= \frac{1}{\text{period duration}}
+     \end{displaymath}
+     
     
     \chapter{Results}
-    
+        Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. In the next section, this divergence and its causes will be discussed in more detail. 
     \section{Measurements}
-    Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. In the next section, this divergence and its causes will be discussed in more detail. 
-\bigskip
-\newline
 As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. \cite{Witschi_basics} As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
 \bigskip
@@ -634,8 +645,8 @@ The optical measurements of the picamera were carried out on an average at about
     of recordings whereas each position was recorded in 10, 20, 40 and 80 minutes.
 \bigskip
 \newline
-    Figure 5 and Table 3 show the deviation per day based on the following calculation:
-    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2=21600):
+    The figure and table below show the deviation per day based on the following calculation:
+    Taken the first timestamp (t1) of a stillstand and taken the last timestamp (t2) of a stillstand, the counted number of stillstands (s1), number of strokes per hour (s2 = 21600):
     \bigskip
     
     \begin{center}
@@ -645,7 +656,7 @@ The optical measurements of the picamera were carried out on an average at about
 	\( \triangle t / s1 = \text{stroke duration}\)
 	    \bigskip
     
-    \((\text{stroke duration}*s2)-3600 sec=\text{deviation per hour}\)
+    \((\text{stroke duration}*s2)-3600 \text{sec}=\text{deviation per hour}\)
         
     \end{center}
     
@@ -681,6 +692,7 @@ The optical measurements of the picamera were carried out on an average at about
 
     \begin{itemize}
       \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
+      \item statistic table hinzufügen
     \item als schlusswort: Messungen mit Kamera sind genau genug
     \end{itemize}
    
@@ -727,9 +739,17 @@ The optical measurements of the picamera were carried out on an average at about
     \end{table}
     
     \chapter{Discussion}
-    \section{Difficulties}
-    \section{Outlook}
+    With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best. If more research is done, such as whether and how to improve the camera settings, the results could possibly be further improved. 
     
+    \section{Difficulties}
+    \begin{itemize}
+    \item Kameraeinstellungen und Lichverhältnisse finden
+    \item schwer gute Referenzmessungen zu bekommen
+    \item Zuerst zu viele Informationen abgespeichert -> zu wenig speicher
+    \end{itemize}
+    
+    \section{Outlook}
+    In this work it was shown that with relatively inexpensive hardware, sufficient good measurements can be carried out to determine the accuracy of a watch. Compared to the professional equipment, which costs thousands of dollars to buy, a good user interface could create a product that is much cheaper and can still keep up with the measurements of more expensive devices. 
     
     \glsaddall
     \printglossaries
