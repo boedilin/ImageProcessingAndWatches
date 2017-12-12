@@ -195,12 +195,14 @@ Overall the measurements with the camera are a little bit worse than those with 
     The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device.
     
     \chapter{Fundamentals}
+    This chapter is intended to lay the foundation for this report. An overview of the existing measuring methods for the accuracy of a mechanical watch is given and the Raspberry Pi camera, which was used for the optical measurements in this project, is described. In addition, the functionality of a mechanical watch is explained and important information about the test watch is listed.
     \section{Competitor Analysis}
-    \subsection{Optical versus acoustical measurement}
-    To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market, acoustical and optical measurement. The common used method is by analyzing the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
+    At the beginning a small historical excursion, or rather an overview of the existing measuring methods for the accuracy of a mechanical watch.
+     \subsection{Optical versus acoustical measurement}
+    To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market; acoustical and optical measurement. The common used method is by analyzing the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
     
     \subsubsection{Acoustical measurement}
-    The first used method to get the frequency measurement of the balance wheel was by using a vibrograph was used. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
+    The first used method to get the frequency measurement of the balance wheel was by using a vibrograph. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
     Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The beat noises of the lever escapement are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
     
     \subsubsection{Optical measurement}
@@ -215,24 +217,22 @@ Overall the measurements with the camera are a little bit worse than those with 
      & \textbf{acoustical}  & \textbf{optical} \\\hline
       since   &  around 19th century (2)  & end of 20th century (2)\\ \hline
      accuracy &   0.1 s/d & 0.1 s/d\\  \hline
-     advantages & most experience (exists for about 200 years)& measurement can be done anywhere\\  \hline
-     disadvantages & background noises need to be filtered out& \\
+     advantages & - most experience (exists for about 200 years) \newline - tracks if balance wheel is damaged (different noises) & measurement can be done anywhere\\  \hline
+     disadvantages & background noises need to be filtered out&laser needs to be positioned precisely \\
      \hline
     \end{tabularx}
     \caption{Comparison of acoustical and optical measurement}
         \end{table}
         
-        \begin{itemize}
-       \item Add introduction what method is used in project
-       \end{itemize}
     
     \subsection{Companies}
+     In the following section the three largest companies producing such measuring instruments are described and the most important facts listed.
     \subsubsection{Witschi - WisioScope S}
     WisioScope S tests mechanical watches acoustically and optically. The measurement is done parallel and in this way is more accurate as both signals are used for the calculation of the frequency.
     The optical metering is done using a laser and lighting, a camera helps to adjust the watch properly. The costs of their product are: CHF 10450.-
     
     \subsubsection{Lepsi - WatchScope/WatchAnalyzer}
-    The WatchScope and WatchAnalyzer from Lepsi are especially for lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input, with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can easily measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.00, resp. CHF 929.-
+    The WatchScope and WatchAnalyzer from Lepsi are especially for watch lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input, with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can easily measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.00, resp. CHF 929.-
     
     
     \subsubsection{Greiner Vibrograf - Compact 900}
@@ -262,7 +262,7 @@ Overall the measurements with the camera are a little bit worse than those with 
     
     However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry Pi.
     
-    This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but processing takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
+    This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but the processing rather takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
     
     \bigskip
     \noindent
@@ -326,7 +326,6 @@ Overall the measurements with the camera are a little bit worse than those with 
     \subsection{Hardware limits}
     
     \begin{itemize}
-    \item The maximum resolution for MJPEG recording is partially dependent on the GPU memory.
     \item The maximum horizontal resolution for the standard H264 recording is 1920 (this is a limitation of the H264 block in the GPU).
     \item The maximum frame rate of the camera depends on several factors. With overclocking 120fps can be achieved, but 90fps is the maximum supported frame rate.
     
@@ -334,6 +333,7 @@ Overall the measurements with the camera are a little bit worse than those with 
     
     
     \section{Mechanical watches}  
+    In the following, the function of a mechanical watch is explained in more detail and the role of a watch's balance wheel is explained. Subsequently, important information on mechanical watches, such as the duration of stroke and facts about the test watch used in this project, are described.
     \subsection{Operation of a mechanical watch}  
     If a mechanical watch is wound up over the crown, the locking wheel (3) is moved by the winding shaft (1) and winding wheels (2). It turns the spring core (4) and pulls the tension spring in the mainspring barrel (5). The spring transmits the stored energy via the external toothed mainspring barrel (5) to the minute wheel (6), third wheel (7) and fourth wheel (8). 
     \newline
@@ -393,6 +393,9 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
       f = \frac{n\text{*}}{7200}
      \end{displaymath}
      
+     \bigskip
+     
+    The following table lists facts about mechanical wristwatches. Among other things, it contains the number of strokes per hour, the duration for one stroke - i. e. half a period - and the frequency.
     
      \begin{table}[H]
      \centering
@@ -415,33 +418,40 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     
     In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Watch Expert II from Witschi, and the rate deviation was determined. 
     
-    In order to calculate the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
+    For the purpose of calculating the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
 
-    \chapter{Technologies and algorithms}
-    \begin{itemize}
-        \item Picamera, Gstreamer und OpenCV im allgemeinen erklären:
-        (Picamera library: The Picamera library is an open source project in the programming language Python. The library is an interface to the MMAL ---written in C--- which in turn is an interface to the firmware of the GPU.
-    This means that the camera can be accessed using a simple programming language such as Python.  \cite{ReadTheDocsPicamera})    
-        \item opencv vereint verschiedene Algorithmen zur Bildverarbeitung und für maschinelles Sehen. Die Programmbibliothek opencv bietet Module an, die Algorithmen haben, die bekannte Probleme lösen können, wie zum Beispiel Gesichtserkennung, Gestenerkennung, Objekterkennung, Tracking(ins Glossar) und Optischer Fluss um nur einige zu nennen.
-  \end{itemize}
+    \chapter{Technologies and Algorithms}
+The first library is OpenCV, an open source library, which is suitable and widely used for the programming languages C++, C, Python and Java. OpenCV combines different algorithms for image processing and machine vision. It offers modules that implement algorithms that can solve common problems such as face recognition, gesture recognition, object recognition, tracking and optical flow, to name but a few. \cite{opencv} 
+\bigskip
+
+The next library is Gstreamer, which is also open source. However, it is mainly programmed in C. As the name suggests, this library is mainly used for multimedia data streams, such as media players and video editing software. \cite{gstreamer}
+
+\bigskip
+As the last library, the eye was casted on the picamera library. This is also an open source project and can only be programmed in Python. The library is an interface to the MMAL -written in C- which in turn is an interface to the firmware of the GPU. This means that the camera can be accessed using a simple programming language such as Python. The picamera library is very strongly tailored to the raspberry pi camera, but offers a wide range of functionalities. \cite{ReadTheDocsPicamera}
     
     \section{Optical Flow}
-    With the library OpenCV it is possible to determine the optical flow of an image sequence. 
-    
     The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
     
     One possibility would be to follow the course of a velocity vector and thereby calculate a period of the frequency of the balance wheel. The calculation of the flow at selected points is also called feature point tracking. Another approach would be to calculate the frequency based on the velocity obtained from the optical flow, since it is more or less a circular movement. 
     
-    One difficulty with this procedure is that one has to commit to certain pixels that one examines. This can cause problems if the clock is placed differently, because wrong points (worst-case scenario: points in which movement never takes place) can cause problems for the calculation.  
+    One difficulty with this procedure is that one has to commit to certain pixels that one examines. This can cause problems if the clock is placed differently, because wrong points can cause problems for the calculation. In the worst-case scenario points, in which movement never takes place, would be examined.
     
-    The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients). 
+    \subsection{Sparse Optical Flow}
     
-    One characteristic of this method is that it does not provide a dense flow, i. e. the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
-    (Dense optical flow vs. sparse optical flow)
+    The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients). \cite{opencv}
+    
+    One characteristic of this method is that it does not provide a dense flow this means the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
+    
+       \subsection{Dense Flow}
+The dense optical flow calculates the flow over all pixels of an image, so the whole image is processed. This method is more accurate than the sparse optical flow method, but also much slower.
+
+The implementation in Open CV is baed on the Gunner Farneback's algorithm which is explained in "Two-Frame Motion Estimation Based on Polynomial Expansion" by Gunner Farneback in 2003. \cite{Farneback2003}
   
    \section{Kalman Filtering} 
-   \section{Object tracking (isbn 978-1-4614-6533-1 oder wikipedia als referenz?)}
-   Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops.
+   Using the Kalman filter, errors in real measurement values can be reduced and estimates for unmeasurable system variables can be provided. For this purpose, the values which are to be examined in more detail are described by a mathematical model, for example in the form of equations of motion. The special mathematical structure of the Kalman filter makes it possible to use it in real-time systems in different areas, such as for example for the evaluation of GPS data to determine the position of moving objects - tracking- or for augmented reality. \cite{Grewal1993}
+   
+   \section{Object tracking}
+   Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops. \cite{objectTracking}
     
  \section{Motion vectors}
  Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence. The motion vectors can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
@@ -454,20 +464,26 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
    Because in this project a mini computer is used and a realtime measurement is to be made, many presented technologies and algorithms are already excluded because they are too computing-intensive.
    This means that at 90 frames per second, a calculation on the image data must be done within \nicefrac{1}{90} seconds, no matter how computing-intensive it is.
    In addition, there is the problem with object tracking, for example, that there are many different shapes of balance wheels and that the software would have to be adapted for each new shape of balance wheel in order to make the object detection work again
-   The same applies to procedures that work with colours. As soon as a balance wheel has a different colour, the procedure would have to be adapted.
+   The same applies to procedures that work with colors. As soon as a balance wheel has a different color, the procedure would have to be adapted.
+   
+   In the table below it is listed which methods are already implemented in which library, how high the computational effort is and if it is generalizable, so that the measurements are always more or less the same and the camera does not need to be positioned precisely in the exact same position every time.
   
    \begin{table}[H]
     
       \centering
-        \begin{tabularx}{\linewidth}{ |>{\hsize=1.3\hsize}L|>{\hsize=0.5\hsize}L|>{\hsize=0.6\hsize}L|>{\hsize=0.6\hsize}L|>{\hsize=0.6\hsize}L|  }
+        \begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|X|X| }
         \hline
-        \textbf{} &  \textbf{Oprical Flow} &  \textbf{Kalman Filtering}&  \textbf{Object Tracking} &  \textbf{Motion Vectors} \\ \hline
-        Generalisability            & \ding{51}        & \ding{51}    & \ding{51}   & \ding{51}          \\ \hline
-        Computational intensity     & \ding{51}        & \ding{51}    & \ding{51}    & \ding{55}      \\ \hline
-        Available in a library      & \ding{51}        & \ding{51}    & \ding{51}    & \ding{51}       \\ \hline
+         \multicolumn{3}{|c}{} & \multicolumn{1}{|c|}{\textbf{OpenCV}} & \multicolumn{1}{|c|}{\textbf{Gstreamer}} & \multicolumn{1}{|c|}{\textbf{Picamera}}\\\hline
+       \textbf{}&   {\fontsize{8}{10}\selectfont Generaliz-ability }&  {\fontsize{8}{10}\selectfont Computa-tional Intensity} &   \multicolumn{3}{c|}{\fontsize{8}{10}\selectfont Implemented} \\ \hline
+        {\fontsize{8}{10}\selectfont Optical Flow}           & \ding{51}        & high & \ding{51}    & \ding{55}  & \ding{55}\\ \hline
+        {\fontsize{8}{10}\selectfont Kalman \newline Filtering}     & \ding{51}        & high     & \ding{51} &  \ding{55}          & \ding{55}\\ \hline
+        {\fontsize{8}{10}\selectfont Object Tracking}     & \ding{51}        & high   & \ding{51}     & \ding{55}    & \ding{51}\\ \hline
+        {\fontsize{8}{10}\selectfont Motion \newline Vectors} & \ding{51}  & medium  &(  \ding{51} )  & ( \ding{51} ) & \ding{51}\\ \hline
       \end{tabularx}
     \caption{Evaluation of different algorithms}
     \end{table}
+    
+    As the computational effort is relatively low with the picamera library and the motion vectors are already reprocessed and easy accessible this library was chosen for the calculation of the frequency of mechanical watches via image processing.
 
     \chapter {Experimental approaches}
     \begin{itemize}
@@ -610,7 +626,7 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
     Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. In the next section, this divergence and its causes will be discussed in more detail. 
 \bigskip
 \newline
-As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch\colorbox{pink}{Referenz zu Witschi Grundkurs letzte Seite (S.55) Messtipps Danke:)}. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
+As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. \cite{Witschi_basics} As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
 \bigskip
 \newline

@@ -61,12 +61,40 @@
       \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
       \field{labeltitlesource}{title}
       \field{abstract}{Witschi Electronic AG entwickelt, produziert und verkauft Innovative Prüf-und Messtechnolgie für: • Uhrenproduktion • Uhrenservice • Prüfgeräte für die Automobil-, Medizin-und Apparateindustrie Unser Qualitätsanspruch Als weltweit führendes Unternehmen der Prüf-und Messtechnik für Uhren und andere mikrotechnische Produkte, setzen wir auf höchste Qualität, zukunftsorientierte Entwicklungsarbeit und zuverlässige Serv-iceleistungen. Um den Ansprüchen des Marktes gerecht zu werden, baut das Unternehmen auf hochqual-ifizierte, kompetente Mitarbeiter und Mitarbeiterinnen. Auch die Zertifizierung nach ISO 9001:2000 ist Garant für eine gleich bleibende, sichergestellte Qualität. So können sich unsere Kunden darauf verlas-sen, dass sie in der Firma Witschi einen optimalen Partner finden und Produkte mit bestmöglichem Ko-sten-Nutzen-Verhältnis erhalten. Dafür bürgen der Name Witschi sowie die rund 70 Mitarbeiterinnen und Mitarbeiter des Unternehmens Unser Know-how Seit über 60 Jahren entwickelt, produziert und verkauft die Firma Witschi weltweit in über 40 Ländern hochwertige Geräte auf dem Gebiet der Mess-und Prüftechnik. Am Anfang des Unternehmens stand das erklärte Ziel, der Uhrenindustrie die besten Mess-und Prüfgeräte zu liefern. Dieses Ziel ist heute längst erreicht. Alle namhaften Betriebe setzen unsere Produkte ein. Im Laufe der Zeit ist es uns gelungen, konstant neue Produkte zu entwickeln, die den höchsten An-forderungen entsprechen und den heutigen Massstab für markt-und kundengerechte Mess-und Prüftechnologie bilden. Davon zeugen tausende zufriedener Anwender in aller Welt. Das Potential unserer Ingenieure und Experten wird auch in Zukunft für wegweisende Innovationen aus dem Hause Witschi sorgen. Ausbildungsziel}
-      \field{title}{{Einführung Wir stellen uns vor}}
+      \field{title}{{Einführung-Grundkurs}}
       \verb{file}
       \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Unknown - Unknown - Einf{\"{u}}hrung Wir stellen uns vor.pdf:pdf
       \endverb
       \verb{url}
       \verb http://www.witschi.com/assets/files/sheets/Witschi%20Grundkurs.pdf
+      \endverb
+    \endentry
+    \entry{Farneback2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7bda08f257f451eba0f1d8902689c8fb}{%
+           family={Farnebäck},
+           familyi={F\bibinitperiod},
+           given={Gunnar},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Berlin, Heidelberg}%
+      }
+      \strng{namehash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{fullhash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{authornamehash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{authorfullhash}{7bda08f257f451eba0f1d8902689c8fb}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Two-Frame Motion Estimation Based on Polynomial Expansion}}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1007/3-540-45103-X_50
+      \endverb
+      \verb{file}
+      \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Farneb{\"{a}}ck - 2003 - Two-Frame Motion Estimation Based on Polynomial Expansion.pdf:pdf
       \endverb
     \endentry
     \entry{Uhrwerk}{misc}{}
@@ -91,6 +119,50 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
+      \endverb
+    \endentry
+    \entry{Grewal1993}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5b182825d4502c0cfc88e2765a52d062}{%
+           family={Grewal},
+           familyi={G\bibinitperiod},
+           given={Mohinder\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2ba6656acfed5000e48620acc13fcc56}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={Angus\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall}%
+      }
+      \strng{namehash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{fullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{authornamehash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{authorfullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{General information -- Linear dynamic systems -- Random processes and stochastic systems -- Linear optimal filters, predictors and smoothers -- Nonlinear applications -- Implementation methods -- Practical considerations.}
+      \field{isbn}{9780132113359}
+      \field{title}{{Kalman filtering : theory and practice}}
+      \field{year}{1993}
+      \field{pages}{381}
+      \range{pages}{1}
+    \endentry
+    \entry{gstreamer}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeltitlesource}{title}
+      \field{title}{{GStreamer: open source multimedia framework}}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/
       \endverb
     \endentry
     \entry{Halliday2005}{book}{}
@@ -130,6 +202,34 @@
       \field{isbn}{0471232319}
       \field{title}{{Fundamentals of physics}}
       \field{year}{2005}
+    \endentry
+    \entry{objectTracking}{book}{}
+      \name{author}{2}{}{%
+        {{hash=deb7e6747717e170e79d1c51aa3285fd}{%
+           family={Karasulu},
+           familyi={K\bibinitperiod},
+           given={Bahadir},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ef674949eeb548c9af8e50bdbf9d1319}{%
+           family={Korukoglu},
+           familyi={K\bibinitperiod},
+           given={Serdar},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{fullhash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{authornamehash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{authorfullhash}{6516c9ac6f915c8966d67dda3c87026f}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781461465331}
+      \field{title}{{Moving Object Detection and Tracking in Videos}}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1007/978-1-4614-6534-8_2
+      \endverb
     \endentry
     \entry{Krug1987}{book}{}
       \name{author}{1}{}{%
@@ -204,6 +304,19 @@
       \endverb
       \verb{url}
       \verb https://www.ncsli.org/c/f/p11/286.314.pdf
+      \endverb
+    \endentry
+    \entry{opencv}{misc}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{labeltitlesource}{title}
+      \field{title}{{OpenCV library}}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://opencv.org/
       \endverb
     \endentry
     \entry{Zeitwaage}{misc}{}

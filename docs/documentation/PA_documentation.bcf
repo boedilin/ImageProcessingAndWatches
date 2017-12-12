@@ -2159,10 +2159,17 @@
     <bcf:citekey order="14">Krug1987</bcf:citekey>
     <bcf:citekey order="15">Krug1987</bcf:citekey>
     <bcf:citekey order="16">Caliber</bcf:citekey>
-    <bcf:citekey order="17">ReadTheDocsPicamera</bcf:citekey>
-    <bcf:citekey order="18">Kuck1978</bcf:citekey>
-    <bcf:citekey order="19">Kuck1978</bcf:citekey>
-    <bcf:citekey order="20">Halliday2005</bcf:citekey>
+    <bcf:citekey order="17">opencv</bcf:citekey>
+    <bcf:citekey order="18">gstreamer</bcf:citekey>
+    <bcf:citekey order="19">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="20">opencv</bcf:citekey>
+    <bcf:citekey order="21">Farneback2003</bcf:citekey>
+    <bcf:citekey order="22">Grewal1993</bcf:citekey>
+    <bcf:citekey order="23">objectTracking</bcf:citekey>
+    <bcf:citekey order="24">Witschi_basics</bcf:citekey>
+    <bcf:citekey order="25">Kuck1978</bcf:citekey>
+    <bcf:citekey order="26">Kuck1978</bcf:citekey>
+    <bcf:citekey order="27">Halliday2005</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
