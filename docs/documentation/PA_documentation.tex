@@ -40,7 +40,7 @@
       description={(Multimedia Abstraction Layer) is a framework designed by Broadcom to provide a host-side, simple and relatively low-level interface to multimedia components running on the Videocore IV GPU on the Raspberry Pi}
     }
     
-    \newglossaryentry{Optical flow}
+    \newglossaryentry{Optical Flow}
     {
       name=Optical flow,
       description={The optical flow of an image sequence is the vector field of the velocity projected into the image from visible points of the object in the reference system of the imaging optics}
@@ -50,6 +50,12 @@
     {
       name=Codecvisa,
       description={CodecVisa is a powerful real-time analyzer for different video codecs. http://www.codecian.com/}
+    }
+    
+        \newglossaryentry{Rate Deviation}
+    {
+      name=Rate Deviation,
+      description={}
     }
     
   \newglossaryentry{VCHI}
@@ -67,19 +73,19 @@
       \newglossaryentry{DMA}
     {
       name=DMA,
-      description={(Direct Memory Access) allows specific hardware systems of a computer system to access main system memory independently of the CPU \cite{Kuck1978}}
+      description={(Direct Memory Access) allows specific hardware systems of a computer system to access main system memory independently of the CPU \cite{Kuck1978}.}
     }
     
           \newglossaryentry{CPU}
     {
       name=CPU,
-      description={(Central Processing Unit) is the electronic circuitry in a computer, which executes the instructions of a computer program. \cite{Kuck1978}}
+      description={(Central Processing Unit) is the electronic circuitry in a computer, which executes the instructions of a computer program \cite{Kuck1978}.}
     }
     
    \newglossaryentry{Photon}
     {
       name=Photon,
-      description={is an elementary particle, which includes electromagnetic radiation (e.g. light) and moves at the speed of light within a vacuum. \cite{Halliday2005}}
+      description={is an elementary particle, which includes electromagnetic radiation (e.g. light) and moves at the speed of light within a vacuum \cite{Halliday2005}.}
     }
 
     \newglossaryentry{Motion blur}
@@ -170,11 +176,11 @@ $\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
 
 \chapter*{Abstract}
  \addcontentsline{toc}{chapter}{Abstract}
-Every mechanical watch must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all devices on the market perform acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device. This camera also differs from conventional measuring devices in the type of measurement. In this work a new approach is used; the measurement is carried out completely optically without laser beam, but completely by means of image processing. 
+Mechanical watches must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all of the devices on the market apply acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device. This camera also differs from conventional measuring devices in the type of measurement. In this work a new approach is used: the measurement is carried out optically by means of image processing. 
 \newline
-The following questions should be clarified in the work: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
+The work will give answers to the following questions: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
 \newline
-In a first step, possible methods were then evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library has a very well-founded documentation and offers many of the functionalities needed for this work, the decision was made in the end for this library. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel and due to a promising result the implementation of a Python program was carried out. During the work, after several measurements with professional instruments, it was found that the watch reacts very sensitively to temperatures, runs very inaccurately and therefore it is difficult to get good reference measurements. Therefore, a comparison was made with a blinking LED, which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing works very well and that sufficient good results can be achieved. In order to get better direct reference measurements a parallel measurement of the watch with the camera and a Greiner measurement device was made. It showed that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. To have a product, which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally one could do further research, if real-time measurements are possible.
+In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel. Due to a promising result the implementation of a Python program was carried out. It was found that the watch reacts very sensitively to temperatures and runs very inaccurately. Therefore it was difficult to get reliable reference measurements. Therefore, a comparison was made with a blinking LED, which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing worked very well and that sufficiently good results could be achieved. In order to get better direct reference measurements a parallel measurement of the watch with the camera and a Greiner measurement device was made. It showed that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. To have a product, which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally one could do further research, if real-time measurements are possible.
 
 \begin{itemize}
 \item Results -> comparison plus evt. fitting (proportional 
@@ -197,19 +203,25 @@ In a first step, possible methods were then evaluated in order to carry out the 
     The aim of this work is to use image processing to measure and analyse the rate deviation of mechanical clocks.
     The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device.
     
+   \begin{itemize}
+\item In welchen Kapiteln können welche informationen gefunden werden
+\end{itemize}
+    
     \chapter{Background}
     This chapter is intended to lay the foundation for this report. An overview of the existing measuring methods for the accuracy of a mechanical watch is given and the Raspberry Pi camera, which was used for the optical measurements in this project, is described. In addition, the functionality of a mechanical watch is explained and important information about the test watch is listed.
     \section{State of the Art}
     At the beginning a small historical excursion, or rather an overview of the existing measuring methods for the accuracy of a mechanical watch.
-     \subsection{Optical versus acoustical measurement}
-    To measure the frequency of the balance wheel of a mechanic clock there exist mainly two methods on the market; acoustical and optical measurement. The common used method is by analyzing the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to be able to classify the rate deviation well enough, it is usually measured in different positions of the watch.
+     \subsection{Optical versus Acoustical Measurement}
+    There exist mainly two methods on the market to measure the frequency of the balance wheel of a mechanic clock; acoustical and optical measurement. The commonly used method is to analyse the beat noises of the lever escapement. More expensive devices use both acoustical and optical feedback. In order to classify the rate deviation well enough, it is usually measured in different positions of the watch.
     
-    \subsubsection{Acoustical measurement}
-    The first used method to get the frequency measurement of the balance wheel was by using a vibrograph. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. Out of the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method isn't the most accurate other techniques are used nowadays.  
+    \subsubsection{Acoustical Measurement}
+    The original method used for frequency measurements of the balance wheel was by using a vibrograph. For every "tick" of the clock a line was drawn onto a ongoing strip of paper. From the distance between of these lines the frequency was calculated \cite{Zeitwaage}. But as this method wasn't very accurate, other techniques have evolved.  
     Modern watch timing machines use an oscillating quartz crystal as comparison for the frequency of the balance wheel \cite{Zeitwaage}. The beat noises of the lever escapement are recorded and amplified with a microphone whereat unwanted background noises need to be filtered out. 
     
-    \subsubsection{Optical measurement}
-    About hundred years later, optical watch timing machines joined the acoustical ones. There are barely devices on the market, which use only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam will be periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency should be quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
+    \subsubsection{Optical Measurement}
+    About hundred years later, optical watch timing machines joined acoustical ones. Even nowadays there are barely devices on the market, which employ only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam is periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency is quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
+    
+    In table \textbf{XXX} a comparison of acoustical and optical measurements is made and the most important facts are listed.
     
         \begin{table}[H]
      \centering
@@ -221,28 +233,28 @@ In a first step, possible methods were then evaluated in order to carry out the 
       since   &  around 19th century (2)  & end of 20th century (2)\\ \hline
      accuracy &   0.1 s/d & 0.1 s/d\\  \hline
      advantages & - most experience (exists for about 200 years) \newline - tracks if balance wheel is damaged (different noises) & - no background noises, which need to be filtered out\\  \hline
-     disadvantages & - background noises need to be filtered out&- laser needs to be positioned precisely \\
+     disadvantages & - background noises need to be filtered out&- laser needs to be positioned precisely  \newline - good lighting is needed\\
      \hline
     \end{tabularx}
-    \caption{Comparison of acoustical and optical measurement}
+    \caption{Comparison of Acoustical and Optical Measurement}
         \end{table}
         
     
-    \subsection{Industrial products}
+    \subsection{Industrial Products}
      In the following section the three largest companies producing such measuring instruments are described and the most important facts listed.
     \subsubsection{Witschi - WisioScope S}
-    WisioScope S tests mechanical watches acoustically and optically. The measurement is done parallel and in this way is more accurate as both signals are used for the calculation of the frequency.
-    The optical metering is done using a laser and lighting, a camera helps to adjust the watch properly. The costs of their product are: CHF 10450.-
+    WisioScope S tests mechanical watches acoustically and optically. The measurement is done in parallel and is more accurate as two signals are used for the calculation of the frequency.
+    The optical metering is done using a laser and lighting. A camera helps to adjust the watch properly. The costs of their product are: CHF 10450.- .
     
     \subsubsection{Lepsi - WatchScope/WatchAnalyzer}
-    The WatchScope and WatchAnalyzer from Lepsi are especially for watch lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input, with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can easily measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.00, resp. CHF 929.-
+    The WatchScope and WatchAnalyzer from Lepsi are especially for watch lovers and not really for production. Both products are Swiss technologies. Both devices only work with an acoustic input with measurements of either a few seconds or up to 24 hours. All data can then be queried with the smartphone. WatchScope is the smaller, more convenient version. With the WatchAnalyzer you can measure the rate deviation of the watch in several positions. The prices for this product are CHF 369.- resp. CHF 929.- .
     
     
     \subsubsection{Greiner Vibrograf - Compact 900}
-    The Compact 900 measures only the beat noises of the ever escapement. The price is CHF 4070.-
+    The Compact 900 measures the beat noises of the lever escapement. The price is CHF 4070.- .
     
     \bigskip
-   The following table summarizes all important information for the three mentioned professional devices.
+   The following table summarizes all important information for the three professional devices.
     
 \begin{table}[H]
      \centering
@@ -258,14 +270,14 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \caption{ Measurement rate deviation with different professional devices}
  \end{table}
     
-    \section{Camera module}
-    The documentation for the picamera library \cite{ReadTheDocsPicamera} provides a good introduction to the operation of the Raspberry Pi with camera, which is used for all measurements in this project. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
+    \section{Camera Module}
+    The documentation for the picamera library \cite{ReadTheDocsPicamera} provides a detailed introduction to the operation of the Raspberry Pi with camera, which is used for all measurements in this project. This chapter will briefly summarize this introduction to better understand the hardware and operation of the Raspberry Pi camera.
     
     The camera module of the Raspberry Pi is basically a mobile phone camera module. Among other things, it uses a rolling shutter to take pictures. The pixel values of a frame are not captured completely at once, but are read line by line.
     
-    However, the sensor is configured via the registers with the number of lines to be read and a corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry Pi.
+    However, the sensor is configured via the registers with the number of lines to be read and the corresponding time. The sensor reads the lines and pushes the data with the configured speed to the Raspberry Pi.
     
-    This keeps the readout time of each line constant. However, the CPU does not speak directly to the camera, but the processing rather takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
+    This keeps the readout time of each line constant. However, the CPU does not "speak" directly to the camera, but the processing rather takes place on the GPU (VideoCore IV) of the Raspberry Pi, which operates its own real-time operating system (VCOS).
     
     \bigskip
     \noindent
@@ -273,38 +285,38 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \centering
     \includegraphics[scale=0.7]{Images/camera_architecture.png}
     
-    \caption{Camera architecture. \cite{ReadTheDocsPicamera}}
+    \caption{Camera architecture \cite{ReadTheDocsPicamera}}
     \end{figure}
     
     
     
     \bigskip
     
-    The illustration above illustrates the processing flow of a frame, with the associated steps explained in the following section.
+    The figure \textbf{XXX} illustrates the processing flow of a frame, with the associated steps explained in the following section.
     
     \begin{enumerate}
     \item The camera's sensor is configured and continuously streams frame lines to the GPU.
     \item The GPU builds complete frame buffers from these lines and performs the post-processing of these buffers.
-    \item Meanwhile, myscript.py makes a capture call with the picamera on the CPU.
+    \item Myscript.py makes a capture call with the picamera on the CPU.
     \item The picamera library uses the MMAL API to meet this requirement.
     \item The MMAL API sends a message via VCHI requesting a frame capture.
-    \item The GPU then initiates a DMA transmission of the next full frame from its RAM portion to the CPU portion.
-    \item Finally, the GPU sends back a message via VCHI that the capture is complete.
+    \item The GPU initiates a DMA transmission of the next full frame from its RAM portion to the CPU portion.
+    \item The GPU sends back a message via VCHI that the capture is complete.
     \item This causes an MMAL thread to trigger a callback in the picamera library, which in turn retrieves the frame.
-    \item Last picamera calls "write" on the output object provided by myscript.py.
+    \item Picamera calls "write" on the output object provided by myscript.py.
     \end{enumerate}
     
-    \subsection{Exposure time}
+    \subsection{Exposure Time}
     
     The camera sensor detects how many photons hit the sensor elements, because the more impact, the more they increase their counter values. The sensor can perform exactly two operations; reset a set of elements or read a set of elements.
     
-    \subsubsection{Minimal exposure time}
+    \subsubsection{Minimal Exposure Time}
     
     Reading out a series of elements takes a certain amount of time, thus there is a limit to the minimum exposure time. Assuming one has 500 lines on a sensor and reading each line takes at least 20ns, then it will take at least $500*20 \text{ns} = 10 \text{ms}$ to read a full screen. 
     
-    \subsubsection{Maximum framerate}
+    \subsubsection{Maximum Framerate}
     
-    The frame rate is the number of frames the camera can capture per second. The exposure time determines the maximum number of images that can be taken in a given time. Assuming it takes 10ms to read a complete image, then no more than $\frac{1 \text{s} }{10 \text{ms}} = \frac{1\text{s}}{0.01\text{s}} = 100 $ images in one second. 
+    The frame rate is the number of frames the camera can capture per second. The exposure time determines the maximum number of images that can be taken in a given time. Assuming it takes 10ms to read a complete image, then no more than $\frac{1 \text{s} }{10 \text{ms}} = \frac{1\text{s}}{0.01\text{s}} = 100 $ images are read in one second. 
     
     \bigskip
     
@@ -315,7 +327,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \end{displaymath}
     The lower the minimum exposure time, the higher the maximum frame rate and vice versa.
     
-    \subsubsection{Maximum exposure time}
+    \subsubsection{Maximum Exposure Time}
     To maximize shutter speed, the framerate needs to be reduced. 
        \newline
       
@@ -326,19 +338,20 @@ In a first step, possible methods were then evaluated in order to carry out the 
     in s}
     \end{displaymath} 
     
-    \subsection{Hardware limits}
+    \subsection{Hardware Limits}
     
     \begin{itemize}
     \item The picamera originally has a very limited zoom to record the watch properly a lens was added to the camera in this project.
     \item The maximum horizontal resolution for the standard H264 recording is 1920 (this is a limitation of the H264 block in the GPU).
-    \item The maximum frame rate of the camera depends on several factors. With overclocking 120fps can be achieved, but 90fps is the maximum supported frame rate.
+    \item The maximum frame rate of the camera depends on several factors. With overclocking 120 fps can be achieved, but 90 fps is the maximum supported frame rate.
     
     \end{itemize}
     
     
-    \section{Mechanical watches}  
+    \section{Mechanical Watches}  
     In the following, the function of a mechanical watch is explained in more detail and the role of a watch's balance wheel is explained. Subsequently, important information on mechanical watches, such as the duration of stroke and facts about the test watch used in this project, are described.
-    \subsection{Operation of a mechanical watch}  
+    \subsection{Operation of a Mechanical Watch}  
+    In Figure \textbf{XXX} the components of a mechanical watch are illustrated. In the following the operation and interaction of those components is described.
     If a mechanical watch is wound up over the crown, the locking wheel (3) is moved by the winding shaft (1) and winding wheels (2). It turns the spring core (4) and pulls the tension spring in the mainspring barrel (5). The spring transmits the stored energy via the external toothed mainspring barrel (5) to the minute wheel (6), third wheel (7) and fourth wheel (8). 
     \newline
     \noindent
@@ -349,7 +362,7 @@ In a first step, possible methods were then evaluated in order to carry out the 
     \caption{Operation of a mechanical watch \cite{Uhrwerk}}
     \end{figure}
     
-The so-called escapement ensures that the gear train runs at the correct speed. The fourth wheel (8) drives the escape wheel (9); it gives an impulse to the pallet fork (10) which it passes on to the balance wheel (11), after which the armature, which moves back and forth like a seesaw, blocks the escape wheel. The balance wheel rotates, but is then retracted by the hairspring (12). It moves the armature back, which now releases the armature wheel again a little bit, which gives the armature with its rotation the next impulse. Due to the sudden braking and acceleration of the escapement wheel, the second hand of a mechanical watch also moves stepwise. \cite{Uhrwerk}
+The so-called escapement ensures that the gear train runs at the correct speed. The fourth wheel (8) drives the escape wheel (9); it gives an impulse to the pallet fork (10) which it passes on to the balance wheel (11), after which the armature, which moves back and forth like a seesaw, blocks the escape wheel. The balance wheel rotates, but is then retracted by the hairspring (12). It moves the armature back, which now releases the armature wheel again a little bit, which gives the armature with its rotation the next impulse. Due to the sudden braking and acceleration of the escapement wheel, the second hand of a mechanical watch also moves stepwise \cite{Uhrwerk}.
     \newline
     \noindent
     \begin{figure}[H]
@@ -359,14 +372,14 @@ The so-called escapement ensures that the gear train runs at the correct speed. 
     \caption{Lever escapement and balance wheel \cite{Uhrwerk}}
     \end{figure}
 \bigskip
-The balance wheel is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
-The occurring error, if the balance wheel does not run accurate, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
+The balance wheel, which is shown in Figure \textbf{XXX} is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
+The occurring error, if the balance wheel does not run accurately, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
 
-\subsection{Oscillation of the balance wheel}
+\subsection{Oscillation of the Balance Wheel}
 In the following section the movement of the balance wheel, which will be recorded and used for the calculation of the frequency, is explained.
 
 \subsubsection{Period}
-The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A). \cite{Witschi_basics}
+The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A) as shown in figure \textbf{XXX} \cite{Witschi_basics}.
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/period.png}
@@ -375,17 +388,17 @@ The period of the balance wheel is the path of a point from one turning point to
     \end{figure}
 \bigskip
 
-\subsubsection{Half a period}
-Half of a period, resp. one stroke, of the balance wheel is the path of a point from one turning point to the other (A - B). \cite{Witschi_basics}
+\subsubsection{Half a Period}
+In figure \textbf{XXX} half of a period, resp. one stroke, of the balance wheel is illustrated. It is the path of a point from one turning point to the other (A - B) \cite{Witschi_basics}.
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/Halfperiod.png}
     
-    \caption{half of a period of the balance wheel \cite{Witschi_basics}}
+    \caption{Half of a period of the balance wheel \cite{Witschi_basics}}
     \end{figure}
 \bigskip
     
-    \subsection{Number of strokes}
+    \subsection{Number of Strokes}
     Since the rate deviation has been calculated in seconds per day and the number of strokes per hour, i. e. the number of audible impulses of a two-armed pallet fork of a mechanical watch per hour, is known, these two quantities must first be brought to a unit. The relationship between the number of strokes (n*) and frequency (f) is as follows \cite{Krug1987}: 
     
     \begin{displaymath}
@@ -414,23 +427,17 @@ Half of a period, resp. one stroke, of the balance wheel is the path of a point 
        \caption{  Number of strokes, period duration and frequency of the balance of automatic wristwatches \cite{Krug1987}}
         \end{table}
         
-        \subsection{Test watch}
-    At first some general information to the test watch, which was used.
-    
-    The test watch is a watch of the caliber ETA C01.211 it is a chronograph, with a diameter of 31 centimeters. It strokes 21600 times per hour with a stroke duration of 0.1666 seconds and therefore has a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours. \cite{Caliber}
-    
-    In order to obtain an exact reference value of the frequency of the balance wheel of the test watch, multiple acoustic measurements were carried out with professional measuring devices, the Greiner Vibrograf - Compact 900 and Watch Expert II from Witschi, and the rate deviation was determined. 
-    
-    For the purpose of calculating the frequency from the rate deviation of the balance wheel, first some transformations had to be carried out.
+        \subsection{Test Watch}
+      The test watch, which was used, is of the caliber ETA C01.211. It is a chronograph, with a diameter of 31 centimeters. It strokes 21600 times per hour with a stroke duration of 0.1666 seconds. It therefore has a frequency of 3 Hz. Additionally the watch has a power reserve of 43 hours \cite{Caliber}.
 
     \chapter{Technologies and Algorithms}
-The first library is \textbf{OpenCV}, an open source library, which is suitable and widely used for the programming languages C++, C, Python and Java. OpenCV combines different algorithms for image processing and machine vision. It offers modules that implement algorithms that can solve common problems such as face recognition, gesture recognition, object recognition, tracking and optical flow, to name but a few. \cite{opencv} 
+The first library is \textbf{OpenCV}, an open source library, which is suitable and widely used for the programming languages C++, C, Python and Java. OpenCV combines different algorithms for image processing and machine vision. It offers modules that implement algorithms that can solve common problems such as face recognition, gesture recognition, object recognition, tracking and optical flow, to name but a few \cite{opencv}.
 \bigskip
 
-The next library is \textbf{Gstreamer}, which is also open source. However, it is mainly programmed in C. As the name suggests, this library is mainly used for multimedia data streams, such as media players and video editing software. \cite{gstreamer}
+The next library is \textbf{Gstreamer}, which is also open source. However, it is mainly programmed in C. As the name suggests, this library is mainly used for multimedia data streams, such as media players and video editing software \cite{gstreamer}.
 
 \bigskip
-As the last library, the eye was casted on the \textbf{Picamera} library. This is also an open source project and can only be programmed in Python. The library is an interface to the MMAL -written in C- which in turn is an interface to the firmware of the GPU. This means that the camera can be accessed using a simple programming language such as Python. The picamera library is very strongly tailored to the raspberry pi camera, but offers a wide range of functionalities. \cite{ReadTheDocsPicamera}
+As the last library, the eye was casted on the \textbf{Picamera} library. This is also an open source project and can only be programmed in Python. The library is an interface to the MMAL -written in C- which in turn is an interface to the firmware of the GPU. This means that the camera can be accessed using a simple programming language such as Python. The picamera library is very strongly tailored to the raspberry pi camera, but offers a wide range of functionalities \cite{ReadTheDocsPicamera}.
     
     \section{Optical Flow}
     The optical flow represents the vector field of the velocities of the points of an image sequence. It is a useful representation of motion information in image processing. The local optical flow is an estimate of patterns in an image in the vicinity of a viewed pixel. 
@@ -441,17 +448,17 @@ As the last library, the eye was casted on the \textbf{Picamera} library. This i
     
     \subsection{Sparse Optical Flow}
     
-    The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients). \cite{opencv}
+    The OpenCV library uses the Lucas-Kanade method to calculate the optical flow. The Lucas-Kanade method also assumes that the flow in the local environment of the pixel for which the flow is intended is the same. So more or less a whole set of pixels is considered. The flow can thus be determined by calculating the derivatives (= gradients) \cite{opencv}.
     
     One characteristic of this method is that it does not provide a dense flow this means the flow information disappears quickly with the distance from the edges of the image. The advantage of the method is its relative robustness against noise and smaller defects in the image.
     
        \subsection{Dense Flow}
 The dense optical flow calculates the flow over all pixels of an image, so the whole image is processed. This method is more accurate than the sparse optical flow method, but also much slower.
 
-The implementation in Open CV is baed on the Gunner Farneback's algorithm which is explained in "Two-Frame Motion Estimation Based on Polynomial Expansion" by Gunner Farneback in 2003. \cite{Farneback2003}
+The implementation in Open CV is baed on the Gunner Farneback's algorithm which is explained in "Two-Frame Motion Estimation Based on Polynomial Expansion" by Gunner Farneback in 2003 \cite{Farneback2003}.
   
    \section{Kalman Filtering} 
-   Using the Kalman filter, errors in real measurement values can be reduced and estimates for unmeasurable system variables can be provided. For this purpose, the values which are to be examined in more detail are described by a mathematical model, for example in the form of equations of motion. The special mathematical structure of the Kalman filter makes it possible to use it in real-time systems in different areas, such as for example for the evaluation of GPS data to determine the position of moving objects - tracking- or for augmented reality. \cite{Grewal1993}
+   Using the Kalman filter, errors in real measurement values can be reduced and estimates for unmeasurable system variables can be provided. For this purpose, the values which are to be examined in more detail are described by a mathematical model, for example in the form of equations of motion. The special mathematical structure of the Kalman filter makes it possible to use it in real-time systems in different areas, such as for example for the evaluation of GPS data to determine the position of moving objects - tracking- or for augmented reality \cite{Grewal1993}.
    
    \section{Object tracking}
    Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops. \cite{objectTracking}
@@ -483,7 +490,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
         {\fontsize{8}{10}\selectfont Object Tracking}     & \ding{51}        & high   & \ding{51}     & \ding{55}    & \ding{51}\\ \hline
         {\fontsize{8}{10}\selectfont Motion \newline Vectors} & \ding{51}  & very low  & \ding{55}   & \ding{55} & \ding{51}\\ \hline
       \end{tabularx}
-    \caption{Evaluation of different algorithms}
+    \caption{Evaluation of Different Algorithms}
     \end{table}
     
     As the computational effort is relatively low with the picamera library and the motion vectors are already reprocessed and easy accessible this library was chosen for the calculation of the frequency of mechanical watches via image processing.
@@ -492,7 +499,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
 
     After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
     With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
-    The motion data object consists of multiple values; a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
+    The motion data object consists of multiple values: a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
     
    \section{Test setup}
    
@@ -505,49 +512,40 @@ The following figure shows the test setup. On average the camera was positioned 
         \caption{Test setup for records}
         \end{figure}
         
-    \section{Gesture detection}
+    \section{Gesture Detection}
     A first attempt was to move the hand in front of the camera down, up, right and left and to determine the direction in real time based on the motion vectors. 
     \newline
     For this, the average of all x-values and all y-values of the motion vectors of a frame are calculated and compared with a minimum value of movement that was defined. Depending on whether the x-average value is lower or higher than zero, a movement to the left or right has been detected. Likewise, it works for the y-average with the movement up or down.
         \newline
  As this worked quite well, the balance wheel of the test watch was recorded and it was tried out to detect the movement with the same program. Unfortunately, this program can only detect very clear movements. With very minimal movements this program fails, therefore the frequency of the balance wheel could not be calculated with this implementation. 
     
-    \section{Animation of motion vectors}
+    \section{Animation of Motion Vectors}
     
-   Another approach was animating all SAD values with colors to get a better understanding of how good the information they keep is and how as well as if they can be used to calculate the frequency of the movement of the balance wheel.
+   Another approach was animating all SAD values with colors to get a better understanding of how good the information they keep is and whether they can be used to calculate the frequency of the movement of the balance wheel. In figure \textbf{XXX} a snapshot of the animation of the SAD values is shown. The lighter the colour of a pixel, the higher is the value of the SAD. 
     
     \noindent
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Images/animation_sad.png}
     
-    \caption{Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}
+    \caption{Snapshot of the animation of the SAD values}
     \end{figure}
-    
-    \begin{itemize}
-    \item Beschriftung x und y koordinaten mit einheiten!
-    \end{itemize}
      
-    Further the x and y vector were analyzed and also animated. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion.
+    Further the x and y vector were analyzed and also animated as shown in figure \textbf{XXX}. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion. The lighter the colour of a pixel, the higher is the value of the hypotenuse.
     
     \noindent
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
     
-    \caption{Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}
+    \caption{Snapshot of the animation of the hypotenuses}
     \end{figure}
     
-        \begin{itemize}
-    \item Beschriftung x und y koordinaten mit einheiten!
-    \end{itemize}
-    
-    Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding under which conditions the best result of the motion vectors is reached.
+    Another experimental approach was displaying the motion vectors as arrows directly in the video. A snapshot of this approach can be seen in figure \textbf{XXX}.This approach was helpful to get a better understanding of the conditions that yield the best result of the motion vectors.
     \pagebreak
     
-    \section{Motion vectors visualized in a frame}
-    Codecvisa was used to display the motion vectors of a frame.
-    The result is shown in Figure 3.
+    \section{Motion Vectors Visualized in a Frame}
+    Codecvisa was used to display the motion vectors of a frame as arrows. The larger the arrow, the higher is the motion of this pixel. As one can see in figure \textbf{XXX} the movement of the balance wheel is detected very well, as the arrows are bigger there.
  
     \noindent
     \begin{figure}[H]
@@ -561,14 +559,14 @@ The following figure shows the test setup. On average the camera was positioned 
     \item Beschriftung x und y koordinaten mit einheiten!
     \end{itemize}
     
-    \section{Analysis of motion vectors in excel}
+    \section{Analysis of Motion Vectors in Excel}
     \begin{itemize}
         \item ev bild, wie das gemeint ist...
       \end{itemize}
     Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
     The hope was that a moving pixel could be followed and therefore the location of the pixel would always have been known.
     The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
-    This experiment looked at the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer).
+    This experiment rests on the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer) as displayed in figure \textbf{XXX} .
     
     \noindent
     \begin{figure}[H]
@@ -578,14 +576,17 @@ The following figure shows the test setup. On average the camera was positioned 
     \caption{It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}
     \end{figure}
     
-    \section{Influences of camera setup and parameters}
-    Testing with different settings has shown that the results can be improved. For example, the black and white records are the better choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
+    \section{Influences of Camera Setup and Parameters}
+    Testing with different settings showed that the results can be improved. For example, the black and white records are the best choice. Reducing the shutter speeds can reduce motion blur, which also contributes to a better result.
     The consequence of the shorter exposure time is that the light source must be very strong and close to the subject, otherwise the image is too dark and has a negative effect on the result.
     Records with changed angles were also taken. The angle was changed by about 30 degrees. With this adjustment, no significant changes in the measured values could be detected.
     Furthermore, it was recognized that the selected image detail influences the measured values. During the video recordings it was taken care that the balance wheel takes up the entire image section.
     \newpage
-
-    \section{Crude calculation of frequency}
+    
+    \chapter{Calculation of the frequency}
+    The implementation of a Python program was based on the procedure in the rough calculation from the Excel spreadsheet. During the first implementation, it turned out that there are different methods for calculating the frequency and it resulted in three different implementations, which are explained in more detail in the following sections.
+    
+     \section{Crude Calculation of Frequency}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
     In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method should be good enough to determine the frequency and thus the rate deviation. 
     
@@ -609,11 +610,8 @@ The following figure shows the test setup. On average the camera was positioned 
     \item kleinerer Ausschnitt
     \end{itemize}
     
-    \chapter{Calculation of the frequency}
-    The implementation of a Python program was based on the procedure in the rough calculation from the Excel spreadsheet. During the first implementation, it turned out that there are different methods for calculating the frequency and it resulted in three different implementations, which are explained in more detail in the following sections.
-    
-       \section{Implementation of the algorithms}
-    \subsection{Counting minima with upper limit} 
+       \section{Implementation of the Algorithms}
+    \subsection{Counting Minima with Upper Limit} 
     
     The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the image noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
     
@@ -623,11 +621,11 @@ The following figure shows the test setup. On average the camera was positioned 
       f = \frac{1}{T}
      \end{displaymath}
      
-  \subsection{Counting minima with stepsize}
+  \subsection{Counting Minima with Stepsize}
   To ensure that minimas are not missed during counting, step sizes were used, that means the specifications where the minimas are to be searched for. In the measurements with the test watch, which has a stroke number of 6 per second, a frame rate of 90 was used and therefore every 15th value should show a standstill or a minimum. To detect deviations, a search window of size 5 has been defined.
   For this way, two further values are compared to the left and right of the nominal step size and 15th steps are added from the smallest value of these 5. This method does not require defining a threshold for the minima searching, which is often difficult to set. On the other hand one has to know the ideal frequency of the watch to calculate the stepsize.
   
-    \subsection{Counting minima with tic toc and stepsize}
+    \subsection{Counting Minima with Tic Toc and Stepsize}
   The implementation of the program for calculating the frequency by counting the minimums with a defined step size has been adapted so that the calculation is carried out in a similar way as with the professional devices. In the previous implementation, the length of one half-period after another was measured and then the frequency calculated. However, the semi-oscillation may differ in one direction from the semi-oscillation in the other direction, so the accuracy of the program can be improved if the length is measured from one tic to the next and exactly the same for the beat on the other side, the tac, as shown in the figure below. 
        \noindent
     \begin{figure}[H]
@@ -713,7 +711,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
     \end{itemize}
     
-    \section{Verification of accuracy}
+    \section{Verification of Accuracy}
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
     
@@ -776,18 +774,6 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \end{tabularx}
     \caption{Measured half periods of led board using motion vectors. Desired value 166666}
     \end{table}
-
-    \begin{figure}[H]
-      \includegraphics[scale=0.15]{Images/greiner_verification.jpg}
-  
-    \caption{ Taken picture of measurement verfification of camera and Greiner Compact 900}
-    \end{figure}  
-
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{Images/win_snipped_searchminima}
-  
-    \caption{ Calculated rate deviation with searchMinima.py}
-    \end{figure}  
     
     \chapter{Discussion}
              \begin{itemize}

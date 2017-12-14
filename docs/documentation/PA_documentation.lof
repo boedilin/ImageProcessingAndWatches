@@ -1,25 +1,23 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Camera architecture. \cite {ReadTheDocsPicamera}}}{5}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Operation of a mechanical watch \cite {Uhrwerk}}}{8}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Lever escapement and balance wheel \cite {Uhrwerk}}}{9}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Period of the balance wheel \cite {Witschi_basics}}}{10}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces half of a period of the balance wheel \cite {Witschi_basics}}}{10}{figure.2.5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Camera architecture \cite {ReadTheDocsPicamera}}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Operation of a mechanical watch \cite {Uhrwerk}}}{9}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Lever escapement and balance wheel \cite {Uhrwerk}}}{10}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Period of the balance wheel \cite {Witschi_basics}}}{11}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Half of a period of the balance wheel \cite {Witschi_basics}}}{11}{figure.2.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Test setup for records}}{17}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Snapshot of the animation of the SAD values, the lighter the color the higher the value of the SAD}}{18}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Snapshot of the animation of the hypotenuses, the lighter the color the higher the value of the hypotenuse}}{19}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Motion vectors drawn in one frame}}{20}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}}{21}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Excel sheet with summed x-, y-values, timestamps and calculated frequency}}{22}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}}{23}{figure.4.7}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Test setup for records}}{18}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Snapshot of the animation of the SAD values}}{19}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Snapshot of the animation of the hypotenuses}}{20}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Motion vectors drawn in one frame}}{21}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.}}{22}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Period duration of tic, resp. tac}}{25}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Excel sheet with summed x-, y-values, timestamps and calculated frequency}}{24}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}}{24}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Period duration of tic, resp. tac}}{26}{figure.5.3}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Variation of different time and position recordings}}{28}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Illustration of convergation of the error to 0. (Hier noch text hinzuf\IeC {\"u}gen)}}{30}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Taken picture of measurement verfification of camera and Greiner Compact 900}}{31}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Calculated rate deviation with searchMinima.py}}{31}{figure.6.4}
 \addvspace {10\p@ }
