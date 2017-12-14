@@ -176,7 +176,7 @@ $\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
 
 \chapter*{Abstract}
  \addcontentsline{toc}{chapter}{Abstract}
-Mechanical watches must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all of the devices on the market apply acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device. This camera also differs from conventional measuring devices in the type of measurement. In this work a new approach is used: the measurement is carried out optically by means of image processing. 
+Mechanical watches must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all of the devices on the market apply acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device. In this work a new approach is used: the measurement is carried out optically by means of image processing. 
 \newline
 The work will give answers to the following questions: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
 \newline
@@ -201,12 +201,15 @@ In a first step, possible methods were evaluated in order to carry out the optic
     The aim of this work is to develop a handy device that can visually measure the rate deviation using inexpensive and simple means.
     To achieve this, an existing camera consisting of the best-known single-board computer Raspberry Pi and the corresponding camera from Raspberry Pi is used.
     The aim of this work is to use image processing to measure and analyse the rate deviation of mechanical clocks.
-    The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device.
-    
-   \begin{itemize}
-\item In welchen Kapiteln können welche informationen gefunden werden
-\end{itemize}
-    
+    The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device. 
+    \newline
+    The second chapter will give a background for this work. Acoustical and optical measurement will be explained and compared. One will have a look at the functionality and operation of mechanical watches and the camera module used in this project.
+    In the third chapter different algorithms and libraries for image processing will be discussed and evaluated. 
+    The test setup, camera settings and all methods used to get a better understanding of the picamera library and motion vectors are listed in chapter four. 
+    The fifth chapter afterwards explains how the frequency was then calculated from the motion vectors and how it was implemented as a program in Python. 
+    All the measurements and results are then listed in chapter six. 
+    The last chapter summarizes those results roughly again and outlines all the problems that were faced during the work. It will also give an outlook of what could be improved and done further.
+
     \chapter{Background}
     This chapter is intended to lay the foundation for this report. An overview of the existing measuring methods for the accuracy of a mechanical watch is given and the Raspberry Pi camera, which was used for the optical measurements in this project, is described. In addition, the functionality of a mechanical watch is explained and important information about the test watch is listed.
     \section{State of the Art}
@@ -230,7 +233,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
      \multicolumn{3}{|c|}{\textbf{Comparison acoustical and optical measurement}} \\
      \hline
      & \textbf{acoustical}  & \textbf{optical} \\\hline
-      since   &  around 19th century (2)  & end of 20th century (2)\\ \hline
+      since   &  around 19th century  \cite{Lombardi2011}  & end of 20th century  \cite{Lombardi2011}\\ \hline
      accuracy &   0.1 s/d & 0.1 s/d\\  \hline
      advantages & - most experience (exists for about 200 years) \newline - tracks if balance wheel is damaged (different noises) & - no background noises, which need to be filtered out\\  \hline
      disadvantages & - background noises need to be filtered out&- laser needs to be positioned precisely  \newline - good lighting is needed\\
@@ -351,7 +354,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
     \section{Mechanical Watches}  
     In the following, the function of a mechanical watch is explained in more detail and the role of a watch's balance wheel is explained. Subsequently, important information on mechanical watches, such as the duration of stroke and facts about the test watch used in this project, are described.
     \subsection{Operation of a Mechanical Watch}  
-    In Figure \textbf{XXX} the components of a mechanical watch are illustrated. In the following the operation and interaction of those components is described.
+    In figure \textbf{XXX} the components of a mechanical watch are illustrated. In the following the operation and interaction of those components is described.
     If a mechanical watch is wound up over the crown, the locking wheel (3) is moved by the winding shaft (1) and winding wheels (2). It turns the spring core (4) and pulls the tension spring in the mainspring barrel (5). The spring transmits the stored energy via the external toothed mainspring barrel (5) to the minute wheel (6), third wheel (7) and fourth wheel (8). 
     \newline
     \noindent
@@ -372,7 +375,7 @@ The so-called escapement ensures that the gear train runs at the correct speed. 
     \caption{Lever escapement and balance wheel \cite{Uhrwerk}}
     \end{figure}
 \bigskip
-The balance wheel, which is shown in Figure \textbf{XXX} is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
+The balance wheel, which is shown in figure \textbf{XXX} is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
 The occurring error, if the balance wheel does not run accurately, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
 
 \subsection{Oscillation of the Balance Wheel}
@@ -411,7 +414,7 @@ In figure \textbf{XXX} half of a period, resp. one stroke, of the balance wheel 
      
      \bigskip
      
-    The following table lists facts about mechanical wristwatches. Among other things, it contains the number of strokes per hour, the duration for one stroke - i. e. half a period - and the frequency.
+    The following table lists important facts about mechanical wristwatches. Among other things, it contains the number of strokes per hour, the duration for one stroke - i. e. half a period - and the frequency.
     
      \begin{table}[H]
      \centering
@@ -503,7 +506,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
     
    \section{Test setup}
    
-The following figure shows the test setup. On average the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used.
+The following figure shows the test setup. On average the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used. The test watch was positioned on a turn table so it was easy to adjust the position of the watch.
 
       \begin{figure}[H]
         \centering
@@ -655,11 +658,9 @@ The following figure shows the test setup. On average the camera was positioned 
     \section{Measurements}
 As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. \cite{Witschi_basics} As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
-\bigskip
-\newline
+
     All measurements were taken in different positions of the watch with different length
     of recordings whereas each position was recorded in 10, 20, 40 and 80 minutes.
-\bigskip
 \newline
 
 From the timestamp (t$_1$) of the first stillstand and from the timestamp (t$_2$) of the last timestamp, the duration ($\triangle$t)of the recording can be calculated.
@@ -776,22 +777,24 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \end{table}
     
     \chapter{Discussion}
+    Different approaches of companies were first compared and then different algorithms and libraries for image processing were evaluated. 
+    With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best.
+    The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices. 
              \begin{itemize}
-    \item First compared different methods and approaches of companies
-    \item Design our solution with camera
     \item We come up with 1/t [see section ...]
-    \item results accuracy, comparison with professional devices
-    \item we were able to achieve goal
     \end{itemize}
-    With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best. If more research is done, such as whether and how to improve the camera settings, the results could possibly be further improved. 
     
     \section{Difficulties}
-    \begin{itemize}
-    \item Kameraeinstellungen und Lichverhältnisse finden
-    \item schwer gute Referenzmessungen zu bekommen
-    \item Zuerst zu viele Informationen abgespeichert -> zu wenig speicher
-    \end{itemize}
-    
+In this work there were also some difficulties, which are specified in the following section.
+
+The first difficulty proved to be that the standstill of the balance was easily detected by eye in the summed x- and y-values of the movement vectors, but it took a while until the Python program could reliably detect these standstills.
+
+The right camera settings and lighting conditions turned out to be another crucial point. Especially due to too weak light, the first recordings were not usable. 
+
+Furthermore, at the beginning too much information, i. e. complete frames, was stored on the Raspberry Pi, which caused memory overflow during measurements over 2 hours. Once this problem had been identified, only the sums of the motion vectors of a frame were stored, which saved a lot of memory.
+
+Probably the greatest difficulty was to get good reference measurements, which could also be used as reference values. Thanks to Greiner, however, this problem could be resolved at the end by enabling parallel measurement of the professional Greiner Compact 900 and the camera.
+
     \section{Outlook}
     In this work it was shown that with relatively inexpensive hardware, sufficient good measurements can be carried out to determine the accuracy of a watch. Compared to the professional equipment, which costs thousands of dollars to buy, a good user interface could create a product that is much cheaper and can still keep up with the measurements of more expensive devices. 
     
