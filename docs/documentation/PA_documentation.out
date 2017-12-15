@@ -39,7 +39,7 @@
 \BOOKMARK [1][-]{section.4.5}{Analysis of Motion Vectors in Excel}{chapter.4}% 39
 \BOOKMARK [1][-]{section.4.6}{Influences of Camera Setup and Parameters}{chapter.4}% 40
 \BOOKMARK [0][-]{chapter.5}{Calculation of the frequency}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Crude Calculation of Frequency}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.1}{Calculation of Frequency in Excel}{chapter.5}% 42
 \BOOKMARK [1][-]{section.5.2}{Implementation of the Algorithms}{chapter.5}% 43
 \BOOKMARK [2][-]{subsection.5.2.1}{Counting Minima with Upper Limit}{section.5.2}% 44
 \BOOKMARK [2][-]{subsection.5.2.2}{Counting Minima with Stepsize}{section.5.2}% 45

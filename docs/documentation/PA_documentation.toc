@@ -38,20 +38,20 @@
 \contentsline {section}{\numberline {4.3}Animation of Motion Vectors}{18}{section.4.3}
 \contentsline {section}{\numberline {4.4}Motion Vectors Visualized in a Frame}{21}{section.4.4}
 \contentsline {section}{\numberline {4.5}Analysis of Motion Vectors in Excel}{21}{section.4.5}
-\contentsline {section}{\numberline {4.6}Influences of Camera Setup and Parameters}{22}{section.4.6}
-\contentsline {chapter}{\numberline {5}Calculation of the frequency}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Crude Calculation of Frequency}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementation of the Algorithms}{24}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Counting Minima with Upper Limit}{24}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Counting Minima with Stepsize}{25}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Counting Minima with Tic Toc and Stepsize}{25}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Results}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Measurements}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Verification of Accuracy}{29}{section.6.2}
-\contentsline {chapter}{\numberline {7}Discussion}{31}{chapter.7}
-\contentsline {section}{\numberline {7.1}Difficulties}{31}{section.7.1}
-\contentsline {section}{\numberline {7.2}Outlook}{32}{section.7.2}
-\contentsline {chapter}{Glossary}{33}{section*.4}
-\contentsline {chapter}{Bibliography}{34}{chapter*.5}
-\contentsline {chapter}{List of Figures}{36}{chapter*.6}
-\contentsline {chapter}{Appendix - Python programs}{37}{chapter*.7}
+\contentsline {section}{\numberline {4.6}Influences of Camera Setup and Parameters}{23}{section.4.6}
+\contentsline {chapter}{\numberline {5}Calculation of the frequency}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Calculation of Frequency in Excel}{24}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementation of the Algorithms}{26}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Counting Minima with Upper Limit}{26}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Counting Minima with Stepsize}{27}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Counting Minima with Tic Toc and Stepsize}{27}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Measurements}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Verification of Accuracy}{31}{section.6.2}
+\contentsline {chapter}{\numberline {7}Discussion}{34}{chapter.7}
+\contentsline {section}{\numberline {7.1}Difficulties}{34}{section.7.1}
+\contentsline {section}{\numberline {7.2}Outlook}{35}{section.7.2}
+\contentsline {chapter}{Glossary}{36}{section*.4}
+\contentsline {chapter}{Bibliography}{37}{chapter*.5}
+\contentsline {chapter}{List of Figures}{39}{chapter*.6}
+\contentsline {chapter}{Appendix - Python programs}{40}{chapter*.7}

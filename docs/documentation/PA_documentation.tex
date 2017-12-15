@@ -185,7 +185,6 @@ In a first step, possible methods were evaluated in order to carry out the optic
 \begin{itemize}
 \item Results -> comparison plus evt. fitting (proportional 
 \end{itemize}
-
 \pagebreak
     \setcounter{secnumdepth}{5} 
     \setcounter{tocdepth}{5} 
@@ -224,7 +223,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
     \subsubsection{Optical Measurement}
     About hundred years later, optical watch timing machines joined acoustical ones. Even nowadays there are barely devices on the market, which employ only optical measurement, but several companies started to combine their acoustical with optical metering. One way to scale the frequency of the balance wheel optically is by using a laser. The beam is periodically interrupted by the balance wheel and thus the frequency can be calculated \cite{Lombardi2011}. In this paper the frequency is quantified optically by using image processing. There is hardly to none company out there, which uses the last technique for measuring the frequency.
     
-    In table \textbf{XXX} a comparison of acoustical and optical measurements is made and the most important facts are listed.
+    In table 2.1 a comparison of acoustical and optical measurements is made and the most important facts are listed.
     
         \begin{table}[H]
      \centering
@@ -290,12 +289,9 @@ In a first step, possible methods were evaluated in order to carry out the optic
     
     \caption{Camera architecture \cite{ReadTheDocsPicamera}}
     \end{figure}
-    
-    
-    
     \bigskip
     
-    The figure \textbf{XXX} illustrates the processing flow of a frame, with the associated steps explained in the following section.
+    The figure 2.1 illustrates the processing flow of a frame, with the associated steps explained in the following section.
     
     \begin{enumerate}
     \item The camera's sensor is configured and continuously streams frame lines to the GPU.
@@ -350,11 +346,10 @@ In a first step, possible methods were evaluated in order to carry out the optic
     
     \end{itemize}
     
-    
     \section{Mechanical Watches}  
     In the following, the function of a mechanical watch is explained in more detail and the role of a watch's balance wheel is explained. Subsequently, important information on mechanical watches, such as the duration of stroke and facts about the test watch used in this project, are described.
     \subsection{Operation of a Mechanical Watch}  
-    In figure \textbf{XXX} the components of a mechanical watch are illustrated. In the following the operation and interaction of those components is described.
+    In figure 2.2 the components of a mechanical watch are illustrated. In the following the operation and interaction of those components is described.
     If a mechanical watch is wound up over the crown, the locking wheel (3) is moved by the winding shaft (1) and winding wheels (2). It turns the spring core (4) and pulls the tension spring in the mainspring barrel (5). The spring transmits the stored energy via the external toothed mainspring barrel (5) to the minute wheel (6), third wheel (7) and fourth wheel (8). 
     \newline
     \noindent
@@ -375,14 +370,14 @@ The so-called escapement ensures that the gear train runs at the correct speed. 
     \caption{Lever escapement and balance wheel \cite{Uhrwerk}}
     \end{figure}
 \bigskip
-The balance wheel, which is shown in figure \textbf{XXX} is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
+The balance wheel, which is shown in figure 2.3 is the heart of the oscillation system. It generates a time-defined movement, which in turn is transferred to the gear train and passed on to the watch hands. 
 The occurring error, if the balance wheel does not run accurately, is called rate deviation. The deviation can be caused by different external and internal matters. Internal motives often are wear, resp. erosion or dirt. Whereas there are a lot more external causes as changes in temperature, air pressure or magnetism.
 
 \subsection{Oscillation of the Balance Wheel}
 In the following section the movement of the balance wheel, which will be recorded and used for the calculation of the frequency, is explained.
 
 \subsubsection{Period}
-The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A) as shown in figure \textbf{XXX} \cite{Witschi_basics}.
+The period of the balance wheel is the path of a point from one turning point to the other and back (A - B - A) as shown in figure 2.4 \cite{Witschi_basics}.
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/period.png}
@@ -392,7 +387,7 @@ The period of the balance wheel is the path of a point from one turning point to
 \bigskip
 
 \subsubsection{Half a Period}
-In figure \textbf{XXX} half of a period, resp. one stroke, of the balance wheel is illustrated. It is the path of a point from one turning point to the other (A - B) \cite{Witschi_basics}.
+In figure 2.5 half of a period, resp. one stroke, of the balance wheel is illustrated. It is the path of a point from one turning point to the other (A - B) \cite{Witschi_basics}.
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Images/Halfperiod.png}
@@ -464,7 +459,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
    Using the Kalman filter, errors in real measurement values can be reduced and estimates for unmeasurable system variables can be provided. For this purpose, the values which are to be examined in more detail are described by a mathematical model, for example in the form of equations of motion. The special mathematical structure of the Kalman filter makes it possible to use it in real-time systems in different areas, such as for example for the evaluation of GPS data to determine the position of moving objects - tracking- or for augmented reality \cite{Grewal1993}.
    
    \section{Object tracking}
-   Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops. \cite{objectTracking}
+   Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops \cite{objectTracking}.
     
  \section{Motion vectors}
  Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence. The motion vectors can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
@@ -479,7 +474,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
    In addition, there is the problem with object tracking, for example, that there are many different shapes of balance wheels and that the software would have to be adapted for each new shape of balance wheel in order to make the object detection work again
    The same applies to procedures that work with colors. As soon as a balance wheel has a different color, the procedure would have to be adapted.
    
-   In the table below it is listed which methods are already implemented in which library, how high the computational effort is and if it is generalizable, so that the measurements are always more or less the same and the camera does not need to be positioned precisely in the exact same position every time.
+   In table 3.1 it is listed which methods are already implemented in which library, how high the computational effort is and if it is generalizable, so that the measurements are always more or less the same and the camera does not need to be positioned precisely in the exact same position every time.
   
    \begin{table}[H]
     
@@ -506,7 +501,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
     
    \section{Test setup}
    
-The following figure shows the test setup. On average the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used. The test watch was positioned on a turn table so it was easy to adjust the position of the watch.
+Figure 4.1 shows the test setup. On average the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used. The test watch was positioned on a turn table so it was easy to adjust the position of the watch.
 
       \begin{figure}[H]
         \centering
@@ -524,7 +519,7 @@ The following figure shows the test setup. On average the camera was positioned 
     
     \section{Animation of Motion Vectors}
     
-   Another approach was animating all SAD values with colors to get a better understanding of how good the information they keep is and whether they can be used to calculate the frequency of the movement of the balance wheel. In figure \textbf{XXX} a snapshot of the animation of the SAD values is shown. The lighter the colour of a pixel, the higher is the value of the SAD. 
+   Another approach was animating all SAD values with colors to get a better understanding of how good the information they keep is and whether they can be used to calculate the frequency of the movement of the balance wheel. In figure 4.2 a snapshot of the animation of the SAD values is shown. The lighter the colour of a pixel, the higher is the value of the SAD. 
     
     \noindent
     \begin{figure}[H]
@@ -534,9 +529,9 @@ The following figure shows the test setup. On average the camera was positioned 
     \caption{Snapshot of the animation of the SAD values}
     \end{figure}
      
-    Further the x and y vector were analyzed and also animated as shown in figure \textbf{XXX}. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values. The hypotenuses give information about the amount as well as the direction of the motion. The lighter the colour of a pixel, the higher is the value of the hypotenuse.
-    
-    \noindent
+    Further the x and y vector were analyzed. But as those vectors itself are hard to use and only give partial information (y-vector: up or down, x-vector: right or left), the hypotenuses were calculated with Pythagoras' theorem and displayed similar to the SAD values as displayed in figure 4.3. The hypotenuses give information about the amount as well as the direction of the motion. The lighter the colour of a pixel, the higher is the value of the hypotenuse.
+ 
+        \noindent
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Images/animation_hypotenuse.png}
@@ -544,11 +539,11 @@ The following figure shows the test setup. On average the camera was positioned 
     \caption{Snapshot of the animation of the hypotenuses}
     \end{figure}
     
-    Another experimental approach was displaying the motion vectors as arrows directly in the video. A snapshot of this approach can be seen in figure \textbf{XXX}.This approach was helpful to get a better understanding of the conditions that yield the best result of the motion vectors.
     \pagebreak
     
     \section{Motion Vectors Visualized in a Frame}
-    Codecvisa was used to display the motion vectors of a frame as arrows. The larger the arrow, the higher is the motion of this pixel. As one can see in figure \textbf{XXX} the movement of the balance wheel is detected very well, as the arrows are bigger there.
+        Another experimental approach was displaying the motion vectors as arrows directly in the video. This approach was helpful to get a better understanding of the conditions that yield the best result of the motion vectors.
+    Codecvisa was used to display the motion vectors of a frame as arrows. The larger the arrow, the higher is the motion of this pixel. As one can see in figure 4.4 the movement of the balance wheel is detected very well, as the arrows are bigger there.
  
     \noindent
     \begin{figure}[H]
@@ -558,18 +553,20 @@ The following figure shows the test setup. On average the camera was positioned 
     \caption{Motion vectors drawn in one frame}
     \end{figure}
     
-        \begin{itemize}
-    \item Beschriftung x und y koordinaten mit einheiten!
-    \end{itemize}
-    
     \section{Analysis of Motion Vectors in Excel}
-    \begin{itemize}
-        \item ev bild, wie das gemeint ist...
-      \end{itemize}
     Another approach used Excel was to determine whether a motion vector from one frame is the predecessor of the motion vector in the next frame.
     The hope was that a moving pixel could be followed and therefore the location of the pixel would always have been known.
+    
+     \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.32]{Images/analysis_mv_excel.png}
+    
+    \caption{Motion vectors drawn in one frame}
+    \end{figure}
+    
+    Two successive frames are illustrated in figure 4.5. Every field with the three values x, y and sad is a 16x16 macro block. The idea was to calculate from those values where the pixel will go. For example the field G18 contains for the x-value -42 and for the y-value 54. If those values are divided by 16, as the macro block has a size of 16x16, the idea was to add those resulting values rounded to the  considered field and get the next field, where this macro block might have moved. This is displayed as the red field, D14, in the right excel snippet. From the fields with high values in it, which is an indicator for a lot of movement, it was expected to get the movement of the balance wheel. 
     The result was sobering because one frame and motion vector cannot be associated with another frame and motion vector.
-    This experiment rests on the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer) as displayed in figure \textbf{XXX} .
+    This experiment rests on the idea of the optical flux with the movement vectors of the MMAL (Multi-Media Abstraction Layer) as displayed in figure 4.6 .
     
     \noindent
     \begin{figure}[H]
@@ -587,11 +584,11 @@ The following figure shows the test setup. On average the camera was positioned 
     \newpage
     
     \chapter{Calculation of the frequency}
-    The implementation of a Python program was based on the procedure in the rough calculation from the Excel spreadsheet. During the first implementation, it turned out that there are different methods for calculating the frequency and it resulted in three different implementations, which are explained in more detail in the following sections.
+After the experimental sessions with the motion vectors it became clear, how the information contained in the motion vectors could be used to calculate the oscillation of the balance wheel. At first a crude calculation of it was made by hand in Excel and the gained insights were then used to start implementing a program in Python. The following chapter will explain how those calculations and implementations were made.
     
-     \section{Crude Calculation of Frequency}
+     \section{Calculation of Frequency in Excel}
     With the help of the motion vectors and the corresponding time stamps per frame, a rough calculation of the frequency can be made. All x, y or SAD values contained in the image are summed up. If the sum of all values is small, it is very likely that the balance wheel is at a standstill before turning back again. For small values, the time stamp is registered and the difference to the next standstill is calculated. Since the balance wheel triggers half a oscillation, it has moved from one stop to the next half point. 
-    In order to roughly calculate the frequency, an Excel sheet was created in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method should be good enough to determine the frequency and thus the rate deviation. 
+    In order to roughly calculate the frequency, an Excel sheet was created - figure 5.1 is a snippet - in which all the accumulated x- and y-values were entered and the standstills of the balance wheels were determined by eye. The half-oscillations and the frequency were calculated from the time intervals of the standstills. Afterwards, the average of all calculated frequencies was determined and it was recognized that the results with this method should be good enough to determine the frequency and thus the rate deviation. 
     
     \noindent
     \begin{figure}[H]
@@ -600,20 +597,19 @@ The following figure shows the test setup. On average the camera was positioned 
     
     \caption{Excel sheet with summed x-, y-values, timestamps and calculated frequency}
     \end{figure}
+    
+    Figure 5.2 is a graph of all summed x-values respectively y-values over time and it was created out of the same excel sheet in figure 5.1. The value over 20000 at the beginning almost always appeared, but as it does not have any impacts on the measurements of the standstills of the balance wheel and only showed up at the beginning, it can be ignored.
 
     \noindent
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Images/excel_sheet_graph.png}
+    \includegraphics[scale=0.45]{Images/excel_sheet_graph.png}
     
     \caption{Illustration of summed x-(blue), y-values (red) over time. The x-axis is the time and the y-axis are the x- and y-values.}
     \end{figure}
     
-        \begin{itemize}
-    \item kleinerer Ausschnitt
-    \end{itemize}
-    
        \section{Implementation of the Algorithms}
+ The implementation of a Python program was based on the procedure in the rough calculation from the Excel spreadsheet. During the first implementation, it turned out that there are different methods for calculating the frequency and it resulted in three different implementations, which are explained in more detail in the following sections.
     \subsection{Counting Minima with Upper Limit} 
     
     The greatest difficulty proved to be the detection of the minimia, which characterize the standstill of the balance wheel. These were relatively easy visible to the unaided eye, but in an automatic calculation, appropriate conditions had to be set in order to take into account the correct values and correct the inaccuracies caused by the image noise. The setting of an upper limit for the minima proved to be a suitable condition. All minima below this limit are therefore taken into account. 
@@ -629,7 +625,7 @@ The following figure shows the test setup. On average the camera was positioned 
   For this way, two further values are compared to the left and right of the nominal step size and 15th steps are added from the smallest value of these 5. This method does not require defining a threshold for the minima searching, which is often difficult to set. On the other hand one has to know the ideal frequency of the watch to calculate the stepsize.
   
     \subsection{Counting Minima with Tic Toc and Stepsize}
-  The implementation of the program for calculating the frequency by counting the minimums with a defined step size has been adapted so that the calculation is carried out in a similar way as with the professional devices. In the previous implementation, the length of one half-period after another was measured and then the frequency calculated. However, the semi-oscillation may differ in one direction from the semi-oscillation in the other direction, so the accuracy of the program can be improved if the length is measured from one tic to the next and exactly the same for the beat on the other side, the tac, as shown in the figure below. 
+  The implementation of the program for calculating the frequency by counting the minimums with a defined step size has been adapted so that the calculation is carried out in a similar way as with the professional devices. In the previous implementation, the length of one half-period after another was measured and then the frequency calculated. However, the semi-oscillation may differ in one direction from the semi-oscillation in the other direction, so the accuracy of the program can be improved if the length is measured from one tic to the next and exactly the same for the beat on the other side, the tac, as shown in the figure 5.3. 
        \noindent
     \begin{figure}[H]
         \centering
@@ -647,10 +643,6 @@ The following figure shows the test setup. On average the camera was positioned 
        \begin{displaymath}
       \text{frequency}= \frac{1}{\text{period duration}}
      \end{displaymath}
-     
-         \begin{itemize}
-    \item Wenn funktioniert Annäherung mit proportionalität weiteres kapitel um Messprozess zu beschleunigen
-    \end{itemize}
      
     
     \chapter{Results}
@@ -690,7 +682,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
 
     \noindent
     \begin{figure}[H]
-        \includegraphics[scale=0.5]{Images/variations_per_day.png}
+        \includegraphics[scale=0.62]{Images/variations_per_day.png}
     
     \caption{ Variation of different time and position recordings}
     \end{figure}    
@@ -705,12 +697,8 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
         down      & -20               &  -46  & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
         left      & -14                & -34 & -87.0	   & -87.1	  & -87.1	  & -83.1      \\ \hline
         \end{tabularx}
-          \caption{ variations per day in seconds} 
+          \caption{ Variations per day in seconds} 
     \end{table}
-    
-             \begin{itemize}
-    \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
-    \end{itemize}
     
     \section{Verification of Accuracy}
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
@@ -721,12 +709,6 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     respectively a frequency of 3 Hz.
 
     The measurement is already accurate to approx. 7 microseconds at 60 seconds, as can be seen in the table below.
-
-    \begin{itemize}
-      \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
-      \item statistic table hinzufügen
-    \item als schlusswort: Messungen mit Kamera sind genau genug
-    \end{itemize}
    
     \begin{table}[H]
       \centering
@@ -775,6 +757,15 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \end{tabularx}
     \caption{Measured half periods of led board using motion vectors. Desired value 166666}
     \end{table}
+    
+         
+         \begin{itemize}
+    \item Wenn funktioniert Annäherung mit proportionalität weiteres kapitel um Messprozess zu beschleunigen
+      \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
+      \item statistic table hinzufügen
+    \item als schlusswort: Messungen mit Kamera sind genau genug
+    \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
+    \end{itemize}
     
     \chapter{Discussion}
     Different approaches of companies were first compared and then different algorithms and libraries for image processing were evaluated. 
