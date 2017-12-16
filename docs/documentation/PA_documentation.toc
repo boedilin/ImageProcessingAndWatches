@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.1.2}Dense Flow}{14}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Kalman Filtering}{14}{section.3.2}
 \contentsline {section}{\numberline {3.3}Object tracking}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Motion vectors}{15}{section.3.4}
+\contentsline {section}{\numberline {3.4}Motion vectors and SAD}{15}{section.3.4}
 \contentsline {section}{\numberline {3.5}Conclusions and Evaluations}{15}{section.3.5}
 \contentsline {chapter}{\numberline {4}Experimental approaches}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Test setup}{17}{section.4.1}
@@ -48,10 +48,10 @@
 \contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Measurements}{29}{section.6.1}
 \contentsline {section}{\numberline {6.2}Verification of Accuracy}{31}{section.6.2}
-\contentsline {chapter}{\numberline {7}Discussion}{34}{chapter.7}
-\contentsline {section}{\numberline {7.1}Difficulties}{34}{section.7.1}
-\contentsline {section}{\numberline {7.2}Outlook}{35}{section.7.2}
-\contentsline {chapter}{Glossary}{36}{section*.4}
-\contentsline {chapter}{Bibliography}{37}{chapter*.5}
-\contentsline {chapter}{List of Figures}{39}{chapter*.6}
-\contentsline {chapter}{Appendix - Python programs}{40}{chapter*.7}
+\contentsline {chapter}{\numberline {7}Discussion}{35}{chapter.7}
+\contentsline {section}{\numberline {7.1}Difficulties}{35}{section.7.1}
+\contentsline {section}{\numberline {7.2}Outlook}{36}{section.7.2}
+\contentsline {chapter}{Glossary}{37}{section*.4}
+\contentsline {chapter}{Bibliography}{38}{chapter*.5}
+\contentsline {chapter}{List of Figures}{40}{chapter*.6}
+\contentsline {chapter}{Appendix - Python programs}{41}{chapter*.7}

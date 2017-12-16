@@ -461,11 +461,10 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
    \section{Object tracking}
    Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops \cite{objectTracking}.
     
- \section{Motion vectors}
- Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence. The motion vectors can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
-    \begin{itemize}
-        \item makroblock sad
-        \end{itemize}
+ \section{Motion vectors and SAD}
+ Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence.
+ Video compression often also uses SAD values as an additional aid to compression. SAD values are also used in other applications such as object recognition and motion estimation. (referenz zu wiki oder buch.)
+ The motion vectors and SAD can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
     
    
    \section{Conclusions and Evaluations}
@@ -486,7 +485,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
         {\fontsize{8}{10}\selectfont Optical Flow}           & \ding{51}        & high & \ding{51}    & \ding{55}  & \ding{55}\\ \hline
         {\fontsize{8}{10}\selectfont Kalman \newline Filtering}     & \ding{51}        & high     & \ding{51} &  \ding{55}          & \ding{55}\\ \hline
         {\fontsize{8}{10}\selectfont Object Tracking}     & \ding{51}        & high   & \ding{51}     & \ding{55}    & \ding{51}\\ \hline
-        {\fontsize{8}{10}\selectfont Motion \newline Vectors} & \ding{51}  & very low  & \ding{55}   & \ding{55} & \ding{51}\\ \hline
+        {\fontsize{8}{10}\selectfont Motion \newline Vectors and SAD} & \ding{51}  & very low  & \ding{55}   & \ding{55} & \ding{51}\\ \hline
       \end{tabularx}
     \caption{Evaluation of Different Algorithms}
     \end{table}
@@ -497,7 +496,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
 
     After deciding which library to use, some experimental sessions took place to get a better understanding of the so called motion data values or motion vectors. 
     With the picamera library it is easy to access these motion data values so the hard part wasn't to get the values but to understand how they are constructed. 
-    The motion data object consists of multiple values: a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of a frame.
+    The motion data object from picamera consists of multiple values: a signed 1-byte x vector, a signed 1-byte y vector and and unsigned 2-byte SAD value for each macro-block of 16x16 pixel of a frame.
     
    \section{Test setup}
    
@@ -704,11 +703,11 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     The calculated frequency is far too imprecise. In theory, however, the calculation should become more precise after a certain period of time and should even be accurate to the microsecond.
     But this has never been achieved. For this reason, a reliable artificial clock was used in the form of an LED that is clocked by a 50 Mhz quartz and is therefore sufficiently accurate.
     
-    Because trust in the motion vectors has diminished, a color-based method was used. The new method analyzes certain pixels in each image of the video sequence and detects the LED's light when a threshold value is exceeded in the RGB color space.
+    Because trust in the motion vectors has diminished, a color-based method was used. The new method analyzes certain pixels in each image of the video sequence and detects the LED's light when a threshold value is exceeded in the RGB color space. This represents an artificial standstill of the balance wheel.
     The LED has been programmed to mimic the test watch's balance wheel and provide 21600 pulses per hour -
-    respectively a frequency of 3 Hz.
+    respectively a frequency of 6 Hz as half periods.
 
-    The measurement is already accurate to approx. 7 microseconds at 60 seconds, as can be seen in the table below.
+    The table XXX shows the result of the measurements. Different durations have been selected to show the measurement becomes more accurate over time and multiple runs have been made to show that it is reproducible.
    
     \begin{table}[H]
       \centering
@@ -728,14 +727,21 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
         2100      & 166668.6                 & 166668.6	   & 166668.6	  & 166655.4	  & 166654.5      \\ \hline
         2400      & 166668.1                 & 166652.7	   & 166656.5	  & 166668.1	  & 166668.1        \\ \hline
     \end{tabularx}
-    \caption{Measured half periods of led board using RGB values of pixels. Desired value 166666}
+    \caption{Measured impulses of led board through RGB analysis. Expected value 166666}
     \end{table}
 
+    In the table XXX the assumption has been confirmed that longer records leads to more accurate measurement results.
+    Surprisingly 60 seconds of measure time already shows a close approach to the expected 166666 microseconds. The error in measurement of run 1 during 60 seconds measure time would be 3.64 seconds per day.
+
     \begin{figure}[H]
-      \includegraphics[scale=0.5]{Images/error_led_rgb.png}
+      \includegraphics[scale=0.5]{Images/errors_600sec.png}
   
-    \caption{ Illustration of convergation of the error to 0. (Hier noch text hinzufügen)}
-    \end{figure}  
+    \caption{Illustration of convergation of the measuremnt error in 600 seconds.}
+    \end{figure}
+
+    Figure XXX shows the measurement over 600 seconds and the convergation of the measurement error.
+    Since exact results of the LED pulses were possible with the RGB measurement, this should also be possible with the movement vectors respectively with the additional SAD values.
+    Instead of reading the RGB values, in the next measurement the motion vectors respectively the SAD values were used again to detect the LED pulse.
 
     \begin{table}[H]
       \centering
@@ -755,17 +761,45 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
         2100      & 166668.4                 & 166661.4	   & 166668.4	  & 166669.3	  & 166662.3      \\ \hline
         2400      & 166669.7                 & 166669.6	   & 166663.5	  & 166663.5	  & 166662.7        \\ \hline
     \end{tabularx}
-    \caption{Measured half periods of led board using motion vectors. Desired value 166666}
+    \caption{Measured half periods of led board using SAD. Desired value 166666}
     \end{table}
+
+    Table XXX proves that even with the SAD values accurate measurements can be made.
+    This implies also the motion vectors can be used for precise measurement.
+
+    Knowing that the methods do not only work in theory but also in practice, Greiner (ref?) was contacted and asked for a direct comparison with the Greiner Compact 900 and the camera of this project.
     
-         
-         \begin{itemize}
-    \item Wenn funktioniert Annäherung mit proportionalität weiteres kapitel um Messprozess zu beschleunigen
-      \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
-      \item statistic table hinzufügen
-    \item als schlusswort: Messungen mit Kamera sind genau genug
-    \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
+    \begin{itemize}
+      \item bild vom versuchsaufbau bei greiner und kurze beschreibung, dass verschiedene abweichungen gemessen wurden, die durch justierungen an der uhr ermöglicht wurden
     \end{itemize}
+
+    \begin{table}[H]
+      \centering
+        \begin{tabularx}{\linewidth}{ |L|L|  }
+        \hline
+        \textbf{Greiner Compact's observed rate deviations during measurement} [s] &  \textbf{Camera's measured rate deviations} [s]  \\ \hline
+        -50/-52/-55        & -52,3 \\ \hline
+        -13/-14/-15        & -13,8 \\ \hline
+        -4/-5/-6          & -5,9 \\ \hline
+        0/1               & 1,1 \\ \hline
+        5/7               & 6,8 \\ \hline
+        17/19/21/         & 18,1 \\ \hline
+        43/44/45/         & 43,7 \\ \hline
+    \end{tabularx}
+    \caption{Results of pararell measurement with Greiner Compact 900 and Camera}
+    \end{table}
+
+    During the measurement at Greiner, the agitation of a watch with a frequency of 2.5 Hz was measured for 600 seconds. The mode of the Greiner meter would be set to measure in an interval of 4 seconds. Correspondingly, the Greiner meter has in some cases outputted up to 3 different values during the 600 seconds, which are shown in Table XXX. The camera's measurement is based on the summed y-values of the motion vectors and the minimas were counted with the algorithm of 5.2.2.
+    As shown in Table xxx, the camera's measured values are very similar to those of the professional device Greiner Compact 900.
+         
+    \begin{itemize}
+      \item Wenn funktioniert Annäherung mit proportionalität weiteres kapitel um Messprozess zu beschleunigen
+        \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
+        \item statistic table hinzufügen
+      \item als schlusswort: Messungen mit Kamera sind genau genug
+      \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
+      \end{itemize}
+    
     
     \chapter{Discussion}
     Different approaches of companies were first compared and then different algorithms and libraries for image processing were evaluated. 
