@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{\numberline {2.1.1.1}Acoustical Measurement}{2}{subsubsection.2.1.1.1}
 \contentsline {subsubsection}{\numberline {2.1.1.2}Optical Measurement}{3}{subsubsection.2.1.1.2}
 \contentsline {subsection}{\numberline {2.1.2}Industrial Products}{3}{subsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.2.1}Witschi - WisioScope S}{3}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Witschi - WisioScope S}{4}{subsubsection.2.1.2.1}
 \contentsline {subsubsection}{\numberline {2.1.2.2}Lepsi - WatchScope/WatchAnalyzer}{4}{subsubsection.2.1.2.2}
 \contentsline {subsubsection}{\numberline {2.1.2.3}Greiner Vibrograf - Compact 900}{4}{subsubsection.2.1.2.3}
 \contentsline {section}{\numberline {2.2}Camera Module}{4}{section.2.2}
@@ -48,10 +48,11 @@
 \contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Measurements}{29}{section.6.1}
 \contentsline {section}{\numberline {6.2}Verification of Accuracy}{31}{section.6.2}
-\contentsline {chapter}{\numberline {7}Discussion}{35}{chapter.7}
-\contentsline {section}{\numberline {7.1}Difficulties}{35}{section.7.1}
-\contentsline {section}{\numberline {7.2}Outlook}{36}{section.7.2}
-\contentsline {chapter}{Glossary}{37}{section*.4}
-\contentsline {chapter}{Bibliography}{38}{chapter*.5}
-\contentsline {chapter}{List of Figures}{40}{chapter*.6}
-\contentsline {chapter}{Appendix - Python programs}{41}{chapter*.7}
+\contentsline {chapter}{\numberline {7}Regression of the measurement error}{37}{chapter.7}
+\contentsline {chapter}{\numberline {8}Discussion}{38}{chapter.8}
+\contentsline {section}{\numberline {8.1}Difficulties}{38}{section.8.1}
+\contentsline {section}{\numberline {8.2}Outlook}{39}{section.8.2}
+\contentsline {chapter}{Glossary}{40}{section*.4}
+\contentsline {chapter}{Bibliography}{41}{chapter*.5}
+\contentsline {chapter}{List of Figures}{43}{chapter*.6}
+\contentsline {chapter}{Appendix - Python programs}{44}{chapter*.7}

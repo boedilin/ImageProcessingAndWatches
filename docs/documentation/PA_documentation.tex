@@ -182,9 +182,6 @@ The work will give answers to the following questions: Is a complete optical mea
 \newline
 In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel. Due to a promising result the implementation of a Python program was carried out. It was found that the watch reacts very sensitively to temperatures and runs very inaccurately. Therefore it was difficult to get reliable reference measurements. Therefore, a comparison was made with a blinking LED, which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing worked very well and that sufficiently good results could be achieved. In order to get better direct reference measurements a parallel measurement of the watch with the camera and a Greiner measurement device was made. It showed that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. To have a product, which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally one could do further research, if real-time measurements are possible.
 
-\begin{itemize}
-\item Results -> comparison plus evt. fitting (proportional 
-\end{itemize}
 \pagebreak
     \setcounter{secnumdepth}{5} 
     \setcounter{tocdepth}{5} 
@@ -235,7 +232,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
       since   &  around 19th century  \cite{Lombardi2011}  & end of 20th century  \cite{Lombardi2011}\\ \hline
      accuracy &   0.1 s/d & 0.1 s/d\\  \hline
      advantages & - most experience (exists for about 200 years) \newline - tracks if balance wheel is damaged (different noises) & - no background noises, which need to be filtered out\\  \hline
-     disadvantages & - background noises need to be filtered out&- laser needs to be positioned precisely  \newline - good lighting is needed\\
+     disadvantages & - background noises need to be filtered out&- laser needs to be positioned precisely \newline- balance wheel needs to be visible  \newline - good lighting is needed\\
      \hline
     \end{tabularx}
     \caption{Comparison of Acoustical and Optical Measurement}
@@ -504,7 +501,7 @@ Figure 4.1 shows the test setup. On average the camera was positioned approximat
 
       \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.1]{Images/test_setup}
+        \includegraphics[scale=0.3]{Images/test_setup}
         
         \caption{Test setup for records}
         \end{figure}
@@ -645,7 +642,7 @@ After the experimental sessions with the motion vectors it became clear, how the
      
     
     \chapter{Results}
-        Reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. In the next section, this divergence and its causes will be discussed in more detail. 
+        The first reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. All those first measurements weren't done in parallel with the camera measurements. In the first subchapter the results, this divergence and its causes will be discussed in more detail. In a next step as the results with the first reference measurements weren't useful, a verification of the accuracy of the measurements with the camera were made with a blinking LED. The last subchapter will focus on the meterings of the Greiner Compact 900 and the Raspberry Pi camera, which were made in parallel and where very similiar results were obtained. 
     \section{Measurements}
 As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch. \cite{Witschi_basics} As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
@@ -707,7 +704,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     The LED has been programmed to mimic the test watch's balance wheel and provide 21600 pulses per hour -
     respectively a frequency of 6 Hz as half periods.
 
-    The table XXX shows the result of the measurements. Different durations have been selected to show the measurement becomes more accurate over time and multiple runs have been made to show that it is reproducible.
+    Table 6.2 shows the result of the measurements. Different durations have been selected to show the measurement becomes more accurate over time and multiple runs have been made to show that it is reproducible.
    
     \begin{table}[H]
       \centering
@@ -730,7 +727,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \caption{Measured impulses of led board through RGB analysis. Expected value 166666}
     \end{table}
 
-    In the table XXX the assumption has been confirmed that longer records leads to more accurate measurement results.
+    In table 6.2 the assumption has been confirmed that longer records leads to more accurate measurement results.
     Surprisingly 60 seconds of measure time already shows a close approach to the expected 166666 microseconds. The error in measurement of run 1 during 60 seconds measure time would be 3.64 seconds per day.
 
     \begin{figure}[H]
@@ -739,7 +736,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \caption{Illustration of convergation of the measuremnt error in 600 seconds.}
     \end{figure}
 
-    Figure XXX shows the measurement over 600 seconds and the convergation of the measurement error.
+    Figure 6.2 shows the measurement over 600 seconds and the convergation of the measurement error.
     Since exact results of the LED pulses were possible with the RGB measurement, this should also be possible with the movement vectors respectively with the additional SAD values.
     Instead of reading the RGB values, in the next measurement the motion vectors respectively the SAD values were used again to detect the LED pulse.
 
@@ -764,14 +761,19 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \caption{Measured half periods of led board using SAD. Desired value 166666}
     \end{table}
 
-    Table XXX proves that even with the SAD values accurate measurements can be made.
+    Table 6.3 proves that even with the SAD values accurate measurements can be made.
     This implies also the motion vectors can be used for precise measurement.
 
-    Knowing that the methods do not only work in theory but also in practice, Greiner (ref?) was contacted and asked for a direct comparison with the Greiner Compact 900 and the camera of this project.
+    Knowing that the methods do not only work in theory but also in practice, a metering of a Greiner Compact 900 and the Raspberry Pi camera was executed in parallel. In figure 6.3 the setup is shown. The watch was placed on a nimble mounting of the Greiner device, which includes the microphone, which is used for measuring the oscillation of the balance wheel 
     
-    \begin{itemize}
-      \item bild vom versuchsaufbau bei greiner und kurze beschreibung, dass verschiedene abweichungen gemessen wurden, die durch justierungen an der uhr ermöglicht wurden
-    \end{itemize}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{Images/parallel_test_setup}
+        
+        \caption{Test setup for records}
+        \end{figure}
+        
+   The oscillation of the test watch was adjusted manually for seven times. Each change of this oscillation and the subsequent measurement of this new rate deviation are displayed as a row in table 6.4.
 
     \begin{table}[H]
       \centering
@@ -792,10 +794,9 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     During the measurement at Greiner, the agitation of a watch with a frequency of 2.5 Hz was measured for 600 seconds. The mode of the Greiner meter would be set to measure in an interval of 4 seconds. Correspondingly, the Greiner meter has in some cases outputted up to 3 different values during the 600 seconds, which are shown in Table XXX. The camera's measurement is based on the summed y-values of the motion vectors and the minimas were counted with the algorithm of 5.2.2.
     As shown in Table xxx, the camera's measured values are very similar to those of the professional device Greiner Compact 900.
          
+    \chapter{Regression of the measurement error}
     \begin{itemize}
-      \item Wenn funktioniert Annäherung mit proportionalität weiteres kapitel um Messprozess zu beschleunigen
-        \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es Messfehler gibt, die nicht erklärt werden können.
-        \item statistic table hinzufügen
+        \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es gewisse Messfehler gibt. 
       \item als schlusswort: Messungen mit Kamera sind genau genug
       \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
       \end{itemize}
@@ -804,9 +805,9 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \chapter{Discussion}
     Different approaches of companies were first compared and then different algorithms and libraries for image processing were evaluated. 
     With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best.
-    The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices. 
+    The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices.
              \begin{itemize}
-    \item We come up with 1/t [see section ...]
+    \item We came up with 1/t  for the error[see section ...]
     \end{itemize}
     
     \section{Difficulties}
