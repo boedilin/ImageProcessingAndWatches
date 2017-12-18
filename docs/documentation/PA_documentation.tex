@@ -8,6 +8,7 @@
     \usepackage{nicefrac}
     \usepackage{pifont}
     \usepackage{xcolor}
+    \usepackage{amsmath}
     \usepackage[toc]{glossaries}
     \makeglossaries
     \newglossaryentry{Rolling shutter}
@@ -176,11 +177,11 @@ $\overline{\hbox{\phantom{mmmm}Valentin Bossi\phantom{mmmm}}}$
 
 \chapter*{Abstract}
  \addcontentsline{toc}{chapter}{Abstract}
-Mechanical watches must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all of the devices on the market apply acoustic measurements and a few complement this measurement with an optical measurement by means of a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device. In this work a new approach is used: the measurement is carried out optically by means of image processing. 
+Mechanical watches must be checked for accuracy both during manufacture and use. Most of the equipment used for this purpose is expensive. Almost all of the devices on the market apply acoustic measurements and a few complement this measurement with an optical measurement done with a laser beam. In this work it is determined whether a Raspberry Pi and a Raspberry Pi camera can be turned into a cheaper and simple measuring device that can compete with the accuracy of a professional device using a new approach: image processing. 
 \newline
-The work will give answers to the following questions: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? What are possible sources of error? How can the measurement be further improved? 
+The work will give answers to the following questions: Is a complete optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? How can the measurement be further improved? 
 \newline
-In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, a first rough calculation of the frequency was done by hand in Excel. Due to a promising result the implementation of a Python program was carried out. It was found that the watch reacts very sensitively to temperatures and runs very inaccurately. Therefore it was difficult to get reliable reference measurements. Therefore, a comparison was made with a blinking LED, which flashes in time to show how the test clock should ideally oscillate back and forth. The measurements of the flashing LED showed that the determination of the frequency by means of image processing worked very well and that sufficiently good results could be achieved. In order to get better direct reference measurements a parallel measurement of the watch with the camera and a Greiner measurement device was made. It showed that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. To have a product, which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally one could do further research, if real-time measurements are possible.
+In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. After this basis had been established, an implementation of a Python program was carried out. It was found that the watch reacts very sensitively to temperatures and runs very inaccurately. So it was difficult to get reliable reference measurements. For this reason, a measurement of a blinking LED was made. The obtained results showed that the determination of the frequency by means of image processing worked very well and that sufficiently good results could be achieved. In order to get better direct reference measurements, some meterings of a watch were done in parallel with the camera and a Greiner measurement device. It turned out that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. To have a product, which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally one could do further research, if real-time measurements are possible.
 
 \pagebreak
     \setcounter{secnumdepth}{5} 
@@ -193,17 +194,22 @@ In a first step, possible methods were evaluated in order to carry out the optic
     \chapter{Introduction}
     Today's watch technology requires measuring instruments to perform a wide variety of measurements and analyses on almost all types of watches with great precision and reliability.
     Mechanical watches must be checked in production and service for their rate deviation.
-    There are different techniques to measure this deviation; on one hand acoustically and optically or only acoustically.
+    There are different techniques to measure this deviation: on one hand acoustically and optically or only acoustically.
+    \newline
     The aim of this work is to develop a handy device that can visually measure the rate deviation using inexpensive and simple means.
     To achieve this, an existing camera consisting of the best-known single-board computer Raspberry Pi and the corresponding camera from Raspberry Pi is used.
-    The aim of this work is to use image processing to measure and analyse the rate deviation of mechanical clocks.
     The vision of this project is to be able to perform real-time measurements as established providers do with a much cheaper device. 
     \newline
     The second chapter will give a background for this work. Acoustical and optical measurement will be explained and compared. One will have a look at the functionality and operation of mechanical watches and the camera module used in this project.
+        \newline
     In the third chapter different algorithms and libraries for image processing will be discussed and evaluated. 
+        \newline
     The test setup, camera settings and all methods used to get a better understanding of the picamera library and motion vectors are listed in chapter four. 
+        \newline
     The fifth chapter afterwards explains how the frequency was then calculated from the motion vectors and how it was implemented as a program in Python. 
-    All the measurements and results are then listed in chapter six. 
+        \newline
+    All the measurements and results are then listed in chapter six. A regression of the measurement error is discussed in chapter seven.
+            \newline
     The last chapter summarizes those results roughly again and outlines all the problems that were faced during the work. It will also give an outlook of what could be improved and done further.
 
     \chapter{Background}
@@ -412,7 +418,7 @@ In figure 2.5 half of a period, resp. one stroke, of the balance wheel is illust
      \centering
     \begin{tabularx}{\linewidth}{ |L|L|L|L|L|  }
      \hline
-     \textbf{Number of strokes} [1/h] &  \textbf{Stroke duration} [s]& \textbf{Oscillation number}  [1/h]& \textbf{Period duration} [s]& \textbf{Frequency} [Hz]\\\hline
+     \textbf{Number of strokes} (1/h) &  \textbf{Stroke duration} (s)& \textbf{Oscillation number}  (1/h)& \textbf{Period duration} (s)& \textbf{Frequency} (Hz)\\\hline
       18'000   &  0.200  & 9'000 & 0.400 & 2.50\\ \hline
      19'800 &  0.182 & 9'900 & 0.364 & 2.75\\  \hline
      21'600 &  0.166 & 10'800 & 0.333 & 3.00\\  \hline
@@ -687,7 +693,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|L|L|  }
         \hline
-        {\fontsize{10}{12}\selectfont \textbf{Positions}} &{\fontsize{9}{10}\selectfont \textbf{Greiner Compact 900}} & {\fontsize{10}{12}\selectfont \textbf{Watch Exper II}} & {\fontsize{10}{12}\selectfont \textbf{10 min}} &  {\fontsize{10}{12}\selectfont \textbf{20 min}} &  {\fontsize{10}{12}\selectfont \textbf{40 min}} & {\fontsize{10}{12}\selectfont  \textbf{80 min}} \\ \hline
+        {\fontsize{10}{12}\selectfont \textbf{Positions}} &{\fontsize{9}{10}\selectfont \textbf{Greiner Compact 900}} & {\fontsize{10}{12}\selectfont \textbf{Watch Expert II}} &  \multicolumn{4}{c|}{{\fontsize{10}{12}\selectfont \textbf{Camera}}}  \\ \hline  {\fontsize{10}{12}\selectfont Metering Duration }& & &{\fontsize{10}{12}\selectfont \textbf{10 min}} &  {\fontsize{10}{12}\selectfont \textbf{20 min}} &  {\fontsize{10}{12}\selectfont \textbf{40 min}} & {\fontsize{10}{12}\selectfont  \textbf{80 min}} \\ \hline
         up        & -13                 &      -31  & -48.7     & -48.0     & -47.6      & -47.0      \\ \hline
         right     & -30                 &      -64  & -58.3      & -65.5    & -54.4      & -49.4      \\ \hline
         down      & -20               &  -46  & -122.2    & -122.2     & -125.4    & -121.4      \\ \hline
@@ -710,7 +716,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
-        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        \textbf{Duration} (s) &  \textbf{run 1}  (\si\micro\/s)&  \textbf{run 2} (\si\micro\/s)&  \textbf{run 3} (\si\micro\/s)&  \textbf{run 4} (\si\micro\/s)&  \textbf{run 5} (\si\micro\/s)\\ \hline
         10        & 166591.5                 & 166585.0     & 166397.2     & 165655.4      & 166585.0      \\ \hline
         20     & 166679.0                 & 166117.1      & 166675.0    & 166675.0      & 166581.9  \\ \hline
         40      & 166486.4                 & 166673.1    & 166675.0     & 166440.3    & 166673.1    \\ \hline
@@ -744,7 +750,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|L|L|L|L|  }
         \hline
-        \textbf{Duration} [s] &  \textbf{run 1}  [\si\micro\/s]&  \textbf{run 2} [\si\micro\/s]&  \textbf{run 3} [\si\micro\/s]&  \textbf{run 4} [\si\micro\/s]&  \textbf{run 5} [\si\micro\/s]\\ \hline
+        \textbf{Duration} (s) &  \textbf{run 1}  (\si\micro\/s)&  \textbf{run 2} (\si\micro\/s)&  \textbf{run 3} (\si\micro\/s)&  \textbf{run 4} (\si\micro\/s)&  \textbf{run 5} (\si\micro\/s)\\ \hline
         10        & 166636.1                 & 166628.1     & 166628.1     & 166628.1      & 166628.1      \\ \hline
         20     & 166700.3                 & 166602.3      & 166700.3    & 166602.3     & 166602.3  \\ \hline
         40      & 166685.6                 & 166638.1    & 166638.1     & 166638.1    & 166638.1    \\ \hline
@@ -779,7 +785,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
       \centering
         \begin{tabularx}{\linewidth}{ |L|L|  }
         \hline
-        \textbf{Greiner Compact's observed rate deviations during measurement} [s] &  \textbf{Camera's measured rate deviations} [s]  \\ \hline
+        \textbf{Greiner Compact 900 rate deviation} (s) &  \textbf{Camera rate deviations} (s)  \\ \hline
         -50/-52/-55        & -52,3 \\ \hline
         -13/-14/-15        & -13,8 \\ \hline
         -4/-5/-6          & -5,9 \\ \hline
@@ -791,25 +797,91 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \caption{Results of pararell measurement with Greiner Compact 900 and Camera}
     \end{table}
 
-    During the measurement at Greiner, the agitation of a watch with a frequency of 2.5 Hz was measured for 600 seconds. The mode of the Greiner meter would be set to measure in an interval of 4 seconds. Correspondingly, the Greiner meter has in some cases outputted up to 3 different values during the 600 seconds, which are shown in Table XXX. The camera's measurement is based on the summed y-values of the motion vectors and the minimas were counted with the algorithm of 5.2.2.
-    As shown in Table xxx, the camera's measured values are very similar to those of the professional device Greiner Compact 900.
+    During the measurement at Greiner, the agitation of a watch with a frequency of 2.5 Hz was measured for 600 seconds. The mode of the Greiner meter would be set to measure in an interval of 4 seconds. Correspondingly, the Greiner meter has in some cases outputted up to 3 different values during the 600 seconds, which are shown in Table 6.4. The camera's measurement is based on the summed y-values of the motion vectors and the minimas were counted with the algorithm of 5.2.2.
+    As shown in Table 6.4, the camera's measured values are very similar to those of the professional device Greiner Compact 900.
          
-    \chapter{Regression of the measurement error}
-    \begin{itemize}
-        \item Grafik von Excel wo man sehen kann, dass die Messung nicht besser wird, weil es gewisse Messfehler gibt. 
-      \item als schlusswort: Messungen mit Kamera sind genau genug
-      \item wenn annäherung funktioniert: "agrees with our theory. this verifies error proportional 1/n"
-      \end{itemize}
-    
+    \chapter{Prediction of the measurement error}
+    While doing the recordings of the blinking LED and the in parallel measurement of the Greiner Compact 900 and the camera, it became apparent that the error is proportional to 1 over time. 
+    To be able to make a prediction of the error of the measurement a regression over the measured values was made.
+    The theoretical part of the regression will be discussed in the following section. 
+    \newline
+   From the approach of the regression
+   
+          \begin{displaymath}
+      f(x)= a*\frac{1}{x}+ b
+     \end{displaymath}
+     
+     and the values of the duration of measurement (x in sec.) as well as the metered absolute measurement errors (y in sec.) the regression equation looks as follows
+     
+\begin{equation}
+y = A
+\begin{pmatrix}
+a \\ b \end{pmatrix}
+ \end{equation}
+ 
+ with 
+ \begin{equation}
+A = 
+\begin{pmatrix}
+\frac{1}{x_1} & 1\\ \vdots & \vdots \\ \frac{1}{x_n} & 1 \end{pmatrix}.
+ \end{equation}
+ 
+ To always have a quadratic matrix on the right side of the equation and therefore be able to solve it, it is multiplied with the transposed matrix of A$^T$. Thus the resulting equation is
+ 
+ \begin{equation}
+A^T y = A^T A
+\begin{pmatrix}
+a \\ b \end{pmatrix}
+ \end{equation}
+ 
+where A$^T$y has the form
+ \begin{equation}
+A^T y = 
+\begin{pmatrix}
+\frac{1}{x_1}*y_1 +\frac{1}{x_2}*y_2 + \ldots + \frac{1}{x_n}*y_n \\ y_1 + y_2 + \ldots + y_n \end{pmatrix}
+ \end{equation}
+ 
+ and further 
+  \begin{equation}
+A^T A= 
+\begin{pmatrix}
+\sum_n  \frac{1}{x_i^2} & \sum_{n} \frac{1}{x_i} \\ \sum_{n} \frac{1}{x_i} & n  \end{pmatrix}.
+ \end{equation}
+ 
+ To solve the equation a Python program was implemented, which after solving it, draws a graph for the calculated $f(x)$. 
+ 
+Figure 7.1 and figure 7.2, which is a enlarged part of figure 7.1, shows such a graph. The values are taken from the parallel measurement of the Greiner device and the camera. As a reference value the average of the shown value of the Greiner device was taken. The calculated function for the metering error for the graph in figure 7.1 is \( f(x) = 103.483 \frac{1}{x} + 2.209 \).
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.6]{Images/error_measurement}
+        
+        \caption{The timeline of the measurement error from 0 sec. to 600 sec.}
+        \end{figure}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.6]{Images/error_measurement_100_600}
+        
+        \caption{The timeline of the measurement error from 100 sec. to 600 sec.}
+        \end{figure}
+
+The determined values $a$ and $b$ were for all measurements, where the rate deviation of the watch was adjusted, more or less the same.
+
+The calculations for $a$ were in the range of 100 to 200 and $b$ was in the range of two and four and a half. 
+ 
+The maximal accuracy of measurement is indicated by $b$. It appeared that there is always a minimal error of about two seconds. Compared with the Greiner Compact 900, which results fluctuate in this range as well, this is a good outcome. 
+The measurements showed that after about three and a half minutes one gets an error of approximately three seconds, to lower this for another second the measurement needs to be extended up to ten minutes.     
     
     \chapter{Discussion}
     Different approaches of companies were first compared and then different algorithms and libraries for image processing were evaluated. 
+    \newline
     With the help of the picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best.
-    The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices.
-             \begin{itemize}
-    \item We came up with 1/t  for the error[see section ...]
-    \end{itemize}
-    
+    \newline
+    For the error of the measurement it was determined that it is reciprocally proportional to the measured time (see chapter 7). With this statement a forecast for the error can be made and one can distinguish how long a measurement needs to be to get the favored outcome.
+    \newline
+    The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices. 
+
     \section{Difficulties}
 In this work there were also some difficulties, which are specified in the following section.
 
@@ -822,11 +894,8 @@ Furthermore, at the beginning too much information, i. e. complete frames, was s
 Probably the greatest difficulty was to get good reference measurements, which could also be used as reference values. Thanks to Greiner, however, this problem could be resolved at the end by enabling parallel measurement of the professional Greiner Compact 900 and the camera.
 
     \section{Outlook}
-    In this work it was shown that with relatively inexpensive hardware, sufficient good measurements can be carried out to determine the accuracy of a watch. Compared to the professional equipment, which costs thousands of dollars to buy, a good user interface could create a product that is much cheaper and can still keep up with the measurements of more expensive devices. 
-    
-             \begin{itemize}
-    \item mit Implementierung folgender Funktionalitäten könnte die Kamera ein konkurrenzfähiges Produkt zu professionellen Geräten werden
-    \end{itemize}
+    In this work it was shown that with relatively inexpensive hardware, sufficient good measurements can be carried out to determine the accuracy of a watch. Compared to the professional equipment, which costs thousands of dollars to buy, a good user interface could create a product that is much cheaper \textbf{which price?!} and can still keep up with the measurements of more expensive devices. 
+ To get a device, which can compete with the professional ones however some additional measurements for other information of the watch need to be implemented. Almost all watch metering devices on the market are able to adjust the lifting angle of the watch, which can have an impact on the oscillation of the balance wheel. Something different that sure needs to be further implemented is the amplitude, which corresponds to the angle of rest position of the balance wheel until turning point. When those things are implemented, the camera will be ready for the market. 
     
     \glsaddall
     \printglossaries
