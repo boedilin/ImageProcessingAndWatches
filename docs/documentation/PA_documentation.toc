@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.1.2}Dense Flow}{14}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Kalman Filtering}{14}{section.3.2}
 \contentsline {section}{\numberline {3.3}Object tracking}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Motion vectors and SAD}{15}{section.3.4}
+\contentsline {section}{\numberline {3.4}Motion vectors}{15}{section.3.4}
 \contentsline {section}{\numberline {3.5}Conclusions and Evaluations}{15}{section.3.5}
 \contentsline {chapter}{\numberline {4}Experimental approaches}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Test setup}{17}{section.4.1}

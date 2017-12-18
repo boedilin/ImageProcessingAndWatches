@@ -390,6 +390,12 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT Files/searchMinima_tic_toc.py
 INPUT Files/searchMinima_tic_toc.py
+INPUT Files/searchMinima.py
+INPUT Files/searchMinima.py
+INPUT Files/searchMinima.py
+INPUT Files/searchMaxima.py
+INPUT Files/searchMaxima.py
+INPUT Files/searchMaxima.py
 INPUT PA_documentation.aux
 INPUT ./PA_documentation.out
 INPUT ./PA_documentation.out

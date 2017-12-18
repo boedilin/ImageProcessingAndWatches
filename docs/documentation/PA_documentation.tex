@@ -43,31 +43,32 @@
     \newglossaryentry{Optical Flow}
     {
       name=Optical flow,
-      description={The optical flow of an image sequence is the vector field of the velocity projected into the image from visible points of the object in the reference system of the imaging optics}
+      description={ of an image sequence is the vector field of the velocity projected into the image from visible points of the object in the reference system of the imaging optics}
     }
     
     \newglossaryentry{Codecvisa}
     {
       name=Codecvisa,
-      description={CodecVisa is a powerful real-time analyzer for different video codecs. http://www.codecian.com/}
+      description={is a powerful real-time analyzer for different video codecs.
+      http://www.codecian.com/}
     }
     
         \newglossaryentry{Rate Deviation}
     {
       name=Rate Deviation,
-      description={}
+      description={is the difference between the measured period duration and the target period duration. From this it can be concluded how precisely the clock displays the time.}
     }
     
   \newglossaryentry{VCHI}
     {
       name=VCHI,
-      description={}
+      description={videoCore Host Interface is a message passing system provided to permit communication between CPU and GPU.  \cite{ReadTheDocsPicamera}}
     }
     
   \newglossaryentry{API}
     {
       name=API,
-      description={}
+      description={application Programming Interface. Clear defined interface to communicate between components. }
     }
     
       \newglossaryentry{DMA}
@@ -91,11 +92,36 @@
     \newglossaryentry{Motion blur}
     {
       name=Motion blur,
-      description={Motion blur is the apparent streaking of rapidly moving objects in a still image or a sequence of images such as a movie or animation.}
+      description={motion blur is the apparent streaking of rapidly moving objects in a still image or a sequence of images such as a movie or animation.}
+    }
+
+    \newglossaryentry{Raspberry Pi}
+    {
+      name=Raspberry Pi,
+      description={is a credit-card-sized computer for hobbyist and education use.}
+    }
+
+    \newglossaryentry{GPU}
+    {
+      name=GPU,
+      description={(graphics processing unit) is a specialized and optimized processor for calculating graphics.}
+    }
+
+    \newglossaryentry{VideoCore IV}
+    {
+      name=VideoCore IV,
+      description={is a multimedia processor low powered and optimized for image applications such as image compression and decompression.}
+    }
+    
+    \newglossaryentry{Processor}
+    {
+      name=Processor,
+      description={is a computation unit.}
     }
 
     
-    
+
+
     
     
     \usepackage{booktabs}
@@ -458,10 +484,9 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
    \section{Object tracking}
    Also called video tracking and is a process in which a moving object is tracked in a video. To achieve this, not only an algorithm for object tracking is used, but also an algorithm for object detection. Depending on the application, this process is computationally intensive. This procedure could be used to track the movement of the balance wheel and find out how fast it moves and when it stops \cite{objectTracking}.
     
- \section{Motion vectors and SAD}
- Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence.
- Video compression often also uses SAD values as an additional aid to compression. SAD values are also used in other applications such as object recognition and motion estimation. (referenz zu wiki oder buch.)
- The motion vectors and SAD can be used to describe how much change is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
+ \section{Motion vectors}
+ Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence.(referenz zu wiki oder buch.)
+ The motion vectors can be used to describe how much change is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
     
    
    \section{Conclusions and Evaluations}
@@ -780,13 +805,13 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
         \begin{tabularx}{\linewidth}{ |L|L|  }
         \hline
         \textbf{Greiner Compact's observed rate deviations during measurement} [s] &  \textbf{Camera's measured rate deviations} [s]  \\ \hline
-        -50/-52/-55        & -52,3 \\ \hline
-        -13/-14/-15        & -13,8 \\ \hline
-        -4/-5/-6          & -5,9 \\ \hline
-        0/1               & 1,1 \\ \hline
-        5/7               & 6,8 \\ \hline
-        17/19/21/         & 18,1 \\ \hline
-        43/44/45/         & 43,7 \\ \hline
+        -50/-52/-55        & -52.3 \\ \hline
+        -13/-14/-15        & -13.8 \\ \hline
+        -4/-5/-6          & -5.9 \\ \hline
+        0/1               & 1.1 \\ \hline
+        5/7               & 6.8 \\ \hline
+        17/19/21/         & 18.1 \\ \hline
+        43/44/45/         & 43.7 \\ \hline
     \end{tabularx}
     \caption{Results of pararell measurement with Greiner Compact 900 and Camera}
     \end{table}
@@ -849,5 +874,25 @@ Probably the greatest difficulty was to get good reference measurements, which c
           breaklines=true
           }  
     \lstinputlisting[language=Python]{Files/searchMinima_tic_toc.py}
+    
+    \section*{searchMinima.py}  
+      \lstset{
+       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
+           keywordstyle=\color{blue}\ttfamily,
+           stringstyle=\color{red}\ttfamily,
+           commentstyle=\color{teal}\ttfamily,
+          breaklines=true
+          }  
+    \lstinputlisting[language=Python]{Files/searchMinima.py}
+
+    \section*{searchMaxima.py}  
+      \lstset{
+       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
+           keywordstyle=\color{blue}\ttfamily,
+           stringstyle=\color{red}\ttfamily,
+           commentstyle=\color{teal}\ttfamily,
+          breaklines=true
+          }  
+    \lstinputlisting[language=Python]{Files/searchMaxima.py}
     
     \end{document}
