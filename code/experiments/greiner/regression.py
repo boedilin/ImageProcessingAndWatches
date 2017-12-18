@@ -49,10 +49,22 @@ def f(x):
 print(f(400))
 
 
-time = np.arange(100, 600, 0.01)
-plt.plot(time, f(time), 'k')
-plt.ylabel('Error of Measurement (sec.)')
-plt.xlabel('Duration of Measurement (sec.)')
+time = np.arange(0.4, 600, 1)
+xtime_new = []
+ydeviation_new = []
+for i in range(len(timestamps)):
+    if timestamps[i]/1000000 <= 600 and i % 50 == 0 :
+        xtime_new.append(x_time[i]/1000000)
+        ydeviation_new.append(y_deviation[i])
+plt.subplot(211)
+plt.plot(xtime_new,ydeviation_new, 'r*')
+plt.ylabel('Error of Measurement (s)')
+plt.xlabel('Duration of Measurement (s)')
+
+plt.subplot(212)
+plt.plot( time, f(time), 'k')
+plt.ylabel('Error of Measurement (s)')
+plt.xlabel('Duration of Measurement (s)')
 plt.show()
         
 
