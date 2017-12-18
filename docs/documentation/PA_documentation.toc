@@ -48,11 +48,11 @@
 \contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Measurements}{29}{section.6.1}
 \contentsline {section}{\numberline {6.2}Verification of Accuracy}{31}{section.6.2}
-\contentsline {chapter}{\numberline {7}Regression of the measurement error}{37}{chapter.7}
-\contentsline {chapter}{\numberline {8}Discussion}{38}{chapter.8}
-\contentsline {section}{\numberline {8.1}Difficulties}{38}{section.8.1}
-\contentsline {section}{\numberline {8.2}Outlook}{39}{section.8.2}
-\contentsline {chapter}{Glossary}{40}{section*.4}
-\contentsline {chapter}{Bibliography}{41}{chapter*.5}
-\contentsline {chapter}{List of Figures}{43}{chapter*.6}
-\contentsline {chapter}{Appendix - Python programs}{44}{chapter*.7}
+\contentsline {chapter}{\numberline {7}Prediction of the measurement error}{37}{chapter.7}
+\contentsline {chapter}{\numberline {8}Discussion}{41}{chapter.8}
+\contentsline {section}{\numberline {8.1}Difficulties}{41}{section.8.1}
+\contentsline {section}{\numberline {8.2}Outlook}{42}{section.8.2}
+\contentsline {chapter}{Glossary}{43}{section*.4}
+\contentsline {chapter}{Bibliography}{44}{chapter*.5}
+\contentsline {chapter}{List of Figures}{46}{chapter*.6}
+\contentsline {chapter}{Appendix - Python programs}{47}{chapter*.7}
