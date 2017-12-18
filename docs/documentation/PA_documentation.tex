@@ -461,7 +461,7 @@ The implementation in Open CV is baed on the Gunner Farneback's algorithm which 
  \section{Motion vectors and SAD}
  Motion vectors are used in video compression to reduce resources required to store and transmit data. A motion vector describes the displacement of a pixel or pixel block within an image sequence.
  Video compression often also uses SAD values as an additional aid to compression. SAD values are also used in other applications such as object recognition and motion estimation. (referenz zu wiki oder buch.)
- The motion vectors and SAD can be used to describe how much movement is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
+ The motion vectors and SAD can be used to describe how much change is taking place in an image sequence. Thus can be used to identify a moving or still balance wheel.
     
    
    \section{Conclusions and Evaluations}
@@ -668,7 +668,7 @@ Out of this duration and the number of stillstands (n$_1$) the stroke duration c
 Additionally the deviation per hour is defined as 
   \bigskip
         \begin{center}
-    \((\text{stroke duration}*n_2)-3600 \text{sec}=\text{deviation per hour}\)
+    \(3600\text{sec}-(\text{stroke duration}*n_2) =\text{deviation per hour}\)
         
     \end{center}
         \bigskip
@@ -680,7 +680,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \begin{figure}[H]
         \includegraphics[scale=0.62]{Images/variations_per_day.png}
     
-    \caption{ Variation of different time and position recordings}
+    \caption{ Rate deviation of different time and position recordings}
     \end{figure}    
     
     \begin{table}[H]
@@ -733,7 +733,7 @@ where (n$_2$) ist the number of strokes per hour, which is 21600.
     \begin{figure}[H]
       \includegraphics[scale=0.5]{Images/errors_600sec.png}
   
-    \caption{Illustration of convergation of the measuremnt error in 600 seconds.}
+    \caption{Illustration of convergation of the measurement error in 600 seconds.}
     \end{figure}
 
     Figure 6.2 shows the measurement over 600 seconds and the convergation of the measurement error.

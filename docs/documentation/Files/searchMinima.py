@@ -35,41 +35,23 @@ def find_start_minima(array):
     else :
         return np.where(array[:20] == first_20_x_values[0])[0][0]
 
-durations_of_period_in_microsec = []
-durations_of_period_in_microsec_tic = []
-durations_of_period_in_microsec_toc = []
+durations_of_half_periods_in_microsec = []
 search_window_increase = 2
-minima_tic = []
-minima_toc = []
+minimas = []
 start_index = find_start_minima(xValues)
 minima = start_index
-switch_to_tic = False
-counter_tic = 0
-counter_toc = 0
 start_timestamp = timestamps[start_index]
 while (minima + step_size + search_window_increase) <= len(xValues):
     next_minima = is_minima_search_window_5(xValues, minima + step_size)
-    if switch_to_tic:
-        minima_tic.append(next_minima)
-        switch_to_tic = False
-        counter_tic = counter_tic + 1
-        if counter_tic % 2 == 0:
-            durations_of_period_in_microsec_tic.append((timestamps[minima_tic[-1]] - timestamps[minima_tic[-2]]))
-    else:
-        minima_toc.append(next_minima)
-        switch_to_tic = True
-        counter_toc = counter_toc + 1
-        if counter_toc % 2 == 0:
-            durations_of_period_in_microsec_toc.append((timestamps[minima_toc[-1]] - timestamps[minima_toc[-2]]))
+    minimas.append(next_minima)
     minima = next_minima
-    if len(durations_of_period_in_microsec_tic) > 0 and len(durations_of_period_in_microsec_toc) > 0:
-        durations_of_period_in_microsec.append((durations_of_period_in_microsec_tic[-1]+durations_of_period_in_microsec_toc[-1])/2)
+    durations_of_half_periods_in_microsec.append((timestamps[minima] - start_timestamp) / len(minimas))
 
 end_timestamp = timestamps[minima]
-duration_of_period_in_microsec = np.sum(durations_of_period_in_microsec) / len(durations_of_period_in_microsec)
+duration_of_half_period_in_microsec = (end_timestamp - start_timestamp) / len(minimas)
 
 print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)
-print("number of found minimas", len(minima_tic)+len(minima_toc))
-print("length of half period over all: ", duration_of_period_in_microsec/2)
-print("variation per day: ", (seconds_per_hour-(((duration_of_period_in_microsec/2)/microseconds_in_second)*strokes_per_hour))*hours_per_day)
+print("number of found minimas", len(minimas))
+print("length of half period over all: ", duration_of_half_period_in_microsec)
+print("variation per day: ", (3600-((duration_of_half_period_in_microsec/microseconds_in_second)*strokes_per_hour))*hours_per_day)
