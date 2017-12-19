@@ -62,5 +62,5 @@ duration_of_half_period_in_microsec = (end_timestamp - start_timestamp) / len(ma
 print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)
 print("number of found minimas", len(maxima))
-print("length of half period over all: ", duration_of_half_period_in_microsec)
-print("variation per day: ", (seconds_per_hour-((duration_of_half_period_in_microsec/microseconds_in_second)*strokes_per_hour))*hours_per_day)
+print("average length of half period: ", duration_of_half_period_in_microsec)
+print("rate deviation per day: ", (seconds_per_hour-((duration_of_half_period_in_microsec/microseconds_in_second)*strokes_per_hour))*hours_per_day)

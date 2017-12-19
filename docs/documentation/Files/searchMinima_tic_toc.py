@@ -71,5 +71,5 @@ duration_of_period_in_microsec = np.sum(durations_of_period_in_microsec) / len(d
 print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)
 print("number of found minimas", len(minima_tic)+len(minima_toc))
-print("length of half period over all: ", duration_of_period_in_microsec/2)
-print("variation per day: ", (seconds_per_hour-(((duration_of_period_in_microsec/2)/microseconds_in_second)*strokes_per_hour))*hours_per_day)
+print("average length of half period: ", duration_of_period_in_microsec/2)
+print("rate deviation per day: ", (seconds_per_hour-(((duration_of_period_in_microsec/2)/microseconds_in_second)*strokes_per_hour))*hours_per_day)
