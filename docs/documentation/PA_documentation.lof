@@ -1,11 +1,11 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Camera architecture \cite {ReadTheDocsPicamera}}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Camera architecture \cite [ch. 6]{ReadTheDocsPicamera}}}{6}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Operation of a mechanical watch \cite {Uhrwerk}}}{9}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Lever escapement and balance wheel \cite {Uhrwerk}}}{10}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Period of the balance wheel \cite {Witschi_basics}}}{11}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Half of a period of the balance wheel \cite {Witschi_basics}}}{11}{figure.2.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Period of the balance wheel \cite [p. 9]{Witschi_basics}}}{11}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Half of a period of the balance wheel \cite [p. 9]{Witschi_basics}}}{11}{figure.2.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Test setup for records}}{18}{figure.4.1}

@@ -2168,11 +2168,12 @@
     <bcf:citekey order="27">Farneback2003</bcf:citekey>
     <bcf:citekey order="28">Grewal1993</bcf:citekey>
     <bcf:citekey order="29">objectTracking</bcf:citekey>
-    <bcf:citekey order="30">Witschi_basics</bcf:citekey>
-    <bcf:citekey order="31">Kuck1978</bcf:citekey>
+    <bcf:citekey order="30">Motionvector</bcf:citekey>
+    <bcf:citekey order="31">Witschi_basics</bcf:citekey>
     <bcf:citekey order="32">Kuck1978</bcf:citekey>
-    <bcf:citekey order="33">Halliday2005</bcf:citekey>
-    <bcf:citekey order="34">ReadTheDocsPicamera</bcf:citekey>
+    <bcf:citekey order="33">Kuck1978</bcf:citekey>
+    <bcf:citekey order="34">Halliday2005</bcf:citekey>
+    <bcf:citekey order="35">ReadTheDocsPicamera</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

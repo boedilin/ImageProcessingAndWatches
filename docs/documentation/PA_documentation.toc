@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {5.2}Implementation of the Algorithms}{26}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Counting Minima with Upper Limit}{26}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Counting Minima with Stepsize}{27}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Counting Minima with Tic Toc and Stepsize}{27}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}Counting Minima with Tic Tac and Stepsize}{27}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {6}Results}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Measurements}{29}{section.6.1}
 \contentsline {section}{\numberline {6.2}Verification of Accuracy}{31}{section.6.2}

@@ -1,7 +1,7 @@
 import numpy as np
 import math
 
-watch_hertz = 3
+watch_hertz = 2.5
 frames_per_second = 90
 hours_per_day = 24
 seconds_per_hour = 3600
@@ -13,9 +13,9 @@ half_period_duration_in_sec = one_second / watch_hertz_half_period
 resolution_grid_in_sec = one_second / frames_per_second
 step_size = math.ceil(half_period_duration_in_sec / resolution_grid_in_sec)
 
-directory = "path"
-xValues = np.loadtxt(directory+"path")
-timestamps = np.loadtxt(directory+"path")
+directory = "greiner/14.12.17/run5_+20sec_greiner/"
+xValues = np.loadtxt(directory+"yValues.txt")
+timestamps = np.loadtxt(directory+"timestamps.txt")
 
 def is_minima_search_window_5(array, index):
     left_right_increase = 2
@@ -49,6 +49,10 @@ while (minima + step_size + search_window_increase) <= len(xValues):
 
 end_timestamp = timestamps[minima]
 duration_of_half_period_in_microsec = (end_timestamp - start_timestamp) / len(minimas)
+
+print(start_timestamp)
+print(end_timestamp)
+print
 
 print("start timestamp", start_timestamp)
 print("end timestamp", end_timestamp)

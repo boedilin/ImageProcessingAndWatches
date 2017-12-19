@@ -19,6 +19,32 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{Uhrwerk}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=29646ee6110320fb5dc55bc88520c898}{%
+           family={Brunner},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi L.},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{29646ee6110320fb5dc55bc88520c898}
+      \strng{fullhash}{29646ee6110320fb5dc55bc88520c898}
+      \strng{authornamehash}{29646ee6110320fb5dc55bc88520c898}
+      \strng{authorfullhash}{29646ee6110320fb5dc55bc88520c898}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Das mechanische Uhrwerk}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
+      \endverb
+    \endentry
     \entry{Caliber}{misc}{}
       \field{sortinit}{C}
       \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
@@ -32,31 +58,7 @@
       \verb http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
       \endverb
     \endentry
-    \entry{ReadTheDocsPicamera}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=26af5ce5068131de10c5293586383068}{%
-           family={{Dave Jones}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{26af5ce5068131de10c5293586383068}
-      \strng{fullhash}{26af5ce5068131de10c5293586383068}
-      \strng{authornamehash}{26af5ce5068131de10c5293586383068}
-      \strng{authorfullhash}{26af5ce5068131de10c5293586383068}
-      \field{sortinit}{D}
-      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{6. Camera Hardware: Picamera 1.13 Documentation}}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2017}
-      \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb https://picamera.readthedocs.io/en/release-1.13/index.html
-      \endverb
-    \endentry
-    \entry{Witschi_basics}{article}{}
+    \entry{Witschi_basics}{unpublished}{}
       \field{sortinit}{E}
       \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
       \field{labeltitlesource}{title}
@@ -71,82 +73,54 @@
     \endentry
     \entry{Farneback2003}{book}{}
       \name{author}{1}{}{%
-        {{hash=7bda08f257f451eba0f1d8902689c8fb}{%
+        {{hash=36e24c57e05a94fd47f2e207b0b7c04b}{%
            family={Farnebäck},
            familyi={F\bibinitperiod},
-           given={Gunnar},
+           given={G.},
            giveni={G\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer, Berlin, Heidelberg}%
       }
-      \strng{namehash}{7bda08f257f451eba0f1d8902689c8fb}
-      \strng{fullhash}{7bda08f257f451eba0f1d8902689c8fb}
-      \strng{authornamehash}{7bda08f257f451eba0f1d8902689c8fb}
-      \strng{authorfullhash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{namehash}{36e24c57e05a94fd47f2e207b0b7c04b}
+      \strng{fullhash}{36e24c57e05a94fd47f2e207b0b7c04b}
+      \strng{authornamehash}{36e24c57e05a94fd47f2e207b0b7c04b}
+      \strng{authorfullhash}{36e24c57e05a94fd47f2e207b0b7c04b}
       \field{sortinit}{F}
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Two-Frame Motion Estimation Based on Polynomial Expansion}}
       \field{year}{2003}
-      \verb{doi}
-      \verb 10.1007/3-540-45103-X_50
-      \endverb
       \verb{file}
       \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Farneb{\"{a}}ck - 2003 - Two-Frame Motion Estimation Based on Polynomial Expansion.pdf:pdf
       \endverb
     \endentry
-    \entry{Uhrwerk}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=01f57a4950a03c8f74edd0135cbf7ca1}{%
-           family={{Gisbert L. Brunner}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{01f57a4950a03c8f74edd0135cbf7ca1}
-      \strng{fullhash}{01f57a4950a03c8f74edd0135cbf7ca1}
-      \strng{authornamehash}{01f57a4950a03c8f74edd0135cbf7ca1}
-      \strng{authorfullhash}{01f57a4950a03c8f74edd0135cbf7ca1}
-      \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Das mechanische Uhrwerk}}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2017}
-      \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
-      \endverb
-    \endentry
     \entry{Grewal1993}{book}{}
       \name{author}{2}{}{%
-        {{hash=5b182825d4502c0cfc88e2765a52d062}{%
+        {{hash=87a036cc1bdbeaa76b27d59705bb11a5}{%
            family={Grewal},
            familyi={G\bibinitperiod},
-           given={Mohinder\bibnamedelima S.},
+           given={M.\bibnamedelimi S.},
            giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=2ba6656acfed5000e48620acc13fcc56}{%
+        {{hash=a86bdf1644463adbe65474810a97b775}{%
            family={Andrews},
            familyi={A\bibinitperiod},
-           given={Angus\bibnamedelima P.},
+           given={A.\bibnamedelimi P.},
            giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Prentice-Hall}%
       }
-      \strng{namehash}{32ecfc6676023cb7c87c8a0a136ca68f}
-      \strng{fullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
-      \strng{authornamehash}{32ecfc6676023cb7c87c8a0a136ca68f}
-      \strng{authorfullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{namehash}{5146965aadebe7b0b7c734f27384276f}
+      \strng{fullhash}{5146965aadebe7b0b7c734f27384276f}
+      \strng{authornamehash}{5146965aadebe7b0b7c734f27384276f}
+      \strng{authorfullhash}{5146965aadebe7b0b7c734f27384276f}
       \field{sortinit}{G}
       \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{General information -- Linear dynamic systems -- Random processes and stochastic systems -- Linear optimal filters, predictors and smoothers -- Nonlinear applications -- Implementation methods -- Practical considerations.}
-      \field{isbn}{9780132113359}
       \field{title}{{Kalman filtering : theory and practice}}
       \field{year}{1993}
       \field{pages}{381}
@@ -167,20 +141,20 @@
     \endentry
     \entry{Halliday2005}{book}{}
       \name{author}{3}{}{%
-        {{hash=9d9a6552821ea504ab1a5c767dddff92}{%
+        {{hash=592d4450e33075615188a48b0aabac07}{%
            family={Halliday},
            familyi={H\bibinitperiod},
-           given={David},
+           given={D.},
            giveni={D\bibinitperiod}}}%
-        {{hash=8967f5a0664f741b0ef2530a47e698fa}{%
+        {{hash=d658284bec5a3779bf1582dfd2f6205f}{%
            family={Resnick},
            familyi={R\bibinitperiod},
-           given={Robert},
+           given={R.},
            giveni={R\bibinitperiod}}}%
-        {{hash=aa8304879d8f7d99c7c4570759b948e2}{%
+        {{hash=3a5c87a6799cb300901a9d7decc2eedc}{%
            family={Walker},
            familyi={W\bibinitperiod},
-           given={Jearl},
+           given={J.},
            giveni={J\bibinitperiod}}}%
       }
       \list{location}{1}{%
@@ -189,121 +163,160 @@
       \list{publisher}{1}{%
         {Wiley}%
       }
-      \strng{namehash}{3978689396696961b0bd612b55ccf075}
-      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
-      \strng{authornamehash}{3978689396696961b0bd612b55ccf075}
-      \strng{authorfullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{namehash}{27d588af16a6b9c95c9301b6a8471c4d}
+      \strng{fullhash}{27d588af16a6b9c95c9301b6a8471c4d}
+      \strng{authornamehash}{27d588af16a6b9c95c9301b6a8471c4d}
+      \strng{authorfullhash}{27d588af16a6b9c95c9301b6a8471c4d}
       \field{sortinit}{H}
       \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{7th ed., extended ed. Includes indexes. Includes index. Measurement -- Motion along a straight line -- Vectors -- Motion in two and three dimensions -- Force and motion I -- Force and motion II -- Kinetic energy and work -- Potential energy and conservation of energy -- Center of mass and linear momentum -- Rotation -- Rolling, torque, and angular momentum -- Equilibrium and elasticity -- Gravitation -- Fluids -- Oscillations -- Waves I -- Waves II -- Temperature, heat, and the First law of thermodynamics -- The kinetic theory of gases -- Entropy and the Second law of thermodynamics -- Electric charge -- Electric fields -- Gauss' law -- Electric potential -- Capacitance -- Current and resistance -- Circuits -- Magnetic fields -- Magnetic fields due to currents -- Induction and inductance -- Electromagnetic oscillations and alternating current -- Maxwell's equations; magnetism of matter -- Electromagnetic waves -- Images -- Interference -- Diffraction -- Relativity.}
       \field{edition}{7th}
-      \field{isbn}{0471232319}
       \field{title}{{Fundamentals of physics}}
       \field{year}{2005}
     \endentry
+    \entry{ReadTheDocsPicamera}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f29660114cc25371d08c58d2bf4fdd80}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f29660114cc25371d08c58d2bf4fdd80}
+      \strng{fullhash}{f29660114cc25371d08c58d2bf4fdd80}
+      \strng{authornamehash}{f29660114cc25371d08c58d2bf4fdd80}
+      \strng{authorfullhash}{f29660114cc25371d08c58d2bf4fdd80}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Picamera 1.13 Documentation}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://picamera.readthedocs.io/en/release-1.13/fov.html
+      \endverb
+    \endentry
     \entry{objectTracking}{book}{}
       \name{author}{2}{}{%
-        {{hash=deb7e6747717e170e79d1c51aa3285fd}{%
+        {{hash=2b6b6abd49dab4e9cf4039c8823ba09b}{%
            family={Karasulu},
            familyi={K\bibinitperiod},
-           given={Bahadir},
+           given={B.},
            giveni={B\bibinitperiod}}}%
-        {{hash=ef674949eeb548c9af8e50bdbf9d1319}{%
+        {{hash=f8a98f252e9d850863f2785af9ec736c}{%
            family={Korukoglu},
            familyi={K\bibinitperiod},
-           given={Serdar},
+           given={S.},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{6516c9ac6f915c8966d67dda3c87026f}
-      \strng{fullhash}{6516c9ac6f915c8966d67dda3c87026f}
-      \strng{authornamehash}{6516c9ac6f915c8966d67dda3c87026f}
-      \strng{authorfullhash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{namehash}{3e857943bdac69e68369ebc89750f18c}
+      \strng{fullhash}{3e857943bdac69e68369ebc89750f18c}
+      \strng{authornamehash}{3e857943bdac69e68369ebc89750f18c}
+      \strng{authorfullhash}{3e857943bdac69e68369ebc89750f18c}
       \field{sortinit}{K}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9781461465331}
       \field{title}{{Moving Object Detection and Tracking in Videos}}
       \field{year}{2013}
-      \verb{doi}
-      \verb 10.1007/978-1-4614-6534-8_2
-      \endverb
     \endentry
     \entry{Krug1987}{book}{}
       \name{author}{1}{}{%
-        {{hash=266ad7791c8cfa6bdfa3e7235c2e76b8}{%
+        {{hash=04f4a3b36dc448ca2ba39b044d57a950}{%
            family={Krug},
            familyi={K\bibinitperiod},
-           given={Günter.},
+           given={G.},
            giveni={G\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Verl. Technik}%
       }
-      \strng{namehash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
-      \strng{fullhash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
-      \strng{authornamehash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
-      \strng{authorfullhash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
+      \strng{namehash}{04f4a3b36dc448ca2ba39b044d57a950}
+      \strng{fullhash}{04f4a3b36dc448ca2ba39b044d57a950}
+      \strng{authornamehash}{04f4a3b36dc448ca2ba39b044d57a950}
+      \strng{authorfullhash}{04f4a3b36dc448ca2ba39b044d57a950}
       \field{sortinit}{K}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{1. Aufl. Literaturverz. S. 337 - 339.}
-      \field{isbn}{3341003568}
       \field{title}{{Mechanische Uhren : Einzelteile, Baugruppen, Werk- u. Hilfsstoffe}}
       \field{year}{1987}
+      \field{pages}{p. 182 \bibrangedash  188}
+      \range{pages}{-1}
     \endentry
     \entry{Kuck1978}{book}{}
       \name{author}{1}{}{%
-        {{hash=f0f2a4b09e260568ee26290922e3ea3b}{%
+        {{hash=d47d8e0c6525582d0795eb60dcf0a3b6}{%
            family={Kuck},
            familyi={K\bibinitperiod},
-           given={David\bibnamedelima J.},
+           given={D.\bibnamedelimi J.},
            giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Wiley}%
       }
-      \strng{namehash}{f0f2a4b09e260568ee26290922e3ea3b}
-      \strng{fullhash}{f0f2a4b09e260568ee26290922e3ea3b}
-      \strng{authornamehash}{f0f2a4b09e260568ee26290922e3ea3b}
-      \strng{authorfullhash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{namehash}{d47d8e0c6525582d0795eb60dcf0a3b6}
+      \strng{fullhash}{d47d8e0c6525582d0795eb60dcf0a3b6}
+      \strng{authornamehash}{d47d8e0c6525582d0795eb60dcf0a3b6}
+      \strng{authorfullhash}{d47d8e0c6525582d0795eb60dcf0a3b6}
       \field{sortinit}{K}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{0471027162}
       \field{title}{{The structure of computers and computations}}
       \field{year}{1978}
       \field{pages}{12}
       \range{pages}{1}
     \endentry
-    \entry{Lombardi2011}{article}{}
+    \entry{Lombardi2011}{misc}{}
       \name{author}{1}{}{%
-        {{hash=d084842ee1e506ad01f44325fef101f8}{%
+        {{hash=82f5c7f0d9843f332d20e0eea28ebc68}{%
            family={Lombardi},
            familyi={L\bibinitperiod},
-           given={Michael},
+           given={M.},
            giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{d084842ee1e506ad01f44325fef101f8}
-      \strng{fullhash}{d084842ee1e506ad01f44325fef101f8}
-      \strng{authornamehash}{d084842ee1e506ad01f44325fef101f8}
-      \strng{authorfullhash}{d084842ee1e506ad01f44325fef101f8}
+      \strng{namehash}{82f5c7f0d9843f332d20e0eea28ebc68}
+      \strng{fullhash}{82f5c7f0d9843f332d20e0eea28ebc68}
+      \strng{authornamehash}{82f5c7f0d9843f332d20e0eea28ebc68}
+      \strng{authorfullhash}{82f5c7f0d9843f332d20e0eea28ebc68}
       \field{sortinit}{L}
       \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{For most of recorded history, the most accurate measurements of time involved dividing the period of a day into smaller parts. For example, the solar second was measured by dividing the solar day in 86,400 parts. The rotational rate of the Earth was known to be the best clock of all, the ultimate reference for timekeeping. This began to change when mechanical clocks first appeared in the 14 th century. Mechanical clocks measured time by counting the oscillations of a repetitive event, such as the swings of a pendulum or balance wheel. This was a fundamental change in timekeeping, because instead of dividing days to get seconds, they multiplied seconds to get days. Early mechanical clocks were not very accurate, and for about 600 years, mechanical clocks were calibrated with astronomical clocks. About a century ago, technology finally improved to the point where man made clocks were known to be more stable and accurate than the Earth's rotation. This presentation begins at that point, and takes a very brief look at developments in clock technology during the past 100 years.}
       \field{title}{{A Century of Time Measurement: From Pendulum to Optical Clocks}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
       \field{year}{2011}
+      \field{urldateera}{ce}
       \verb{file}
       \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Lombardi - 2011 - A Century of Time Measurement From Pendulum to Optical Clocks.pdf:pdf
       \endverb
       \verb{url}
       \verb https://www.ncsli.org/c/f/p11/286.314.pdf
+      \endverb
+    \endentry
+    \entry{Motionvector}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeltitlesource}{title}
+      \field{title}{{Motion vector}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Motion%7B%5C_%7Dvector
       \endverb
     \endentry
     \entry{opencv}{misc}{}
@@ -324,6 +337,10 @@
       \field{sortinithash}{35589aa085e881766b72503e53fd4c97}
       \field{labeltitlesource}{title}
       \field{title}{{Zeitwaage Uhren-Wiki: Die besten Uhren und Uhrenmarken}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
       \verb{url}
       \verb https://www.uhren-wiki.net/index.php?title=Zeitwaage
       \endverb
