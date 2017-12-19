@@ -331,9 +331,6 @@ INPUT ./Images/period.png
 INPUT Images/Halfperiod.png
 INPUT ./Images/Halfperiod.png
 INPUT ./Images/Halfperiod.png
-INPUT Images/test_setup.png
-INPUT ./Images/test_setup.png
-INPUT ./Images/test_setup.png
 INPUT Images/animation_sad.png
 INPUT ./Images/animation_sad.png
 INPUT ./Images/animation_sad.png
@@ -371,9 +368,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT Images/errors_600sec.png
 INPUT ./Images/errors_600sec.png
 INPUT ./Images/errors_600sec.png
-INPUT Images/parallel_test_setup.png
-INPUT ./Images/parallel_test_setup.png
-INPUT ./Images/parallel_test_setup.png
+INPUT Images/camera_and_microphone.jpg
+INPUT ./Images/camera_and_microphone.jpg
+INPUT ./Images/camera_and_microphone.jpg
 INPUT Images/error_measurement.png
 INPUT ./Images/error_measurement.png
 INPUT ./Images/error_measurement.png
