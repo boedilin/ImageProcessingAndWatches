@@ -224,7 +224,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
     The vision of this project is substitute real-time measurements of professional equipment with a much cheaper device. 
 
 
-    The second chapter will give a background for this work. Acoustical and optical measurement will be explained and compared. One will have a look at the functionality and operation of mechanical watches and the camera module used in this project.
+    The second chapter will give a background for this work. Acoustical and optical measurement will be explained and compared. One will have a look at the functionality and operation of mechanical watches, the used camera module and its constraints as well as the Nyquist–Shannon sampling theorem.
 
 
     In the third chapter different algorithms and libraries for image processing will be discussed and evaluated. 
@@ -536,14 +536,7 @@ The implementation in Open CV is based on the Gunner Farneback's algorithm which
     
    \section{Test setup}
    
-Figure 4.1 shows the test setup. On average, the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small light source directed at the test watch was used. The test watch was positioned on a turn table so it was easy to adjust the position of the watch.
-
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.3]{Images/test_setup}
-        
-        \caption{Test setup for records}
-        \end{figure}
+   The test setup is the same as shown in Figure XXX, but without the Greiner Compact 900 and its accessories. On average, the camera was positioned approximately four centimeters from the test watch. In order to ensure that the images are still well illuminated and a good measurement can be carried out due to the high shutter speed, a small and strong light source directed at the test watch was used. The test watch was positioned on a turn table so it was easy to adjust the position of the watch.
         
     \section{Gesture Detection}
    In a first attempt, the hand in front of the camera was moved down, up, right and left in order to determine the direction in real time based on the motion vectors. 
@@ -807,7 +800,7 @@ where $n_2$ ist the number of strokes per hour, which is 21600.
     
       \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.3]{Images/parallel_test_setup}
+        \includegraphics[scale=0.24]{Images/camera_and_microphone}
         
         \caption{Test setup for records}
         \end{figure}
