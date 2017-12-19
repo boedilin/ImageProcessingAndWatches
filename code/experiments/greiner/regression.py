@@ -46,10 +46,10 @@ b = a_b.item((0, 1))
 def f(x):
     return a/x + b
 
-print(f(400))
+print(f(00))
 
 
-time = np.arange(0.4, 600, 1)
+time = np.arange(50, 600, 1)
 xtime_new = []
 ydeviation_new = []
 for i in range(len(timestamps)):
