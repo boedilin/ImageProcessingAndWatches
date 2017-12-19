@@ -50,8 +50,7 @@
     \newglossaryentry{Codecvisa}
     {
       name=Codecvisa,
-      description={is a powerful real-time analyzer for different video codecs
-      http://www.codecian.com/}
+      description={is a powerful real-time analyzer for different video codecs \cite{codecian}}
     }
     
         \newglossaryentry{Rate Deviation}
@@ -154,7 +153,9 @@
     
     \HRule \\[0.4cm]
     { \huge \bfseries Measurement of Rate Deviation}\\[0.4cm] % Title of your document
-      { \huge \bfseries  of Watches with Raspberry Pi Camera}\\[0.4cm] % Title of your document
+      { \huge \bfseries  of Mechanical Watches -}\\[0.4cm] 
+      { \huge \bfseries  an Optical Approach using}\\[0.4cm]
+       { \huge \bfseries  Raspberry Pi}\\[0.4cm]% Title of your document
 
     \HRule \\[1.5cm]
     
@@ -839,10 +840,10 @@ where $n_2$ ist the number of strokes per hour, which is 21600.
       f(t)= a*\frac{1}{t}+ b
      \end{displaymath}
      
-     and the values of the duration of measurement (t in s.) as well as the metered absolute measurement errors (e in s.) the regression equation for the measurement error looks as follows
+     and the values of the duration of measurement (t in s.) as well as the metered absolute measurement errors (y in s.) the regression equation for the measurement error looks as follows
      
 \begin{equation}
-e = A
+y = A
 \begin{pmatrix}
 a \\ b \end{pmatrix}
  \end{equation}
@@ -857,16 +858,16 @@ A =
  To always have a quadratic matrix on the right side of the equation and therefore be able to solve it, it is multiplied with the transposed matrix of $A^T$. Thus the resulting equation is
  
  \begin{equation}
-A^T e = A^T A
+A^T y = A^T A
 \begin{pmatrix}
 a \\ b \end{pmatrix}
  \end{equation}
  
-where $A^T e$ has the form
+where $A^T y$ has the form
  \begin{equation}
-A^T e = 
+A^T y = 
 \begin{pmatrix}
-\frac{1}{t_1}*e_1 +\frac{1}{t_2}*e_2 + \ldots + \frac{1}{t_n}*e_n \\ e_1 + e_2 + \ldots + e_n \end{pmatrix}
+\frac{1}{t_1}*y_1 +\frac{1}{t_2}*y_2 + \ldots + \frac{1}{t_n}*y_n \\ y_1 + y_2 + \ldots + y_n \end{pmatrix}
  \end{equation}
  
  and further 
@@ -892,7 +893,7 @@ The plot on top in Figure 7.1 are the measured values and the plot below in the 
 
       \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.6]{Images/error_measurement_100_600}
+        \includegraphics[scale=0.4]{Images/error_measurement_100_600}
         
         \caption{The timeline of the measurement error from recording 50s to 600s}
         \end{figure}

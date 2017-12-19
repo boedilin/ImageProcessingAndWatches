@@ -332,6 +332,19 @@
       \verb https://opencv.org/
       \endverb
     \endentry
+    \entry{codecian}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeltitlesource}{title}
+      \field{title}{{Powerful video codec analyzer for professionals {\&} researchers}}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.codecian.com/
+      \endverb
+    \endentry
     \entry{Zeitwaage}{misc}{}
       \field{sortinit}{Z}
       \field{sortinithash}{35589aa085e881766b72503e53fd4c97}
