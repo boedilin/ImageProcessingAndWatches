@@ -1,0 +1,334 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Caliber}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeltitlesource}{title}
+      \field{title}{{Chronoskop Zeitwaagen von Timegraphers}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.chronoskop.com/index.php/chronoskop-zeitwaagen-von-prelislisit-timegraphers/
+      \endverb
+    \endentry
+    \entry{ReadTheDocsPicamera}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=26af5ce5068131de10c5293586383068}{%
+           family={{Dave Jones}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{26af5ce5068131de10c5293586383068}
+      \strng{fullhash}{26af5ce5068131de10c5293586383068}
+      \strng{authornamehash}{26af5ce5068131de10c5293586383068}
+      \strng{authorfullhash}{26af5ce5068131de10c5293586383068}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{6. Camera Hardware: Picamera 1.13 Documentation}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://picamera.readthedocs.io/en/release-1.13/index.html
+      \endverb
+    \endentry
+    \entry{Witschi_basics}{article}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Witschi Electronic AG entwickelt, produziert und verkauft Innovative Prüf-und Messtechnolgie für: • Uhrenproduktion • Uhrenservice • Prüfgeräte für die Automobil-, Medizin-und Apparateindustrie Unser Qualitätsanspruch Als weltweit führendes Unternehmen der Prüf-und Messtechnik für Uhren und andere mikrotechnische Produkte, setzen wir auf höchste Qualität, zukunftsorientierte Entwicklungsarbeit und zuverlässige Serv-iceleistungen. Um den Ansprüchen des Marktes gerecht zu werden, baut das Unternehmen auf hochqual-ifizierte, kompetente Mitarbeiter und Mitarbeiterinnen. Auch die Zertifizierung nach ISO 9001:2000 ist Garant für eine gleich bleibende, sichergestellte Qualität. So können sich unsere Kunden darauf verlas-sen, dass sie in der Firma Witschi einen optimalen Partner finden und Produkte mit bestmöglichem Ko-sten-Nutzen-Verhältnis erhalten. Dafür bürgen der Name Witschi sowie die rund 70 Mitarbeiterinnen und Mitarbeiter des Unternehmens Unser Know-how Seit über 60 Jahren entwickelt, produziert und verkauft die Firma Witschi weltweit in über 40 Ländern hochwertige Geräte auf dem Gebiet der Mess-und Prüftechnik. Am Anfang des Unternehmens stand das erklärte Ziel, der Uhrenindustrie die besten Mess-und Prüfgeräte zu liefern. Dieses Ziel ist heute längst erreicht. Alle namhaften Betriebe setzen unsere Produkte ein. Im Laufe der Zeit ist es uns gelungen, konstant neue Produkte zu entwickeln, die den höchsten An-forderungen entsprechen und den heutigen Massstab für markt-und kundengerechte Mess-und Prüftechnologie bilden. Davon zeugen tausende zufriedener Anwender in aller Welt. Das Potential unserer Ingenieure und Experten wird auch in Zukunft für wegweisende Innovationen aus dem Hause Witschi sorgen. Ausbildungsziel}
+      \field{title}{{Einführung-Grundkurs}}
+      \verb{file}
+      \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Unknown - Unknown - Einf{\"{u}}hrung Wir stellen uns vor.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.witschi.com/assets/files/sheets/Witschi%20Grundkurs.pdf
+      \endverb
+    \endentry
+    \entry{Farneback2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7bda08f257f451eba0f1d8902689c8fb}{%
+           family={Farnebäck},
+           familyi={F\bibinitperiod},
+           given={Gunnar},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Berlin, Heidelberg}%
+      }
+      \strng{namehash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{fullhash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{authornamehash}{7bda08f257f451eba0f1d8902689c8fb}
+      \strng{authorfullhash}{7bda08f257f451eba0f1d8902689c8fb}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Two-Frame Motion Estimation Based on Polynomial Expansion}}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1007/3-540-45103-X_50
+      \endverb
+      \verb{file}
+      \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Farneb{\"{a}}ck - 2003 - Two-Frame Motion Estimation Based on Polynomial Expansion.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Uhrwerk}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=01f57a4950a03c8f74edd0135cbf7ca1}{%
+           family={{Gisbert L. Brunner}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{01f57a4950a03c8f74edd0135cbf7ca1}
+      \strng{fullhash}{01f57a4950a03c8f74edd0135cbf7ca1}
+      \strng{authornamehash}{01f57a4950a03c8f74edd0135cbf7ca1}
+      \strng{authorfullhash}{01f57a4950a03c8f74edd0135cbf7ca1}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Das mechanische Uhrwerk}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.watchtime.net/uhren-wissen/das-mechanische-uhrwerk/
+      \endverb
+    \endentry
+    \entry{Grewal1993}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5b182825d4502c0cfc88e2765a52d062}{%
+           family={Grewal},
+           familyi={G\bibinitperiod},
+           given={Mohinder\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2ba6656acfed5000e48620acc13fcc56}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={Angus\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall}%
+      }
+      \strng{namehash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{fullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{authornamehash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \strng{authorfullhash}{32ecfc6676023cb7c87c8a0a136ca68f}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{General information -- Linear dynamic systems -- Random processes and stochastic systems -- Linear optimal filters, predictors and smoothers -- Nonlinear applications -- Implementation methods -- Practical considerations.}
+      \field{isbn}{9780132113359}
+      \field{title}{{Kalman filtering : theory and practice}}
+      \field{year}{1993}
+      \field{pages}{381}
+      \range{pages}{1}
+    \endentry
+    \entry{gstreamer}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeltitlesource}{title}
+      \field{title}{{GStreamer: open source multimedia framework}}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/
+      \endverb
+    \endentry
+    \entry{Halliday2005}{book}{}
+      \name{author}{3}{}{%
+        {{hash=9d9a6552821ea504ab1a5c767dddff92}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8967f5a0664f741b0ef2530a47e698fa}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa8304879d8f7d99c7c4570759b948e2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Jearl},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{authornamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhash}{3978689396696961b0bd612b55ccf075}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{7th ed., extended ed. Includes indexes. Includes index. Measurement -- Motion along a straight line -- Vectors -- Motion in two and three dimensions -- Force and motion I -- Force and motion II -- Kinetic energy and work -- Potential energy and conservation of energy -- Center of mass and linear momentum -- Rotation -- Rolling, torque, and angular momentum -- Equilibrium and elasticity -- Gravitation -- Fluids -- Oscillations -- Waves I -- Waves II -- Temperature, heat, and the First law of thermodynamics -- The kinetic theory of gases -- Entropy and the Second law of thermodynamics -- Electric charge -- Electric fields -- Gauss' law -- Electric potential -- Capacitance -- Current and resistance -- Circuits -- Magnetic fields -- Magnetic fields due to currents -- Induction and inductance -- Electromagnetic oscillations and alternating current -- Maxwell's equations; magnetism of matter -- Electromagnetic waves -- Images -- Interference -- Diffraction -- Relativity.}
+      \field{edition}{7th}
+      \field{isbn}{0471232319}
+      \field{title}{{Fundamentals of physics}}
+      \field{year}{2005}
+    \endentry
+    \entry{objectTracking}{book}{}
+      \name{author}{2}{}{%
+        {{hash=deb7e6747717e170e79d1c51aa3285fd}{%
+           family={Karasulu},
+           familyi={K\bibinitperiod},
+           given={Bahadir},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ef674949eeb548c9af8e50bdbf9d1319}{%
+           family={Korukoglu},
+           familyi={K\bibinitperiod},
+           given={Serdar},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{fullhash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{authornamehash}{6516c9ac6f915c8966d67dda3c87026f}
+      \strng{authorfullhash}{6516c9ac6f915c8966d67dda3c87026f}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781461465331}
+      \field{title}{{Moving Object Detection and Tracking in Videos}}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1007/978-1-4614-6534-8_2
+      \endverb
+    \endentry
+    \entry{Krug1987}{book}{}
+      \name{author}{1}{}{%
+        {{hash=266ad7791c8cfa6bdfa3e7235c2e76b8}{%
+           family={Krug},
+           familyi={K\bibinitperiod},
+           given={Günter.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Verl. Technik}%
+      }
+      \strng{namehash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
+      \strng{fullhash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
+      \strng{authornamehash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
+      \strng{authorfullhash}{266ad7791c8cfa6bdfa3e7235c2e76b8}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{1. Aufl. Literaturverz. S. 337 - 339.}
+      \field{isbn}{3341003568}
+      \field{title}{{Mechanische Uhren : Einzelteile, Baugruppen, Werk- u. Hilfsstoffe}}
+      \field{year}{1987}
+    \endentry
+    \entry{Kuck1978}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f0f2a4b09e260568ee26290922e3ea3b}{%
+           family={Kuck},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{fullhash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{authornamehash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \strng{authorfullhash}{f0f2a4b09e260568ee26290922e3ea3b}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0471027162}
+      \field{title}{{The structure of computers and computations}}
+      \field{year}{1978}
+      \field{pages}{12}
+      \range{pages}{1}
+    \endentry
+    \entry{Lombardi2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d084842ee1e506ad01f44325fef101f8}{%
+           family={Lombardi},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d084842ee1e506ad01f44325fef101f8}
+      \strng{fullhash}{d084842ee1e506ad01f44325fef101f8}
+      \strng{authornamehash}{d084842ee1e506ad01f44325fef101f8}
+      \strng{authorfullhash}{d084842ee1e506ad01f44325fef101f8}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For most of recorded history, the most accurate measurements of time involved dividing the period of a day into smaller parts. For example, the solar second was measured by dividing the solar day in 86,400 parts. The rotational rate of the Earth was known to be the best clock of all, the ultimate reference for timekeeping. This began to change when mechanical clocks first appeared in the 14 th century. Mechanical clocks measured time by counting the oscillations of a repetitive event, such as the swings of a pendulum or balance wheel. This was a fundamental change in timekeeping, because instead of dividing days to get seconds, they multiplied seconds to get days. Early mechanical clocks were not very accurate, and for about 600 years, mechanical clocks were calibrated with astronomical clocks. About a century ago, technology finally improved to the point where man made clocks were known to be more stable and accurate than the Earth's rotation. This presentation begins at that point, and takes a very brief look at developments in clock technology during the past 100 years.}
+      \field{title}{{A Century of Time Measurement: From Pendulum to Optical Clocks}}
+      \field{year}{2011}
+      \verb{file}
+      \verb :Users/Linda/Library/Application Support/Mendeley Desktop/Downloaded/Lombardi - 2011 - A Century of Time Measurement From Pendulum to Optical Clocks.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ncsli.org/c/f/p11/286.314.pdf
+      \endverb
+    \endentry
+    \entry{opencv}{misc}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{labeltitlesource}{title}
+      \field{title}{{OpenCV library}}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://opencv.org/
+      \endverb
+    \endentry
+    \entry{Zeitwaage}{misc}{}
+      \field{sortinit}{Z}
+      \field{sortinithash}{35589aa085e881766b72503e53fd4c97}
+      \field{labeltitlesource}{title}
+      \field{title}{{Zeitwaage Uhren-Wiki: Die besten Uhren und Uhrenmarken}}
+      \verb{url}
+      \verb https://www.uhren-wiki.net/index.php?title=Zeitwaage
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

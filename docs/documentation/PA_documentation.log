@@ -1,13 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.26)  19 DEC 2017 07:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.17)  19 DEC 2017 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/valentinbossi/Documents/git/pa17_cogsworth/docs/documentation/PA_docum
-entation.tex
-
-(/Users/valentinbossi/Documents/git/pa17_cogsworth/docs/documentation/PA_docume
-ntation.tex
+**PA_documentation.tex
+(./PA_documentation.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
@@ -1572,7 +1569,7 @@ Package biblatex Info: Reference segment=0 on input line 143.
 \c__siunitx_mathsf_int=\count411
 \c__siunitx_mathtt_int=\count412
 
-<Images/logo.png, id=232, 1116.17pt x 1116.17pt>
+<Images/logo.png, id=233, 1116.17pt x 1116.17pt>
 File: Images/logo.png Graphic file (type png)
  <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png used on input line 179.
@@ -1608,47 +1605,16 @@ l.237     \chapter
 
 ]
 Chapter 2.
-
-LaTeX Warning: Citation 'Zeitwaage' on page 2 undefined on input line 245.
-
-
-LaTeX Warning: Citation 'Zeitwaage' on page 2 undefined on input line 246.
-
 [2
 
-]
-
-LaTeX Warning: Citation 'Lombardi2011' on page 3 undefined on input line 249.
-
-
-LaTeX Warning: Citation 'Lombardi2011' on page 3 undefined on input line 265.
-
-
-LaTeX Warning: Citation 'Lombardi2011' on page 3 undefined on input line 265.
-
-[3]
-
-LaTeX Warning: Citation 'ReadTheDocsPicamera' on page 4 undefined on input line
- 301.
-
-
-Overfull \hbox (0.3407pt too wide) in paragraph at lines 301--302
-\T1/cmr/m/n/12 The doc-u-men-ta-tion for the pi-cam-era li-brary [[]] pro-
- []
-
-[4] <Images/camera_architecture.png, id=348, 540.0175pt x 614.295pt>
+] [3] [4] <Images/camera_architecture.png, id=362, 540.0175pt x 614.295pt>
 File: Images/camera_architecture.png Graphic file (type png)
 
 <use Images/camera_architecture.png>
 Package pdftex.def Info: Images/camera_architecture.png used on input line 313.
 
 (pdftex.def)             Requested size: 378.00966pt x 430.00356pt.
-
-
-LaTeX Warning: Citation 'ReadTheDocsPicamera' on page 5 undefined on input line
- 315.
-
-[5] [6 <./Images/camera_architecture.png>]
+ [5] [6 <./Images/camera_architecture.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
@@ -1662,296 +1628,237 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 368.
 
-<Images/Funktionsweise-Uhrwerk.jpg, id=378, 903.375pt x 520.94624pt>
+<Images/Funktionsweise-Uhrwerk.jpg, id=393, 903.375pt x 520.94624pt>
 File: Images/Funktionsweise-Uhrwerk.jpg Graphic file (type jpg)
 
 <use Images/Funktionsweise-Uhrwerk.jpg>
 Package pdftex.def Info: Images/Funktionsweise-Uhrwerk.jpg used on input line 3
-83.
+82.
 (pdftex.def)             Requested size: 406.515pt x 234.42365pt.
 
-Overfull \hbox (16.515pt too wide) in paragraph at lines 383--384
+Overfull \hbox (16.515pt too wide) in paragraph at lines 382--383
  [][] 
  []
 
 
-LaTeX Warning: Citation 'Uhrwerk' on page 8 undefined on input line 385.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--386
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
-[8]
-
-LaTeX Warning: Citation 'Uhrwerk' on page 9 undefined on input line 388.
-
-<Images/Hemmung-Teil1.jpg, id=383, 903.375pt x 643.40375pt>
+[8] <Images/Hemmung-Teil1.jpg, id=400, 903.375pt x 643.40375pt>
 File: Images/Hemmung-Teil1.jpg Graphic file (type jpg)
 
 <use Images/Hemmung-Teil1.jpg>
-Package pdftex.def Info: Images/Hemmung-Teil1.jpg used on input line 393.
+Package pdftex.def Info: Images/Hemmung-Teil1.jpg used on input line 392.
 (pdftex.def)             Requested size: 406.515pt x 289.529pt.
 
-Overfull \hbox (16.515pt too wide) in paragraph at lines 393--394
+Overfull \hbox (16.515pt too wide) in paragraph at lines 392--393
  [][] 
  []
 
 
-LaTeX Warning: Citation 'Uhrwerk' on page 9 undefined on input line 395.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--396
+Underfull \hbox (badness 10000) in paragraph at lines 387--395
 
  []
 
 [9 <./Images/Funktionsweise-Uhrwerk.jpg>]
-
-LaTeX Warning: Citation 'Witschi_basics' on page 10 undefined on input line 405
-.
-
-<Images/period.png, id=389, 463.7325pt x 402.50375pt>
+<Images/period.png, id=409, 463.7325pt x 402.50375pt>
 File: Images/period.png Graphic file (type png)
  <use Images/period.png>
-Package pdftex.def Info: Images/period.png used on input line 408.
+Package pdftex.def Info: Images/period.png used on input line 407.
 (pdftex.def)             Requested size: 185.4897pt x 160.99864pt.
 
-
-LaTeX Warning: Citation 'Witschi_basics' on page 10 undefined on input line 410
-.
-
 [10 <./Images/Hemmung-Teil1.jpg>]
-
-LaTeX Warning: Citation 'Witschi_basics' on page 11 undefined on input line 415
-.
-
-<Images/Halfperiod.png, id=395, 461.725pt x 368.37625pt>
+<Images/Halfperiod.png, id=418, 461.725pt x 368.37625pt>
 File: Images/Halfperiod.png Graphic file (type png)
 
 <use Images/Halfperiod.png>
-Package pdftex.def Info: Images/Halfperiod.png used on input line 418.
+Package pdftex.def Info: Images/Halfperiod.png used on input line 417.
 (pdftex.def)             Requested size: 184.68672pt x 147.34789pt.
-
-
-LaTeX Warning: Citation 'Witschi_basics' on page 11 undefined on input line 420
-.
-
-
-LaTeX Warning: Citation 'Krug1987' on page 11 undefined on input line 425.
-
-[11 <./Images/period.png> <./Images/Halfperiod.png>]
-
-LaTeX Warning: Citation 'Krug1987' on page 12 undefined on input line 450.
-
-
-LaTeX Warning: Citation 'Krug1987' on page 12 undefined on input line 450.
-
-
-LaTeX Warning: Citation 'Caliber' on page 12 undefined on input line 454.
-
-[12]
+ [11 <./Images/period.png> <./Images/Halfperiod.png>] [12]
 Chapter 3.
-
-LaTeX Warning: Citation 'opencv' on page 13 undefined on input line 457.
-
-
-LaTeX Warning: Citation 'gstreamer' on page 13 undefined on input line 460.
-
-
-LaTeX Warning: Citation 'ReadTheDocsPicamera' on page 13 undefined on input lin
-e 463.
-
 [13
 
-]
-
-LaTeX Warning: Citation 'opencv' on page 14 undefined on input line 474.
-
-
-LaTeX Warning: Citation 'Farneback2003' on page 14 undefined on input line 481.
-
-
-
-LaTeX Warning: Citation 'Grewal1993' on page 14 undefined on input line 484.
-
-
-LaTeX Warning: Citation 'objectTracking' on page 14 undefined on input line 487
-.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
+] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
 []|\T1/cmr/m/n/8 Generaliz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
 []|\T1/cmr/m/n/8 Computa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
 \T1/cmr/m/n/8 tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
 []|\T1/cmr/m/n/8 Object
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 513--513
+Underfull \hbox (badness 2865) in paragraph at lines 518--518
 \T1/cmr/m/n/8 Vectors and
  []
 
 [15] [16]
 Chapter 4.
-<Images/test_setup.png, id=429, 1027.84pt x 770.88pt>
+<Images/test_setup.png, id=475, 1027.84pt x 770.88pt>
 File: Images/test_setup.png Graphic file (type png)
 
 <use Images/test_setup.png>
-Package pdftex.def Info: Images/test_setup.png used on input line 531.
+Package pdftex.def Info: Images/test_setup.png used on input line 536.
 (pdftex.def)             Requested size: 308.35437pt x 231.26578pt.
  [17
 
-] [18 <./Images/test_setup.png>]
-<Images/animation_sad.png, id=441, 589.20125pt x 421.575pt>
+]
+<Images/animation_sad.png, id=480, 589.20125pt x 421.575pt>
 File: Images/animation_sad.png Graphic file (type png)
 
 <use Images/animation_sad.png>
-Package pdftex.def Info: Images/animation_sad.png used on input line 550.
+Package pdftex.def Info: Images/animation_sad.png used on input line 555.
 (pdftex.def)             Requested size: 353.52347pt x 252.94695pt.
-
-<Images/animation_hypotenuse.png, id=442, 584.1825pt x 433.62pt>
+ [18 <./Images/test_setup.png>]
+<Images/animation_hypotenuse.png, id=487, 584.1825pt x 433.62pt>
 File: Images/animation_hypotenuse.png Graphic file (type png)
 
 <use Images/animation_hypotenuse.png>
-Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 560
+Package pdftex.def Info: Images/animation_hypotenuse.png used on input line 565
 .
 (pdftex.def)             Requested size: 350.51219pt x 260.17401pt.
  [19 <./Images/animation_sad.png>]
 [20 <./Images/animation_hypotenuse.png>]
-<Images/motion_vectors.png, id=456, 618.31pt x 617.30624pt>
+<Images/motion_vectors.png, id=501, 618.31pt x 617.30624pt>
 File: Images/motion_vectors.png Graphic file (type png)
 
 <use Images/motion_vectors.png>
-Package pdftex.def Info: Images/motion_vectors.png used on input line 574.
+Package pdftex.def Info: Images/motion_vectors.png used on input line 579.
 (pdftex.def)             Requested size: 309.15424pt x 308.65236pt.
 
-<Images/analysis_mv_excel.png, id=457, 1222.5675pt x 333.245pt>
+<Images/analysis_mv_excel.png, id=502, 1222.5675pt x 333.245pt>
 File: Images/analysis_mv_excel.png Graphic file (type png)
 
 <use Images/analysis_mv_excel.png>
-Package pdftex.def Info: Images/analysis_mv_excel.png used on input line 585.
+Package pdftex.def Info: Images/analysis_mv_excel.png used on input line 590.
 (pdftex.def)             Requested size: 391.22958pt x 106.64056pt.
 
-Overfull \hbox (1.22958pt too wide) in paragraph at lines 585--586
+Overfull \hbox (1.22958pt too wide) in paragraph at lines 590--591
  [][] 
  []
 
 [21 <./Images/motion_vectors.png>]
-<Images/optical_flow_basic1.jpg, id=464, 438.63875pt x 194.7275pt>
+<Images/optical_flow_basic1.jpg, id=509, 438.63875pt x 194.7275pt>
 File: Images/optical_flow_basic1.jpg Graphic file (type jpg)
 
 <use Images/optical_flow_basic1.jpg>
-Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 597.
+Package pdftex.def Info: Images/optical_flow_basic1.jpg used on input line 602.
 
 (pdftex.def)             Requested size: 307.04501pt x 136.3083pt.
  [22 <./Images/analysis_mv_excel.png> <./Images/optical_flow_basic1.jpg>] [23]
 Chapter 5.
-<Images/excel_sheet_numbers.png, id=476, 878.28125pt x 516.93124pt>
+<Images/excel_sheet_numbers.png, id=521, 878.28125pt x 516.93124pt>
 File: Images/excel_sheet_numbers.png Graphic file (type png)
 
 <use Images/excel_sheet_numbers.png>
-Package pdftex.def Info: Images/excel_sheet_numbers.png used on input line 619.
+Package pdftex.def Info: Images/excel_sheet_numbers.png used on input line 624.
 
 (pdftex.def)             Requested size: 395.22292pt x 232.6169pt.
 
-Overfull \hbox (5.22292pt too wide) in paragraph at lines 619--620
+Overfull \hbox (5.22292pt too wide) in paragraph at lines 624--625
  [][] 
  []
 
 [24
 
-] <Images/excel_sheet_graph.png, id=481, 866.7582pt x 647.5392pt>
+] <Images/excel_sheet_graph.png, id=526, 866.7582pt x 647.5392pt>
 File: Images/excel_sheet_graph.png Graphic file (type png)
 
 <use Images/excel_sheet_graph.png>
-Package pdftex.def Info: Images/excel_sheet_graph.png used on input line 629.
+Package pdftex.def Info: Images/excel_sheet_graph.png used on input line 634.
 (pdftex.def)             Requested size: 390.03758pt x 291.38994pt.
  [25 <./Images/excel_sheet_numbers.png>]
 [26 <./Images/excel_sheet_graph.png>]
-<Images/gangdeviation.png, id=495, 875.27pt x 259.97125pt>
+<Images/gangdeviation.png, id=540, 875.27pt x 259.97125pt>
 File: Images/gangdeviation.png Graphic file (type png)
 
 <use Images/gangdeviation.png>
-Package pdftex.def Info: Images/gangdeviation.png used on input line 655.
+Package pdftex.def Info: Images/gangdeviation.png used on input line 660.
 (pdftex.def)             Requested size: 350.10179pt x 103.98665pt.
  [27] [28 <./Images/gangdeviation.png>]
 Chapter 6.
 
-LaTeX Warning: Citation 'Witschi_basics' on page 29 undefined on input line 674
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--680
+Underfull \hbox (badness 10000) in paragraph at lines 682--685
 
  []
 
 [29
 
-] <Images/variations_per_day.png, id=510, 621.0402pt x 343.0416pt>
+] <Images/variations_per_day.png, id=556, 621.0402pt x 343.0416pt>
 File: Images/variations_per_day.png Graphic file (type png)
 
 <use Images/variations_per_day.png>
-Package pdftex.def Info: Images/variations_per_day.png used on input line 708.
+Package pdftex.def Info: Images/variations_per_day.png used on input line 713.
 (pdftex.def)             Requested size: 385.04095pt x 212.68358pt.
 
-Overfull \hbox (2.09566pt too wide) in paragraph at lines 722--722
-[]|\T1/cmr/bx/n/10 Positions|  
+Overfull \hbox (5.69273pt too wide) in paragraph at lines 727--727
+[]|\T1/cmr/bx/n/9 Positions| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--727
+[]|\T1/cmr/m/n/9 Metering
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--727
+\T1/cmr/m/n/9 Du-ra-
  []
 
 [30 <./Images/variations_per_day.png>]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 758--758
 []|\T1/cmr/bx/n/12 Duration 
  []
 
-[31] <Images/errors_600sec.png, id=525, 770.3982pt x 553.1064pt>
+[31] <Images/errors_600sec.png, id=571, 770.3982pt x 553.1064pt>
 File: Images/errors_600sec.png Graphic file (type png)
 
 <use Images/errors_600sec.png>
-Package pdftex.def Info: Images/errors_600sec.png used on input line 761.
+Package pdftex.def Info: Images/errors_600sec.png used on input line 766.
 (pdftex.def)             Requested size: 385.19815pt x 276.55252pt.
  [32]
-Overfull \hbox (0.62726pt too wide) in paragraph at lines 787--787
+Overfull \hbox (0.62726pt too wide) in paragraph at lines 792--792
 []|\T1/cmr/bx/n/12 Duration 
  []
 
 [33 <./Images/errors_600sec.png>]
-<Images/parallel_test_setup.png, id=538, 1027.84pt x 770.88pt>
+<Images/parallel_test_setup.png, id=584, 1027.84pt x 770.88pt>
 File: Images/parallel_test_setup.png Graphic file (type png)
 
 <use Images/parallel_test_setup.png>
-Package pdftex.def Info: Images/parallel_test_setup.png used on input line 798.
+Package pdftex.def Info: Images/parallel_test_setup.png used on input line 803.
 
 (pdftex.def)             Requested size: 308.35437pt x 231.26578pt.
  [34] [35 <./Images/parallel_test_setup.png>] [36]
 Chapter 7.
 [37
 
-] <Images/error_measurement.png, id=566, 589.20125pt x 581.17125pt>
+] <Images/error_measurement.png, id=613, 589.20125pt x 581.17125pt>
 File: Images/error_measurement.png Graphic file (type png)
 
 <use Images/error_measurement.png>
-Package pdftex.def Info: Images/error_measurement.png used on input line 878.
+Package pdftex.def Info: Images/error_measurement.png used on input line 886.
 (pdftex.def)             Requested size: 353.52347pt x 348.70544pt.
  [38]
-<Images/error_measurement_100_600.png, id=573, 604.2575pt x 443.6575pt>
+<Images/error_measurement_100_600.png, id=620, 604.2575pt x 443.6575pt>
 File: Images/error_measurement_100_600.png Graphic file (type png)
 
 <use Images/error_measurement_100_600.png>
 Package pdftex.def Info: Images/error_measurement_100_600.png used on input lin
-e 885.
+e 893.
 (pdftex.def)             Requested size: 362.5573pt x 266.19655pt.
  [39 <./Images/error_measurement.png>] [40 <./Images/error_measurement_100_600.
 png>]
@@ -1963,15 +1870,6 @@ Overfull \hbox (109.49683pt too wide) in paragraph at lines 11--13
 []\T1/cmr/m/n/12 is a pow-er-ful real-time an-a-lyzer for dif-fer-ent video cod
 ecs. http://www.codecian.com/.
  []
-
-
-LaTeX Warning: Citation 'Kuck1978' on page 43 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Kuck1978' on page 43 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Halliday2005' on page 43 undefined on input line 30.
 
 [43
 
@@ -1985,68 +1883,73 @@ Package glossaries Warning: Glossary entry `Processoro' has not been defined on
 Package glossaries Warning: Glossary entry `Processoro' has not been defined on
  input line 34.
 
+) [44]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 934.
 
-LaTeX Warning: Citation 'ReadTheDocsPicamera' on page 44 undefined on input lin
-e 50.
-
-
-Overfull \hbox (12.48772pt too wide) in paragraph at lines 50--52
-\T1/cmr/m/n/12 mit com-mu-ni-ca-tion be-tween CPU and GPU. [[]].
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (21.66927pt too wide) in paragraph at lines 935--935
+[]\T1/cmr/m/it/12 Chronoskop Zeit-waa-gen von Timeg-ra-phers\T1/cmr/m/n/12 . \T
+1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 http : / / www . chronos
+kop .
  []
 
-)
 
-LaTeX Warning: Empty bibliography on input line 925.
+Overfull \hbox (43.30017pt too wide) in paragraph at lines 935--935
+\T1/cmtt/m/n/12 com / index . php / chronoskop -[] zeitwaagen -[] von -[] preli
+slisit -[] timegraphers/$[][]
+ []
 
-[44] (./PA_documentation.lof)
+
+Overfull \hbox (18.65652pt too wide) in paragraph at lines 935--935
+[]\T1/cmr/m/it/12 GStreamer: open source mul-ti-me-dia frame-work\T1/cmr/m/n/12
+ . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / gstream
+er .
+ []
+
+[45
+
+]
+Overfull \hbox (9.37819pt too wide) in paragraph at lines 935--935
+[]\T1/cmr/m/it/12 Zeitwaage Uhren-Wiki: Die besten Uhren und Uhren-marken\T1/cm
+r/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
+ []
+
+[46] (./PA_documentation.lof)
 \tf@lof=\write9
 \openout9 = `PA_documentation.lof'.
 
- [45
+ [47
 
 ]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 941.
+(./Files/searchMinima_tic_toc.py [48
 
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-(./Files/searchMinima_tic_toc.py [46
-
-] [47]) (./Files/searchMinima.py [48])
-(./Files/searchMaxima.py [49] [50])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 963.
- [51]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 963.
+] [49]) (./Files/searchMinima.py [50])
+(./Files/searchMaxima.py [51] [52])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 972.
+ [53]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 972.
  (./PA_documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 963.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 963.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 972.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 972.
 Package rerunfilecheck Info: File `PA_documentation.out' has not changed.
-(rerunfilecheck)             Checksum: A84121CF1C5502B03CF8B1C2A994E3EF;3953.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                PA_documentation
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 23B8F5927B218D8FC96E3D828BBB681F;3953.
 Package logreq Info: Writing requests to 'PA_documentation.run.xml'.
 \openout1 = `PA_documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32541 strings out of 492995
- 598754 string characters out of 6132704
- 1131731 words of memory out of 5000000
- 35302 multiletter control sequences out of 15000+600000
- 25428 words of font info for 58 fonts, out of 8000000 for 9000
+ 32609 strings out of 492995
+ 600231 string characters out of 6132703
+ 1132913 words of memory out of 5000000
+ 35349 multiletter control sequences out of 15000+600000
+ 26425 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,16n,75p,10461b,2434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,16n,75p,10392b,2434s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -2064,20 +1967,23 @@ e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-urw/zapfding/uzdr.pfb>
-Output written on PA_documentation.pdf (57 pages, 4191511 bytes).
+-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/cm-super/sftt1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/cm-super/sftt1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/za
+pfding/uzdr.pfb>
+Output written on PA_documentation.pdf (59 pages, 4276997 bytes).
 PDF statistics:
- 1024 PDF objects out of 1200 (max. 8388607)
- 894 compressed objects within 9 object streams
- 359 named destinations out of 1000 (max. 500000)
+ 1126 PDF objects out of 1200 (max. 8388607)
+ 985 compressed objects within 10 object streams
+ 379 named destinations out of 1000 (max. 500000)
  557 words of extra memory for PDF output out of 10000 (max. 10000000)
 
