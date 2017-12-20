@@ -23,36 +23,34 @@
 \BOOKMARK [3][-]{subsubsection.2.3.2.2}{Half a Period}{subsection.2.3.2}% 23
 \BOOKMARK [2][-]{subsection.2.3.3}{Number of Strokes}{section.2.3}% 24
 \BOOKMARK [2][-]{subsection.2.3.4}{Test Watch}{section.2.3}% 25
-\BOOKMARK [1][-]{section.2.4}{The sampling theorem}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter.3}{Technologies and Algorithms}{}% 27
-\BOOKMARK [1][-]{section.3.1}{Optical Flow}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.1.1}{Sparse Optical Flow}{section.3.1}% 29
-\BOOKMARK [2][-]{subsection.3.1.2}{Dense Flow}{section.3.1}% 30
-\BOOKMARK [1][-]{section.3.2}{Kalman Filtering}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.3}{Object tracking}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.4}{Motion vectors}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.5}{Conclusions and Evaluations}{chapter.3}% 34
-\BOOKMARK [0][-]{chapter.4}{Experimental approaches}{}% 35
-\BOOKMARK [1][-]{section.4.1}{Test setup}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.2}{Gesture Detection}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.3}{Animation of Motion Vectors}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.4}{Motion Vectors Visualized in a Frame}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.5}{Analysis of Motion Vectors in Excel}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.6}{Influences of Camera Setup and Parameters}{chapter.4}% 41
-\BOOKMARK [0][-]{chapter.5}{Calculation of the frequency}{}% 42
-\BOOKMARK [1][-]{section.5.1}{Calculation of Frequency in Excel}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.2}{Implementation of the Algorithms}{chapter.5}% 44
-\BOOKMARK [2][-]{subsection.5.2.1}{Counting Minima with Upper Limit}{section.5.2}% 45
-\BOOKMARK [2][-]{subsection.5.2.2}{Counting Minima with Stepsize}{section.5.2}% 46
-\BOOKMARK [2][-]{subsection.5.2.3}{Counting Minima with Tic Tac and Stepsize}{section.5.2}% 47
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 48
-\BOOKMARK [1][-]{section.6.1}{Measurements}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.2}{Verification of Accuracy}{chapter.6}% 50
-\BOOKMARK [0][-]{chapter.7}{Prediction of the measurement error}{}% 51
-\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 52
-\BOOKMARK [1][-]{section.8.1}{Difficulties}{chapter.8}% 53
-\BOOKMARK [1][-]{section.8.2}{Outlook}{chapter.8}% 54
-\BOOKMARK [0][-]{section*.4}{Glossary}{}% 55
-\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 56
-\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 57
-\BOOKMARK [0][-]{chapter*.7}{Appendix - Python programs}{}% 58
+\BOOKMARK [0][-]{chapter.3}{Technologies and Algorithms}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Optical Flow}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.1.1}{Sparse Optical Flow}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.2}{Dense Flow}{section.3.1}% 29
+\BOOKMARK [1][-]{section.3.2}{Kalman Filtering}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.3}{Object tracking}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.4}{Motion vectors}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.5}{Conclusions and Evaluations}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{Experimental approaches}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Test setup}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{Gesture Detection}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Animation of Motion Vectors}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.4}{Motion Vectors Visualized in a Frame}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.5}{Analysis of Motion Vectors in Excel}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.6}{Influences of Camera Setup and Parameters}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Calculation of the frequency}{}% 41
+\BOOKMARK [1][-]{section.5.1}{Calculation of Frequency in Excel}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.2}{Implementation of the Algorithms}{chapter.5}% 43
+\BOOKMARK [2][-]{subsection.5.2.1}{Counting Minima with Upper Limit}{section.5.2}% 44
+\BOOKMARK [2][-]{subsection.5.2.2}{Counting Minima with Stepsize}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.3}{Counting Minima with Tic Tac and Stepsize}{section.5.2}% 46
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 47
+\BOOKMARK [1][-]{section.6.1}{Measurements}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.2}{Verification of Accuracy}{chapter.6}% 49
+\BOOKMARK [0][-]{chapter.7}{Prediction of the measurement error}{}% 50
+\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 51
+\BOOKMARK [1][-]{section.8.1}{Difficulties}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.2}{Outlook}{chapter.8}% 53
+\BOOKMARK [0][-]{section*.4}{Glossary}{}% 54
+\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 55
+\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 56

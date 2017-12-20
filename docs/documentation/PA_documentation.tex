@@ -50,8 +50,7 @@
     \newglossaryentry{Codecvisa}
     {
       name=Codecvisa,
-      description={is a powerful real-time analyzer for different video codecs
-      http://www.codecian.com/}
+      description={is a powerful real-time analyzer for different video codecs \cite{codecian}}
     }
     
         \newglossaryentry{Rate Deviation}
@@ -154,7 +153,9 @@
     
     \HRule \\[0.4cm]
     { \huge \bfseries Measurement of Rate Deviation}\\[0.4cm] % Title of your document
-      { \huge \bfseries  of Watches with Raspberry Pi Camera}\\[0.4cm] % Title of your document
+      { \huge \bfseries  of Mechanical Watches -}\\[0.4cm] 
+      { \huge \bfseries  an Optical Approach using}\\[0.4cm]
+       { \huge \bfseries  Raspberry Pi}\\[0.4cm]% Title of your document
 
     \HRule \\[1.5cm]
     
@@ -203,7 +204,7 @@ Mechanical watches must be checked for clock drifts both during manufacture and 
 \newline
 The work will give answers to the following questions: Is an exclusive optical measurement by means of image processing possible? How accurate will these measurements be and can they keep up with the results of professional equipment? How can the measurement be further improved? 
 \newline
-In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at the OpenCV library, the gstreamer, a one-to-one comparison of images, tracking a specific pixel and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used eventually. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. Using the data from these experiments, an implementation of a Python program was carried out. The experiments also showed that the clock drift of the watch reacts very sensitively to varying temperatures, making it difficult to get reliable reference measurements. For this reason, a setup using a blinking LED with known frequency was chosen as a reference. The obtained results showed that the determination of the frequency by means of image processing worked very well and that sufficiently precise results could be achieved. In order to get better direct reference measurements, some meterings of a watch were done in parallel with the camera and a Greiner measurement device. It turned out that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. In order to turn the presented approach into a product which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally, one could do further research, if real-time measurements are required.
+In a first step, possible methods were evaluated in order to carry out the optical measurement of the frequency of the balance wheel of a watch. A closer look was taken at a one-to-one comparison of images, tracking a specific pixel, the OpenCV, the Gstreamer and the Picamera library. Since the Picamera library offers a very detailed documentation and many of the functionalities needed for this work, this library was used eventually. In order to better understand the motion vectors, various experiments were carried out, whereby the camera settings were also improved. Using the data from these experiments, an implementation of a Python program was carried out. The experiments also showed that the clock drift of the watch reacts very sensitively to varying temperatures, making it difficult to get reliable reference measurements. For this reason, a setup using a blinking LED with known frequency was chosen as a reference. The obtained results showed that the determination of the frequency by means of image processing worked very well and that sufficiently precise results could be achieved. In order to get better direct reference measurements, some meterings of a watch were done in parallel with the camera and a Greiner measurement device. It turned out that the results of both devices are very similar and therefore the measurement with the camera is accurate enough. For a precision of 5, 3, and about 2s one needs approximately 40s, 150s and 600s of measurement accordingly. In order to turn the presented approach into a product which can compete with the professional devices, some more implementations of measurements of various other things need to be made. Additionally, one could do further research, if real-time measurements are required.
 
 \pagebreak
     \setcounter{secnumdepth}{5} 
@@ -845,10 +846,10 @@ where $n_2$ ist the number of strokes per hour, which is 21600.
    From the approach of the regression
    
           \begin{displaymath}
-      f(x)= a*\frac{1}{x}+ b
+      f(t)= a*\frac{1}{t}+ b
      \end{displaymath}
      
-     and the values of the duration of measurement (x in sec.) as well as the metered absolute measurement errors (y in sec.) the regression equation looks as follows
+     and the values of the duration of measurement (t in s.) as well as the metered absolute measurement errors (y in s.) the regression equation for the measurement error looks as follows
      
 \begin{equation}
 y = A
@@ -860,10 +861,10 @@ a \\ b \end{pmatrix}
  \begin{equation}
 A = 
 \begin{pmatrix}
-\frac{1}{x_1} & 1\\ \vdots & \vdots \\ \frac{1}{x_n} & 1 \end{pmatrix}.
+\frac{1}{t_1} & 1\\ \vdots & \vdots \\ \frac{1}{t_n} & 1 \end{pmatrix}.
  \end{equation}
  
- To always have a quadratic matrix on the right side of the equation and therefore be able to solve it, it is multiplied with the transposed matrix of A$^T$. Thus the resulting equation is
+ To always have a quadratic matrix on the right side of the equation and therefore be able to solve it, it is multiplied with the transposed matrix of $A^T$. Thus the resulting equation is
  
  \begin{equation}
 A^T y = A^T A
@@ -871,23 +872,23 @@ A^T y = A^T A
 a \\ b \end{pmatrix}
  \end{equation}
  
-where A$^T$y has the form
+where $A^T y$ has the form
  \begin{equation}
 A^T y = 
 \begin{pmatrix}
-\frac{1}{x_1}*y_1 +\frac{1}{x_2}*y_2 + \ldots + \frac{1}{x_n}*y_n \\ y_1 + y_2 + \ldots + y_n \end{pmatrix}
+\frac{1}{t_1}*y_1 +\frac{1}{t_2}*y_2 + \ldots + \frac{1}{t_n}*y_n \\ y_1 + y_2 + \ldots + y_n \end{pmatrix}
  \end{equation}
  
  and further 
   \begin{equation}
 A^T A= 
 \begin{pmatrix}
-\sum_n  \frac{1}{x_i^2} & \sum_{n} \frac{1}{x_i} \\ \sum_{n} \frac{1}{x_i} & n  \end{pmatrix}.
+\sum_n  \frac{1}{t_i^2} & \sum_{n} \frac{1}{t_i} \\ \sum_{n} \frac{1}{t_i} & n  \end{pmatrix}.
  \end{equation}
  
- To solve the equation a Python program was implemented, which after solving it, draws a graph for the calculated $f(x)$. 
+ To solve the equation a Python program was implemented, which after solving it, draws a graph for the calculated $f(t)$. 
  
-Figure 7.1 and Figure 7.2 which is a enlarged part of Figure 7.1 shows such a graph. The values are taken from the parallel measurement of the Greiner device and the camera. As a reference value the average of the shown value of the Greiner device was taken. The calculated function for the metering error for the graph in Figure 7.1 is \( f(x) = 103.483 \frac{1}{x} + 2.209 \). 
+Figure 7.1 and Figure 7.2 which is a enlarged part of Figure 7.1 shows such a graph. The values are taken from the parallel measurement of the Greiner device and the camera when the clock had a rate deviation of about minus five seconds. As a reference value the average of the shown value of the Greiner device was taken. The calculated function for the metering error for the graph in Figure 7.1 is \( f(t) = 103.483 \frac{1}{t} + 2.209 \). 
 
 
 The plot on top in Figure 7.1 are the measured values and the plot below in the same figure is drawn with the computed function. As one can easily see the graph of the calculated function matches really good with the timeline of the measured values, which proves that the error truly is proportional to 1 over time. 
@@ -896,22 +897,23 @@ The plot on top in Figure 7.1 are the measured values and the plot below in the 
         \centering
         \includegraphics[scale=0.6]{Images/error_measurement}
         
-        \caption{The timeline of the measurement error from 0 sec. to 600 sec.}
+        \caption{The timeline of the measurement error from recording 1s to 600s}
         \end{figure}
 
       \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.6]{Images/error_measurement_100_600}
+        \includegraphics[scale=0.4]{Images/error_measurement_100_600}
         
-        \caption{The timeline of the measurement error from 100 sec. to 600 sec.}
+        \caption{The timeline of the measurement error from recording 50s to 600s}
         \end{figure}
 
 The determined values $a$ and $b$ were for all measurements, where the rate deviation of the watch was adjusted, more or less the same.
 
 The calculations for $a$ were in the range of 100 to 200 and $b$ was in the range of two and four and a half. 
 
+For example for a precision of 5, 3, and about 2s one needs 40s, 150s and 600s of measurement accordingly.
 
-The maximal accuracy of measurement is indicated by $b$. It appeared that there is always a minimal error of about two seconds. Compared with the Greiner Compact 900, which results fluctuate in this range as well, this is a good outcome. 
+The minimal error of measurement is indicated by $b$. It appeared that there is always a minimal error of about two seconds. Compared with the Greiner Compact 900, which results fluctuate in this range as well, this is a good outcome. 
 The measurements showed that after about three and a half minutes one gets an error of approximately three seconds, to lower this for another second the measurement needs to be extended up to ten minutes.     
     
     \chapter{Discussion}
@@ -919,7 +921,7 @@ The measurements showed that after about three and a half minutes one gets an er
     \newline
     With the help of the Picamera library and motion vectors the frequency of the balance of a mechanical watch was calculated with different implementations. Overall, the frequency was determined relatively accurate and without large deviations. Actually, all methods worked, but the implementation with the step size and the consideration of the direction of the semi-oscillation did best.
     \newline
-    For the error of the measurement it was determined that it is reciprocally proportional to the measured time (see chapter 7). With this statement a forecast for the error can be made and one can distinguish how long a measurement needs to be to get the favored outcome.
+    For the error of the measurement it was determined that it is reciprocally proportional to the measured time (see chapter 7). With this statement a forecast for the error can be made and one can distinguish how long a measurement needs to be to get the favored outcome. For a precision of 5, 3, and about 2s one needs approximately 40s, 150s and 600s of measurement accordingly. 
     \newline
     The results of image processing correlate very well with the values of professional devices. The deviation is very slight and therefore hardly weighs in. Even the results with the professional devices fluctuate slightly and so the measured values obtained in this work keep up very well with the devices. 
 
@@ -948,36 +950,5 @@ Probably the greatest difficulty was to get good reference measurements, which c
     \listoffigures
     \bigskip
       
-    \addcontentsline{toc}{chapter}{Appendix - Python programs}
-     \chapter*{Appendix - Python programs}  
-     \section*{searchMinima\_tic\_toc.py}  
-      \lstset{
-       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
-           keywordstyle=\color{blue}\ttfamily,
-           stringstyle=\color{red}\ttfamily,
-           commentstyle=\color{teal}\ttfamily,
-          breaklines=true
-          }  
-    \lstinputlisting[language=Python]{Files/searchMinima_tic_toc.py}
-    
-    \section*{searchMinima.py}  
-      \lstset{
-       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
-           keywordstyle=\color{blue}\ttfamily,
-           stringstyle=\color{red}\ttfamily,
-           commentstyle=\color{teal}\ttfamily,
-          breaklines=true
-          }  
-    \lstinputlisting[language=Python]{Files/searchMinima.py}
-
-    \section*{searchMaxima.py}  
-      \lstset{
-       basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
-           keywordstyle=\color{blue}\ttfamily,
-           stringstyle=\color{red}\ttfamily,
-           commentstyle=\color{teal}\ttfamily,
-          breaklines=true
-          }  
-    \lstinputlisting[language=Python]{Files/searchMaxima.py}
     
     \end{document}
