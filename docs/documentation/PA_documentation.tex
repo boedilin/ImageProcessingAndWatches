@@ -378,6 +378,7 @@ In a first step, possible methods were evaluated in order to carry out the optic
     
     \end{itemize}
     
+    \pagebreak
     \section{Mechanical Watches}  
     In the following, the function of a mechanical watch is explained in more detail and the role of a watch's balance wheel is explained. Subsequently, important information on mechanical watches, such as the duration of stroke and facts about the test watch used in this project, are described.
     \subsection{Operation of a Mechanical Watch}  
@@ -455,10 +456,18 @@ In Figure 2.5 half of a period, i.e. one stroke, of the balance wheel is illustr
     \end{tabularx}
        \caption{  Number of strokes, period duration and frequency of the balance of automatic wristwatches \cite{Krug1987}}
         \end{table}
-        
+       
+        \pagebreak
         \subsection{Test Watch}
       The test watch, which was used, is of the caliber ETA C01.211. It is a chronograph with a diameter of 31 centimeters. It strokes 21600 times per hour with a stroke duration of 0.1666 seconds. It therefore has a frequency of 3 Hz. Additionally, the watch has a power reserve of 43 hours \cite{Caliber}.
 
+
+      \section{The sampling theorem}
+      In order to convert a continuous-time signal, such as a movement into a discrete-time signal, such as a time stamp, the Nyquist–Shannon sampling theorem must be respected in order to ensure that the continuous-time signal is correctly reconstructed.
+      The sampling theorem states if a signal contains no frequencies higher than B hertz, it is completely determined by giving its ordinates at a series of points spaced 1/(2B) seconds apart. A sufficient sample rate is therefore 2B samples/second.
+      In this project the continous-time component is represented by the balance wheel (3 Hz) and the discrete-time component is represented by the frame rate and its time stamps of the camera (90 Hz) which satisfies the condition.  
+
+    
     \chapter{Technologies and Algorithms}
  The investigation of image processing packages comprised three libraries:
  \begin{enumerate}
@@ -609,7 +618,7 @@ The implementation in Open CV is based on the Gunner Farneback's algorithm which
     The consequence of the shorter exposure time is that the light source must be very strong and close to the subject, otherwise the image is too dark and has a negative effect on the result.
     Records with changed angles were also taken. The angle was changed by about 30 degrees. With this adjustment, no significant changes in the measured values could be detected.
     Furthermore, it was recognized that the selected image detail influences the measured values. During the video recordings it was taken care that the balance wheel takes up the entire image.
-    \newpage
+    
     
     \chapter{Calculation of the frequency}
 During the experimental sessions with the motion vectors it became clear how the information contained in the motion vectors could be used to calculate the oscillation of the balance wheel. At first, a crude calculation was made in Excel and the gained insights were then used to start implementing a program in Python. The following chapter will explain how those calculations and implementations were done.
@@ -674,9 +683,9 @@ During the experimental sessions with the motion vectors it became clear how the
      
     
     \chapter{Results}
-        The first reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. All those first measurements were not done in parallel with the camera measurements. In the first subchapter the results, this divergence and its causes will be discussed in more detail. In a next step, since the results with the first reference measurements were not useful, a verification of the accuracy of the measurements with the camera were made with a blinking LED. The last subchapter will focus on the meterings of the Greiner Compact 900 and the Raspberry Pi camera which were made in parallel and where very similiar results were obtained. 
+        The first reference measurements were performed on the test watch on three days. Two measurements were carried out with the Greiner Compact 900 and one with the Witschi Watch Expert II. Calculations using the Greiner Compact diverge greatly from those taken with the Watch Expert II. All those first measurements were not done in parallel with the camera measurements. In the first subchapter the results, this divergence and its causes will be discussed in more detail. In a next step, since the results with the first reference measurements were not useful, a verification of the accuracy of the measurements with the camera were made with a blinking LED. The last subchapter will focus on the measurements of the Greiner Compact 900 and the Raspberry Pi camera which were made in parallel and where very similiar results were obtained. 
     \section{Measurements}
-As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact meter was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch\cite[p. 21 - 23]{Witschi_basics}. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
+As the test watch was in a distinctly colder environment (about 5 degrees Celsius) shortly before the Greiner Compact 900 was used to measure the reference values, it is highly likely that the small metal spring has contracted and the watch ran faster as a result. Before the calculation with the Watch Expert II time scale, the test watch was in an ambient temperature of about 25 degrees Celsius for a long time. A difference of only 5 degrees Celsius can affect the accuracy of the watch\cite[p. 21 - 23]{Witschi_basics}. As the reference measurements are based on a difference of about 20 degrees Celsius, the above-mentioned difference occurs with the measured values obtained.
 The optical measurements of the Picamera were carried out on an average at about 25 degrees Celsius, therefore the reference values determined by the Wisio Scope time scale are best suited for the comparison.
 
     All measurements were taken in different positions of the watch with different length
@@ -796,7 +805,7 @@ where $n_2$ ist the number of strokes per hour, which is 21600.
     Table 6.3 proves that even with the SAD values accurate measurements can be made.
     This implies also the motion vectors can be used for precise measurement.
 
-    Knowing that the methods do not only work in theory but also in practice, a metering of a Greiner Compact 900 and the Raspberry Pi camera was executed in parallel. In Figure 6.3 the setup is shown. The watch was placed on a nimble mounting of the Greiner device, which includes the microphone, that was used for measuring the oscillation of the balance wheel. 
+    Knowing that the methods do not only work in theory but also in practice, a measurement of a Greiner Compact 900 and the Raspberry Pi camera was executed in parallel. In Figure 6.3 the setup is shown. The watch was placed on a nimble mounting of the Greiner device, which includes the microphone, that was used for measuring the oscillation of the balance wheel. 
     
       \begin{figure}[H]
         \centering
