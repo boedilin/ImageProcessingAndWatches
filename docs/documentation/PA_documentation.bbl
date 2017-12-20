@@ -19,6 +19,19 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{videocore}{misc}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeltitlesource}{title}
+      \field{title}{{BCM2835 - Raspberry Pi Documentation}}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/README.md
+      \endverb
+    \endentry
     \entry{Uhrwerk}{misc}{}
       \name{author}{1}{}{%
         {{hash=29646ee6110320fb5dc55bc88520c898}{%
@@ -344,6 +357,60 @@
       \verb{url}
       \verb http://www.codecian.com/
       \endverb
+    \endentry
+    \entry{Richardson2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=eb8e7b4c4aa8ba0c1144ebef8a2bc165}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={I.\bibnamedelimi E.\bibnamedelimi G.},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Ltd.}%
+      }
+      \strng{namehash}{eb8e7b4c4aa8ba0c1144ebef8a2bc165}
+      \strng{fullhash}{eb8e7b4c4aa8ba0c1144ebef8a2bc165}
+      \strng{authornamehash}{eb8e7b4c4aa8ba0c1144ebef8a2bc165}
+      \strng{authorfullhash}{eb8e7b4c4aa8ba0c1144ebef8a2bc165}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{H.264 and MPEG-4 Video Compression: Video Coding for Next-generation Multimedia}}
+      \field{year}{2003}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Sum%7B%5C_%7Dof%7B%5C_%7Dabsolute%7B%5C_%7Ddifferences
+      \endverb
+    \endentry
+    \entry{Seibt2006}{book}{}
+      \name{author}{1}{}{%
+        {{hash=eff9296da37527575c580659a9b2c413}{%
+           family={Seibt},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{eff9296da37527575c580659a9b2c413}
+      \strng{fullhash}{eff9296da37527575c580659a9b2c413}
+      \strng{authornamehash}{eff9296da37527575c580659a9b2c413}
+      \strng{authorfullhash}{eff9296da37527575c580659a9b2c413}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Data Compaction -- Cryptography -- Information Theory and Signal Theory: Sampling and Reconstruction -- Error Control Codes -- Data Reduction: Lossy Compression.}
+      \field{isbn}{3540332197}
+      \field{title}{{Algorithmic information theory : mathematics of digital information processing}}
+      \field{year}{2006}
+      \field{pages}{442}
+      \range{pages}{1}
     \endentry
     \entry{Zeitwaage}{misc}{}
       \field{sortinit}{Z}

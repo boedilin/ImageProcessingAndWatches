@@ -7,7 +7,7 @@
 \BOOKMARK [3][-]{subsubsection.2.1.1.1}{Acoustical Measurement}{subsection.2.1.1}% 7
 \BOOKMARK [3][-]{subsubsection.2.1.1.2}{Optical Measurement}{subsection.2.1.1}% 8
 \BOOKMARK [2][-]{subsection.2.1.2}{Industrial Products}{section.2.1}% 9
-\BOOKMARK [3][-]{subsubsection.2.1.2.1}{Witschi - WisioScope S}{subsection.2.1.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.2.1}{Witschi - Watch Expert II}{subsection.2.1.2}% 10
 \BOOKMARK [3][-]{subsubsection.2.1.2.2}{Lepsi - WatchScope/WatchAnalyzer}{subsection.2.1.2}% 11
 \BOOKMARK [3][-]{subsubsection.2.1.2.3}{Greiner Vibrograf - Compact 900}{subsection.2.1.2}% 12
 \BOOKMARK [1][-]{section.2.2}{Camera Module}{chapter.2}% 13
@@ -16,41 +16,42 @@
 \BOOKMARK [3][-]{subsubsection.2.2.1.2}{Maximum Framerate}{subsection.2.2.1}% 16
 \BOOKMARK [3][-]{subsubsection.2.2.1.3}{Maximum Exposure Time}{subsection.2.2.1}% 17
 \BOOKMARK [2][-]{subsection.2.2.2}{Hardware Limits}{section.2.2}% 18
-\BOOKMARK [1][-]{section.2.3}{Mechanical Watches}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.3.1}{Operation of a Mechanical Watch}{section.2.3}% 20
-\BOOKMARK [2][-]{subsection.2.3.2}{Oscillation of the Balance Wheel}{section.2.3}% 21
-\BOOKMARK [3][-]{subsubsection.2.3.2.1}{Period}{subsection.2.3.2}% 22
-\BOOKMARK [3][-]{subsubsection.2.3.2.2}{Half a Period}{subsection.2.3.2}% 23
-\BOOKMARK [2][-]{subsection.2.3.3}{Number of Strokes}{section.2.3}% 24
-\BOOKMARK [2][-]{subsection.2.3.4}{Test Watch}{section.2.3}% 25
-\BOOKMARK [0][-]{chapter.3}{Technologies and Algorithms}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Optical Flow}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.1.1}{Sparse Optical Flow}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.2}{Dense Flow}{section.3.1}% 29
-\BOOKMARK [1][-]{section.3.2}{Kalman Filtering}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.3}{Object tracking}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.4}{Motion vectors}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.5}{Conclusions and Evaluations}{chapter.3}% 33
-\BOOKMARK [0][-]{chapter.4}{Experimental approaches}{}% 34
-\BOOKMARK [1][-]{section.4.1}{Test setup}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.2}{Gesture Detection}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.3}{Animation of Motion Vectors}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.4}{Motion Vectors Visualized in a Frame}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.5}{Analysis of Motion Vectors in Excel}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.6}{Influences of Camera Setup and Parameters}{chapter.4}% 40
-\BOOKMARK [0][-]{chapter.5}{Calculation of the frequency}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Calculation of Frequency in Excel}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.2}{Implementation of the Algorithms}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.2.1}{Counting Minima with Upper Limit}{section.5.2}% 44
-\BOOKMARK [2][-]{subsection.5.2.2}{Counting Minima with Stepsize}{section.5.2}% 45
-\BOOKMARK [2][-]{subsection.5.2.3}{Counting Minima with Tic Tac and Stepsize}{section.5.2}% 46
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 47
-\BOOKMARK [1][-]{section.6.1}{Measurements}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.2}{Verification of Accuracy}{chapter.6}% 49
-\BOOKMARK [0][-]{chapter.7}{Prediction of the measurement error}{}% 50
-\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 51
-\BOOKMARK [1][-]{section.8.1}{Difficulties}{chapter.8}% 52
-\BOOKMARK [1][-]{section.8.2}{Outlook}{chapter.8}% 53
-\BOOKMARK [0][-]{section*.4}{Glossary}{}% 54
-\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 55
-\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 56
+\BOOKMARK [1][-]{section.2.3}{The Sampling Theorem}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.4}{Mechanical Watches}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.4.1}{Operation of a Mechanical Watch}{section.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.4.2}{Oscillation of the Balance Wheel}{section.2.4}% 22
+\BOOKMARK [3][-]{subsubsection.2.4.2.1}{Period}{subsection.2.4.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.4.2.2}{Half a Period}{subsection.2.4.2}% 24
+\BOOKMARK [2][-]{subsection.2.4.3}{Number of Strokes}{section.2.4}% 25
+\BOOKMARK [2][-]{subsection.2.4.4}{Test Watch}{section.2.4}% 26
+\BOOKMARK [0][-]{chapter.3}{Technologies and Algorithms}{}% 27
+\BOOKMARK [1][-]{section.3.1}{Optical Flow}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.1.1}{Sparse Optical Flow}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.2}{Dense Flow}{section.3.1}% 30
+\BOOKMARK [1][-]{section.3.2}{Kalman Filtering}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.3}{Object Tracking}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.4}{Motion Vectors}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.5}{Conclusions and Evaluations}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{Experimental Approaches}{}% 35
+\BOOKMARK [1][-]{section.4.1}{Test Setup}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{Gesture Detection}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.3}{Animation of Motion Vectors}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.4}{Motion Vectors Visualized in a Frame}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.5}{Analysis of Motion Vectors in Excel}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.6}{Influences of Camera Setup and Parameters}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter.5}{Calculation of the Frequency}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Calculation of Frequency in Excel}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.2}{Implementation of the Algorithms}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.2.1}{Counting Minima with Upper Limit}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.2}{Counting Minima with Stepsize}{section.5.2}% 46
+\BOOKMARK [2][-]{subsection.5.2.3}{Counting Minima with Tic Tac and Stepsize}{section.5.2}% 47
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 48
+\BOOKMARK [1][-]{section.6.1}{Measurements}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.2}{Verification of Accuracy}{chapter.6}% 50
+\BOOKMARK [0][-]{chapter.7}{Prediction of the Measurement Error}{}% 51
+\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 52
+\BOOKMARK [1][-]{section.8.1}{Difficulties}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.2}{Outlook}{chapter.8}% 54
+\BOOKMARK [0][-]{section*.4}{Glossary}{}% 55
+\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 56
+\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 57

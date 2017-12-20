@@ -1,17 +1,17 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'PA_documentation.blg'
-[59] biber-darwin:303> INFO - === Di Dez 19, 2017, 23:10:36
-[91] Biber.pm:359> INFO - Reading 'PA_documentation.bcf'
-[192] Biber.pm:835> INFO - Found 16 citekeys in bib section 0
-[206] Biber.pm:3670> INFO - Processing section 0
-[229] Biber.pm:3840> INFO - Looking for bibtex format file 'PA_cogsworth_citation.bib' for section 0
-[232] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[243] bibtex.pm:1292> INFO - Found BibTeX data source 'PA_cogsworth_citation.bib'
-[275] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/_b/mh9y5jjs3h74kp184dsbn5f80000gn/T/nznmlTSGaj/PA_cogsworth_citation.bib_22290.utf8, line 6, warning: 177 characters of junk seen at toplevel
-[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[301] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[301] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[317] bbl.pm:608> INFO - Writing 'PA_documentation.bbl' with encoding 'UTF-8'
-[319] bbl.pm:712> INFO - Output to PA_documentation.bbl
-[320] Biber.pm:109> INFO - WARNINGS: 1
+[42] biber-darwin:303> INFO - === Mi Dez 20, 2017, 13:37:58
+[66] Biber.pm:359> INFO - Reading 'PA_documentation.bcf'
+[172] Biber.pm:835> INFO - Found 19 citekeys in bib section 0
+[187] Biber.pm:3670> INFO - Processing section 0
+[204] Biber.pm:3840> INFO - Looking for bibtex format file 'PA_cogsworth_citation.bib' for section 0
+[208] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[216] bibtex.pm:1292> INFO - Found BibTeX data source 'PA_cogsworth_citation.bib'
+[265] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/_b/mh9y5jjs3h74kp184dsbn5f80000gn/T/U_DUK2oH6T/PA_cogsworth_citation.bib_93175.utf8, line 6, warning: 177 characters of junk seen at toplevel
+[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[291] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[292] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[312] bbl.pm:608> INFO - Writing 'PA_documentation.bbl' with encoding 'UTF-8'
+[317] bbl.pm:712> INFO - Output to PA_documentation.bbl
+[317] Biber.pm:109> INFO - WARNINGS: 1
